@@ -1,0 +1,6 @@
+publicclassEntryPoint
+{
+publicvoidMain()
+    {
+    }
+}
