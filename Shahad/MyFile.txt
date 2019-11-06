@@ -1,0 +1,14 @@
+name: Shahad
+INumber:i260008
+Department : R&D1
+team name : Rockstar
+
+Created a repo on the command line
+pushed exsiting repo 
+started with the C# classes
+learned about OOP
+Class and functions
+Types of Datatypes
+Types if acess qualifiers - Public internal private protected
+How to create an instance of an object and how to call different methods
+
