@@ -6,7 +6,8 @@ namespace MainProgram {
             Iterration iter = new Iterration ();
             iter.DefineLoops ();
             MultipleOfFive m = new MultipleOfFive();
-            m. Multiple(100);
+            m. Multiple();
+            m.Multiple1(100);
 
 
         }
