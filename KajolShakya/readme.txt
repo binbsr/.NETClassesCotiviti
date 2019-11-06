@@ -8,3 +8,7 @@ Introduction to .Net and C#, .Net Framework, .Net Infrastructure, IDE and GIT.
 
 5th Nov 2019 -- Day 2
 Learn about creating and executing console application and c# data types.
+
+6th Nov 2019 -- Day 3
+Learn about Arrays and Iterations.
+

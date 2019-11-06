@@ -5,3 +5,6 @@ Team name: Submission Team
 
 5th Nov 2019
 Console configuration and Data types
+
+6th Nov 2019
+Arrays and Iterations

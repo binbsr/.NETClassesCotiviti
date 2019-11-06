@@ -1,32 +1,12 @@
-public class 
-{
-    public void Main()
-    {
-        Person p = new Person();
-        p.Read()
+using LoopsAndConditions;
+namespace MainProgram {
 
+    public class EntryPoint {
+        public static void Main () {
+            Iterations iter = new Iterations ();
+            iter.DefineLoops ();
+            PrintMultipleofFive pf = new PrintMultipleofFive();
+            pf.printMFive();
+        }
     }
-}
-
-
-
-public class Person
-{
-    //Data
-    string firstName;
-    string lastName;
-    int age;
-    string addres;
-
-    internal void Read()
-    {
-
-    }
-
-    void Walk()
-    {
-
-    }
-
-
 }
