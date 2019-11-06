@@ -2,3 +2,10 @@ Name: Ravi SHakya
 Icode: i156160
 Dept: R&D
 Team: Warrior
+
+
+Date: 6th November, 2019
+
+Defining Arrays.
+Performing Class Exercises using Arrays of Byte function.
+Defining loop and conditions.
