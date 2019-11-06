@@ -12,3 +12,6 @@ Types of Datatypes
 Types if acess qualifiers - Public internal private protected
 How to create an instance of an object and how to call different methods
 
+6th Nov
+Arrays and Iterations
+
