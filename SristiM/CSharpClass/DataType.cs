@@ -10,9 +10,9 @@ public class DataType
     long d=49869438694386;//64 bits
 
     //Floating pint numbers
-    float e=878.8;//32 bits, use when 6-8 digits after decimal place precision
+    //float e=878.8;//32 bits, use when 6-8 digits after decimal place precision
     double f=43543.6;//64 bits, 15-17 digits precision
-    decimal g=86879.5;//128 bits, 28-29 digits precision
+    //decimal g=86879.5;//128 bits, 28-29 digits precision
 
     //characters
     char h='a';
