@@ -1,3 +1,6 @@
+/*
+namespace DataTypeBasics{
+
 public class  DataType
 {
     //Value  Types
@@ -10,9 +13,9 @@ public class  DataType
     long d = 237479487294879837875; //64 bits
 
     //Floating point numbers
-    float e = 423423.5; // 32 bits, point pachi 6-9 digits
+    float e = 423423.5f; // 32 bits, point pachi 6-9 digits
     double f = 23748.9; // 64 bits, point pachi 15-17 digits precision
-    decimal g = 34242.8; // 128 bits, point pachi 28-29 digits
+    decimal g = 34242.8m; // 128 bits, point pachi 28-29 digits
 
     //Character types
     char h = 'r';
@@ -27,3 +30,5 @@ public class  DataType
 
 
 }
+}
+*/
