@@ -15,3 +15,10 @@ How to create an instance of an object and how to call different methods
 6th Nov
 Arrays and Iterations
 
+7th Nov
+Libraries
+Conditional operator : IF, ElSE IF , TERNIARY OPERATORS
+exercise to print hello world using object
+excercise to print greatest among 3 number
+
+
