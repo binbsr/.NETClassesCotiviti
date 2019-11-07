@@ -54,14 +54,16 @@ namespace LoopsAndConditions
         }
         public void CheckIfVowel()
         {
-            String Check;
-            Check = Console.ReadLine ();
-            double x = int.Parse(Check);
-            if (x == 'a'|| x =='e'|| x =='i' || x == 'o'|| x =='u'||x =='A' ||x =='E'||x=='I'||x=='O'||x=='U')
+            Char ch;
+            Console.WriteLine("Input an Alphabet (A-Z or a-z): ");
+                       
+            ch = Convert.ToChar (Console.ReadLine());
+           
+           if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
             {
-                Console.WriteLine("The entered character is a vowel");
+                Console.WriteLine ("The entered character is a vowel");
             }
-            else
+            else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
             {
                 Console.WriteLine ("The entered character is a Consonent");
             }
