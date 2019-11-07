@@ -1,4 +1,4 @@
-namespace C_Class
+namespace DotNetClass
 {
     public class DataType
     {
