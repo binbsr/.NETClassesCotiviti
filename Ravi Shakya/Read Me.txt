@@ -13,3 +13,4 @@ Defining loop and conditions.
 Date: 7th November, 2019 (Class 4th)
 
 Use of Conditional clauses (IF/Else conditions)
+2 sets of assignment done.
