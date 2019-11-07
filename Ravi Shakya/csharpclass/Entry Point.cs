@@ -1,6 +1,0 @@
-publicclassEntryPoint
-{
-publicvoidMain()
-    {
-    }
-}

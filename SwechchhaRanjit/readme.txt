@@ -9,3 +9,6 @@ Team name: Submission Team
 5th November, 2019 (Day 2)
 - Learn about creating new console application and learn different types of C# data types.
 
+6th November, 2019 (Day 3)
+- Learn about Arrays and iterations.
+
