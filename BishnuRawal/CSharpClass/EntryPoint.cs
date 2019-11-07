@@ -1,3 +1,4 @@
+using System;
 using LoopsAndConditions;
 
 namespace MainProgram
@@ -6,8 +7,8 @@ namespace MainProgram
     {
         public static void Main()
         {
-            Iterations iterations = new Iterations();
-            iterations.DefineLoops();
+            Conditionals c = new Conditionals();
+            c.CheckIfUserSaysHi();                   
         }
     }
 }
