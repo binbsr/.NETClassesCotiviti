@@ -8,9 +8,9 @@ namespace LoopsAndConditions
 
         public void CheckForCorrectString()
         {
-            Console.WriteLine("Please say Gracious!!");
+            Console.WriteLine("Please Greet!");
             String str = Console.ReadLine();
-            if (str == "Gracious")
+            if (str == "Gracious"||str=="Hello"||str=="Hi")
             {
                 Console.WriteLine("Wow you said " + str + ". " + "Thank you!");
             }
@@ -60,7 +60,10 @@ namespace LoopsAndConditions
         {
 
             Console.WriteLine("Enter a Character......");
-            char ch = Convert.ToChar(Console.ReadLine().ToLower());
+            char ch = Convert.ToChar(Console.ReadLine());
+            if(char.IsUpper(ch)){
+            ch=char.ToLower(ch);
+            }
             if ("aeiou".Contains(ch))
             {
                 Console.WriteLine(ch + " is a vowel");
