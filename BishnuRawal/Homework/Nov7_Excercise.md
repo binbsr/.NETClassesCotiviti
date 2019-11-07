@@ -1,0 +1,5 @@
+- [x] Check if user enters valid string?
+- [x] Largest number among 3 numbers?
+- [x] Check if entered alphabet if vowel or not?
+- [ ] Check if entered number is even or not (ternary operator)?
+- [ ] Calculate the sum of squares of first *n* natural numbers.
