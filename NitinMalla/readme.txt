@@ -8,3 +8,6 @@ Team: Paymnet Customization
 
 5th Nov 2019 -- Day 2
 	Learn about creating and executing console application and c# data types.
+
+6th Nov 2019 -- Day 3
+	Introduction to arrays, iterations, differnt kind of loops and namespace
