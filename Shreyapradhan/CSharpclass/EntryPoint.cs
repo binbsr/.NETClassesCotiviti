@@ -14,7 +14,9 @@ namespace MainProgram
             Conditionals conditions=new Conditionals();
             //conditions.PrintMessage();
             //conditions.GetLargest();
-            conditions.CheckForVowel();
+            //conditions.CheckForVowel();
+            //conditions.CalculateSumOfNumber();
+            conditions.CheckOddEvenNumber();
         }
     
  }

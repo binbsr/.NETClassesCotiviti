@@ -53,13 +53,44 @@ namespace LoopsAndConditions{
         {
             char readchar=Convert.ToChar(Console.ReadLine());
             char [] vowels={'a','e','i','o','u'};
+            bool isVowel=false;
             foreach(char x in vowels)
             {
                 if(readchar==x)
-                Console.WriteLine(x+"is a vowel");
-                break;
-              
+                 isVowel=true;
+                 break;
+                          
             }
+
+            if(isVowel)
+              Console.WriteLine("It is a vowel");
+            else 
+                 Console.WriteLine("It is not a vowel");
+
+        }
+
+        public void CheckOddEvenNumber()
+        {
+            int number=Convert.ToInt16(Console.ReadLine());
+            bool iseven=number%2==0?true:false;
+            if(iseven)
+             Console.WriteLine(number+"Is even");
+            else
+            {
+                Console.WriteLine(number+"Is odd");
+            }
+        }
+
+        public void CalculateSumOfNumber()
+        {
+             int number=Convert.ToInt16(Console.ReadLine());
+             int sum=0;
+             for(int i=1;i<=number;i++)
+             {
+                    sum+=i*i;
+             }
+
+             Console.WriteLine("Sum of N natural numbers is "+sum);
 
         }
 
