@@ -2,7 +2,7 @@ namespace DataTypeBasic
 {
 public class DataType
 {
-/*    //value types
+   //value types
     //numbers
     //Integers
     byte a; //8 bits
@@ -16,7 +16,7 @@ public class DataType
     decimal g =342423.323m; //128 bits 28-29 digits after decimal. Scientific purpose
 
     //Character Types
-    char h = 'test';
+    char h = 't';
     
     //boolean type
     bool i;
@@ -29,7 +29,7 @@ public class DataType
     object l;
 
     
-*/ 
+
 }   
 
 }

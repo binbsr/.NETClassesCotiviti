@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace C_File
+namespace CSharpProject
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            UserInput Obj1 = new UserInput();
+            Obj1.test();
+
         }
     }
 }
