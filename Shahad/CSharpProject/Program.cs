@@ -6,8 +6,7 @@ namespace CSharpProject
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
-            Example1 Obj1 = new Example1();
+            UserInput Obj1 = new UserInput();
             Obj1.test();
 
         }
