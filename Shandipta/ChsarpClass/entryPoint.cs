@@ -14,9 +14,15 @@ namespace MainProgram
                m.Multiple1(100);
                */
 
-            Conditionals c = new Conditionals();
+          /*   Conditionals c = new Conditionals();
             c.CheckForCorrectString();
-            c. GetLargestNumber(222,111,333);
+            c. GetLargestNumber();
+            c.CheckVowel();*/
+            CheckForEvenNumber evenNum =  new CheckForEvenNumber();
+            evenNum.CheckEvenNumbers();
+            SumOfNaturalNumbers nnum = new SumOfNaturalNumbers();
+            nnum.NaturalNumbersSum();
+        
 
         }
     }

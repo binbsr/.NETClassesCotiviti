@@ -12,3 +12,7 @@ Learn about creating and executing console application and c# data types.
 6th Nov 2019 -- Day 3
 Learn about Arrays and Iterations.
 
+7th Nov 2019 -- Day 4
+Learn about Conditions.
+
+
