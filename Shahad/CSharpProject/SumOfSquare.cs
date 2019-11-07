@@ -9,7 +9,7 @@ public class SumOfSquare
         numberRange = Convert.ToInt32(Console.ReadLine());
         for (int i = 1; i <= numberRange; i++)
         {
-            Sum=Sum+(i*i);
+            Sum=Sum+ Math.Pow(i,2);
         }
         Console.WriteLine(Sum);
     }

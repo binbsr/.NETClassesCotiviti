@@ -15,11 +15,11 @@ namespace CSharpProject
 
             // CheckString obj3= new CheckString();
             // obj3.checkHello();
-            //obj3.getLargest();
-            //obj3.checkVowel();
+            // obj3.getLargest();
+            // obj3.checkVowel();
 
-            //  EvenOdd obj4= new EvenOdd();
-            //   obj4.checkEven();
+            // EvenOdd obj4= new EvenOdd();
+            // obj4.checkEven();
 
             SumOfSquare obj5 = new SumOfSquare();
             obj5.printSquares();
