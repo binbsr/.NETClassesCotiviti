@@ -1,8 +1,14 @@
+using System;
+using LoopsAndConditions;
 
-public class EntryPoint
-{    
-    public void Main()
+namespace MainProgram
+{
+    public class EntryPoint
     {
-        
+        public static void Main()
+        {
+            Conditionals c = new Conditionals();
+            c.CheckIfUserSaysHi();                   
+        }
     }
 }

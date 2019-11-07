@@ -1,5 +1,5 @@
 using System;
-namespace C_Class
+namespace DotNetClass
 {
     class Iterations
     {
