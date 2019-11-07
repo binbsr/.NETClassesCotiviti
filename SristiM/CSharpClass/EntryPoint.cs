@@ -8,8 +8,8 @@ namespace MainProgram
 
             // Iterations iterations = new Iterations();
             // iterations.DefineLoops();
-            Exercise1 exercise =new Exercise1();
-            exercise.ByteArrays();
+            //Exercise1 exercise =new Exercise1();
+            //exercise.ByteArrays();
         }
     }
 }
