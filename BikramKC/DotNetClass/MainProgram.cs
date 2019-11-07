@@ -14,10 +14,13 @@ namespace MainProgram
             ex1.printMultipleOfFive();
             */
             Conditions cnd = new Conditions();
-            //string str = cnd.GetText();
-            //cnd.PrintHello(str);
+            string str = cnd.GetText();
+            cnd.PrintHello(str);
             //cnd.GetLargestNumber();
             cnd.PrintVowel();
+            cnd.CheckEvenOrOdd();
+            cnd.SumOfNaturalNumbers();
+
         }
 
     }
