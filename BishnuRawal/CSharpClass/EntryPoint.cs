@@ -5,9 +5,7 @@ namespace MainProgram
     public class EntryPoint
     {
         public static void Main()
-        {
-            Iterations iterations = new Iterations();
-            iterations.DefineLoops();
+        {            
         }
     }
 }
