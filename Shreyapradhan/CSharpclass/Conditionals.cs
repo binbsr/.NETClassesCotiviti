@@ -72,23 +72,29 @@ namespace LoopsAndConditions{
         public void CheckOddEvenNumber()
         {
             int number=Convert.ToInt16(Console.ReadLine());
-            bool iseven=number%2==0?true:false;
-            if(iseven)
-             Console.WriteLine(number+"Is even");
-            else
-            {
-                Console.WriteLine(number+"Is odd");
-            }
+            string iseven=number%2==0?"even":"odd";
+            Console.WriteLine(number+" is "+iseven);
+            
         }
 
         public void CalculateSumOfNumber()
         {
              int number=Convert.ToInt16(Console.ReadLine());
              int sum=0;
+             
+             /*
+             int i=0;
              for(int i=1;i<=number;i++)
              {
                     sum+=i*i;
              }
+             while(i<=number)
+             {
+                  sum+=i*i;
+                  i++;
+             }*/
+             sum=(number*(number+1))/2;
+          
 
              Console.WriteLine("Sum of N natural numbers is "+sum);
 
