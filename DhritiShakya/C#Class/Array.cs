@@ -17,8 +17,8 @@ internal class Arrays
 void definearrays()
 {
     byte[][] jaggedarray1=new byte[3][];
-    jaggedarray1[0]=new byte{1,2,3};
-    jaggedarray1[1]=new byte{45,34};
-    jaggedarray1[2]=new byte{5,6,7,8,9};
+    jaggedarray1[0]=new byte[3]{1,2,3};
+    jaggedarray1[1]=new byte[2]{45,34};
+    jaggedarray1[2]=new byte[5]{5,6,7,8,9};
 }
 }}

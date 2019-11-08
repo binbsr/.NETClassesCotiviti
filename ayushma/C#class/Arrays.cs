@@ -1,3 +1,5 @@
+namespace DataTypeBasic
+{
 internal class Arrays
 {
     //Declare one-dimensional array
@@ -17,4 +19,5 @@ internal class Arrays
     jaggArray1[1] = new byte[2] {5, 32};
     jaggArray1[2] = new byte[5] {45, 23, 2, 54, 3}; 
     }
+}
 }
