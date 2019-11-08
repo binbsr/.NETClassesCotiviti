@@ -33,5 +33,22 @@ namespace LearningMethods
           return fullName1;
        }
 
+       //Returning multiple values
+       public (int,int) GetMinMax(int[] nums)
+       {
+           int min = nums[0];
+           int max = nums[0];
+           for(int i = 1; i< nums.Length ; i++)
+           {
+               if(min > nums[i])
+               min = nums[i];
+               else
+               {
+                   max = nums[i];
+               }
+           }
+           return (min,max);  //tuple
+       }
+
     }
 }
