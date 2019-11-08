@@ -77,6 +77,7 @@ namespace LoopsAndConditions
             }
             Console.WriteLine(sum + " is sum of Square of natural number =" + num);
         }
+       
     }
 }
 

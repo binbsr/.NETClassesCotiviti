@@ -38,30 +38,35 @@ namespace LearningMethods
             return FullName;
         }
         //REturning Multiple Values
-        public int GetMin(int [] nums)
+        public int GetMin(int[] nums)
         {
             int min = nums[0];
-            for (int i = 1; i < nums.Length ; i++)
+            for (int i = 1; i < nums.Length; i++)
             {
-                if(min>nums[i])
-                min  = nums[i];
+                if (min > nums[i])
+                    min = nums[i];
             }
             return min;
         }
         //Get MinMax//use tuple
-         public (int,int) GetMinMax(int [] nums)
+        public (int, int) GetMinMax(int[] nums)
         {
             int min = nums[0];
             int max = nums[0];
-            for (int i = 1; i < nums.Length ; i++)
+            for (int i = 1; i < nums.Length; i++)
             {
-                if(min>nums[i])
-                min  = nums[i];
-                else 
-                max = nums[i];
+                if (min > nums[i])
+                    min = nums[i];
+                else
+                    max = nums[i];
             }
-            return (min,max);
+            return (min, max);
         }
-
+        // Write C# method that calculate average of 3 decimal number arguments of 3 decimal number 
+        public float AvgDec(float num1, float num2, float num3)
+        {
+            float Avg = (num1+num2+num3)/3;
+            return Avg;
+        }
     }
 }
