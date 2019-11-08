@@ -29,8 +29,12 @@ Iterations iterations = new Iterations();
   long s2 = m.Sum(456,34543,345345,34534);
   Console.WriteLine(m.GetFullName("sheprata","shrestha"));
   Console.WriteLine(m.GetFullName("sheprata","shrestha","optional"));
-  Console.WriteLine(m.GetFullName(lastName : "shrestha",firstName : "shrestha",middleName :"optional"));
+  Console.WriteLine(m.GetFullName(lastName : "shrestha",firstName : "shrestha",middleName :"optional")); //named argument
+  //int min = m.GetMinMax(new int[] {4,3,5,2,6});
+  (int Min, int Max) result = m.GetMinMax(new int[] {4,3,5,6,5});
+  Console.WriteLine($"Min Tuple(multiple return) = {result.Min} and Min Tuple(multiple return) = {result.Max}");
      }
+
 }
 
 class Person
