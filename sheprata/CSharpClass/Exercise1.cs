@@ -1,8 +1,8 @@
 using System;
 public class Exercise1{
-     static void Main(){
+  /*    static void Main(){
     Multipleof5();
-    }
+    }*/
 
     internal static void Multipleof5()
     {
