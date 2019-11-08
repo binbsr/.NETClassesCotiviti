@@ -25,7 +25,7 @@ namespace MainProgram
             //conditionals.CheckVowel();
             //conditionals.CheckIfInputCharIsVowel();
             //conditionals.CheckEvenNumber();
-            //conditionals.CalculateTheSumOfFirstNNaturalNumbers();
+            conditionals.CalculateTheSumOfFirstNNaturalNumbers();
             //iterations.LearnNestedLoops();
             Methods learnNewMethods = new Methods();
             //long sum = learnNewMethods.ReturnSum(3456,46768);
@@ -47,8 +47,8 @@ namespace MainProgram
             // Console.WriteLine(learnNewMethods.GetAverageOfNDecimalNumbers(new decimal[] {2.9M,8.5m }));
 
             //genderCount
-            (int femaleCount, int maleCount, int nullCount) gendersCount = learnNewMethods.GetGenderCount();
-            Console.WriteLine($"Female count is {gendersCount.femaleCount}, Male count is {gendersCount.maleCount} and Null count is {gendersCount.nullCount}");
+            // (int femaleCount, int maleCount, int nullCount) gendersCount = learnNewMethods.GetGenderCount();
+            // Console.WriteLine($"Female count is {gendersCount.femaleCount}, Male count is {gendersCount.maleCount} and Null count is {gendersCount.nullCount}");
         }
     }
 

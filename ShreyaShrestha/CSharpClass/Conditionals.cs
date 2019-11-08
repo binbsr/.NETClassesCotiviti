@@ -83,33 +83,41 @@ namespace LoopsAndConditions
 
         public void CalculateTheSumOfFirstNNaturalNumbers()
         {
-            try
-            {
-                int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Enter numbers:");
-                int sum = 0;
-                int i = 0;
-                int[] inputNumbers = new int[nNoOfNaturalNumbers];
-                while (i < nNoOfNaturalNumbers)
-                {
-                    try
-                    {
-                        inputNumbers[i] = Int32.Parse(Console.ReadLine());
-                        sum += inputNumbers[i] * inputNumbers[i];
-                        i++;
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
-                }
-                Console.WriteLine("The sum of squares of first '{0}' numbers is '{1}'", nNoOfNaturalNumbers, sum);
-            }
+            // try
+            // {
+            //     int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
+            //     Console.WriteLine("Enter numbers:");
+            //     int sum = 0;
+            //     int i = 0;
+            //     int[] inputNumbers = new int[nNoOfNaturalNumbers];
+            //     while (i < nNoOfNaturalNumbers)
+            //     {
+            //         try
+            //         {
+            //             inputNumbers[i] = Int32.Parse(Console.ReadLine());
+            //             sum += inputNumbers[i] * inputNumbers[i];
+            //             i++;
+            //         }
+            //         catch (Exception e)
+            //         {
+            //             Console.WriteLine(e.Message);
+            //         }
+            //     }
+            //     Console.WriteLine("The sum of squares of first '{0}' numbers is '{1}'", nNoOfNaturalNumbers, sum);
+            // }
 
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            // catch (Exception ex)
+            // {
+            //     Console.WriteLine(ex.Message);
+            // }
+            int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
+            Console.WriteLine($"There are {nNoOfNaturalNumbers}");
+            int sum = 0;          
+               
+            sum = nNoOfNaturalNumbers * (nNoOfNaturalNumbers + 1) * (2 * nNoOfNaturalNumbers + 1) / 6;                
+            
+            Console.WriteLine($"The sum of {nNoOfNaturalNumbers} natural numbers is {sum}");
+
         }
     }
 }
