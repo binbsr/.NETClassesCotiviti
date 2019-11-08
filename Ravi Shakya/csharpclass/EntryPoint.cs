@@ -11,10 +11,14 @@ public static void Main()
       //  iterations.DefineLoops();
         // Exercise1 exercise =new Exercise1();
         //exercise.ByteArrays();
-        Conditionals c = new Conditionals ();
+       // Conditionals c = new Conditionals ();
         //c.CheckInput();
         //c.GetLargest();
-        c.CheckIfVowel();
+        //c.CheckIfVowel();
+        Assignments a = new Assignments ();
+        //a.CheckEvenOrOdd();
+        a.SumOfSquares();
+
 
     }
 }

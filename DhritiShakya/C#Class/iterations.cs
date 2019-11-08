@@ -1,15 +1,15 @@
- namespace LoopsAndConditions
+﻿ namespace LoopsAndConditions
  {
  
- Using System
+ using System;
  
  class Iterations
 {
     public void Defineloop()
     {
-        for (int i = 0; i < length; i++) // i is the iteration varariable,i<length is condition and i++ is iteration
+        for (int i = 0; i < 100; i++) // i is the iteration varariable,i<length is condition and i++ is iteration
         {
-            Console.WriteLine(i),
+            Console.WriteLine(i);
         }
         
         int j=0;
@@ -19,7 +19,7 @@
            j++;
         }
 
-        int[] nums={2,3,4,6,7,9}
+        int[] nums={2,3,4,6,7,9};
         foreach (int num in nums)
         {
             if(num % 2==0)

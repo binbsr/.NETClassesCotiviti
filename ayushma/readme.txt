@@ -8,3 +8,7 @@ Console configuration and Data types
 
 6th Nov 2019
 Arrays and Iterations
+
+7th Nov 2019
+Conditional operator : if, if else, ternary operators
+

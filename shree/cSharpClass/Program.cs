@@ -11,13 +11,23 @@ namespace cSharpClass
             iternation1.DefineLoops();
         }
 
-    */
-
-        public static void Main()
+            public static void Main()
         {
             Multiple mul = new Multiple();
             mul.PrintMultiple();
 
+        } */
+
+        public static void Main()
+        {
+            Conditional c1 = new Conditional();
+            // c1.CheckIfUserSaysHello();
+            // c1.GetLargest();
+            // c1.UseTernary();
+            // c1.CheckVowel();
+            c1.CheckEvenOdd();
+            //c1.SumOfSquareOfNumber();
         }
+        
     }
 }

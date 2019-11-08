@@ -13,10 +13,16 @@ namespace CSharpProject
             // ConditionExample obj2= new ConditionExample();
             // obj2.PrintHello();
 
-                CheckString obj3= new CheckString();
-               // obj3.checkHello();
-             //obj3.getLargest();
-             obj3.checkVowel();
+            // CheckString obj3= new CheckString();
+            // obj3.checkHello();
+            // obj3.getLargest();
+            // obj3.checkVowel();
+
+            // EvenOdd obj4= new EvenOdd();
+            // obj4.checkEven();
+
+            SumOfSquare obj5 = new SumOfSquare();
+            obj5.printSquares();
         }
     }
 }
