@@ -57,38 +57,39 @@ namespace LearningMethods
 
         public decimal GetAverage(decimal[] nums)
         {
-             decimal sum=0.0M;
+            decimal sum = 0.0M;
             for (int i = 0; i < nums.Length; i++)
             {
-                sum+=nums[i];
-                                
+                sum += nums[i];
+
             }
-            return sum/(nums.Length*1.0M);
+            return sum / (nums.Length * 1.0M);
         }
 
-        public (int,int,int) DetemineGender(char?[] genders)
-        {      int numberOfMales=0;
-               int numberOfFemales=0;
-               int numberOfOtherGenders=0;
+        public (int, int, int) DetemineGender(char?[] genders)
+        {
+            int numberOfMales = 0;
+            int numberOfFemales = 0;
+            int numberOfOtherGenders = 0;
             foreach (var item in genders)
-            { 
-               
-           
-               if(item=='M')
-               {
-                  numberOfMales=numberOfMales+1;
-               } 
-               else if(item=='F')
-               {
-                   numberOfFemales= numberOfFemales+1;
-               }
-               else 
-               {
-                   numberOfOtherGenders= numberOfOtherGenders+1;
-               }
-               
+            {
+
+
+                if (item == 'M')
+                {
+                    numberOfMales = numberOfMales + 1;
+                }
+                else if (item == 'F')
+                {
+                    numberOfFemales = numberOfFemales + 1;
+                }
+                else
+                {
+                    numberOfOtherGenders = numberOfOtherGenders + 1;
+                }
+
             }
-            return (numberOfMales,numberOfFemales,numberOfOtherGenders);
+            return (numberOfMales, numberOfFemales, numberOfOtherGenders);
 
         }
 
