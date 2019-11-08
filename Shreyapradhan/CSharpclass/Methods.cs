@@ -49,6 +49,41 @@ namespace LearningMethods
             }
             return (min,max);
         }
+
+        public decimal CalculateAverage(decimal num1,decimal num2,decimal num3)
+        {
+            return (num1+num2+num3)/3;
+        }
+
+        public decimal CalculateAverageOfAllNumbers(params decimal[] numbers)
+        {
+            long sum=0;
+            foreach(long number in numbers)
+            {
+                sum+=number;
+            }
+             return sum/numbers.Length;
+        }
+
+        public (int,int,int) ClaculateGenderDistibution()
+        {
+            int femaleCount=0;
+            int maleCount=0;
+            int otherCount=0;
+            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+            foreach(char?person in genderCollection)
+            {
+
+                if(person=='F')
+                    femaleCount++;
+                else if(person=='M')
+                  maleCount++;
+                else
+                   otherCount++;
+                        
+            }
+            return (femaleCount,maleCount,otherCount);
+        }
     }
 
 }
