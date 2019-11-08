@@ -60,21 +60,22 @@ namespace LoopsAndConditions
         public void CheckEvenNumber()
         {
             int value = 0;
-            bool isInt = Int32.TryParse(Console.ReadLine(), out value);
+            //bool isInt = Int32.TryParse(Console.ReadLine(), out value);
             if (value != 0)
             {
-                bool iseven = value % 2 == 0 ? true : false;
+                //bool iseven = value % 2 == 0 ? true : false;
+                string iseven = value % 2 == 0 ? "even" : "odd";
+                Console.WriteLine($"The number is {value}");
+                // if (iseven)
+                // {
+                //     Console.WriteLine(value + " is even");
 
-                if (iseven)
-                {
-                    Console.WriteLine(value + " is even");
+                // }
 
-                }
-
-                else
-                {
-                    Console.WriteLine(value + " is odd");
-                }
+                // else
+                // {
+                //     Console.WriteLine(value + " is odd");
+                // }
             }
         }
 
