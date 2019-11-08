@@ -1,33 +1,33 @@
 namespace DotnetHomeWorks
 {
-public class GenderCount
-{
-
-    public (int,int,int) DisplayCount()
+    public class GenderCount
     {
-        char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
 
-        int countMale= 0;
-        int countFemale=0;
-        int countOthers=0;
-
-        foreach(char? gender in genderCollection)
+        public (int, int, int) DisplayCount()
         {
-                if (gender=='M')
+            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+
+            int countMale = 0;
+            int countFemale = 0;
+            int countOthers = 0;
+
+            foreach (char? gender in genderCollection)
+            {
+                if (gender == 'M')
                 {
                     countMale++;
                 }
-                else if (gender=='F')
+                else if (gender == 'F')
                 {
-                        countFemale++;
+                    countFemale++;
                 }
                 else
                 {
-                        countOthers++;
+                    countOthers++;
                 }
+            }
+            return (countMale, countFemale, countOthers);
         }
-        return (countMale,countFemale,countOthers);
     }
-}
 
 }
