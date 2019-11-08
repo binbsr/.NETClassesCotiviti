@@ -1,6 +1,7 @@
 using LoopsAndConditions;
 using LearningMethos;
 using System;
+using Practice;
 namespace MainProgram
 {
     public class entryPoint
@@ -19,7 +20,7 @@ namespace MainProgram
             c.CheckForCorrectString();
             c. GetLargestNumber();
             c.CheckVowel();*/
-            CheckForEvenNumber evenNum =  new CheckForEvenNumber();
+    /*        CheckForEvenNumber evenNum =  new CheckForEvenNumber();
             evenNum.CheckEvenNumbers();
             SumOfNaturalNumbers nnum = new SumOfNaturalNumbers();
             nnum.NaturalNumbersSum();
@@ -34,7 +35,17 @@ namespace MainProgram
             Console.WriteLine(fullName);
             int[] value = new int[]{1,1,12,5,5,9};
            (int min,int max) result= m.GetMinMax(value);
-            Console.WriteLine($"The Min. number is {result.min} and the Max. number is {result.max}");
+            Console.WriteLine($"The Min. number is {result.min} and the Max. number is {result.max}");*/
+            DecimalAverage dec = new DecimalAverage();
+            decimal average = dec.CalculateAverage(123.54673m,5.678901m,545367.789m);
+            Console.WriteLine($"The average is {average}");
+            decimal average2=dec.Average(12.5m,15.2456m,1.445m,2,3,7,9,8);
+           Console.WriteLine($"The average is {average2}");
+          (int F, int M, int U)result = dec.CountEachGenderType();
+         Console.WriteLine($"Total Female: {result.F} Total Male: {result.M} Total Unknown: {result.U} ");
+     
+
+
         }
     }
 }
