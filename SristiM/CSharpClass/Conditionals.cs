@@ -79,8 +79,48 @@ namespace LoopsAndConditions
             }
         }
 
+        public void EvenNumberCheckTernary()
+        {
+            Console.WriteLine("Please enter any whole number");
+            int x = Convert.ToInt16(Console.ReadLine());
+            string evenOrNot;
 
+            evenOrNot = (x % 2 == 0) ? "Even" : "Odd";
+
+            Console.WriteLine("The number you entered is " + evenOrNot);
+        }
+
+        public void SumofSquares()
+        {
+            int n;
+            int sum = 0;
+            Console.WriteLine("Enter number of natural numbers");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                sum = sum + (i * i);
+            }
+            Console.WriteLine(sum);
+        }
+
+        public void LearnNestedLoops()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Jai");
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.WriteLine("Nepal");
+                    
+                }
+                
+            }
+        }
     }
 
 
+
+
 }
+
+
