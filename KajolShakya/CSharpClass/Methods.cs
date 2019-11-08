@@ -57,5 +57,49 @@ namespace LearningMethods
             return (min, max);
         }
 
+        //Calculate average of 3 decimal number arguments.
+
+        public decimal AverageThreeArguments(decimal a, decimal b, decimal c)
+        {
+            decimal sum = a+b+c;
+            decimal avg = (sum/3);
+            return avg;
+        }
+
+        //modify same method above that allows user to supply any number of arguments and calculate average of all.
+
+        public decimal AverageNArguments(params decimal[] numbers)
+        {
+            decimal average,sum=0;
+            int totalArguments=numbers.Length;
+            foreach(decimal n in numbers){
+                sum=sum+n;
+            } 
+            return average=sum/totalArguments;
+        }
+
+        //method that count total males, females and others, given the array of genders as:
+        //char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+
+        public (int,int,int) GetGender()
+        {
+            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+            int male = 0, female = 0, others = 0;
+            foreach(char? n in genderCollection)
+            {
+                if(n=='F')
+                {
+                    female++;
+                }
+                else if(n=='M')
+                {
+                    male++;
+                }
+                else
+                others++;
+            }
+            return(male,female,others);
+            
+        }
     }
 }

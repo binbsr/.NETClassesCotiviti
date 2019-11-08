@@ -45,6 +45,17 @@ namespace MainProgram {
 
             Console.WriteLine($"Minimum no. is {result.Min} and the maximum no. is {result.Max}");
 
-        }
+            decimal f = m.AverageThreeArguments(2.7m,3.5m,4.6m);
+            Console.WriteLine("Average of 3 decimal arguments is "+f);
+            decimal average = m.AverageNArguments(4,5,6);
+            Console.WriteLine("Average of given arguments is "+average);
+
+
+            (int m, int f, int o) gender = m.GetGender();
+            Console.WriteLine("Total Male is "+gender.m+" , total Female is "+gender.f+" and total others are "+gender.o);
+        }    
     }
 }
+
+
+
