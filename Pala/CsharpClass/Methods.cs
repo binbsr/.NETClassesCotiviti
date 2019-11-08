@@ -65,8 +65,20 @@ namespace LearningMethods
         // Write C# method that calculate average of 3 decimal number arguments of 3 decimal number 
         public float AvgDec(float num1, float num2, float num3)
         {
-            float Avg = (num1+num2+num3)/3;
+            float Avg = (num1 + num2 + num3) / 3;
             return Avg;
         }
+        //Modify same method above that allows user to supply any number of argumnets and calculate average of all.
+        public float AvgAll(params float[] numbers)//declaring any number of arguments
+        {
+            //Console.WriteLine("length is =" + numbers.Length);
+            float sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                 sum+=numbers[i];
+            }
+            return(sum/(numbers.Length));
+        }
+
     }
 }

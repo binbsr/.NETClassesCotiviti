@@ -36,8 +36,11 @@ public class EntryPoint
          //Console.WriteLine($"Minimum = {minMax.Min} and Largest = {minMax.Max}");
         // int mi = minMax.min;
         //int ma = minMax.max;
-        float Result = m.AvgDec(1.2F,2.2F,4.5F);
-        Console.WriteLine("Average of 3 Decimal number is " + Result);
+        //float Result = m.AvgDec(1.2F,2.2F,4.5F);
+        //Console.WriteLine("Average of 3 Decimal number is " + Result);
+        float Result = m.AvgAll(3.2F,2.2F,6.2F,5.4F);
+        Console.WriteLine(Result);
+        
        
     }
 }
