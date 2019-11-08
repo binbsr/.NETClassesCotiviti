@@ -11,3 +11,6 @@ Day2 (5th Nov 2019)
 
 Day3 (6th Noc 2019)
 	Introduction to Array, its types, declaration and initialization methods, loops and its usage and importance of specifying namespace and implematation of all of them.
+
+Day4 (7th Nov 2019)
+	Exercises on if else, ternary operator.
