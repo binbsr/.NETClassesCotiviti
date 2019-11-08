@@ -18,3 +18,7 @@ Created methods with arrays
 Day4:
 Learned user input, how to store and use it
 Learned about if else conditions
+
+Day5:
+Learned about methods with arguments
+Learned about multiple returns, string interpolations
