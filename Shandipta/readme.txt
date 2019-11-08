@@ -4,4 +4,5 @@ Department: R&D1
 Team name: Submission Team
 5th Nov: console app and datatype 
 6th Nov: array type and iterration
-7th: conditions and print
+7th Nov: conditions and print
+8th Nov: methods

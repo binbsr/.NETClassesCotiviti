@@ -14,3 +14,12 @@ Date: 7th November, 2019 (Class 4th)
 
 Use of Conditional clauses (IF/Else conditions)
 2 sets of assignment done.
+
+
+Date: 8th November, 2019 (Class 5th)
+
+Use of nested for loops.
+discussion of methods. 
+ - optional arguments
+ - string interpolation
+ - returning multiple values

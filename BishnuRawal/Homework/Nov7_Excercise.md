@@ -1,5 +1,5 @@
 - [x] Check if user says "Hi" or "Hello"?
 - [x] Largest number among 3 numbers?
 - [x] Check if entered alphabet is vowel or not?
-- [ ] Check if entered number is even or not (use ternary operator)?
-- [ ] Calculate the sum of squares of first *n* natural numbers.
+- [x] Check if entered number is even or not (use ternary operator)?
+- [x] Calculate the sum of squares of first *n* natural numbers.
