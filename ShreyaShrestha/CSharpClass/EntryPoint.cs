@@ -14,8 +14,18 @@ public class EntryPoint
         // Iterations iterations = new Iterations();
         // iterations.DefineLoops();
 
-        ClassWork exercise1 = new ClassWork();
-        exercise1.PrintMultiplesOfFive();
+        // ClassWork exercise1 = new ClassWork();
+        // exercise1.PrintMultiplesOfFive();
+
+        Conditionals conditionals = new Conditionals();
+        //conditionals.CheckIfUserSaysHello();
+        //conditionals.ReturnLargestNumber();
+        //conditionals.CheckVowel();
+        //conditionals.CheckIfInputCharIsVowel();
+        //conditionals.CheckEvenNumber();
+        conditionals.CalculateTheSumOfFirstNNaturalNumbers();
+
+
     }
 }
 
