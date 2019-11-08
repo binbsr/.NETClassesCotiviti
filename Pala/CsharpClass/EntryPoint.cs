@@ -1,5 +1,7 @@
 using LoopsAndConditions;
 using Exercise;
+using LearningMethods;
+using System;
 
 namespace MainProgram
 {
@@ -20,9 +22,22 @@ public class EntryPoint
         //c.PrintMessage();
         //c.GetLarge();
         //c.Vowels();
-        //c.IsTernery();
-        c.SumSqNaturalNum();
+        //c.IsEven();
+        //c.SumSqNaturalNum();
+        Methods m = new Methods();
+        //long s = m.AddTwoNumbers(23456,56789);//parameters
+        //long s1 = m.AddThreeNumbers(23456,56789,1234);//parameters
+        //Console.WriteLine("Sum is = " + s);
+        //Console.WriteLine("Sum is = " + s1);
+        //string fullName= m.GetFullName(firstName: "Pala",lastName: "Kansakar");//Named Arguments
+        //Console.WriteLine(fullName);
+        int min = m.GetMin(new int[] {4,3,5,2,6});
+        (int Min,int Max) minMax = m.GetMinMax(new int[] {4,3,5,2,6});
+         Console.WriteLine($"Minimum = {minMax.Min} and Largest = {minMax.Max}");
+        // int mi = minMax.min;
+        //int ma = minMax.max;
+       
+       
     }
 }
 }
-
