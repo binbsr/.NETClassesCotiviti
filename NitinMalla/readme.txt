@@ -11,3 +11,6 @@ Team: Paymnet Customization
 
 6th Nov 2019 -- Day 3
 	Introduction to arrays, iterations, differnt kind of loops and namespace
+
+7th Nov 2019 -- Day 4
+	conditional(if else and ternary) and further on iterations 

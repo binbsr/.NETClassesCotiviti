@@ -15,4 +15,7 @@ Learn about Arrays and Iterations.
 7th Nov 2019 -- Day 4
 Learn about Conditions.
 
+8th Nov 2019 -- Day 5
+Learn about Methods.
+
 
