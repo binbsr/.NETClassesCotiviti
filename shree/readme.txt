@@ -9,3 +9,5 @@ Nov 5: Learned about Data types, console and console application
 Nov 6: Learned about Iteration and array, namespace and Exercise 1
 
 Nov 7: conditional (if else and ternary) and Exercise 2
+
+Nov 8: Learned Nested For loop, methods with return type, optional argument and variable argument in methods, returning multiple values from methods
