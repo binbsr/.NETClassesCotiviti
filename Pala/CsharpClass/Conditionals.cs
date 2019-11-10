@@ -59,7 +59,7 @@ namespace LoopsAndConditions
 
 
         }
-        public void IsTernery()
+        public void IsEven()
         {
             string result;
             int num = Convert.ToInt32(Console.ReadLine());
@@ -77,6 +77,7 @@ namespace LoopsAndConditions
             }
             Console.WriteLine(sum + " is sum of Square of natural number =" + num);
         }
+       
     }
 }
 

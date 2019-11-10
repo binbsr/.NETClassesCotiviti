@@ -23,6 +23,19 @@ public class Iterations
             if(num % 2 ==0 )
             Console.WriteLine(num);
         }
+
+    
+    }
+    public void LearnNestedLoops()
+    {
+        for (int j =0; j <5; j++)
+        { 
+            Console.WriteLine("Jai");
+            for (int k=0; k<10; k++)
+            {
+                Console.WriteLine("Nepal");
+            }
+        }
     }
 }
 }
