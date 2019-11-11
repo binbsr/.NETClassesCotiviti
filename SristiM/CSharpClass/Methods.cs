@@ -63,7 +63,7 @@ namespace LearningMethods
                 sum += nums[i];
 
             }
-            return sum / (nums.Length * 1.0M);
+            return sum / (nums.Length);
         }
 
         public (int, int, int) DetemineGender(char?[] genders)

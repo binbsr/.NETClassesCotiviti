@@ -1,6 +1,9 @@
 using LoopsAndConditions;
 using LearningMethods;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 //comment ctrl+K+C and uncomment ctrl+K+U
 namespace MainProgram
@@ -25,7 +28,8 @@ namespace MainProgram
             // c.SumofSquares();
             // c.LearnNestedLoops();
 
-            Methods m = new Methods();
+            //Methods m = new Methods();
+
             //long s=m.AddTwoNumbers(222,3333);
             //Console.WriteLine("Sum is "+s);
 
@@ -40,17 +44,71 @@ namespace MainProgram
             //  Console.WriteLine($"Minimum={result.Min} and Largest ={result.Max}");
 
             //Calculate average of the numbers provided
-            decimal avg = m.GetAverage(new decimal[] { 9.5M, 6.5M, 5.5M });
-            Console.WriteLine("The average of the provided input numbers=" + avg);
+            // decimal avg = m.GetAverage(new decimal[] { 9.5M, 6.5M, 5.5M });
+            // Console.WriteLine("The average of the provided input numbers=" + avg);
 
-            //Determine gender of the provided set
-            (int NoOfMales, int NoOfFemales, int NoOfOthers) result =
-            m.DetemineGender(new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' });
-            Console.WriteLine($"No of Males={result.NoOfMales} and No of Females={result.NoOfFemales} and No of Others={result.NoOfOthers}");
+            // //Determine gender of the provided set
+            // (int NoOfMales, int NoOfFemales, int NoOfOthers) result =
+            // m.DetemineGender(new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' });
+            // Console.WriteLine($"No of Males={result.NoOfMales} and No of Females={result.NoOfFemales} and No of Others={result.NoOfOthers}");
 
+            //calling generic method
+            // TestList<string> list=new TestList<string>();
+            // list.Add("abcd");
+
+            // TestList<byte> list1=new TestList<byte>();
+            // list1.Add(34);
+
+            //Non generic list, can hold any data type but is not suggested to use
+            // ArrayList arrayList=new ArrayList();
+            // //ctrl+. to find the namespace
+            // arrayList.Add("asdf");
+            // arrayList.Add(1234);
+
+            // SortedList sortedList=new SortedList();
+
+            // List<short> list = new List<short>();//List holds only one data type
+            // {
+            //     list.Add(123);
+            //     list.Add(123);
+            //     list.Add(123);
+
+            //     List<Student> students = new List<Student>();
+            //     Student student1 = new Student { name = "sristi" };
+
+            //     Student student2 = new Student()
+            //     {
+            //         name = "shreya"
+            //     };
+
+            //     students.Add(student1);
+            //     students.Add(student2);
+
+            Dictionary<int, string> countries = new Dictionary<int, string>()
+            {
+                [1] = "USA",
+                [977] = "Nepal",
+                [91] = "India"
+            };
+            // //Dictionary hold multiple data type
+            // //Key has to be unique,first paramter is always key like int in this case
+            // countries.Add(1,"USA");
+            // countries.Add(977,"Nepal");
+            // countries.Add(91,"Nepal");
+
+            //Console.WriteLine(countries[0]);
+            foreach (var item in countries)
+            {
+                Console.WriteLine(item.Key + "=" + item.Value);
+            }
 
         }
+
+
+
+
     }
 }
+
 
 
