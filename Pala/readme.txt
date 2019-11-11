@@ -24,3 +24,5 @@ Learnt about: Return Argments, Passing Varable number of arguments,Passing optio
 5.Learnt using tuple .
 6.Learnt Named Argument while passing in arugemnt
 ------------------------------------------------------------------
+Monday , 11th November 2019
+Learned about Genric , Make List<string> , Dictonary 
