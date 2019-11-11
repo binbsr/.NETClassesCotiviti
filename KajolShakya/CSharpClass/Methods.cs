@@ -81,6 +81,7 @@ namespace LearningMethods
         //method that count total males, females and others, given the array of genders as:
         //char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
 
+        /*
         public (int,int,int) GetGender()
         {
             char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
@@ -101,5 +102,28 @@ namespace LearningMethods
             return(male,female,others);
             
         }
+        */
+
+        public (int,int,int) GetGender()
+        {
+            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+            int male = 0, female = 0, others = 0;
+            foreach(char? n in genderCollection)
+            {
+                if(n=='F')
+                {
+                    female++;
+                }
+                else if(n=='M')
+                {
+                    male++;
+                }
+                else
+                others++;
+            }
+            return(male,female,others);
+            
+        }
+        
     }
 }
