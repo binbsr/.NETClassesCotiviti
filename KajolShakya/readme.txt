@@ -18,4 +18,7 @@ Learn about Conditions.
 8th Nov 2019 -- Day 5
 Learn about Methods.
 
+11th Nov 2019 -- Day 6
+Learn about Generic, Non-Generic, List and Dictionary.
+
 
