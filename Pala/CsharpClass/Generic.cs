@@ -1,7 +1,8 @@
-public class TestList
+public class TestList<T>
 {
-    public void Add()
+    public void Add(T num)
     {
+
         
     }
 }
