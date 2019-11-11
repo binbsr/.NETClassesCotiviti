@@ -35,19 +35,16 @@ namespace Exercise3
             public (int, int, int) GenderCollectionCount(char?[] genderCollection)
             {
                 int maleCount = 0; int femaleCount = 0; int otherCount = 0;
-                foreach (Nullable<int> genderCount in genderCollection)
+                foreach (Nullable<char> genderCount in genderCollection)
                 {
-                    if (genderCount.HasValue)
+                    if (genderCount == 'M')
                     {
-                        if (genderCount=='M')
-                        {
-                            maleCount++;
-                        }
-                        else
-                        {
-                            femaleCount++;
-                        }    
+                        maleCount++;
                     }
+                    else if (genderCount == 'F')
+                    {
+                        femaleCount++;
+                    }    
                     else
                     {
                         otherCount++;
