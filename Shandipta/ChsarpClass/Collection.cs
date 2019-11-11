@@ -32,10 +32,9 @@ namespace Collection
                     new Dictionary<string, string>(){
                                   {"Kashmir", "Rock"},
                                   {"Wildest dream", "Indi pop"},
-                                {"Wanted", "Pop"} };
-
-
-
+                                {"Let's get it on", "R&B/Soul"} ,
+                                  {"Wanted", "Pop"},
+                                    {"Lazarus", "Progressive metal"}};
             return songList;
 
         }
@@ -52,7 +51,9 @@ namespace Collection
 {
     {"Kashmir", new List<string> { "Rock","Led Zeppelin"} },
     {"Wildest dream", new List<string> { "Indi Pop","Taylor Swift" } },
-    {"Wanted", new List<string> { "Pop","One Republic" } }
+    {"Let's get it on", new List<string> { "R&B/Soul","Marvin Gaye" } },
+    {"Wanted", new List<string> { "Pop","One Republic" } },
+    {"Lazarus", new List<string> { "Progressive metal","Porcupine Tree" } }
 };
             return songList;
         }
