@@ -6,9 +6,6 @@ namespace Collection
     public class Collections
     {
 
-        public string animalName;
-        public string songName, songGenre;
-
         //*GetAnimals()* which returns list of animal names.
 
         public List<string> GetAnimals()
@@ -38,6 +35,7 @@ namespace Collection
             return songList;
 
         }
+
 
         //Modify 2. to return list of songs (name, genre and artist name
 
