@@ -20,5 +20,8 @@ There are following classes on DotNetClass:
   This contains the class room exercise which has method to print the multiple of 5 from array.
 5. Conditions
   This contains few examples of if else conditions. 
-  Few simple problems like largest number among 3, recognizing vowel from entered number 
+  Few simple problems like largest number among 3, recognizing vowel from entered number.
+  Exercise:
+    Check if entered number is even or not (use ternary operator)?
+    Calculate the sum of squares of first n natural numbers.
   

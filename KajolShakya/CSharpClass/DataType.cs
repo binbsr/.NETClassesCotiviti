@@ -1,4 +1,4 @@
-/*
+
 namespace DataTypeBasics{
 
 public class  DataType
@@ -10,7 +10,7 @@ public class  DataType
     byte a =24; //8 bits
     short b = 345; // 16 bits
     int c = 13123134; //32 bits
-    long d = 237479487294879837875; //64 bits
+    long d = 237479; //64 bits
 
     //Floating point numbers
     float e = 423423.5f; // 32 bits, point pachi 6-9 digits
@@ -31,4 +31,3 @@ public class  DataType
 
 }
 }
-*/

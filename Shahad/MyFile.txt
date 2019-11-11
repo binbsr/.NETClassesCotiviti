@@ -20,5 +20,13 @@ Libraries
 Conditional operator : IF, ElSE IF , TERNIARY OPERATORS
 exercise to print hello world using object
 excercise to print greatest among 3 number
+inline conditional operators
 
+8th Nov
+Methods
+passing and return arguments in methods
+named arguments
+returning multiple values
+returning multiple values - topple
 
+Completed all the assginments given

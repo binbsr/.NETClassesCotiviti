@@ -46,19 +46,24 @@ public class CheckString
         Console.Write("Enter Letter ::");
         char[] vowelList = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
         char letter;
-        int count = 0;
-        int i = 0;
         letter = Convert.ToChar(Console.ReadLine());
-        while (count == 0)
+        bool con = false;
+        for (int i = 0; i < 9; i++)
         {
             if (letter == vowelList[i])
             {
                 Console.WriteLine("Its a Vowel");
-                count++;
+                con = true;
             }
-            i++;
         }
+        if (!con)
+        {
+            Console.WriteLine("Its a Consonanat");
+        }
+
     }
+
+    
 
 }
 
