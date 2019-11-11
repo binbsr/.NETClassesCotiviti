@@ -68,11 +68,11 @@ namespace MainProgram
             arrayList.Add(345);
 
             //Generic : used when collections have multiple datatypes 
-            TestList<string> list = new TestList<string>();
+            /*TestList<string> list = new TestList<string>();
             list.Add("sdfg");
 
             TestList<byte> list1 = new TestList<byte>();
-            list1.Add(34);
+            list1.Add(34);*/
 
             List<short> list2 = new List<short>();
             list2.Add(23);
@@ -120,9 +120,7 @@ namespace MainProgram
             {
                 Console.WriteLine(item.Key + " = " + item.Value);
             }
-
-
-
+            
         }
 
     }
