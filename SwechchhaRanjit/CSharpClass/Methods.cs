@@ -70,10 +70,5 @@ namespace LearningMethods
             
            return (min, max);
         }
-
-
-
-
-
     }
 }

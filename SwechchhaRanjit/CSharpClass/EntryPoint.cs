@@ -1,5 +1,7 @@
 //using LoopandConditions;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using LearningMethods;
 using LoopandConditions;
 //using MultipleFiveNumbers;
@@ -55,10 +57,72 @@ namespace MainProgram
             Console.WriteLine("The average of given three arguments is: " + average);
 
             decimal avg = exercise2.CalculateAvgNArguments(new decimal[] { 12.3M, 23.45M, 45.678M });
-            Console.WriteLine("Average of N arguments is: " + avg);
+            Console.WriteLine($"Average of N arguments is: {avg}");
 
             (int male, int female, int others) result1 = exercise2.CountGenderType();
             Console.WriteLine($"Total count of Males =  {result1.male} , Total count of Females = {result1.female} and Total count of Others = {result1.others}");
+
+            //Non-Generic
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("sdf");
+            arrayList.Add(345);
+
+            //Generic : used when collections have multiple datatypes 
+            TestList<string> list = new TestList<string>();
+            list.Add("sdfg");
+
+            TestList<byte> list1 = new TestList<byte>();
+            list1.Add(34);
+
+            List<short> list2 = new List<short>();
+            list2.Add(23);
+            list2.Add(23);
+            list2.Add(23);
+            list2.Add(23);
+
+            List<Student> students = new List<Student>();
+            Student st1 = new Student { name = "Swechchha" };
+
+            //st1 and st2 creation are same but different ways to represent.
+            Student st2 = new Student()
+            {
+                name = "Ranjit"
+            };
+
+            students.Add(st1);
+            students.Add(st2);
+
+            //Key must be unique for Dictionary
+            Dictionary<int, string> countries = new Dictionary<int, string>();
+            countries.Add(1, "USA");
+            countries.Add(977, "Nepal");
+            countries.Add(91, "India");
+
+            Console.WriteLine(countries[1]);
+
+            foreach (var item in countries)
+            {
+                Console.WriteLine(item.Key + " = " + item.Value);
+            }
+
+            //countries and countries1 objects are same but different ways to represent.
+            Dictionary<int, string> countries1 = new Dictionary<int, string>()
+
+            {
+                [1] = "USA",
+                [977] = "Nepal",
+                [91] = "India"
+            };
+
+            Console.WriteLine(countries1[1]);
+
+            foreach (var item in countries1)
+            {
+                Console.WriteLine(item.Key + " = " + item.Value);
+            }
+
+
+
         }
 
     }
