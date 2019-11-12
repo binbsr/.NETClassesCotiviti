@@ -17,13 +17,11 @@ namespace Exercise3
         public decimal GetAverageOfThreeNum1(params decimal[] numbers)
         {
             decimal sum = 0;
-            int count = 0;
             foreach (decimal num in numbers)
             {
                 sum += num;
-                count++;
             }
-            return (sum / count);
+            return (sum / numbers.Length);
         }
     }
         
@@ -35,7 +33,7 @@ namespace Exercise3
             public (int, int, int) GenderCollectionCount(char?[] genderCollection)
             {
                 int maleCount = 0; int femaleCount = 0; int otherCount = 0;
-                foreach (Nullable<char> genderCount in genderCollection)
+                foreach (char? genderCount in genderCollection)             // here char ? is used to take null value as well
                 {
                     if (genderCount == 'M')
                     {
