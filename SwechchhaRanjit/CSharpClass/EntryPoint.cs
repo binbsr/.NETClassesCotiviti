@@ -120,7 +120,7 @@ namespace MainProgram
             foreach (var item in countries1)
             {
                 Console.WriteLine(item.Key + " = " + item.Value);
-            }*/
+            }
 
             Collection list = new Collection();
             var animallist = list.GetAnimals();
@@ -140,6 +140,18 @@ namespace MainProgram
             {
                 Console.WriteLine($"{s.Key} : Artist name of {s.Value.name} song belonging to {s.Value.genre} genre is {s.Value.artistName}");
             }
+
+           //tuple
+           Collection c = new Collection();
+           List<(string SongName, string Genre, string Artist)>songs = c.FetchSongList();
+            foreach (var song in songs)
+            {
+                Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
+            }*/
+
+            //default constructor
+            Person p = new Person();
+            Person p1 = new Person("Swechchha");
 
         }
     }

@@ -17,3 +17,6 @@ Day4 (7th Nov 2019)
 
 Day5 (8th Nov 2019)
 	Learnt nested for loops, complexities of for loop, method types, variable number of arguments, string interpolation, optional arguments, named arguments and tuples.
+
+Day6 (11th Nov 2019)
+	Introduction to Generics, dictionary, list.
