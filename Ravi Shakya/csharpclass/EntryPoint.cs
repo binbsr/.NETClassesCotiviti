@@ -34,14 +34,14 @@ namespace MainProgram
             //(int min, int max) result = m.GetMinMax(new int[] {4, 3, 5, 6, 7, 8, 10});
             //Console.WriteLine("Min is : " + result.min);
             //Console.WriteLine("Max is : " + result.max);
-            Assignment2 x = new Assignment2();
+            //Assignment2 x = new Assignment2();
             //float output= x.CalcAverage(3.3F, 2.1F, 6.9F);
             //Console.WriteLine("Avg of 3 Decimal number is " + output);
             //decimal output = x.CalcAllAverage (new decimal[] {231.151,3.2,4.5,6.5,1.102});
             //Console.WriteLine ("Average of All Decimal Number is : " + output);
             // char?[] genders = (new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' });
             // (int male, int female, int others) output = x.CountGender(genders);
-            // Console.WriteLine($"Total no of Males = (output.male), Total no of Females = (output.female), Total no of Other Gener = (output.others");
+            // Console.WriteLine($"Total no of Males = {output.male}, Total no of Females = {output.female}, Total no of Other Gener = {output.others}");
 
             // //Generic: used when collections have multiple datatypes
             // Testlist<string> list = new Testlist<string>();
@@ -100,8 +100,43 @@ namespace MainProgram
             //   Console.WriteLine(item.Key + " = " + item.Value);
 
             // }
+            //list of animals name
+            List<string> animals = new List<string>() { "Cats", "Dogs", "Tigers", "Dinosaurus", "Snakes" };
             Collection c = new Collection();
-            
+            c.GetAnimals(animals);
+            //list of songs and genre
+            Dictionary<string, string> songs = new Dictionary<string, string>()
+            {
+                ["BackInBlack"] = "ClassicRock",
+                ["WhiskeyInTheJar"] = "HeavyMetal",
+                ["HighwayToHell"] = "ClassicRock",
+                ["One"] = "HeavyMetal"
+            };
+            c.FetchSongs(songs);
+
+            //modifying the above to return the list of songs name, genre and artist name  
+            Dictionary<string, List<string>> songsgenre = new Dictionary<string, List<string>>()
+            {
+                ["BackInBlack"] = new List<string> {"ClassicRock","AC/DC"},
+                ["WhiskeyInTheJar"] = new List<string> {"HeavyMetal", "Metalica"},
+                ["HighwayToHell"] = new List<string> {"ClassicRock", "AC/DC"},
+                ["One"] = new List <string> {"HeavyMetal", "Metalica"}
+            };
+                c.FetchSongs(songsgenre);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 
