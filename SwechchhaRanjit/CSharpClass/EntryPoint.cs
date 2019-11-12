@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Exercise3;
 using LearningMethods;
 using LoopandConditions;
 //using MultipleFiveNumbers;
@@ -50,7 +51,7 @@ namespace MainProgram
             int m1 = result.min;
             int m2 = result.max;
 
-            Console.WriteLine($"Minimum = (result.min) and Largest = (result.max)"); */
+            Console.WriteLine($"Minimum = (result.min) and Largest = (result.max)"); 
 
             Exercise2 exercise2 = new Exercise2();
             decimal average = exercise2.CalculateAvgThreeArguments(12.3M, 23.45M, 45.678M);
@@ -72,7 +73,7 @@ namespace MainProgram
             list.Add("sdfg");
 
             TestList<byte> list1 = new TestList<byte>();
-            list1.Add(34);*/
+            list1.Add(34);
 
             List<short> list2 = new List<short>();
             list2.Add(23);
@@ -119,9 +120,27 @@ namespace MainProgram
             foreach (var item in countries1)
             {
                 Console.WriteLine(item.Key + " = " + item.Value);
-            }
-            
-        }
+            }*/
 
+            Collection list = new Collection();
+            var animallist = list.GetAnimals();
+            foreach (string animals in animallist)
+            {
+                Console.WriteLine($"{animals}");
+            }
+
+            var songlist = list.FetchSongs();
+            foreach (var songs in songlist)
+            {
+                Console.WriteLine(songs.Key + " = " + songs.Value);
+            }
+
+            var songs1 = list.FetchSongs1();
+            foreach (var s in songs1)
+            {
+                Console.WriteLine($"{s.Key} : Artist name of {s.Value.name} song belonging to {s.Value.genre} genre is {s.Value.artistName}");
+            }
+
+        }
     }
 }
