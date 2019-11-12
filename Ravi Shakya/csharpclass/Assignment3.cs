@@ -5,28 +5,44 @@ namespace Practice
 {
     public class Collection
     {
-        public void GetAnimals(List<string> animals)
+        public List<string> GetAnimals()
         {
-            foreach (string animal in animals)
-            {
-                Console.WriteLine(animal);
-            }
+            var animals = new List<string> { "Cat", "Dog", "Tiger", "Dinosaurus" };
+            return animals;
         }
-        public void FetchSongs(Dictionary<string,string> songs)
+        public Dictionary<string, string> FetchSongs()
         {
-            foreach (var item in songs)
+            var songs = new Dictionary<string, string>
             {
-                Console.WriteLine($"{item.Key} = {item.Value}");
-            }
+                ["BackInBlack"] = "ClassicRock",
+                ["WhiskeyInTheJar"] = "HeavyMetal",
+                ["HighwayToHell"] = "ClassicRock",
+                ["One"] = "HeavyMetal"
+            };
+            return songs;
         }
-        public void AddArtists(Dictionary<String, List<string>> songsgenre)
+        public Dictionary<string, List<string>> FetchSongsDetail()
         {
-            foreach (var item in songsgenre)
+            var songs = new Dictionary<string, List<string>>
             {
-                Console.WriteLine($"{item.Key} {item.Value[0]} {item.Value[0]}");
+                ["BackInBlack"] = new List<string> { "ClassicRock", "AC/DC" },
+                ["WhiskeyInTheJar"] = new List<string> { "HeavyMetal", "Metalica" },
+                ["HighwayToHell"] = new List<string> { "ClassicRock", "AC/DC" },
+                ["One"] = new List<string> { "HeavyMetal", "Metalica" }
+            };
+            return songs;
+        }
+        public List<(string, string, string)> FetchSongsList()
+        {
+            var songs = new List<(string, string, string)>
+            {
+               ("BackInBlack","ClassicRock", "AC/DC"),
+                ("WhiskeyInTheJar","HeavyMetal", "Metalica"),
+            ("HighwayToHell","ClassicRock", "AC/DC" ),
+                ("One","HeavyMetal", "Metalica" )
+            };
+        return songs;
+        }
 
-            }
-        }
-        
     }
 }
