@@ -78,13 +78,18 @@ namespace MainProgram
             Console.WriteLine("The Largest is :"+max);
             */
 
-            Collection1 c = new Collection1();
+           /* Collection1 c = new Collection1();
             List<(string SongName, string Genre, string Artist)> songs = c.FetchsongsList();
             
             foreach(var song in songs)
                 {
                     Console.WriteLine($"Song Name={song.SongName} Genre ={song.Genre} Artist = {song.Artist}");
                 }
+            */
+
+            Person p = new Person();
+            Person p1 = new Person("Shree");
+
             
 
         }
