@@ -22,3 +22,7 @@ Learned about if else conditions
 Day5:
 Learned about methods with arguments
 Learned about multiple returns, string interpolations
+
+Day6:
+Learned about Generic class/methods
+Learned about List and Dictionary

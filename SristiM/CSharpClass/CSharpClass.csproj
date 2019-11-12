@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Nowarn>0414</Nowarn>
   </PropertyGroup>
 
 </Project>

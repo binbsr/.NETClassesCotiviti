@@ -23,3 +23,12 @@ discussion of methods.
  - optional arguments
  - string interpolation
  - returning multiple values
+
+Date: 11th November, 2019 (Class 6th)
+
+Learnt about Generic/Non-Generic, Datastructures and Lists
+
+Date: 12th November, 2019 (Class 7th)
+
+Learnt about use of Var and constructors.
+

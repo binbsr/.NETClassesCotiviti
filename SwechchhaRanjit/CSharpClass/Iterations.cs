@@ -5,6 +5,7 @@ namespace LoopandConditions
     public class Iterations
     {
         public void DefineLoops()
+
         {
             for (int i = 0; i < 100; i++)
             {
@@ -26,6 +27,20 @@ namespace LoopandConditions
             }
 
         }
+       
+        public void LearnNestedLoops()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Jai");
 
+                for (int j = 0; j < 10; j++)
+                {
+                  Console.WriteLine("Nepal");  
+                }
+            }
+            
+            
+        }
     }
 }

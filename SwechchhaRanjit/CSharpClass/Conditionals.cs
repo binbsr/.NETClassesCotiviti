@@ -70,7 +70,10 @@ namespace LoopandConditions
             Boolean checkeven;
              evennm = int.Parse(Console.ReadLine()); 
              checkeven = evennm % 2 ==  0 ? true : false;
+             if (checkeven == true)
              Console.WriteLine(evennm + " is even number");
+             else
+             Console.WriteLine(evennm + " is odd number");
         }
 
         public void SumSquaresNm()
@@ -86,5 +89,11 @@ namespace LoopandConditions
             }
         Console.WriteLine("Sum of squares of first natural numbers are: "+ sum);
         }
+
+        
+
+
+
+
     }
 }
