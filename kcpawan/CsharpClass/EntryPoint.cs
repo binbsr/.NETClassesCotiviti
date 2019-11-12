@@ -31,6 +31,7 @@ Public class person
 }
 */
 using System;
+using System.Collections.Generic;
 using Excercise;
 using LearningMethods;
 using LoopsAndConditions;
@@ -52,7 +53,7 @@ namespace MainProgram
            // Methods m = new Methods();
             //long s = m.AddTwoNumbers(5,10);
             //Console.WriteLine("Sum is " + s);
-            
+          /*  
             Methods m = new Methods();
             long s = m.Sum(5,10);
             long s1 =m.Sum(5,5,10);
@@ -75,6 +76,16 @@ namespace MainProgram
             int max = result.Max;
             Console.WriteLine("The Smallest is :"+ min);
             Console.WriteLine("The Largest is :"+max);
+            */
+
+            Collection1 c = new Collection1();
+            List<(string SongName, string Genre, string Artist)> songs = c.FetchsongsList();
+            
+            foreach(var song in songs)
+                {
+                    Console.WriteLine($"Song Name={song.SongName} Genre ={song.Genre} Artist = {song.Artist}");
+                }
+            
 
         }
     }
