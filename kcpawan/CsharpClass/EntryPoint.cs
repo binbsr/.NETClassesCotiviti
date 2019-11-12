@@ -30,7 +30,9 @@ Public class person
 
 }
 */
+using System;
 using Excercise;
+using LearningMethods;
 using LoopsAndConditions;
 
 namespace MainProgram
@@ -40,8 +42,40 @@ namespace MainProgram
 
         public static void Main()
         {
-            Excercise1 ex1 = new Excercise1();
-            ex1.PrintMultipleOfFive();
+            //Excercise1 ex1 = new Excercise1();
+            //ex1.PrintMultipleOfFive();
+            
+            
+            //Iterations ex1 = new Iterations();
+            //ex1.LearnNestedLoops();
+
+           // Methods m = new Methods();
+            //long s = m.AddTwoNumbers(5,10);
+            //Console.WriteLine("Sum is " + s);
+            
+            Methods m = new Methods();
+            long s = m.Sum(5,10);
+            long s1 =m.Sum(5,5,10);
+            Console.WriteLine("Sum is :"+s1);
+            Console.WriteLine("Sum is :"+s);
+
+            Methods fn = new Methods();
+            string j = fn.GetFullName("Pawan","KC");
+            Console.WriteLine("Hello "+j);
+        
+
+            //Methods fn = new Methods();
+            //Named Argument
+            string n = fn.GetFullName(lastName:"Pawan",firstName:"KC");
+            Console.WriteLine("Good Morning Mr."+n);
+
+            
+            (int Min, int Max) result = fn.GetMinMax(new int[]{10,50,2,54,8,91,23,99});
+            int min = result.Min;
+            int max = result.Max;
+            Console.WriteLine("The Smallest is :"+ min);
+            Console.WriteLine("The Largest is :"+max);
+
         }
     }
 }
