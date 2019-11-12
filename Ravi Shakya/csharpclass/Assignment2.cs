@@ -24,7 +24,7 @@ namespace UsingMethods
 
         //counting total males, females and others, given the array of genders
 
-        public (int, int, int) CountGender(char?[]genders)
+        public (int, int, int) CountGender (char?[] genders)
         {
             //char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
             
@@ -43,8 +43,9 @@ namespace UsingMethods
                 {
                     others += 1;
                 }
-                return (male, female, others);
+                
             }
+            return (male, female, others);
         }
     }
 
