@@ -6,7 +6,7 @@ public class Collection
     {
 
         string[] animalArray = { "Cat", "Dog", "Cow" };
-        List<string> animals = new List<string>();
+        var animals = new List<string>();
         animals.AddRange(animalArray);
         return animals;
 
@@ -32,6 +32,30 @@ public class Collection
         allSongDetails.Add(songdetail1);
         allSongDetails.Add(songdetail2);
         return allSongDetails;
+
+    }
+
+    public Dictionary<string, List<string>> FetchSongsGenre1()
+    {
+        var nameAndGenre = new Dictionary<string, List<string>>
+        {
+           ["song1"]=new List<string>{"genre1","artist1"},
+           ["song2"]=new List<string>{"genre2","artist2"}
+
+        };
+        return nameAndGenre;
+
+    }
+
+    public List<(string,string,string)> FetchSongDetails2()
+    {
+        var songs=new List<(string,string,string)>
+        {
+            ("song1","genre1","artist1"),
+            ("song2","genre2","artist2")
+        };
+
+        return songs;
 
     }
 
