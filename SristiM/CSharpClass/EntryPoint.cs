@@ -27,7 +27,7 @@ namespace MainProgram
             //c.EvenNumberCheckTernary();
             // c.SumofSquares();
             // c.LearnNestedLoops();
-
+            //--------------------------------------------------------------------
             //Methods m = new Methods();
 
             //long s=m.AddTwoNumbers(222,3333);
@@ -51,6 +51,7 @@ namespace MainProgram
             // (int NoOfMales, int NoOfFemales, int NoOfOthers) result =
             // m.DetemineGender(new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' });
             // Console.WriteLine($"No of Males={result.NoOfMales} and No of Females={result.NoOfFemales} and No of Others={result.NoOfOthers}");
+            //-----------------------------------------------------------------------------------            
 
             //calling generic method
             // TestList<string> list=new TestList<string>();
@@ -84,29 +85,60 @@ namespace MainProgram
             //     students.Add(student1);
             //     students.Add(student2);
 
-            Dictionary<int, string> countries = new Dictionary<int, string>()
-            {
-                [1] = "USA",
-                [977] = "Nepal",
-                [91] = "India"
-            };
-            // //Dictionary hold multiple data type
-            // //Key has to be unique,first paramter is always key like int in this case
-            // countries.Add(1,"USA");
-            // countries.Add(977,"Nepal");
-            // countries.Add(91,"Nepal");
+            // Dictionary<int, string> countries = new Dictionary<int, string>()
+            // {
+            //     [1] = "USA",
+            //     [977] = "Nepal",
+            //     [91] = "India"
+            // };
+            // // //Dictionary hold multiple data type
+            // // //Key has to be unique,first paramter is always key like int in this case
+            // // countries.Add(1,"USA");
+            // // countries.Add(977,"Nepal");
+            // // countries.Add(91,"Nepal");
 
-            //Console.WriteLine(countries[0]);
-            foreach (var item in countries)
-            {
-                Console.WriteLine(item.Key + "=" + item.Value);
-            }
+            // //Console.WriteLine(countries[0]);
+            // foreach (var item in countries)
+            // {
+            //     Console.WriteLine(item.Key + "=" + item.Value);
+            // }
+            //------------------------------------------------------------------------------
+            // Collection c = new Collection();
+            // //Print the list of animals
+            // List<string> resultListOfAnimals = c.GetAnimals();
+            // foreach (string anim in resultListOfAnimals)
+            // {
+            //     Console.WriteLine(anim);
 
+            // }
+            // Console.WriteLine();
+
+            // //Print the list of Songs and Genres
+            // Dictionary<string, string> resultSongNameGenre = c.FetchSongsGenre();
+            // foreach (var item in resultSongNameGenre)
+            // {
+            //     Console.WriteLine("Song name is " + item.Key + ", and song genre is " + item.Value);
+            // }
+            // Console.WriteLine();
+
+            // //Print the list of Song details
+            // List<SongDetails> resultSongDetails = c.FetchSongDetails();
+            // foreach (var item in resultSongDetails)
+            // {
+            //     Console.WriteLine($"Song name is {item.name} , and song genre is {item.genre} and the artist is {item.artist}");
+            // }
+            // Console.WriteLine();
+
+            // List<(string SongName, string Genre, string artist)> listofSongs = c.FetchSongDetails2();//Tuple deconstruction
+            // foreach (var song in listofSongs)
+            // {
+            //     Console.WriteLine($"Song Name= {song.SongName} Genre={song.Genre} Artist= {song.artist}");
+            // }
+
+            //----------------------------------------------------------------------------------------
+            Person p = new Person();
+            Person p1 = new Person("Person1");
         }
-
-
-
-
     }
 }
 

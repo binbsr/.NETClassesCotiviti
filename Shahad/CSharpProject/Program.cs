@@ -1,6 +1,9 @@
 ﻿using System;
 using LoopsAndConditions;
 using LearningMethods;
+using Constructors;
+
+
 
 namespace CSharpProject
 {
@@ -40,6 +43,8 @@ namespace CSharpProject
             (int min, int max) result= obj6.GetMinMax(new int[] {2,3,4,5,6,7});
             Console.WriteLine("min is: "+result.min);
             Console.WriteLine("max is: "+result.max);
+
+            PersonInfo person=new PersonInfo("Shahad");
         } 
 
     }

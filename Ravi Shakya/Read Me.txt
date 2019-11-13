@@ -28,3 +28,16 @@ Date: 11th November, 2019 (Class 6th)
 
 Learnt about Generic/Non-Generic, Datastructures and Lists
 
+Date: 12th November, 2019 (Class 7th)
+
+Learnt about use of Var and constructors.
+
+Date: 13th November, 2019 (Class 8th)
+
+Continuation of constructor.
+Auto implemented properties.
+readonly and write onlyl properties.
+Expression bodied definition and Access modifier.
+Enumeration lists.
+
+
