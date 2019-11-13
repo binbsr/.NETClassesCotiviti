@@ -35,6 +35,7 @@ using System.Collections.Generic;
 using Excercise;
 using LearningMethods;
 using LoopsAndConditions;
+using PropertiesAndEnums;
 
 namespace MainProgram
 {
@@ -87,10 +88,25 @@ namespace MainProgram
                 }
             */
 
-            Person p = new Person();
-            Person p1 = new Person("Shree");
+            PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Pawan","KC", "98419418850");
+            var x = p.FirstName;
+            var y = p.LastName;
+            var z = p.Phone;
+            Console.WriteLine(y+", "+x);      
+            Console.WriteLine("Cell No: "+z); 
 
+
+            Console.WriteLine("****************************************************");
             
+            p.FirstNameAI = "Pawan";                
+            Console.WriteLine(p.FirstNameAI);
+
+
+            Console.WriteLine("****************************************************");
+
+            var a = Customer.CardNo;
+            Customer c = new Customer();
+            var b = c.CitizenshipID;
 
         }
     }

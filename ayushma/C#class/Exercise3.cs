@@ -36,21 +36,21 @@ public class Exercise3
         {
             if (gender == 'M')
             {
-                
+
                 male++;
             }
             else if (gender == 'F')
             {
-                
+
                 female++;
             }
             else
             {
-               
+
                 others++;
             }
         }
-        System.Console.WriteLine ("M: "+male+" F: "+female+" O: "+others);
+        System.Console.WriteLine("M: " + male + " F: " + female + " O: " + others);
 
     }
 }
