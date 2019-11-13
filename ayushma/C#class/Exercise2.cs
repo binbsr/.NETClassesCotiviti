@@ -66,7 +66,7 @@ public class Exercise2
         int y; 
         Console.WriteLine ("Enter a number:"); 
         y = Convert.ToInt32(Console.ReadLine()); 
-        String result = y % 2 == 0 ? "even":"odd";
+        string result = y % 2 == 0 ? "even":"odd";
         Console.WriteLine (result);
         
     }
