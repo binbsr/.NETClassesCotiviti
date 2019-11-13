@@ -72,7 +72,7 @@ namespace LoopsAndConditions
         {
             string a=Console.ReadLine();
             int b=int.Parse(a);
-            Console.WriteLine((b%2==0) ? "The number is even" : "The number is odd");
+            Console.WriteLine((b%2==0) ? b+"  is even" : b+"  is odd");
 
         }
 

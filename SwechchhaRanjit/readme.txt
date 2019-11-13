@@ -12,3 +12,12 @@ Team name: Submission Team
 6th November, 2019 (Day 3)
 - Learn about Arrays and iterations.
 
+7th November, 2019 (Day 4)
+- Learn about Conditions.
+
+8th November, 2019 (Day 5)
+- Learn about Methods, Named Arguments, tuple.
+
+11th November, 2019 (Day 6)
+- Learn about Generic, Non-Generic, List and Dictionary.
+

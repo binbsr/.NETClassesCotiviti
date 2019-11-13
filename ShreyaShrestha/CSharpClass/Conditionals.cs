@@ -60,21 +60,22 @@ namespace LoopsAndConditions
         public void CheckEvenNumber()
         {
             int value = 0;
-            bool isInt = Int32.TryParse(Console.ReadLine(), out value);
+            //bool isInt = Int32.TryParse(Console.ReadLine(), out value);
             if (value != 0)
             {
-                bool iseven = value % 2 == 0 ? true : false;
+                //bool iseven = value % 2 == 0 ? true : false;
+                string iseven = value % 2 == 0 ? "even" : "odd";
+                Console.WriteLine($"The number is {value}");
+                // if (iseven)
+                // {
+                //     Console.WriteLine(value + " is even");
 
-                if (iseven)
-                {
-                    Console.WriteLine(value + " is even");
+                // }
 
-                }
-
-                else
-                {
-                    Console.WriteLine(value + " is odd");
-                }
+                // else
+                // {
+                //     Console.WriteLine(value + " is odd");
+                // }
             }
         }
 
@@ -82,33 +83,41 @@ namespace LoopsAndConditions
 
         public void CalculateTheSumOfFirstNNaturalNumbers()
         {
-            try
-            {
-                int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Enter numbers:");
-                int sum = 0;
-                int i = 0;
-                int[] inputNumbers = new int[nNoOfNaturalNumbers];
-                while (i < nNoOfNaturalNumbers)
-                {
-                    try
-                    {
-                        inputNumbers[i] = Int32.Parse(Console.ReadLine());
-                        sum += inputNumbers[i] * inputNumbers[i];
-                        i++;
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
-                }
-                Console.WriteLine("The sum of squares of first '{0}' numbers is '{1}'", nNoOfNaturalNumbers, sum);
-            }
+            // try
+            // {
+            //     int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
+            //     Console.WriteLine("Enter numbers:");
+            //     int sum = 0;
+            //     int i = 0;
+            //     int[] inputNumbers = new int[nNoOfNaturalNumbers];
+            //     while (i < nNoOfNaturalNumbers)
+            //     {
+            //         try
+            //         {
+            //             inputNumbers[i] = Int32.Parse(Console.ReadLine());
+            //             sum += inputNumbers[i] * inputNumbers[i];
+            //             i++;
+            //         }
+            //         catch (Exception e)
+            //         {
+            //             Console.WriteLine(e.Message);
+            //         }
+            //     }
+            //     Console.WriteLine("The sum of squares of first '{0}' numbers is '{1}'", nNoOfNaturalNumbers, sum);
+            // }
 
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            // catch (Exception ex)
+            // {
+            //     Console.WriteLine(ex.Message);
+            // }
+            int nNoOfNaturalNumbers = Int32.Parse(Console.ReadLine());
+            Console.WriteLine($"There are {nNoOfNaturalNumbers}");
+            int sum = 0;          
+               
+            sum = nNoOfNaturalNumbers * (nNoOfNaturalNumbers + 1) * (2 * nNoOfNaturalNumbers + 1) / 6;                
+            
+            Console.WriteLine($"The sum of {nNoOfNaturalNumbers} natural numbers is {sum}");
+
         }
     }
 }

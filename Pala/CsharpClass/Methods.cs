@@ -62,7 +62,7 @@ namespace LearningMethods
             }
             return (min, max);
         }
-        // Write C# method that calculate average of 3 decimal number arguments of 3 decimal number 
+
         public float AvgDec(float num1, float num2, float num3)
         {
             float Avg = (num1 + num2 + num3) / 3;
@@ -75,10 +75,47 @@ namespace LearningMethods
             float sum = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
-                 sum+=numbers[i];
+                sum += numbers[i];
             }
-            return(sum/(numbers.Length));
+            return (sum / (numbers.Length));
         }
-
+        // Wrtie C# method that count total males, females and others, given the array of genders as:
+        //char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+        public string GetGender(char?[] gender)
+        {
+            char male = 'M';
+            char female = 'F';
+            int m = 0;
+            int f = 0;
+            int o = 0;
+            for (int i = 0; i < gender.Length; i++)
+            {
+                if (gender[i] == male)
+                    m = m + 1;
+                else if (gender[i] == female)
+                    f = f + 1;
+                else
+                    o = o + 1;
+            }
+            string TotalGender = $"{m}, {f} {o}";//string interpolation
+            return (TotalGender);
+        }
+        public (int, int, int) GetGenderTuple(char?[] gender)
+        {
+            int m = 0;
+            int f = 0;
+            int o = 0;
+            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+            foreach (char?person in genderCollection)
+            {
+                if (person == 'M')
+                    m = m + 1;
+                else if (person == 'F')
+                    f = f + 1;
+                else
+                    o = o + 1;
+            }
+            return (m, f, o);
+        }
     }
 }
