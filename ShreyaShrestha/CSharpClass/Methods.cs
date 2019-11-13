@@ -59,9 +59,9 @@ namespace LearnNewMethods
         public decimal GetAverageOfNDecimalNumbers(decimal[] nums)
         {
             decimal sum = 0;
-            for (int i = 0; i < nums.Length; i++)
+            foreach(decimal e in nums)
             {
-                sum += nums[i];
+                sum += e;
             }
             return sum / nums.Length;
         }

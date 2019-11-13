@@ -26,6 +26,19 @@ using System;
                     Console.WriteLine(num);
             }
 
+
+        }
+        public void LearnNestedLoops()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Jay");
+                
+                for(int j=0; j < 10; j++)
+                {
+                    Console.WriteLine("Nepal");
+                }
+            }
         }
     }
 }
