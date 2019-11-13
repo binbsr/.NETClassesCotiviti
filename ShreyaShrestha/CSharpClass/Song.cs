@@ -3,7 +3,7 @@ using System;
 namespace GenericExamples
 {
 
-    public class Songs
+    public class Song
     {
        // public string songName;
 

@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GenericExamples;
+using PropertiesAndEnum;
 namespace MainProgram
 {
     public class EntryPoint
@@ -114,16 +115,16 @@ namespace MainProgram
 
           
             //for fetching songName and genre
-            foreach(var songList in c.FetchSongs())
-            {
-                Console.WriteLine(songList.Key + ", " + songList.Value);
-            }
+            // foreach(var songList in c.FetchSongs())
+            // {
+            //     Console.WriteLine(songList.Key + ", " + songList.Value);
+            // }
 
 
             //for fetching songName, genre and artist by class
-            // List<Songs> songs = new List<Songs>();            
-            // Songs song1 = new Songs { songName = "Sayau Thunga", genre = "National Song", artistName = "Bimal Maila"};
-            // Songs song2 = new Songs {songName = "Komal tyo timro" , genre = "Pop" , artistName = "Sabin Rai"};
+            // List<Song> songs = new List<Song>();            
+            // Song song1 = new Songs { songName = "Sayau Thunga", genre = "National Song", artistName = "Bimal Maila"};
+            // Song song2 = new Songs {songName = "Komal tyo timro" , genre = "Pop" , artistName = "Sabin Rai"};
             // songs.Add(song1);
             // songs.Add(song2);
 
@@ -132,14 +133,42 @@ namespace MainProgram
             // {
             //     Console.WriteLine(song.songName + ", " + song.genre + ", " + song.artistName);
             // }
-            
-            foreach(var item in c.FetchSongsBySongNameGenreArtist())
-            {
-                Console.WriteLine(item.Key + "," + item.Value.genre + ", " + item.Value.artistName );
-            }
 
-    
+            // foreach(var item in c.FetchSongsBySongNameGenreArtist())
+            // {
+            //     Console.WriteLine(item.Key + "," + item.Value.genre + ", " + item.Value.artistName );
+            // }
+
+            // foreach(var item in c.FetchSongsBySongNameGenreArtist1())
+            // {
+            //     Console.WriteLine($"Song name = {item.Key}, Genre = {item.Value}");
+            // }
+
+            // List<(string songName, string genre, string artist)> songs = c.FetchSongsBySongNameGenreArtist2();
+            // foreach(var item in songs)
+            // {
+            //     Console.WriteLine($"Song Name = {item.songName}, Genre = {item.genre}, Artist = {item.artist}");
+            // }    
+
+            // Person p = new Person(); //since the fields are private we cannot access the fields using p.name or p.age
+            // Person p1 = new Person("Shreya");
+
+            PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
+            var x = p.FirstName;
+            var y = p.LastName;
+            x = p.FullName;
+            // p.FirstName = "abc";
+            // x = p.FirstName;
+            //Console.WriteLine($"{x}, {y}");
+            Console.WriteLine(x);
+
+            Customer customer = new Customer("");
+            var a = Customer.cardNumber;
+           // var z = Customer.citizenshipNumber;
+           var z = customer.citizenshipNumber;
+            
     }
+
 
 }
 }
