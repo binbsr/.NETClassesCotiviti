@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using LearningMethods;
 using LoopsAndConditions;
+using PropertiesAndEnums;
 
 namespace MainProgram
 {
@@ -10,8 +11,8 @@ namespace MainProgram
     {
         public static void Main()
         {
-            Person p = new Person();
-            Person p1 = new Person("Shreya");
+            var x = Customer.CardNo;
+            
         }
     }
 }
