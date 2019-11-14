@@ -5,6 +5,8 @@ using System.Collections;
 using Practice;
 using Collection;
 using System;
+using Properties;
+using HealthAndFitness;
 namespace MainProgram
 {
     public class entryPoint
@@ -48,36 +50,76 @@ namespace MainProgram
                Console.WriteLine($"Total Female: {result.F} Total Male: {result.M} Total Unknown: {result.U} ");*/
 
 
-            Collections c = new Collections();
-            List<String> animalList = c.GetAnimals();
-            Console.WriteLine("List of Animals:");
-            foreach (string a in animalList)
+            /*         Collections c = new Collections();
+                     List<String> animalList = c.GetAnimals();
+                     Console.WriteLine("List of Animals:");
+                     foreach (string a in animalList)
+                     {
+                         Console.WriteLine(a);
+
+                     }
+                     Console.WriteLine("-----------------------");
+
+                     Dictionary<string, string> songList = c.FetchSongs();
+                     Console.WriteLine("Song => Genre");
+                     foreach (KeyValuePair<string, string> songs in songList)
+                     {
+                         Console.WriteLine("{0} => {1}", songs.Key, songs.Value);
+                     }
+
+                     Console.WriteLine("-----------------------");
+
+
+                     Dictionary<string, List<string>> songDetail = c.FetchSongsDetail();
+                     Console.WriteLine("Song | Genre | Singer/Band");
+                     foreach (var songs in songDetail)
+                     {
+                         string key = songs.Key;
+                         List<string> values = songs.Value;
+                         Console.WriteLine(key + "| " + string.Join("| ", values));
+                     }
+
+                     Colletion02 cc = new Colletion02();
+                    List<(string songName,string genreName,string artistName)> songs02 = cc.FetchSongDetail();
+                    foreach(var song in songs02){
+                        Console.WriteLine($"Song:{song.songName} Genre:{song.genreName} Artist:{song.artistName}");
+
+                    } */
+            Properties.Person p = new Properties.Person("Anna", "Rai"); //to remove ambugity
+                                                                        //  var x = p.FirstName;
+                                                                        //  var y = p.LastName;
+                                                                        //    var z = p.Phone;
+            var a = p.FullName;
+            //  var b = p.FirstName02;
+            Console.WriteLine(a);
+            //   Console.WriteLine(b);
+            // var x=Customer.CardNo; //doesnt need to create class object to call a constant of a class.
+
+            //Console.WriteLine("Enter your age");
+            //float val = float.Parse(Console.ReadLine());
+            BodyFatCaclulator FatCalc = new BodyFatCaclulator(1.58f, 56.0f);
+            FatCalc.Age = 38;
+            var sex = FatCalc.Gender = "F";
+            if (sex == "F")
             {
-                Console.WriteLine(a);
-
+                FatCalc.GenderFlag = 0;
             }
-            Console.WriteLine("-----------------------");
+            else FatCalc.GenderFlag = 1;
+            var bmiValue = FatCalc.BMICalculator();
+            var bmicalc = FatCalc.PersonHealthDetail(bmiValue);
+            Console.WriteLine(bmicalc);
+            var fatPercentage = FatCalc.BodyFatCalculation;
+            var bodyFatAnalysis = sex == "F" ? FatCalc.BodyFatResultEvaluationFemale : FatCalc.BodyFatResultEvaluationMale;
+            Console.WriteLine(bodyFatAnalysis);
 
-            Dictionary<string, string> songList = c.FetchSongs();
-            Console.WriteLine("Song => Genre");
-            foreach (KeyValuePair<string, string> songs in songList)
-            {
-                Console.WriteLine("{0} => {1}", songs.Key, songs.Value);
-            }
+            //Student s1 = new Student();
+            //Student s2 = new Student();
+            //Student s3 = new Student();
 
-            Console.WriteLine("-----------------------");
+            //Student.PrintStudentDetails();
+            //Math.Sin(123);
 
-
-            Dictionary<string, List<string>> songDetail = c.FetchSongsDetail();
-            Console.WriteLine("Song | Genre | Singer/Band");
-            foreach (var songs in songDetail)
-            {
-                string key = songs.Key;
-                List<string> values = songs.Value;
-                Console.WriteLine(key + "| " + string.Join("| ", values));
-            }
-
-
+            //Student.address
 
         }
     }
