@@ -24,15 +24,35 @@ namespace GenericExamples
 
         }
 
-        public Dictionary<string , Songs> FetchSongsBySongNameGenreArtist()
+        public Dictionary<string , Song> FetchSongsBySongNameGenreArtist()
         {
-            Dictionary<string, Songs > songs = new Dictionary<string, Songs>();                 
-            Songs song1 = new Songs {genre = "National Song", artistName = "Byakul Maila"};
-            Songs song2 = new Songs {genre = "Pop", artistName = "Sabin Rai"};
+            Dictionary<string, Song> songs = new Dictionary<string, Song>();                 
+            Song song1 = new Song {genre = "National Song", artistName = "Byakul Maila"};
+            Song song2 = new Song {genre = "Pop", artistName = "Sabin Rai"};
             songs.Add("Sayau Thunga", song1);
             songs.Add("Komal tyo timro", song2);
             return songs;
 
+        }
+
+        public Dictionary<string, List<string>> FetchSongsBySongNameGenreArtist1()
+        {
+            var songsList = new Dictionary<string, List<string>>
+            {
+                ["abc"] = new List<string>{"aa","ab"},
+                ["ab"] = new List<string>{"b", "c"}
+            };
+            return songsList;
+        }
+
+         public List<(string, string, string)> FetchSongsBySongNameGenreArtist2()
+        {
+            var songsList = new List<(string, string, string)>
+            {
+               ("a","b","c"),
+               ("d","e","f")
+            };
+            return songsList;
         }
 
     }

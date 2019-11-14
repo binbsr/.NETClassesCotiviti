@@ -9,10 +9,45 @@ namespace Exercise4Collection
     {
         public List<string> ReturnAnimalName()
         {
-            List<string> AnimalName = new List<string> {"tiger","cat","cow","dog","leopard"};
-            return AnimalName;   
+            var animalName = new List<string> {"tiger","cat","cow","dog","leopard"};   // or use List<string> animalName
+            return animalName;   
         }
 
+        // Fetch song using Dictionary method
+        public Dictionary<string, string> FetchSongs()
+        {
+            var songs = new Dictionary<string, string>
+            {
+                ["song1"] = "Jazz",
+                ["song2"] = "Blues",
+                ["song3"] = "Classical"
+            };
+            return songs;
+        }
+
+        // Fetch song using list of dictionary
+        public Dictionary<string, List<string>> FetchSongs1()
+        {
+            var songs = new Dictionary<string, List<string>>
+            {
+                    ["song1"] = new List<string> { "Genre1", "Ram"},
+                    ["song2"] = new List<string> { "Genre2", "Sita" },
+                    ["song3"] = new List<string> { "Genre3", "hari" }
+             };
+             return songs;
+        }
+
+        // using List of Tuple 
+      /*  public List<(string, string, string)> Fetchsongs2()
+        {
+            var songs = new List<(string, string, string)>
+            {
+                ("abc", "adsf", "dafs"),
+                ("abc", "adsf", "dafs"),
+                ("abc", "adsf", "dafs")
+            };
+        }
+        */
         public List<SongDetails> ReturnSongNameGenre()
         {
             SongDetails song1 = new SongDetails()

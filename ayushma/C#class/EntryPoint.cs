@@ -1,6 +1,8 @@
 using System;
 using LoopsAndConditions;  
 using LearningMethods;
+using System.Collections.Generic;
+
 namespace MainProgram
 {
 public class EntryPoint
@@ -23,7 +25,7 @@ public static void Main() // main methods has to be static
         //obj2.UseTernaryEvenOdd();
         //obj2.SumofSquares();
         
-        Exercise3 obj3 = new Exercise3();
+        //Exercise3 obj3 = new Exercise3();
         //obj3.LearnNestedLoops();
         //Methods m = new Methods();
         //long sum = m.AddTwoNumbers(273642,463729);
@@ -35,15 +37,30 @@ public static void Main() // main methods has to be static
         //(int Min,int Max) result = m.GetMinMax(new int[] {4,3,5,2,6});
         //Console.WriteLine (result);
         //Console.WriteLine($"Minimum value = {result.Min} and Maximum value = {result.Max}");
-        double avg = obj3.AverageofDecimalNumbers(12.5, 12.5, 12.5);
-        Console.WriteLine(avg);
+        //double avg = obj3.AverageofDecimalNumbers(12.5, 12.5, 12.5);
+        //Console.WriteLine(avg);
 
-        Exercise3 obj4 = new Exercise3();
-        long sum = obj4.AverageofN(8,8,8,8,8);
-        Console.WriteLine(sum);
+        //Exercise3 obj4 = new Exercise3();
+        //long sum = obj4.AverageofN(8,8,8,8,8);
+        //Console.WriteLine(sum);
 
-        Exercise3 obj5=new Exercise3();
-        obj5.CountGender();
+        //Exercise3 obj5=new Exercise3();
+        //obj5.CountGender();
+
+        // Collection c = new Collection();
+        // List<(string SongName, string Genre, string Artist)> songs = c.FetchSongDetails1();
+
+        // foreach (var song in songs)
+        // {
+        //     Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist ={song.Artist}");
+        // }
+
+        
+        Person p = new Person("Ayu");
+        Person p1 = new Person("Shahad");
+        p.print();
+        p1.print();
+
     }
 }
 }

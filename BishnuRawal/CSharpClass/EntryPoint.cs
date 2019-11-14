@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using LearningMethods;
 using LoopsAndConditions;
+using PropertiesAndEnums;
 
 namespace MainProgram
 {
@@ -8,12 +11,8 @@ namespace MainProgram
     {
         public static void Main()
         {
-            Methods m = new Methods(); 
-            //Named arguments           
-            string name = m.GetFullName(lastName: "Rawal", firstName: "Rawal");
-            (int Min, int Max) result = m.GetMinMax(new int[] {4, 3, 5, 2, 6});
-
-            Console.WriteLine($"Minimum = {result.Min} and Largest = {result.Max}");
+            var x = Customer.CardNo;
+            
         }
     }
 }

@@ -7,6 +7,7 @@ using LearningMethods;
 using LoopandConditions;
 //using MultipleFiveNumbers;
 using Practice;
+using PropertiesAndEnums;
 
 namespace MainProgram
 {
@@ -147,11 +148,17 @@ namespace MainProgram
             foreach (var song in songs)
             {
                 Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
-            }*/
+            }
 
             //default constructor
             Person p = new Person();
             Person p1 = new Person("Swechchha");
+
+            PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Swechchha", "Ranjit");
+            var x = p.FirstName;
+            System.Console.WriteLine(x);*/
+
+            var x = Customer.CardNo;
 
         }
     }
