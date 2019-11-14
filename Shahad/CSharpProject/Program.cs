@@ -1,9 +1,10 @@
 ﻿using System;
-using LoopsAndConditions;
-using LearningMethods;
-using Constructors;
-
-
+// using LoopsAndConditions;
+// using LearningMethods;
+// using Constructors;
+// using PropertiesAndEnums;
+// //using PropertiesAndEnums2;
+using StudentDetails;
 
 namespace CSharpProject
 {
@@ -30,22 +31,39 @@ namespace CSharpProject
 
             // NestFor obj5 = new NestFor();
             // obj5.NestedLoops();
-        
-            Methods obj6= new Methods();
+
+            //Methods obj6 = new Methods();
             // long sum = obj6.Add2Numbers(11231,21230);
             // Console.WriteLine("Sum is: "+sum);
             // long sum=obj6.Sum(123,123,123,123);
             // Console.WriteLine("Sum is: "+sum);
 
-        //    String Fullname= obj6.GetFullName(Mname:"Chandra",Lname:"Shrestha",Fname:"Shahad"); //Named arguments
-        //     Console.WriteLine("Your full name is: "+Fullname);
-        
-            (int min, int max) result= obj6.GetMinMax(new int[] {2,3,4,5,6,7});
-            Console.WriteLine("min is: "+result.min);
-            Console.WriteLine("max is: "+result.max);
+            //    String Fullname= obj6.GetFullName(Mname:"Chandra",Lname:"Shrestha",Fname:"Shahad"); //Named arguments
+            //     Console.WriteLine("Your full name is: "+Fullname);
 
-            PersonInfo person=new PersonInfo("Shahad");
-        } 
+            // (int min, int max) result = obj6.GetMinMax(new int[] { 2, 3, 4, 5, 6, 7 });
+            // Console.WriteLine("min is: " + result.min);
+            // Console.WriteLine("max is: " + result.max);
+
+            // Person person = new Person("Shahad","Shrestha");
+            // person.FirstName = "Shahad Chandra ";
+            // var x = person.FirstName + person.LastName;
+            // person.HasTB= false;
+            
+            // Console.WriteLine("Name:"+x);
+
+        
+           // var cardNo= Customer.cardNo;
+            
+            // Customer c=new Customer();
+            // var CitNo=c.CitizenshipNo;
+
+            //Console.WriteLine(Student.PrintStudentDetails());
+            Student s1=new Student();
+            Student s2=new Student();
+
+        
+        }
 
     }
 }
