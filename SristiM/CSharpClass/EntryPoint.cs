@@ -1,20 +1,15 @@
-using LoopsAndConditions;
-using LearningMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using LearningMethods;
+using LoopsAndConditions;
 using PropertiesAndEnum;
 
-
-
 //comment ctrl+K+C and uncomment ctrl+K+U
-namespace MainProgram
-{
-    public class EntryPoint
-    {
-        public static void Main()//Main method has to be static
+namespace MainProgram {
+    public class EntryPoint {
+        public static void Main () //Main method has to be static
         {
-
 
             // Iterations iterations = new Iterations();
             // iterations.DefineLoops();
@@ -140,23 +135,27 @@ namespace MainProgram
             //----------------------------------------------------------------------------------------
             // Person p = new Person();
             // Person p1 = new Person("Person1");
+            //-----------------------------------------------------------
+            //     PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
+            //     var x = p.FirstName;
+            //     var y = p.LastName;
+            //     x = p.FullName;
+            //     // p.FirstName = "abc";
+            //     // x = p.FirstName;
+            //     //Console.WriteLine($"{x}, {y}");
+            //     Console.WriteLine(x);
 
-            PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
-            var x = p.FirstName;
-            var y = p.LastName;
-            x = p.FullName;
-            // p.FirstName = "abc";
-            // x = p.FirstName;
-            //Console.WriteLine($"{x}, {y}");
-            Console.WriteLine(x);
+            //     Customer customer = new Customer("");
+            //     var a = Customer.cardNumber;
+            //    // var z = Customer.citizenshipNumber;
+            //    var z = customer.citizenshipNumber;
+            Student s1 = new Student (); //first object call always looks for static constructor, and is called only once
+            Student s2 = new Student ();
+            Student s3 = new Student ();
+            //Student.address
 
-            Customer customer = new Customer("");
-            var a = Customer.cardNumber;
-           // var z = Customer.citizenshipNumber;
-           var z = customer.citizenshipNumber;
+            //Student.PrintStudentDetails();//call the static method through class i.e. class.
+
         }
     }
 }
-
-
-
