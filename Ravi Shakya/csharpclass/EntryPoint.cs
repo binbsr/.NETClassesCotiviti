@@ -4,7 +4,8 @@ using System;
 using UsingMethods;
 using System.Collections.Generic;
 using System.Collections;
-using Practice;
+using PropertiesAndEnums;
+// using Practice;
 
 namespace MainProgram
 {
@@ -101,28 +102,44 @@ namespace MainProgram
 
             // }
             //list of animals name
-            List<string> animals = new List<string>() { "Cats", "Dogs", "Tigers", "Dinosaurus", "Snakes" };
-            Collection c = new Collection();
-            c.GetAnimals(animals);
+          //   Collection c = new Collection();
+
+          //   List<string> animallists = c.GetAnimals();
+          //  Console.WriteLine("List of Animals:");
+          //  foreach(string a in animallists)
+          //  {
+          //    Console.WriteLine(a);
+          //  }
+          //  Console.WriteLine("..............................");
+
+
             //list of songs and genre
-            Dictionary<string, string> songs = new Dictionary<string, string>()
-            {
-                ["BackInBlack"] = "ClassicRock",
-                ["WhiskeyInTheJar"] = "HeavyMetal",
-                ["HighwayToHell"] = "ClassicRock",
-                ["One"] = "HeavyMetal"
-            };
-            c.FetchSongs(songs);
+           
 
             //modifying the above to return the list of songs name, genre and artist name  
-            Dictionary<string, List<string>> songsgenre = new Dictionary<string, List<string>>()
-            {
-                ["BackInBlack"] = new List<string> {"ClassicRock","AC/DC"},
-                ["WhiskeyInTheJar"] = new List<string> {"HeavyMetal", "Metalica"},
-                ["HighwayToHell"] = new List<string> {"ClassicRock", "AC/DC"},
-                ["One"] = new List <string> {"HeavyMetal", "Metalica"}
-            };
-                c.FetchSongs(songsgenre);
+            
+          //  List<(string SongName, string Genre, string Artist)>songs =c.FetchSongsList();
+          //  foreach(var song in songs)
+          //  {
+          //    Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
+
+          //  }
+            // Person p = new Person();
+            // Person p1 = new Person ("Ravi");
+
+            PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Ravi","Shakya");
+            var x = p.FirstName;
+            p.FirstName = "Ravi";
+            x = p.FirstName;
+            Console.WriteLine();
+
+           var x = Customer.CardNo;
+           Customer c =new Customer();
+           
+
+
+
+
 
 
 

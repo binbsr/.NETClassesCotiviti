@@ -3,6 +3,8 @@ using LearningMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PropertiesAndEnum;
+
 
 
 //comment ctrl+K+C and uncomment ctrl+K+U
@@ -103,33 +105,55 @@ namespace MainProgram
             //     Console.WriteLine(item.Key + "=" + item.Value);
             // }
             //------------------------------------------------------------------------------
-            Collection c = new Collection();
-            //Print the list of animals
-            List<string> resultListOfAnimals = c.GetAnimals();
-            foreach (string anim in resultListOfAnimals)
-            {
-                Console.WriteLine(anim);
+            // Collection c = new Collection();
+            // //Print the list of animals
+            // List<string> resultListOfAnimals = c.GetAnimals();
+            // foreach (string anim in resultListOfAnimals)
+            // {
+            //     Console.WriteLine(anim);
 
-            }
-            Console.WriteLine();
+            // }
+            // Console.WriteLine();
 
-            //Print the list of Songs and Genres
-            Dictionary<string, string> resultSongNameGenre = c.FetchSongsGenre();
-            foreach (var item in resultSongNameGenre)
-            {
-                Console.WriteLine("Song name is " + item.Key + ", and song genre is " + item.Value);
-            }
-            Console.WriteLine();
+            // //Print the list of Songs and Genres
+            // Dictionary<string, string> resultSongNameGenre = c.FetchSongsGenre();
+            // foreach (var item in resultSongNameGenre)
+            // {
+            //     Console.WriteLine("Song name is " + item.Key + ", and song genre is " + item.Value);
+            // }
+            // Console.WriteLine();
 
-            //Print the list of Song details
-            List<SongDetails> resultSongDetails = c.FetchSongDetails();
-            foreach (var item in resultSongDetails)
-            {
-                Console.WriteLine("Song name is " + item.name + ", and song genre is " + item.genre + ", and the artist is " + item.artist);
-            }
-            Console.WriteLine();
+            // //Print the list of Song details
+            // List<SongDetails> resultSongDetails = c.FetchSongDetails();
+            // foreach (var item in resultSongDetails)
+            // {
+            //     Console.WriteLine($"Song name is {item.name} , and song genre is {item.genre} and the artist is {item.artist}");
+            // }
+            // Console.WriteLine();
+
+            // List<(string SongName, string Genre, string artist)> listofSongs = c.FetchSongDetails2();//Tuple deconstruction
+            // foreach (var song in listofSongs)
+            // {
+            //     Console.WriteLine($"Song Name= {song.SongName} Genre={song.Genre} Artist= {song.artist}");
+            // }
 
             //----------------------------------------------------------------------------------------
+            // Person p = new Person();
+            // Person p1 = new Person("Person1");
+
+            PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
+            var x = p.FirstName;
+            var y = p.LastName;
+            x = p.FullName;
+            // p.FirstName = "abc";
+            // x = p.FirstName;
+            //Console.WriteLine($"{x}, {y}");
+            Console.WriteLine(x);
+
+            Customer customer = new Customer("");
+            var a = Customer.cardNumber;
+           // var z = Customer.citizenshipNumber;
+           var z = customer.citizenshipNumber;
         }
     }
 }
