@@ -4,6 +4,9 @@ using LearningMethods;
 using System;
 using Generics;
 using System.Collections.Generic;
+                
+using PropertiesAndEnums;
+using Flight;
 
 
 namespace MainProgram 
@@ -96,13 +99,42 @@ namespace MainProgram
                  {
                      Console.WriteLine($"{song.name} is a {song.genre} song and sung by {song.artist}");
                  }
-                 */
+                 
+                 // tuple deconstruction
             List<(string songname,string genre,string artist)> songs = collections.GetallSongs();
+
+
             foreach(var song  in songs)
                  {
                      Console.WriteLine($"{song.songname} is a {song.genre} song and sung by {song.artist}");
                  }
-            
+                
+                 PropertiesAndEnums.Person person=new PropertiesAndEnums.Person("shreya","Pradhan","Basundhara");
+                 var x=person.Address;
+                 Console.WriteLine(x);
+                 var x1=Customer.CardNO; // constant can be accessed using Class name itself, inherently static
+                 Customer c = new Customer();
+
+                 */
+
+                 Aeroplane aeroplane=new Aeroplane("pradhan","Buddha Airways",20);
+                 aeroplane.origin="Kathmandu";
+                 aeroplane.destination="Butwal";
+                 var passangerOnboard=aeroplane.Capacity;
+                 var route=aeroplane.DisplayRoute();
+                 Console.WriteLine($"route: {route}");
+                 Console.WriteLine($"number of passanger={passangerOnboard}");
+                 
+
+
+                 
+                 
+
+                
+
+                            
+
+                            
              
     
  }
