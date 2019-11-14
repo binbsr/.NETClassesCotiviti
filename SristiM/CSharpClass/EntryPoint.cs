@@ -3,6 +3,8 @@ using LearningMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PropertiesAndEnum;
+
 
 
 //comment ctrl+K+C and uncomment ctrl+K+U
@@ -136,8 +138,22 @@ namespace MainProgram
             // }
 
             //----------------------------------------------------------------------------------------
-            Person p = new Person();
-            Person p1 = new Person("Person1");
+            // Person p = new Person();
+            // Person p1 = new Person("Person1");
+
+            PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
+            var x = p.FirstName;
+            var y = p.LastName;
+            x = p.FullName;
+            // p.FirstName = "abc";
+            // x = p.FirstName;
+            //Console.WriteLine($"{x}, {y}");
+            Console.WriteLine(x);
+
+            Customer customer = new Customer("");
+            var a = Customer.cardNumber;
+           // var z = Customer.citizenshipNumber;
+           var z = customer.citizenshipNumber;
         }
     }
 }
