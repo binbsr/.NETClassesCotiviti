@@ -127,15 +127,27 @@ namespace MainProgram
             // Person p = new Person();
             // Person p1 = new Person ("Ravi");
 
-            PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Ravi","Shakya");
-            var x = p.FirstName;
-            p.FirstName = "Ravi";
-            x = p.FirstName;
-            Console.WriteLine();
+          //   PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Ravi","Shakya");
+          //   var x = p.FirstName;
+          //   p.FirstName = "Ravi";
+          //   x = p.FirstName;
+          //   Console.WriteLine();
 
-           var x = Customer.CardNo;
-           Customer c =new Customer();
+          //  var x = Customer.CardNo;
+          //  Customer c =new Customer();
            
+           Student s1 = new Student( ); //s1 is the instance
+
+            Student s2 = new Student();
+             Student s3 = new Student();
+              Student s4 = new  Student();
+               Student s5 = new Student();
+              //  Student.PrintStudentDetails();
+
+              //  Math.Sin(324);
+
+               //Student.address
+
 
 
 

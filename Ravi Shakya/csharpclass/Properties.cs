@@ -16,11 +16,12 @@ namespace PropertiesAndEnums
             firstName = f;
             lastName = l;
         }
+        //autom implemented properties
         public string FirstName {get; set;}
         public string LastName {get; set;}
 
         //Expression bodied definition
-        //Read only property
+        //Read only property {Read only property has only get}
         public string FullName => $"{FirstName} {LastName}";
 
         // // public string LastName
@@ -40,7 +41,7 @@ namespace PropertiesAndEnums
         //     }
         // }
         
-        public bool HasTB //write only property
+        public bool HasTB //write only property {write only property has only set}
         {
             set=> hasTB = value;
         }

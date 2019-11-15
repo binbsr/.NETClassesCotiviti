@@ -41,3 +41,10 @@ Expression bodied definition and Access modifier.
 Enumeration lists.
 
 
+Date; 14th November, 2019 (Class 9th)
+
+uses of static kewords.
+understanding of concept of inheritances. 
+types of inheritances,.
+
+
