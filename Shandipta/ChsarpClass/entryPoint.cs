@@ -85,28 +85,34 @@ namespace MainProgram
                         Console.WriteLine($"Song:{song.songName} Genre:{song.genreName} Artist:{song.artistName}");
 
                     } */
-            Properties.Person p = new Properties.Person("Anna", "Rai"); //to remove ambugity
-                                                                        //  var x = p.FirstName;
-                                                                        //  var y = p.LastName;
-                                                                        //    var z = p.Phone;
-            var a = p.FullName;
-            //  var b = p.FirstName02;
-            Console.WriteLine(a);
-            //   Console.WriteLine(b);
-            // var x=Customer.CardNo; //doesnt need to create class object to call a constant of a class.
-
-            //Console.WriteLine("Enter your age");
-            //float val = float.Parse(Console.ReadLine());
-            BodyFatCaclulator FatCalc = new BodyFatCaclulator(1.58f, 56.0f);
-            FatCalc.Age = 38;
-            var sex = FatCalc.Gender = "M";
-            FatCalc.GenderFlag=sex=="F" ? 0 : 1;
-            var bmiValue = (float)(Math.Round(FatCalc.BMICalculator(),2));
+            /*        Properties.Person p = new Properties.Person("Anna", "Rai"); //to remove ambugity
+                                                                                //  var x = p.FirstName;
+                                                                                //  var y = p.LastName;
+                                                                                //    var z = p.Phone;
+                    var a = p.FullName;
+                    //  var b = p.FirstName02;
+                    Console.WriteLine(a);
+                    //   Console.WriteLine(b);
+                    // var x=Customer.CardNo; //doesnt need to create class object to call a constant of a class.
+        */
+            Console.WriteLine("Enter your height in meter:");
+            var heightInMeter = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your weight in kg:");
+            var weightInKg = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your age:");
+            var age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gender M/F:");
+            var sex = Console.ReadLine();
+            BodyFatCaclulator FatCalc = new BodyFatCaclulator(heightInMeter, weightInKg);
+            FatCalc.Age = age;
+            FatCalc.Gender = sex;
+            FatCalc.GenderFlag = sex == "F" ? 0 : 1;
+            var bmiValue = FatCalc.BMICalculator;
             var bmicalc = FatCalc.PersonHealthDetail(bmiValue);
             Console.WriteLine(bmicalc);
-            var fatPercentage = FatCalc.BodyFatCalculation;
             var bodyFatAnalysis = sex == "F" ? FatCalc.BodyFatResultEvaluationFemale : FatCalc.BodyFatResultEvaluationMale;
             Console.WriteLine(bodyFatAnalysis);
+        
             //Student s1 = new Student();
             //Student s2 = new Student();
             //Student s3 = new Student();
