@@ -31,7 +31,7 @@ namespace HealthAndFitness
     {
         private string gender, fatPercentageCategory;
 
-        private float bmi, heightInMeter, weightInKg, fatPercentage;
+        private float bmi, heightInMeter, weightInKg;
         private string nl = Environment.NewLine;
         //Default Constructor
         public BodyFatCaclulator()
@@ -68,12 +68,11 @@ namespace HealthAndFitness
 
 
         }
-        public string BodyFatCalculation
+        public float BodyFatCalculation
         {
             get
             {
-                fatPercentage = (1.20f * bmi) + (0.23f * Age) - (10.8f * GenderFlag) - 5.4f;
-                return $"{fatPercentage}%";
+                return (float)(Math.Round((float)(1.20f * bmi) + (0.23f * Age) - (10.8f * GenderFlag) - 5.4f,2));
             }
 
         }
@@ -83,24 +82,24 @@ namespace HealthAndFitness
 
             get
             {
-                if (fatPercentage < (int)fatPercentangeRangeFemale.UltraLeanMin)
+                if (BodyFatCalculation < (int)fatPercentangeRangeFemale.UltraLeanMin)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which is very low.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which is very low.";
 
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeFemale.UltraLeanMin && fatPercentage <= (int)fatPercentangeRangeFemale.UltraLeanMin)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeFemale.UltraLeanMin && BodyFatCalculation <= (int)fatPercentangeRangeFemale.UltraLeanMin)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which means you are UltraLean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which means you are UltraLean.";
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeFemale.LeanMin && fatPercentage <= (int)fatPercentangeRangeFemale.LeanMax)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeFemale.LeanMin && BodyFatCalculation <= (int)fatPercentangeRangeFemale.LeanMax)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% your body fat percentage is {fatPercentage}% which means your are Lean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% your body fat percentage is {BodyFatCalculation}% which means your are Lean.";
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeFemale.ModeratelyLeanMin && fatPercentage <= (int)fatPercentangeRangeFemale.ModeratelyLeanMax)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeFemale.ModeratelyLeanMin && BodyFatCalculation <= (int)fatPercentangeRangeFemale.ModeratelyLeanMax)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which means you are Moderately Lean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which means you are Moderately Lean.";
                 }
-                else { fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which is very high."; }
+                else { fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which is very high."; }
                 return fatPercentageCategory;
             }
         }
@@ -110,24 +109,24 @@ namespace HealthAndFitness
         {
             get
             {
-                if (fatPercentage < (int)fatPercentangeRangeMale.UltraLeanMin)
+                if (BodyFatCalculation < (int)fatPercentangeRangeMale.UltraLeanMin)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which is very low.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which is very low.";
 
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeMale.UltraLeanMin && fatPercentage <= (int)fatPercentangeRangeMale.UltraLeanMin)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeMale.UltraLeanMin && BodyFatCalculation <= (int)fatPercentangeRangeMale.UltraLeanMin)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which means you are UltraLean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which means you are UltraLean.";
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeMale.LeanMin && fatPercentage <= (int)fatPercentangeRangeMale.LeanMax)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeMale.LeanMin && BodyFatCalculation <= (int)fatPercentangeRangeMale.LeanMax)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% your body fat percentage is {fatPercentage}% which means your are Lean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% your body fat percentage is {BodyFatCalculation}% which means your are Lean.";
                 }
-                else if (fatPercentage >= (int)fatPercentangeRangeMale.ModeratelyLeanMin && fatPercentage <= (int)fatPercentangeRangeMale.ModeratelyLeanMax)
+                else if (BodyFatCalculation >= (int)fatPercentangeRangeMale.ModeratelyLeanMin && BodyFatCalculation <= (int)fatPercentangeRangeMale.ModeratelyLeanMax)
                 {
-                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which means you are Moderately Lean.";
+                    fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which means you are Moderately Lean.";
                 }
-                else { fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {fatPercentage}% which is very high."; }
+                else { fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which is very high."; }
                 return fatPercentageCategory;
             }
         }

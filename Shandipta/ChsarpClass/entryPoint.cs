@@ -99,23 +99,17 @@ namespace MainProgram
             //float val = float.Parse(Console.ReadLine());
             BodyFatCaclulator FatCalc = new BodyFatCaclulator(1.58f, 56.0f);
             FatCalc.Age = 38;
-            var sex = FatCalc.Gender = "F";
-            if (sex == "F")
-            {
-                FatCalc.GenderFlag = 0;
-            }
-            else FatCalc.GenderFlag = 1;
-            var bmiValue = FatCalc.BMICalculator();
+            var sex = FatCalc.Gender = "M";
+            FatCalc.GenderFlag=sex=="F" ? 0 : 1;
+            var bmiValue = (float)(Math.Round(FatCalc.BMICalculator(),2));
             var bmicalc = FatCalc.PersonHealthDetail(bmiValue);
             Console.WriteLine(bmicalc);
             var fatPercentage = FatCalc.BodyFatCalculation;
             var bodyFatAnalysis = sex == "F" ? FatCalc.BodyFatResultEvaluationFemale : FatCalc.BodyFatResultEvaluationMale;
             Console.WriteLine(bodyFatAnalysis);
-
             //Student s1 = new Student();
             //Student s2 = new Student();
             //Student s3 = new Student();
-
             //Student.PrintStudentDetails();
             //Math.Sin(123);
 
