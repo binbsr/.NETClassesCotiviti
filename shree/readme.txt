@@ -19,3 +19,5 @@ Nov 12: Learned Constructor, class and Worked on Exercise 4
 Nov 13: Learned class properties, getter and setter, discussed on  auto implemented properties,  Enum, constant and read only data type
 
 Nov 14: Learned Static class data, methods, class and its implementation, private, public and static constructor
+
+Nov 18: Learned Inheritance, multiple inheritance, interface
