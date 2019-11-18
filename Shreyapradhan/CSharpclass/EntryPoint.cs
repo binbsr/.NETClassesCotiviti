@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using PropertiesAndEnums;
 using Flight;
 
+using Inhert;
+
 
 namespace MainProgram 
 {
@@ -115,8 +117,7 @@ namespace MainProgram
                  var x1=Customer.CardNO; // constant can be accessed using Class name itself, inherently static
                  Customer c = new Customer();
 
-                 */
-
+               
                  Aeroplane aeroplane=new Aeroplane("pradhan","Buddha Airways",20);
                  aeroplane.origin="Kathmandu";
                  aeroplane.destination="Butwal";
@@ -124,6 +125,14 @@ namespace MainProgram
                  var route=aeroplane.DisplayRoute();
                  Console.WriteLine($"route: {route}");
                  Console.WriteLine($"number of passanger={passangerOnboard}");
+
+                 Student s1=new Student();
+                 Student.PrintStudentDetails();
+                 Math.Sin(534);  */
+
+
+                 ISellable p =new Puppy(); // loose -couplning , used in dependency injection
+                  
                  
 
 
