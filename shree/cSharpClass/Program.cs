@@ -211,11 +211,14 @@ namespace cSharpClass
              var x = p.FirstName;
              Console.WriteLine(x);  */
 
-            var x=Customer.CardNo;            // for Constant variable no need to create class object
+            //var x=Customer.CardNo;            // for Constant variable no need to create class object
 
-            var y = Customer.CitizenshipNum;
+            //Student.address;            // here address is static variable which is shared by all class object
+            // to access STATIC variable, use classname.static_variable name
 
-
+          //  var x=Student.PrintStudentDetails();
+            
+            
         }
 
 
