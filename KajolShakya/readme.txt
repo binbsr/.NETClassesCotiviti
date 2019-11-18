@@ -21,4 +21,7 @@ Learn about Methods.
 11th Nov 2019 -- Day 6
 Learn about Generic, Non-Generic, List and Dictionary.
 
+12th Nov 2019 -- Day 7
+Learn about Collection and Constructor.
+
 

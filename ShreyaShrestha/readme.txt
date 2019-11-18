@@ -17,3 +17,15 @@ Day4 (7th Nov 2019)
 
 Day5 (8th Nov 2019)
 	Learnt nested for loops, complexities of for loop, method types, variable number of arguments, string interpolation, optional arguments, named arguments and tuples.
+
+Day6 (11th Nov 2019)
+	Introduction to Generics, dictionary, list.
+
+Day7 (12th Nov,  2019)
+	Learnt about constructor, class and assignment review to make it simpler.
+
+Day8 (13th Nov, 2019)
+	Introduction to properties, auto implemented properties, Enum, constant and read only data type.
+
+Day9 (14th Nov, 2019)
+	Discussion on static varaibles, methods and constructor.

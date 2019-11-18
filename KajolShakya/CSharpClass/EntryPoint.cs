@@ -111,6 +111,43 @@ namespace MainProgram {
             }
             
             Console.WriteLine(countries[1]); //USA 1 as a key rather than index
+
+
+            Collections c = new Collections();
+            List<String> animalList = c.GetAnimals();
+            Console.WriteLine("List of Animals:");
+            foreach (string a in animalList)
+            {
+                Console.WriteLine(a);
+ 
+            }
+
+            Dictionary<string, string> song = c.FetchSongs();
+            Console.WriteLine("Song => Genre");
+            foreach (KeyValuePair<string, string> sng in song)
+            {
+                Console.WriteLine("{0} => {1}", sng.Key, sng.Value);
+            }
+
+            /*Dictionary<string, List<string>> songDetail = c.FetchSongsDetail();
+            Console.WriteLine("Song | Genre | Singer/Band");
+            foreach (var songs in songDetail)
+            {
+                string key = songs.Key;
+                List<string> values = songs.Value;
+                Console.WriteLine(key + "| " + string.Join("| ", values));
+            }
+            */
+            List<(string SongName, string Genre, string Artist)> songDetail = c.FetchSongsDetail(); //tuple
+            foreach (var songs in songDetail)
+            {
+                Console.WriteLine($"Song Name = {songs.SongName} Genre = {songs.Genre} Artist = {songs.Artist}");
+
+            }
+
+            Person p = new Person();
+            Person p1 = new Person("Kajol");
+
         }    
     }
 }
