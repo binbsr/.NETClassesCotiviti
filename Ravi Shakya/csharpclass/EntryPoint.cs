@@ -136,17 +136,23 @@ namespace MainProgram
           //  var x = Customer.CardNo;
           //  Customer c =new Customer();
            
-           Student s1 = new Student( ); //s1 is the instance
+          //  Student s1 = new Student( ); //s1 is the instance
 
-            Student s2 = new Student();
-             Student s3 = new Student();
-              Student s4 = new  Student();
-               Student s5 = new Student();
-              //  Student.PrintStudentDetails();
+          //   Student s2 = new Student();
+          //    Student s3 = new Student();
+          //     Student s4 = new  Student();
+          //      Student s5 = new Student();
+          //     //  Student.PrintStudentDetails();
 
               //  Math.Sin(324);
 
                //Student.address
+
+               //ISaleable p= new Snake();
+               var p = new Snake();
+               var s = new Puppy();
+
+
 
 
 

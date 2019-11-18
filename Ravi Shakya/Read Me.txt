@@ -48,3 +48,10 @@ understanding of concept of inheritances.
 types of inheritances,.
 
 
+Date: 18th November, 2019 (Class 10th)
+> Continuation of Inheritances.
+> Types of Instance constructors.
+> Learnt that Multi level inheritances is possible but Multiple Inheritance is not allowed in c#.
+> Learnt about Interface: whicha allows to add inheritance in different object (it doesn't have body).
+> "Is a" and "Has a" relation
+
