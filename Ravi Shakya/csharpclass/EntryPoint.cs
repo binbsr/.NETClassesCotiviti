@@ -149,8 +149,13 @@ namespace MainProgram
                //Student.address
 
                //ISaleable p= new Snake();
-               var p = new Snake();
-               var s = new Puppy();
+              //  var p = new Snake();
+              //  var s = new Puppy();
+              ILivesOnLand p = new Mammals();
+              ILivesOnLand q = new Reptiles();
+              ILivesOnWater w = new Amphibians();
+              
+
 
 
 
