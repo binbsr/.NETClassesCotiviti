@@ -4,7 +4,8 @@ using System;
 using UsingMethods;
 using System.Collections.Generic;
 using System.Collections;
-using Practice;
+using PropertiesAndEnums;
+// using Practice;
 
 namespace MainProgram
 {
@@ -34,14 +35,14 @@ namespace MainProgram
             //(int min, int max) result = m.GetMinMax(new int[] {4, 3, 5, 6, 7, 8, 10});
             //Console.WriteLine("Min is : " + result.min);
             //Console.WriteLine("Max is : " + result.max);
-            Assignment2 x = new Assignment2();
+            //Assignment2 x = new Assignment2();
             //float output= x.CalcAverage(3.3F, 2.1F, 6.9F);
             //Console.WriteLine("Avg of 3 Decimal number is " + output);
             //decimal output = x.CalcAllAverage (new decimal[] {231.151,3.2,4.5,6.5,1.102});
             //Console.WriteLine ("Average of All Decimal Number is : " + output);
             // char?[] genders = (new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' });
             // (int male, int female, int others) output = x.CountGender(genders);
-            // Console.WriteLine($"Total no of Males = (output.male), Total no of Females = (output.female), Total no of Other Gener = (output.others");
+            // Console.WriteLine($"Total no of Males = {output.male}, Total no of Females = {output.female}, Total no of Other Gener = {output.others}");
 
             // //Generic: used when collections have multiple datatypes
             // Testlist<string> list = new Testlist<string>();
@@ -100,8 +101,71 @@ namespace MainProgram
             //   Console.WriteLine(item.Key + " = " + item.Value);
 
             // }
-            Collection c = new Collection();
+            //list of animals name
+          //   Collection c = new Collection();
+
+          //   List<string> animallists = c.GetAnimals();
+          //  Console.WriteLine("List of Animals:");
+          //  foreach(string a in animallists)
+          //  {
+          //    Console.WriteLine(a);
+          //  }
+          //  Console.WriteLine("..............................");
+
+
+            //list of songs and genre
+           
+
+            //modifying the above to return the list of songs name, genre and artist name  
             
+          //  List<(string SongName, string Genre, string Artist)>songs =c.FetchSongsList();
+          //  foreach(var song in songs)
+          //  {
+          //    Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
+
+          //  }
+            // Person p = new Person();
+            // Person p1 = new Person ("Ravi");
+
+          //   PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Ravi","Shakya");
+          //   var x = p.FirstName;
+          //   p.FirstName = "Ravi";
+          //   x = p.FirstName;
+          //   Console.WriteLine();
+
+          //  var x = Customer.CardNo;
+          //  Customer c =new Customer();
+           
+           Student s1 = new Student( ); //s1 is the instance
+
+            Student s2 = new Student();
+             Student s3 = new Student();
+              Student s4 = new  Student();
+               Student s5 = new Student();
+              //  Student.PrintStudentDetails();
+
+              //  Math.Sin(324);
+
+               //Student.address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 

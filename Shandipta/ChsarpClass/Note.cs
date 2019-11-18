@@ -12,6 +12,8 @@ namespace Practice
                 int i;
              */
             
+            //  float val = float.Parse(Console.ReadLine());
+            //int intTemp = Convert.ToInt32(Console.ReadLine());
             
         }
     }

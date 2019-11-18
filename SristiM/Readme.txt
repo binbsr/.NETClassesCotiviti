@@ -26,3 +26,12 @@ Learned about multiple returns, string interpolations
 Day6:
 Learned about Generic class/methods
 Learned about List and Dictionary
+
+Day7:
+Learned about Constructors
+
+Day8:
+Learned about Properties, Constants and Enums
+
+Day9:
+Learned about static constructors,class
