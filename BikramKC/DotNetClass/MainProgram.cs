@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DotNetClass;
+using Properties;
 namespace MainProgram
 {
     class MainClass{
@@ -71,6 +72,7 @@ namespace MainProgram
                 Console.WriteLine(item.Key + " = " + item.Value);
             }
             */
+            /*
             Collections coll = new Collections();
             var animals = coll.GetAnimals();
             foreach (string animal in animals)
@@ -89,8 +91,28 @@ namespace MainProgram
             {
                 Console.WriteLine("Song name is " + item.name + ", and song genre is " + item.genre + ", and the artist is " + item.artist);
             }
-            Console.WriteLine();
             
+            List<(string songName, string genre, string artist)> songList = coll.FetchSongList();
+            foreach (var item in songList)
+            {
+                Console.WriteLine($"Song Name: {item.songName}      Song Genre: {item.genre}       Artist: {item.artist}");
+            }
+            */
+            Properties.Person p = new Properties.Person("Bikram", "KC");
+            var x = p.FirstName;
+            p.FirstName = "abc";
+            var y = p.FirstName;
+            Console.WriteLine($"First Name : {x} Set Name : {y}");
+            p.Address = "Sukedhara";
+            Console.WriteLine(p.Address);
+            Console.WriteLine(Customer.cardNumber);
+
+            Student st1 = new Student();
+            Student.collegeName = "IOE";
+            Console.WriteLine(Student.collegeName);
+            string colName = Student.GetCollegeName();
+            Console.WriteLine(colName);
+
         }
 
     }
