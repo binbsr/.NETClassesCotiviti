@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using DotNetClass;
 using Properties;
+using Inheritances;
+
 namespace MainProgram
 {
     class MainClass{
@@ -24,7 +26,7 @@ namespace MainProgram
             cnd.CheckEvenOrOdd();
             cnd.SumOfNaturalNumbers();
             */
-            CalculateAverage avg = new CalculateAverage();
+           /* CalculateAverage avg = new CalculateAverage();
             decimal d = avg.CalcAvg(10.2m,10.3m,10.4m);
             Console.WriteLine(d);
 
@@ -34,6 +36,7 @@ namespace MainProgram
 
             (int m, int f, int o) gender = avg.GenderCount();
             Console.WriteLine("Total Male is "+gender.m+" , total Female is "+gender.f+" and total others are "+gender.o);
+            */
            /* TestList<string> list = new TestList<string>();
             TestList<byte> list1 = new TestList<byte>();
 
@@ -97,7 +100,6 @@ namespace MainProgram
             {
                 Console.WriteLine($"Song Name: {item.songName}      Song Genre: {item.genre}       Artist: {item.artist}");
             }
-            */
             Properties.Person p = new Properties.Person("Bikram", "KC");
             var x = p.FirstName;
             p.FirstName = "abc";
@@ -112,6 +114,25 @@ namespace MainProgram
             Console.WriteLine(Student.collegeName);
             string colName = Student.GetCollegeName();
             Console.WriteLine(colName);
+            */
+            /*
+            VoteKukur v = new VoteKukur(); // base class constructor is called first
+            ISaleable x = new VoteKukur();
+            ISaleable y = new GermanShephard();
+            x.Buy();
+            y.Buy();
+            */
+            IBrakingSystem bs1 = new Car();
+            bs1.getBrakingSystem();
+            IBrakingSystem bs2 = new SportsBike();
+            bs2.getBrakingSystem();
+            IBrakingSystem bs3 = new CruiseBike();
+            bs3.getBrakingSystem();
+
+            ILegGuard lg1 = new SportsBike();
+            ILegGuard lg2 = new CruiseBike();
+            System.Console.WriteLine(lg1.hasLegGuard);
+            System.Console.WriteLine(lg2.hasLegGuard);
 
         }
 
