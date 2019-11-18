@@ -17,3 +17,6 @@ Team: Paymnet Customization
 
 8th Nov 2019 -- Day 5
 	Learn about Nested loops, Methods, Access modifier, Return types, Arguments and parameters, String concatination 
+
+11th Nov 2019 -- Day 6
+	Learn about collection types list , dictionary, generic list

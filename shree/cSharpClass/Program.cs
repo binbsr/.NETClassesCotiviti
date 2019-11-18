@@ -9,6 +9,7 @@ using LearnGeneric;
 using Exercise4Collection;
 using SongDetailInformation;
 using PropertiesAndEnums;
+using LearningInheritance;
 
 namespace cSharpClass
 {
@@ -203,20 +204,34 @@ namespace cSharpClass
             {
                 Console.WriteLine($"song = {item.songName} and Genre = {item.Genre} and Artist = {item.Artist}");
             }
-        }       */
+        }       
 
-        public static void Main()
+       public static void Main()
         {
             /* PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("ram", "shyam");
              var x = p.FirstName;
-             Console.WriteLine(x);  */
+             Console.WriteLine(x);  
 
-            var x=Customer.CardNo;            // for Constant variable no need to create class object
+            //var x=Customer.CardNo;            // for Constant variable no need to create class object
 
-            var y = Customer.CitizenshipNum;
+            //Student.address;            // here address is static variable which is shared by all class object
+            // to access STATIC variable, use classname.static_variable name
 
+          //  var x=Student.PrintStudentDetails();
+            
+            
+        } */
 
-        }
+        public static void Main()
+    {
+            //Dog d = new Dog();            // FIRST BASE CLASS CONSTRUCTOR CALLS then only Child class constructor 
+            Puppy p = new Puppy();
+
+            Isaleable p1 = new Puppy();      // this is dependancy injection, it is also valid 
+            Isaleable p2 = new Snake();
+            Animal p3 = new Snake();
+            
+    }
 
 
 

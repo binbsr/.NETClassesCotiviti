@@ -1,6 +1,6 @@
 namespace DataTypeBasics
 {
-
+/*
 public class DataType
 {
     //Value Type
@@ -31,6 +31,6 @@ public class DataType
 
 
 
-}
+}*/
 
 }

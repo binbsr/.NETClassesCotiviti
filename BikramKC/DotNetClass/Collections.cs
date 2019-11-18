@@ -27,5 +27,13 @@ namespace DotNetClass
             return listSong;
 
         }
+        // tuple
+        public List<(string, string, string)> FetchSongList()
+        {
+            var songs = new List<(string, string, string)> {("Nothing Else matter", "Rock", "Metallica"),("Walk", "Heavy Metal", "Pantera"),("Sajha Pakha", "Pop", "Nabin K Bhattarai")};
+            return songs;
+
+
+        }
     }
 }

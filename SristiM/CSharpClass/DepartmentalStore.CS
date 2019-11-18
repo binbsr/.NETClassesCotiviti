@@ -16,7 +16,7 @@ namespace DepartmentalStore {
 
         //3.A read-only property evaluated from other properties
         //read-only property has only get
-        private readonly int ProductPrice = 0;
+        private int ProductPrice = 0;
         public int FindProductPrice { get { return ProductPrice; } }
 
         //4.A write-only property

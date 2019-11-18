@@ -66,7 +66,7 @@ namespace MainProgram
             //list.Add(324);
             //list.Add(324);
             //list.Add(324);
-
+  
             //List<Student> students = new List<Student>();
             //Student st1 = new Student { name = "Bishnu" };
             //Student st2 = new Student()
@@ -93,7 +93,7 @@ namespace MainProgram
             // Console.WriteLine(item.Key + "=" + item.Value);
             //}
             // Create class named *Collection*, create 3 methods in there:*GetAnimals()* which returns list of animal names.
-            List<string> animals = new List<string>() { "Rat", "Cat" };
+            /*List<string> animals = new List<string>() { "Rat", "Cat" };
             Collection collectionName = new Collection();
             collectionName.getAnimals(animals);
 
@@ -113,7 +113,33 @@ namespace MainProgram
                 ["wolves"] = new List<string> { "ElectronicMusic", "SelenaGomez" }
             };
 
-            collectionName.ReturnArtist(Fetchsongs1);
+            collectionName.ReturnArtist(Fetchsongs1);*/
+
+            /*Collection c = new Collection();
+            List<(string songName,string genre, string artist)> songs = c.FetchSongList();// deconstruction
+            foreach(var song in songs)
+            {
+              Console.WriteLine($" Song Name = {song.songName} Genre = {song.genre} Artist = {song.artist}");
+            }*/
+
+            /*PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Pala","Kansakar");
+            var x = p.FirstName;
+            p.FirstName = "abc";
+            x = p.FullName;
+            Customer.card*/
+
+           //Student.PrintStudentDetails();//ststic methodcalled by classname.
+           //student.address 
+
+           //Math.Sin(324);
+           //Student s1 = new Student();
+           //Student s2 = new Student();
+           //Student s3 = new Student();
+           
+           //Dog g = new Dog();
+           //Puppy p = new Puppy();
+           ISaleable p = new Puppy();// class Object is assigend in Interface: Dependecy --loosly couple 
+
         }
     }
 }
