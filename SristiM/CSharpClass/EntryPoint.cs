@@ -149,12 +149,20 @@ namespace MainProgram {
             //     var a = Customer.cardNumber;
             //    // var z = Customer.citizenshipNumber;
             //    var z = customer.citizenshipNumber;
-            Student s1 = new Student (); //first object call always looks for static constructor, and is called only once
-            Student s2 = new Student ();
-            Student s3 = new Student ();
+            //---------------------------------------------------
+            // Student s1 = new Student (); //first object call always looks for static constructor, and is called only once
+            // Student s2 = new Student ();
+            // Student s3 = new Student ();
             //Student.address
 
             //Student.PrintStudentDetails();//call the static method through class i.e. class.
+            //-----------------------------------------------------------
+            //inheritance
+            //Puppy p=new Puppy();
+            // Isaleable p=new Puppy();//this allows dependency injection and hence loosely coupled code
+            ISaleable s = new Snake ();
+            Animal p = new Puppy ();//First calls the baseclass constructor i.e. Animal and later calls its own constructor
+            // Animal p=new Puppy();
 
         }
     }
