@@ -18,3 +18,4 @@ Enumeration lists.
 uses of static kewords.
 understanding of concept of inheritances. 
 types of inheritances,.
+18th Nov: Abstract class, Inheritance class
