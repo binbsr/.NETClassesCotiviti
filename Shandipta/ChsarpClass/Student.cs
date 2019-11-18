@@ -3,7 +3,7 @@ namespace Collection
 {
     public class Student
     {
-        public int RollNo {get;set;}
+/*        public int RollNo {get;set;}
         public string Name {get;set;}
         public static string Address{get;set;}//all instance of this class will have this static address
         public string Stream{get;set;}
@@ -24,15 +24,18 @@ namespace Collection
 
       //private constructor
       //prevent to create instace of that class
-      private Student(){
+      public Student(){
+
+          Console.WriteLine("Default  Constructor");
           
       }
       //instantiation in c#
-      //useability,commoness
+      //useability,commonness
       //one class cannot inherit multiple class
       //multiple interface can be implemented but bass class need to be only one
+      
+*/
     }
-
 
 
 }

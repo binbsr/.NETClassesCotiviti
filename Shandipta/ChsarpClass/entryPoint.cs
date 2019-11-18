@@ -7,6 +7,9 @@ using Collection;
 using System;
 using Properties;
 using HealthAndFitness;
+using Inheritance;
+using PropertiesPrac;
+using Sport;
 namespace MainProgram
 {
     public class entryPoint
@@ -95,31 +98,57 @@ namespace MainProgram
                     //   Console.WriteLine(b);
                     // var x=Customer.CardNo; //doesnt need to create class object to call a constant of a class.
         */
-            Console.WriteLine("Enter your height in meter:");
-            var heightInMeter = float.Parse(Console.ReadLine());
-            Console.WriteLine("Enter your weight in kg:");
-            var weightInKg = float.Parse(Console.ReadLine());
-            Console.WriteLine("Enter your age:");
-            var age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Gender M/F:");
-            var sex = Console.ReadLine();
-            BodyFatCaclulator FatCalc = new BodyFatCaclulator(heightInMeter, weightInKg);
-            FatCalc.Age = age;
-            FatCalc.Gender = sex;
-            FatCalc.GenderFlag = sex == "F" ? 0 : 1;
-            var bmiValue = FatCalc.BMICalculator;
-            var bmicalc = FatCalc.PersonHealthDetail(bmiValue);
-            Console.WriteLine(bmicalc);
-            var bodyFatAnalysis = sex == "F" ? FatCalc.BodyFatResultEvaluationFemale : FatCalc.BodyFatResultEvaluationMale;
-            Console.WriteLine(bodyFatAnalysis);
-        
-            //Student s1 = new Student();
-            //Student s2 = new Student();
-            //Student s3 = new Student();
-            //Student.PrintStudentDetails();
+            /*       Console.WriteLine("Enter your height in meter:");
+                   var heightInMeter = float.Parse(Console.ReadLine());
+                   Console.WriteLine("Enter your weight in kg:");
+                   var weightInKg = float.Parse(Console.ReadLine());
+                   Console.WriteLine("Enter your age:");
+                   var age = Convert.ToInt32(Console.ReadLine());
+                   Console.WriteLine("Gender M/F:");
+                   var sex = Console.ReadLine();
+                   BodyFatCaclulator FatCalc = new BodyFatCaclulator(heightInMeter, weightInKg);
+                   FatCalc.Age = age;
+                   FatCalc.Gender = sex;
+                   FatCalc.GenderFlag = sex == "F" ? 0 : 1;
+                   var bmicalc = FatCalc.PersonHealthDetail(FatCalc.BMICalculator);
+                   Console.WriteLine(bmicalc);
+                   var bodyFatAnalysis = sex == "F" ? FatCalc.BodyFatResultEvaluationFemale : FatCalc.BodyFatResultEvaluationMale;
+                   Console.WriteLine(bodyFatAnalysis);*/
+
+            //    Student s1 = new Student();
+            //    Student s2 = new Student();
+            //   Student s3 = new Student();
+            //   Student.PrintStudentDetails();
             //Math.Sin(123);
 
             //Student.address
+
+            // Dog d= new Dog();
+            //  GermanShepard g = new GermanShepard(); 
+            //  Animal a = new Snake(); // base cass
+            //  var s = new Snake(); //loose coupling
+            //  var g = new GermanShepard();
+            //  ISaleable ss = new Snake();
+
+            /*     prac p = new prac();
+               var a = p.FName="Shandipta";
+                p.LName="Rai";
+                var v = p.FullName;
+                Console.WriteLine(a);
+                */
+            Console.WriteLine("-----------------------------------");
+            MotoGP mgp = new MotoGP();
+            mgp.WinnerName();
+            Console.WriteLine("-----------------------------------");
+            Moto2 m3 = new Moto2();
+            Console.WriteLine("-----------------------------------");
+            MMA mma = new MMA();
+            mma.WeightDivision(90);
+            mma.WinnerName();
+            Console.WriteLine("-----------------------------------");
+            Boxing boxing = new Boxing();
+            boxing.WeightDivision(90);
+
 
         }
     }

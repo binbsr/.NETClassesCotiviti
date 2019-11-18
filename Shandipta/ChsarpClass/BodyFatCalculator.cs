@@ -83,7 +83,6 @@ namespace HealthAndFitness
 
             get
             {
-
                 if (BodyFatCalculation < (int)fatPercentangeRangeFemale.UltraLeanMin)
                 {
                     fatPercentageCategory = $"Based on your BMI {bmi}% Your body fat percentage is {BodyFatCalculation}% which is very low.";

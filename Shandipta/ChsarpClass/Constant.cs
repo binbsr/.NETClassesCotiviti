@@ -25,8 +25,10 @@ namespace Properties
             {
                 Console.WriteLine("Yes it is Tuesday i.e. Martes");
             }
+         
 
         }
+
     }
 
 
@@ -34,6 +36,7 @@ namespace Properties
     //integral type of numbers are allowed in enum
     //to remove magic values enum is used
     enum WeekDay { domingo, lunes, martes, meracules, jueves, vernes, sabado };
+    
     
 
 
