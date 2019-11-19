@@ -5,6 +5,7 @@ using LearningMethods;
 using System.Collections;
 using System.Collections.Generic;
 using Collections;
+using PropertiesAndEnums;
 
 namespace MainProgram
 {
@@ -67,6 +68,7 @@ namespace MainProgram
 
                  Console.WriteLine($"No.of Males = {result.male} , No. of Females = {result.female} and No. of others = {result.other}");
     */
+            /*
             TestList<string> list = new TestList<string>();
             list.Add("gfdgfg");
 
@@ -113,46 +115,91 @@ namespace MainProgram
             countries.Add(91,"India");
             //countries.Add(1,"USA1"); // key should be always unique
 */
-            Dictionary<int, string> countries = new Dictionary<int, string>()
-            {
-            [1]="USA",
-            [977]="Nepal",
-            [91]="India"
-            };
-            Console.WriteLine(countries[977]);
-            foreach (var c in countries)
-            {
-                Console.WriteLine(c.Key + " = " + c.Value);
+            /*
+                  Dictionary<int, string> countries = new Dictionary<int, string>()
+                  {
+                  [1]="USA",
+                  [977]="Nepal",
+                  [91]="India"
+                  };
+                  Console.WriteLine(countries[977]);
+                  foreach (var c in countries)
+                  {
+                      Console.WriteLine(c.Key + " = " + c.Value);
 
-            }
+                  }
 
+
+                  Collection coll = new Collection();
+                  var animals = coll.GetAnimals();
+                  foreach (string animal in animals)
+                  {
+                      Console.WriteLine($"{animal}") ; 
+                  }
+
+                  var songs = coll.FetchSongs();
+                  foreach (var s in songs)
+                  {
+                      Console.WriteLine($"{s.Key} song is {s.Value} genre");
+                  }
+
+                  var songs1 = coll.FetchSongs1();
+                  foreach (var s in songs1)
+                  {
+                      Console.WriteLine($"{s.Key} is {s.Value[0]} genre and artist name is {s.Value[1]}" );
+
+                  }
+
+                 List<(string SongName, string Genre, string ArtistName)> songs2 = coll.FetchSongs3();
+                  foreach (var s in songs2)
+                  {
+                      Console.WriteLine($" song name {s.SongName} genre is {s.Genre} and artist is {s.ArtistName}" );
+
+                  }
+                  */
+                  /*
+            Person p = new Person();
+            Person p1 = new Person("Shreya");
+
+            PropertiesAndEnums.Person per = new PropertiesAndEnums.Person("Nitin","Malla");
+            var x = per.FirstName;
+            Console.WriteLine(x);
+           // per.FirstName = "Abc";
+            x = per.FirstName;
+            Console.WriteLine(x);
+
+           //  var card = Customer.CardNo;
+
+*/
+            //Student s1 = new Student("Nitin");
+            //Student s2 = new Student("Ram");
             
-            Collection coll = new Collection();
-            var animals = coll.GetAnimals();
-            foreach (string animal in animals)
-            {
-                Console.WriteLine($"{animal}") ; 
-            }
+           // Student s3 = new Student();
+           // Student s4 = new Student();
+            //Student s5 = new Student();
 
-            var songs = coll.FetchSongs();
-            foreach (var s in songs)
-            {
-                Console.WriteLine($"{s.Key} song is {s.Value} genre");
-            }
+            Student.Address ="ktm";
 
-            var songs1 = coll.FetchSongs1();
-            foreach (var s in songs1)
-            {
-                Console.WriteLine($"{s.Key} is {s.Value[0]} genre and artist name is {s.Value[1]}" );
-               
-            }
+           // s1.RollNo;
 
-            var songs2 = coll.FetchSongs2();
-            foreach (var s in songs2)
-            {
-                Console.WriteLine($"{s.Key} is {s.Value.name} of {s.Value.genre} genre and artist name is {s.Value.artistName}" );
-               
-            }
+            Student.PrintStudentDetails();
+// built in static class
+            Math.Sin(90);
+
+           // Dog d = new Dog();
+            //Puppy puppy = new Puppy();
+           // Puppy p = new Puppy();
+
+            ISaleable p1 = new Snake();  // dependancy injection
+
+            var p = new Snake();
+            var s = new Puppy(); 
+
+           // Animal a = new Snake();
+            Animal b = new Puppy();
+
+
+
         }
     }
 }

@@ -4,11 +4,11 @@
 //     private byte age;
 //     private static string scientificName = "Homo Sapiens";
 
-//     public Person()
+//     public Person() //default constructor
 //     {
 
 //     }
-//     // public Person(string name)
+//     // public Person(string name) //parameterized constructor
 //     // {
 //     //     this.name = name;
 //     // }

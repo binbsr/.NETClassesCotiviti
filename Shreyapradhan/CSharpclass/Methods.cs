@@ -65,12 +65,12 @@ namespace LearningMethods
              return sum/numbers.Length;
         }
 
-        public (int,int,int) ClaculateGenderDistibution()
+        public (int,int,int) ClaculateGenderDistibution(char?[] genderCollection)
         {
             int femaleCount=0;
             int maleCount=0;
             int otherCount=0;
-            char?[] genderCollection = new char?[] { 'F', 'M', 'F', 'M', null, 'M', null, 'F', 'F', 'M', null, null, 'F', 'M', 'M' };
+            
             foreach(char?person in genderCollection)
             {
 
