@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Collections;
 using PropertiesAndEnums;
+using Inheritance;
 
 namespace MainProgram
 {
@@ -178,25 +179,38 @@ namespace MainProgram
            // Student s4 = new Student();
             //Student s5 = new Student();
 
-            Student.Address ="ktm";
+           // Student.Address ="ktm";
 
            // s1.RollNo;
 
-            Student.PrintStudentDetails();
+            //Student.PrintStudentDetails();
 // built in static class
-            Math.Sin(90);
+            // Math.Sin(90);
 
            // Dog d = new Dog();
             //Puppy puppy = new Puppy();
            // Puppy p = new Puppy();
 
-            ISaleable p1 = new Snake();  // dependancy injection
+           // ISaleable p1 = new Snake();  // dependancy injection
 
-            var p = new Snake();
-            var s = new Puppy(); 
+            //var p = new Snake();
+            //var s = new Puppy(); 
 
            // Animal a = new Snake();
-            Animal b = new Puppy();
+           // Animal b = new Puppy();
+
+            BaseEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "Nitin";
+            fte.LastName = "Malla";
+            
+            System.Console.WriteLine (fte.GetFullName()); // method hiding
+            System.Console.WriteLine (fte.CalculateMonthlySalary()); // method override
+
+            Contractor contra = new Contractor();
+            contra.FirstName = "Abc";
+            contra.LastName = "test";
+
+            System.Console.WriteLine (contra.GetFullName());
 
 
 
