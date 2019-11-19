@@ -41,4 +41,10 @@ Thursday , 14th November,2019
 Monday: 18th November , 2019
 1. Studied about inheritance and Interface .
 2. Class Object is assigend in Interface: Dependecy --loosly couple 
-3. 
+3. No body in interface
+4. Inheritance
+5. Base class- parnet class
+6. Derived class - child class
+7. Multiple Base class cannot be derived from derived class
+8. Accessin Ability (Multiple method )is called Interface from classes, it has no body.
+9. Calling object via interface interface c = new puppy() class puppy constructor first.

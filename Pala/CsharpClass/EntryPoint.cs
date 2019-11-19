@@ -139,7 +139,9 @@ namespace MainProgram
            //Dog g = new Dog();
            //Puppy p = new Puppy();
            ISaleable p = new Puppy();// class Object is assigend in Interface: Dependecy --loosly couple 
-
+           //CanPlay g = new IsGirl();
+           //CanPlay m = new IsMale();
+           //CanSing s = new GirlPlayer();
         }
     }
 }

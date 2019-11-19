@@ -58,6 +58,7 @@ public class Puppy : ISaleable
 
 //is a 
 //has a 
+
 public interface ISaleable// no body in interface
 {
     public void Buy();
