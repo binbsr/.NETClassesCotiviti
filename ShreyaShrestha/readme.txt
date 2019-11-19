@@ -29,3 +29,6 @@ Day8 (13th Nov, 2019)
 
 Day9 (14th Nov, 2019)
 	Discussion on static varaibles, methods and constructor.
+
+Day10 (18th Nov, 2019)
+	Inheritance and interface.
