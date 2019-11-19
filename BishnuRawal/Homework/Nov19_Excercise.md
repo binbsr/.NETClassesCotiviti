@@ -1,4 +1,4 @@
-## Its the continuation of previous excersice, please add following to your implementation:
+## Its the continuation of [previous excersice](https://github.com/binbsr/.NETClassesCotiviti/blob/master/BishnuRawal/Homework/Nov18_Excercise.md), please add following to your existing implementation:
 1. Base class 1 should have a method that can be overriden by child classes  
 1. Base class 1 should not allow its instantiation.
 1. Base class 2 should have a method that must be overriden by child classes1. 
