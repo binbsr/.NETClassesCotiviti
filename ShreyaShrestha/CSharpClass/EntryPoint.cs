@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GenericExamples;
+using Assignments;
 using PropertiesAndEnum;
 namespace MainProgram
 {
@@ -153,19 +154,27 @@ namespace MainProgram
             // Person p = new Person(); //since the fields are private we cannot access the fields using p.name or p.age
             // Person p1 = new Person("Shreya");
 
-            PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
-            var x = p.FirstName;
-            var y = p.LastName;
-            x = p.FullName;
-            // p.FirstName = "abc";
-            // x = p.FirstName;
-            //Console.WriteLine($"{x}, {y}");
-            Console.WriteLine(x);
+            // PropertiesAndEnum.Person p = new PropertiesAndEnum.Person("Shreya", "Shrestha");
+            // var x = p.FirstName;
+            // var y = p.LastName;
+            // x = p.FullName;
+            // // p.FirstName = "abc";
+            // // x = p.FirstName;
+            // //Console.WriteLine($"{x}, {y}");
+            // Console.WriteLine(x);
 
-            Customer customer = new Customer("");
-            var a = Customer.cardNumber;
+            // Customer customer = new Customer("");
+            // var a = Customer.cardNumber;
            // var z = Customer.citizenshipNumber;
-           var z = customer.citizenshipNumber;
+           //var z = customer.citizenshipNumber;
+           //Dog d = new Dog();
+        //    Puppy p = new Puppy();
+        //    ISaleable p1 = new Puppy();
+           
+           Marigold marigold = new Marigold();
+           LeafyGreen leafyGreen = new LeafyGreen();
+           Sunflower sunflower = new Sunflower();
+           Console.WriteLine($"Does Marigold produce nectar? {marigold.ProduceNectar()}");
             
     }
 
