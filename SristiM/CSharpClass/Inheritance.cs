@@ -72,3 +72,77 @@ public interface ISaleable {
     public void Buy ();
     public void Sale ();
 }
+
+
+//---------------------------Assignment Nov-19 -----------------------------------------
+
+//Interface Songs
+public interface IPlaySongs
+ {
+    public void PlaySongs ();
+}
+
+public interface IPlayAdvertisements
+ {
+    public void PlayAdvertisements ();
+}
+//----------------------------------------------
+
+//Base Class Television
+public class Television
+{
+
+}
+public class MusicalShow : Television, IPlaySongs
+{
+    public void PlaySongs()
+    {
+        throw new NotImplementedException();
+    }
+}
+public class Top10CountDownShows:MusicalShow
+{
+
+}
+
+//------------------------------------------------------
+
+//Base class Radio
+public class Radio
+{
+
+}
+
+public class CelebritiesTalkProgram : Radio, IPlaySongs,IPlayAdvertisements
+{
+    public void PlayAdvertisements()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void PlaySongs()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void playCommercialAdd()
+    {
+        System.Console.WriteLine("This is commercial Add");
+    }
+}
+
+public class NewsBroadCasting : Radio, IPlayAdvertisements
+{
+    public void PlayAdvertisements()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void PlayEnglishNews()
+    {
+        System.Console.WriteLine("This is English News.");
+    }
+}
+
+
+

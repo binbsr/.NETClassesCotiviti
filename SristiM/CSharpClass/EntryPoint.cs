@@ -160,9 +160,14 @@ namespace MainProgram {
             //inheritance
             //Puppy p=new Puppy();
             // Isaleable p=new Puppy();//this allows dependency injection and hence loosely coupled code
-            ISaleable s = new Snake ();
-            Animal p = new Puppy ();//First calls the baseclass constructor i.e. Animal and later calls its own constructor
+
+            //  ISaleable s = new Snake ();
+            //Animal p = new Puppy ();//First calls the baseclass constructor i.e. Animal and later calls its own constructor
+
             // Animal p=new Puppy();
+            //-------------------------------------------------------------------------
+            IPlayAdvertisements advertisements = new CelebritiesTalkProgram ();
+            Radio r = new NewsBroadCasting ();
 
         }
     }
