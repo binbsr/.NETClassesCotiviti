@@ -5,6 +5,7 @@ using UsingMethods;
 using System.Collections.Generic;
 using System.Collections;
 using PropertiesAndEnums;
+using Inheritance;
 // using Practice;
 
 namespace MainProgram
@@ -151,10 +152,20 @@ namespace MainProgram
                //ISaleable p= new Snake();
               //  var p = new Snake();
               //  var s = new Puppy();
-              ILivesOnLand p = new Mammals();
-              ILivesOnLand q = new Reptiles();
-              ILivesOnWater w = new Amphibians();
+              // ILivesOnLand p = new Mammals();
+              // ILivesOnLand q = new Reptiles();
+              // ILivesOnWater w = new Amphibians();
               
+              FullTimeEmployee fte = new FullTimeEmployee();
+              fte.FirstName = "Ravi";
+              fte.LastName = "Shakya";
+              System.Console.WriteLine(fte.GetFullName);
+
+              Contractor contra = new Contractor();
+              contra.FirstName = "RaviKrishna";
+              contra.LastName = "Shrestha";
+              System.Console.WriteLine(contra.GetFullName);
+
 
 
 
