@@ -48,3 +48,15 @@ Monday: 18th November , 2019
 7. Multiple Base class cannot be derived from derived class
 8. Accessin Ability (Multiple method )is called Interface from classes, it has no body.
 9. Calling object via interface interface c = new puppy() class puppy constructor first.
+
+Tuesday: 19th November 2019
+1. Learnt about keywords,
+//sealed -- cannot be inherated in class //selaed class also called concrete base class
+//abstrct similatr to interface using override
+//instance can't be made and called  using abstract method
+//virtual method similar to overriding but it is not compulsary
+// Method hiding- (using keywordBase )base class method hide by derived class
+//base implementation when using method of base class (using keyword base.method of baseclass)
+//Key word new to hide method and properties
+
+

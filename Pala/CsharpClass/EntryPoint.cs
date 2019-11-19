@@ -138,10 +138,23 @@ namespace MainProgram
            
            //Dog g = new Dog();
            //Puppy p = new Puppy();
-           ISaleable p = new Puppy();// class Object is assigend in Interface: Dependecy --loosly couple 
-           //CanPlay g = new IsGirl();
-           //CanPlay m = new IsMale();
-           //CanSing s = new GirlPlayer();
+           //ISaleable p = new Puppy();// class Object is assigend in Interface: Dependecy --loosly couple 
+          BaseEmployee fte = new FullTimeEmployee();
+          fte.FirstName = "Pala";
+          fte.LastName = "Kansakar";
+          System.Console.WriteLine(fte.GetFullName());
+          System.Console.WriteLine(fte.CalculateMonthlysalary());
+
+          Contractor contra = new Contractor();
+          contra.FirstName = "Sugam";
+          contra.LastName = "Tamrakar";
+          System.Console.WriteLine(contra.GetFullName());
+
+          Airplane air = new Airplane();
+         Console.WriteLine(air.NumOfLane);
+         Console.WriteLine(air.NumOfPlanes);
+         air.JetCode = 2;
+         Console.WriteLine($"No of JetCode and Num of Planes is : {air.GetJetCodeAndPlanes()}");
         }
     }
 }
