@@ -1,4 +1,4 @@
-public class FourWheeler
+public abstract class FourWheeler
 {
       public int NoOfGears{get; set;}  
 
