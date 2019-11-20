@@ -29,9 +29,22 @@ namespace FileHandling
         internal string[] ReadFile(string path)
         {
             var fileContent = File.ReadAllText(path);
-            var lines = fileContent.Split("\n\r");
+            var lines = fileContent.Split("\n",System.StringSplitOptions.RemoveEmptyEntries);
+
             return lines;
         }
+
+        public (int, int, int) Count(string path)
+        {
+            var fileContent = File.ReadAllText(path);
+            var CharCount = fileContent.Length;            //total char 
+            var LinesCount = fileContent.Split('\r').Length;       //total lines
+            var WordsCount = fileContent.Split(' ').Length;                   
+
+            return (CharCount, LinesCount, WordsCount);
+        }
+
+        
     }
 
 }
