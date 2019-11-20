@@ -11,6 +11,9 @@ using SongDetailInformation;
 using PropertiesAndEnums;
 using LearningInheritance;
 using cSharpClass.Inheritance;
+using MultipleInheritance;
+using FileHandling;
+using System.IO;
 
 namespace cSharpClass
 {
@@ -236,7 +239,7 @@ namespace cSharpClass
     */
 
         public static void Main()
-        {
+        {/*
             BaseEmployee fte = new FullTimeEmployee();
             fte.FirstName = "ram";
             fte.LastName = "sharma";
@@ -250,9 +253,41 @@ namespace cSharpClass
             Contractor fte1 = new Contractor();
             Console.WriteLine(fte1.CalculateMonthlySalary());
             Console.WriteLine(fte1.CalculateTax());
+            
+            Amphibian a1 = new Amphibian();
+            a1.Name = "Animal";
+            a1.ClassName = "Amphibian Class";
+            Console.WriteLine(a1.GetName());        */
+
+            string folderpath= @"D:\shree\dot net\.NETClassesCotiviti\shree\TestFolder";
+            FileInputOutput f1 = new FileInputOutput();
+            string filepath1 = Path.Combine(folderpath,"TextFile.txt");
+
+            string filepath3 = Path.Combine(folderpath, "testFile.log");
+
+            /* var folderDetails = f1.CreateFolder(folderpath);
+             Console.WriteLine($"{folderDetails.CreationTime}");
+             Console.WriteLine($"{folderDetails.Attributes}");
+             Console.WriteLine($"{folderDetails.FullName}");
+             Console.WriteLine($"{folderDetails.Root}");
+
+             f1.CreateFile(filepath1);
+             string text = "This is file, folder handling";
+             f1.CreateFile(filepath1, text);
+
+             string[] texts = { "ram", "shyam", "hari", "" };
+             string filepath2 = Path.Combine(folderpath, "TextFile1.txt");
+             f1.CreateFile(filepath2, texts);        */
+
+            var lines = f1.ReadFile(filepath3);
+            for (byte i=1; i<lines.Length;i++)
+            {
+                Console.WriteLine($"{i} - {lines[i - 1]}");
+            }
+            
 
         }
-
+         
 
     }
 }
