@@ -128,10 +128,48 @@ namespace MainProgram
 
                  Student s1=new Student();
                  Student.PrintStudentDetails();
-                 Math.Sin(534);  */
+                 Math.Sin(534);  
 
-
+                 #region Nov19
                  ISellable p =new Puppy(); // loose -couplning , used in dependency injection
+
+                 Animal s=new Snake();
+
+
+                 FullTimeEmployee fte=new FullTimeEmployee();
+                 Contractor c=new Contractor();
+                    fte.FirstName="Shreya";
+                    fte.LastName="Pradhan";
+
+                    Console.WriteLine(fte.GetFullName());    
+                    c.FirstName="Shreya";
+                    c.LastName="Shrestha"; 
+                    Console.WriteLine(c.GetFullName());  
+                #endregion*/
+
+                 
+                 
+                 OffshoreEmployee Offshore=new OffshoreEmployee();
+                 Offshore.MinimumWorkingHours=200;
+                 Offshore.baseSalary=400;
+                 Offshore.ExperineceYears=4;
+                 Offshore.name="Shreya";
+                 Offshore.TimeZome="GMT+5";
+                 Console.WriteLine(Offshore.getWorkFromHomeHours());
+                 Console.WriteLine(Offshore.GetSalary());
+                 var time=Offshore.TimeZome;
+                  Console.WriteLine(time);
+
+                 EngineeringDepartment department=new EngineeringDepartment();
+                 department.regionalHead="Bishnu";
+                 department.departmentalHead="Ram";
+                 Console.WriteLine(department.GetChairPerson());
+
+
+
+
+
+
                   
                  
 
