@@ -207,6 +207,7 @@ namespace MainProgram {
             //5.Child class 2 should have a propery that hides a property in a parent class.
             NewsBroadCasting n = new NewsBroadCasting ();
             n.RadioProgramName = "8 A.M Nepali News";
+            System.Console.WriteLine($"The program playing is '{n.RadioProgramName}'");
 
             //6.Child class 2 should have a method that is overriden and uses base class implementation of that method as well.
             System.Console.WriteLine (ctp.DisplayCelerbityName ("AR Reheman"));
