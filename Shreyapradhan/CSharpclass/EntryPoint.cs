@@ -4,7 +4,9 @@ using LearningMethods;
 using System;
 using Generics;
 using System.Collections.Generic;
-                
+using Filehandling;
+using System.IO;
+           
 using PropertiesAndEnums;
 using Flight;
 
@@ -145,8 +147,7 @@ namespace MainProgram
                     c.FirstName="Shreya";
                     c.LastName="Shrestha"; 
                     Console.WriteLine(c.GetFullName());  
-                #endregion*/
-
+                
                  
                  
                  OffshoreEmployee Offshore=new OffshoreEmployee();
@@ -164,6 +165,35 @@ namespace MainProgram
                  department.regionalHead="Bishnu";
                  department.departmentalHead="Ram";
                  Console.WriteLine(department.GetChairPerson());
+                 #endregion*/
+
+
+
+                 #region  Nov 20
+
+                 string folderPath=@"C:\Users\i10572\.NETClassesCotiviti\Shreyapradhan\DemoFolder";
+                 string filepath1=Path.Combine(folderPath,"file1.txt");
+                 string filepath2=Path.Combine(folderPath,"file2.txt");
+                 string filepath3=Path.Combine(folderPath,"file3.txt");
+                 string text="Today is a lovely day";       
+                 string[] texts={"Hi there!","Hello","Hi"};       
+                 
+                 FileIo fileIO=new FileIo();
+                 /*var folder=fileIO.CreateDFolder(folderPath);
+                 Console.WriteLine(folder.FullName);
+                 Console.WriteLine(folder.CreationTime);
+                 Console.WriteLine(folder.LastAccessTime);
+                 Console.WriteLine(folder.Attributes);*/
+                 //fileIO.CreateFile(filepath1,text);
+                 //fileIO.CreateFile(filepath2,texts);
+                 var result=fileIO.ReadFile(filepath3);
+                 for(int i=0;i<result.Length;i++)
+                 {
+                        Console.WriteLine($"{i+1}-{result[i]}");
+                 }
+                  
+
+                 #endregion
 
 
 
