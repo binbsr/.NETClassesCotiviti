@@ -39,3 +39,6 @@ Learned about static constructors,class
 Day10:
 Learned about Inheritance-Interface
 Learned about how to create objects from inherited class or interface
+
+Day11:
+Learned about File I/O
