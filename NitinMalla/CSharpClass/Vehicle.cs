@@ -1,9 +1,11 @@
+
 public abstract class TwoWheeler
+
 {
     public float topSpeed {get;set;}
-    Public virtual bool IsElectic()
+    public virtual bool IsElectric()
     {
-        return False;
+        return false;
     }
     public string BrakingSystem() =>"Brakes to Stop";
 }
@@ -31,18 +33,15 @@ public class MotorBike : TwoWheeler, IFuelType
        
 }
 
-public class ElecticBike : MotorBike
+public sealed class ElecticBike : MotorBike
 {
-    public override bool IsElectric()
-    {
-        return true;
-    }
-    Public new string BrakingSystem() => $"{base.BrakingSystem()} and disc brakes";
+    public override bool IsElectric() => true;
+    public new string BrakingSystem() => $"{base.BrakingSystem()} and disc brakes";
     
 }
 public class Taxi : FourWheeler,IFuelType,IRentable
 {
-    Public string color{get; set;} = "Yellow";
+    public string color{get; set;} = "Yellow";
     public override int NoOfSheets() => 5;
     public string Fuel {get;set;}
     public void FuelDetails()
@@ -54,7 +53,7 @@ public class Taxi : FourWheeler,IFuelType,IRentable
     {
         System.Console.WriteLine($" The rate is 30 Rs per KM");
     }
-    public new string FourWheelDrive() => "{base.FourWheelDrive()} is not avaliable";
+    public new string FourWheelDrive() => $"{base.FourWheelDrive()} is not avaliable";
 }
 
 public class Car : FourWheeler, IFuelType
