@@ -4,7 +4,9 @@ using LearningMethods;
 using System;
 using Generics;
 using System.Collections.Generic;
-                
+using Filehandling;
+using System.IO;
+           
 using PropertiesAndEnums;
 using Flight;
 
@@ -128,10 +130,76 @@ namespace MainProgram
 
                  Student s1=new Student();
                  Student.PrintStudentDetails();
-                 Math.Sin(534);  */
+                 Math.Sin(534);  
 
-
+                 #region Nov19
                  ISellable p =new Puppy(); // loose -couplning , used in dependency injection
+
+                 Animal s=new Snake();
+
+
+                 FullTimeEmployee fte=new FullTimeEmployee();
+                 Contractor c=new Contractor();
+                    fte.FirstName="Shreya";
+                    fte.LastName="Pradhan";
+
+                    Console.WriteLine(fte.GetFullName());    
+                    c.FirstName="Shreya";
+                    c.LastName="Shrestha"; 
+                    Console.WriteLine(c.GetFullName());  
+                
+                 
+                 
+                 OffshoreEmployee Offshore=new OffshoreEmployee();
+                 Offshore.MinimumWorkingHours=200;
+                 Offshore.baseSalary=400;
+                 Offshore.ExperineceYears=4;
+                 Offshore.name="Shreya";
+                 Offshore.TimeZome="GMT+5";
+                 Console.WriteLine(Offshore.getWorkFromHomeHours());
+                 Console.WriteLine(Offshore.GetSalary());
+                 var time=Offshore.TimeZome;
+                  Console.WriteLine(time);
+
+                 EngineeringDepartment department=new EngineeringDepartment();
+                 department.regionalHead="Bishnu";
+                 department.departmentalHead="Ram";
+                 Console.WriteLine(department.GetChairPerson());
+                 #endregion*/
+
+
+
+                 #region  Nov 20
+
+                 string folderPath=@"C:\Users\i10572\.NETClassesCotiviti\Shreyapradhan\DemoFolder";
+                 string filepath1=Path.Combine(folderPath,"file1.txt");
+                 string filepath2=Path.Combine(folderPath,"file2.txt");
+                 string filepath3=Path.Combine(folderPath,"file3.txt");
+                 string text="Today is a lovely day";       
+                 string[] texts={"Hi there!","Hello","Hi"};       
+                 
+                 FileIo fileIO=new FileIo();
+                 /*var folder=fileIO.CreateDFolder(folderPath);
+                 Console.WriteLine(folder.FullName);
+                 Console.WriteLine(folder.CreationTime);
+                 Console.WriteLine(folder.LastAccessTime);
+                 Console.WriteLine(folder.Attributes);*/
+                 //fileIO.CreateFile(filepath1,text);
+                 //fileIO.CreateFile(filepath2,texts);
+                 var result=fileIO.ReadFile(filepath3);
+                 for(int i=0;i<result.Length;i++)
+                 {
+                        Console.WriteLine($"{i+1}-{result[i]}");
+                 }
+                  
+
+                 #endregion
+
+
+
+
+
+
                   
                  
 
