@@ -1,17 +1,26 @@
-public class Airtransport
+public  abstract class Airtransport
 {
+    
     public Airtransport()
     {
         System.Console.Write("Call Airtransport Constructor ()");
     }
-    public void hasLane()
-    {
-        System.Console.WriteLine("AirTransport has multiple Lane");
+    public abstract int hasLane();
+    public int NumOfPlanes => 100;
+    public int NumOfLane => 900;
+    public int JetCode{get;set;}
+    public string GetJetCodeAndPlanes()=>$"{JetCode} {NumOfPlanes}";
     }
  
-}
 public class Airplane : Airtransport, HaveWings
 {
+    //public new int GetNumOfPlanes() => 100;
+
+    public override int hasLane()
+    {
+        return NumOfLane;
+    }
+
     public void hasPassengerSeats()
     {
       System.Console.WriteLine("has Passenger seat");  
@@ -22,8 +31,11 @@ public class Airplane : Airtransport, HaveWings
         throw new System.NotImplementedException();
     }
 }
-public class Jet: Airplane
+public sealed class Jet: Airplane
 {
+    public new int JetCode{get;set;}
+    public new string GetJetCodeAndPlanes()=>$"{base.GetJetCodeAndPlanes()}- No of Jet and Planes";
+
     public void hasWindow()
     {
         System.Console.WriteLine("Jetplane has windows");
@@ -31,17 +43,15 @@ public class Jet: Airplane
 
 
 }
-public class Bird
+public  abstract class Bird
 {
-    public void haveMultipleWings()
-    {
-        System.Console.WriteLine("have wings");
-    }
+    public abstract int haveMultipleWings();
    
 }
 
 public class HummingBird : Bird, HaveWings, Canfly
 {
+    public override int haveMultipleWings()=>3;
     public void fly()
     {
         throw new System.NotImplementedException();
@@ -65,6 +75,11 @@ public class drone : Bird, Canfly
     }
 
     public void fly()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override int haveMultipleWings()
     {
         throw new System.NotImplementedException();
     }

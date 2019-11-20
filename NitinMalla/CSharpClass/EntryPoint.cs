@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using Collections;
 using PropertiesAndEnums;
 using Inheritance;
+using FileHandling;
+using System.IO;
 
 namespace MainProgram
 {
@@ -213,6 +215,49 @@ namespace MainProgram
             System.Console.WriteLine (contra.GetFullName());
 
 
+            MotorBike bike1 = new MotorBike();
+            System.Console.WriteLine(bike1.BrakingSystem());
+
+            ElecticBike ebike1 = new ElecticBike();
+            System.Console.WriteLine(ebike1.BrakingSystem());
+
+            Taxi t1 = new Taxi();
+            System.Console.WriteLine(t1.color);
+            System.Console.WriteLine(t1.NoOfSheets());
+            System.Console.WriteLine(t1.FourWheelDrive());
+
+            string folderPath =@"D:\Nitin\test";
+            FileIO fileIO = new FileIO();
+            var folder =fileIO.CreateFolder(folderPath);
+            Console.WriteLine(folder.FullName);
+            Console.WriteLine(folder.CreationTime);
+            Console.WriteLine(folder.LastAccessTime);
+
+           /*
+            string filePath =@"D:\Nitin\test";
+            string fileName ="Test1.txt";
+            fileIO.CreateFile($@"{filePath}\{fileName}");
+            */
+
+            string filePath = Path.Combine(folderPath,"file1.txt");
+            string filePath1 = Path.Combine(folderPath,"file2.txt");
+            string filePath2 = Path.Combine(folderPath,"production_support.txt");
+            fileIO.CreateFile(filePath);   
+
+            string text = "testing ";
+
+            fileIO.CreateFile (filePath, text);
+
+            string[] texts = { "Hi there", "hello", "Hi"};
+            
+            fileIO.CreateFile(filePath1,texts);
+
+            var results = fileIO.ReadFile(filePath2);
+            for (byte i=0; i<results.Length;i++)
+            {
+                Console.WriteLine($"{i+1} -> {results[i]}");
+            }
+            
 
         }
     }

@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using LearningMethods;
-using LoopsAndConditions;
-using PropertiesAndEnums;
+using Inheritance;
 
 namespace MainProgram
 {
@@ -11,8 +6,19 @@ namespace MainProgram
     {
         public static void Main()
         {
-            var x = Customer.CardNo;
-            
+            BaseEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "Bishnu";
+            fte.LastName = "Rawal";            
+            System.Console.WriteLine(fte.GetFullName());
+            System.Console.WriteLine(fte.CalculateMonthlySalary());
+
+            Contractor contra = new Contractor();
+            contra.FirstName = "Shree Krishna";
+            contra.LastName = "Gurung";
+
+            System.Console.WriteLine(contra.GetFullName());
+                       
+
         }
     }
 }

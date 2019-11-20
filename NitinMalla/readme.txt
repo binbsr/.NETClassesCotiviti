@@ -33,3 +33,9 @@ Team: Paymnet Customization
 
 18 Nov 2019 -- Day 10
     Learn more on inheritance, multiple inheritance using inerface
+
+19 NOv 2019 -- Day 11
+	 Learn about abstract , virtual , sealed methods and properties.
+
+20 Nov 2019 -- Day 12
+	Learn about File and Directory Handling
