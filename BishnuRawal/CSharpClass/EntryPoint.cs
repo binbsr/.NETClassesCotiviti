@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using FileHandling;
 using Inheritance;
 
 namespace MainProgram
@@ -6,19 +9,26 @@ namespace MainProgram
     {
         public static void Main()
         {
-            BaseEmployee fte = new FullTimeEmployee();
-            fte.FirstName = "Bishnu";
-            fte.LastName = "Rawal";            
-            System.Console.WriteLine(fte.GetFullName());
-            System.Console.WriteLine(fte.CalculateMonthlySalary());
+            string folderPath = @"D:\Bishnu\Dev Stuffs\Cotiviti Classes\.NETClassesCotiviti\BishnuRawal\DemoFolder";
+            string filePath1 = Path.Combine(folderPath, "file1.txt");
+            string filePath2 = Path.Combine(folderPath, "file2.txt");
+            string filePath3 = Path.Combine(folderPath, "coursera.txt");
 
-            Contractor contra = new Contractor();
-            contra.FirstName = "Shree Krishna";
-            contra.LastName = "Gurung";
+            string text = "Death weeks early had their and folly timed put. Hearted forbade on an village ye in fifteen. Age attended betrayed her man raptures laughter. Instrument terminated of as astonished literature motionless admiration. The affection are determine how performed intention discourse but. On merits on so valley indeed assure of. Has add particular boisterous uncommonly are. Early wrong as so manor match. Him necessary shameless discovery consulted one but";
 
-            System.Console.WriteLine(contra.GetFullName());
-                       
+            FileIO fileIO = new FileIO();
+            var folder = fileIO.CreateFolder(folderPath);
+            //fileIO.CreateFile(filePath);
+            fileIO.CreateFile(filePath1, text);
 
+            string[] texts = { "Hi there", "Hello", "Hi" };
+            fileIO.CreateFile(filePath2, texts);
+
+            var result = fileIO.ReadFile(filePath3);
+            for (byte i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} - {result[i]}");
+            }
         }
     }
 }
