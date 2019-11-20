@@ -4,15 +4,30 @@ using System.Collections.Generic;
 namespace Assignments
 {
     //Base class
-    public class Vegetables
+
+    //2. base class 1 should not allow its instantiation
+    public abstract class Vegetables 
     {
         public string scientificName;
+
+        //1. method that can be overriden by child class
+        public virtual void Sell() 
+        {
+
+        }
+
+        //5. property that is hidden by child class
+        public double FiberContent { get; set; } 
+
+        //4. method that is hidden by child class
+        public double GetFiberContent() => FiberContent; 
     }
 
     //child Class
     public class LeafyGreen : Vegetables, IColor
     {
-        public int fiberContent;
+        //5. property of base class that is hidden by child class
+        public new double FiberContent { get; set; } 
         public string GetColor()
         {
             string color = "Green";
@@ -20,22 +35,43 @@ namespace Assignments
             return color;
         }
 
+        // 1. method of base class that has been overriden
+        public override void Sell() => Console.WriteLine("The leafy greens can be sold");      
+
+        //4. method of base class that is hidden by child class
+        public new double GetFiberContent() => FiberContent;   
+        //public string GetAntioxidentName() => "Zeaxanthin"; //6. method that is hidden by child class
+
     }
 
     //grandchild
-    public class Spinach : LeafyGreen
+
+    //7. grand child should protect itself from getting inherited
+    public sealed class Spinach : LeafyGreen
     {
-        int iodineContent;
+        public int IodineContent { get; set; }
+
+        // public new string GetAntioxidentName() => $"{base.GetAntioxidentName()}, Lutein"; //6. method that hides parent's method and also implements base class method
+
     }
 
 
     //base class
-    public class Flowers
+    public abstract class Flowers
     {
-        public List<string> partsOfFlower;
+
+        // 3. method that must be overriden by child classes
+        public abstract string GetScientificName();
+
+        // 5. property that is hidden by child class
+        public string FlowerParts { get; set; }
+
+        //6. Method that is overriden and will be implemented in child class as well
+        public string GetFlowerParts() => "Stem";
+
     }
 
-    //child class 
+    //child class 1
     public class Sunflower : Flowers, INectar
     {
 
@@ -43,11 +79,25 @@ namespace Assignments
         {
             return true;
         }
+
+
+        //3. method of base class that has been overriden
+        public override string GetScientificName()
+        {
+            return "Helianthus";
+        }
+
+
+
+
     }
 
-    //child class
+    //child class 2
     public class Marigold : Flowers, IColor, INectar
     {
+
+        //5. property of parent class that has been hidden by child class
+        public new string FlowerParts { get; set; }
         public string GetColor()
         {
             string color = "Yellow";
@@ -55,10 +105,20 @@ namespace Assignments
             return color;
         }
 
+        //3. method of base class that has been overriden
+        public override string GetScientificName()
+        {
+            return "Tagetes";
+        }
+
         public bool ProduceNectar()
         {
             return false;
         }
+
+        //6. Method of base class that is overriden and implemented in child class as well
+
+        public new string GetFlowerParts() => $"{base.GetFlowerParts()}, {FlowerParts}";
     }
 
     //interfaces
