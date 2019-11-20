@@ -5,6 +5,8 @@ using Inheritances;
 using LearningMethods;
 using LoopsAndConditions;
 using PropertiesAndEnum;
+using Filehandling;
+using System.IO;
 
 //comment ctrl+K+C and uncomment ctrl+K+U
 namespace MainProgram {
@@ -186,31 +188,57 @@ namespace MainProgram {
             // // System.Console.WriteLine (c.GetFullName ());
 
             //--------------------------------------------Nov-20 Assignment-----------------------
-            //Base class 1 should have a method that can be overriden by child classes
-            Television t = new MusicalShow ();
-            System.Console.WriteLine ("No of Week Days to display the program is " + t.ProgramDisplayDays ());
+            // //Base class 1 should have a method that can be overriden by child classes
+            // Television t = new MusicalShow ();
+            // System.Console.WriteLine ("No of Week Days to display the program is " + t.ProgramDisplayDays ());
 
-            //2.Base class 1 should not allow its instantiation.
-            // Television t=new Television();
+            // //2.Base class 1 should not allow its instantiation.
+            // // Television t=new Television();
 
-            //3.Base class 2 should have a method that must be overriden by child classes1.
-            CelebritiesTalkProgram ctp = new CelebritiesTalkProgram ();
-            System.Console.WriteLine ("The display duration of the program is " + ctp.DisplayDuration ());
+            // //3.Base class 2 should have a method that must be overriden by child classes1.
+            // CelebritiesTalkProgram ctp = new CelebritiesTalkProgram ();
+            // System.Console.WriteLine ("The display duration of the program is " + ctp.DisplayDuration ());
 
-            //4.Child class 1 should have a method that hides a parent method.
-            MusicalShow m = new MusicalShow ();
-            m.ProgramName = "Chart Busters";
-            m.Language = "Hindi";
-            m.HostName = "Asif";
-            System.Console.WriteLine (m.GetProgramName ());
+            // //4.Child class 1 should have a method that hides a parent method.
+            // MusicalShow m = new MusicalShow ();
+            // m.ProgramName = "Chart Busters";
+            // m.Language = "Hindi";
+            // m.HostName = "Asif";
+            // System.Console.WriteLine (m.GetProgramName ());
 
-            //5.Child class 2 should have a propery that hides a property in a parent class.
-            NewsBroadCasting n = new NewsBroadCasting ();
-            n.RadioProgramName = "8 A.M Nepali News";
-            System.Console.WriteLine($"The program playing is '{n.RadioProgramName}'");
+            // //5.Child class 2 should have a propery that hides a property in a parent class.
+            // NewsBroadCasting n = new NewsBroadCasting ();
+            // n.RadioProgramName = "8 A.M Nepali News";
+            // System.Console.WriteLine($"The program playing is '{n.RadioProgramName}'");
 
-            //6.Child class 2 should have a method that is overriden and uses base class implementation of that method as well.
-            System.Console.WriteLine (ctp.DisplayCelerbityName ("AR Reheman"));
+            // //6.Child class 2 should have a method that is overriden and uses base class implementation of that method as well.
+            // System.Console.WriteLine (ctp.DisplayCelerbityName ("AR Reheman"));
+//---------------------------------------Nov 20 Files---------------------------------
+            string folderPath=@"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder";
+                 string filepath1=Path.Combine(folderPath,"file1.txt");
+                 string filepath2=Path.Combine(folderPath,"file2.txt");
+                 string filepath3=Path.Combine(folderPath,"file3.txt");
+                 string filepath4=Path.Combine(folderPath,"file4.txt");
+                 string filepath5=Path.Combine(folderPath,"file5.txt");
+                 string text="Today is a lovely day";       
+                 string[] texts={"Hi there!","Hello","Hi"};       
+
+                 FileIo fileIO=new FileIo();
+                 var folder=fileIO.CreateDFolder(folderPath);
+                //  Console.WriteLine(folder.FullName);
+                //  Console.WriteLine(folder.CreationTime);
+                //  Console.WriteLine(folder.LastAccessTime);
+                //  Console.WriteLine(folder.Attributes);
+                 //fileIO.CreateFile(filepath1,text);
+                 fileIO.CreateFile(filepath4,texts);
+                 
+                 var result=fileIO.ReadFile(filepath5);
+                Console.WriteLine(result);
+
+                 for(int i=0;i<result.Length;i++)
+                 {
+                        Console.WriteLine($"{i+1}-{result[i]}");
+                 }
 
         }
     }
