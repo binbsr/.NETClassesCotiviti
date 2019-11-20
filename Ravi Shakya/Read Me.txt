@@ -55,3 +55,10 @@ Date: 18th November, 2019 (Class 10th)
 > Learnt about Interface: whicha allows to add inheritance in different object (it doesn't have body).
 > "Is a" and "Has a" relation
 
+Date: 19th November, 2019 (Class 11th)
+ > Continuation of Inheritances.
+ > use of abstract class
+ > use of override function
+ > use of sealed function
+ > use of virtual key
+ > use of base and new class

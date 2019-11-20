@@ -10,6 +10,7 @@ using Exercise4Collection;
 using SongDetailInformation;
 using PropertiesAndEnums;
 using LearningInheritance;
+using cSharpClass.Inheritance;
 
 namespace cSharpClass
 {
@@ -222,7 +223,7 @@ namespace cSharpClass
             
         } */
 
-        public static void Main()
+       /* public static void Main()
     {
             //Dog d = new Dog();            // FIRST BASE CLASS CONSTRUCTOR CALLS then only Child class constructor 
             Puppy p = new Puppy();
@@ -232,7 +233,25 @@ namespace cSharpClass
             Animal p3 = new Snake();
             
     }
+    */
 
+        public static void Main()
+        {
+            BaseEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "ram";
+            fte.LastName = "sharma";
+            Console.WriteLine(fte.GetFullName());
+
+            Contractor contr = new Contractor();
+            contr.FirstName = "Shree";
+            contr.LastName = "gurung";
+            Console.WriteLine(contr.GetFullName());
+
+            Contractor fte1 = new Contractor();
+            Console.WriteLine(fte1.CalculateMonthlySalary());
+            Console.WriteLine(fte1.CalculateTax());
+
+        }
 
 
     }

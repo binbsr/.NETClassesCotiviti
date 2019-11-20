@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using GenericExamples;
 using Assignments;
 using PropertiesAndEnum;
+using Inheritance;
 namespace MainProgram
 {
     public class EntryPoint
@@ -114,7 +115,7 @@ namespace MainProgram
             // }
 
 
-          
+
             //for fetching songName and genre
             // foreach(var songList in c.FetchSongs())
             // {
@@ -165,20 +166,45 @@ namespace MainProgram
 
             // Customer customer = new Customer("");
             // var a = Customer.cardNumber;
-           // var z = Customer.citizenshipNumber;
-           //var z = customer.citizenshipNumber;
-           //Dog d = new Dog();
-        //    Puppy p = new Puppy();
-        //    ISaleable p1 = new Puppy();
-           
-           Marigold marigold = new Marigold();
-           LeafyGreen leafyGreen = new LeafyGreen();
-           Sunflower sunflower = new Sunflower();
-           Console.WriteLine($"Does Marigold produce nectar? {marigold.ProduceNectar()}");
-            
+            // var z = Customer.citizenshipNumber;
+            //var z = customer.citizenshipNumber;
+            //Dog d = new Dog();
+            //    Puppy p = new Puppy();
+            //    ISaleable p1 = new Puppy();
+
+            // Marigold marigold = new Marigold();
+            // LeafyGreen leafyGreen = new LeafyGreen();
+            // Sunflower sunflower = new Sunflower();
+            // Console.WriteLine($"Does Marigold produce nectar? {marigold.ProduceNectar()}");
+
+            // BaseEmployee fte = new FullTimeEmployee(); // this will not call baseclass this is called runtime polymorphism, even if the obj is of base class, it will check if the methods are overridden and if there is, then it calls the overriden method 
+            // // if the method has been hidden not overriden then, it calls the method of base class
+            // fte.FirstName = "Bishnu";
+            // fte.LastName = "Rawal";            
+            // Console.WriteLine(fte.GetFullName()); // Method hiding
+            // Console.WriteLine(fte.CalculateSalary()); //Method overriding using virtual
+
+            // Contractor contractor = new Contractor();
+            // contractor.FirstName = "Kajol";
+            // contractor.LastName = "Agarwal";
+            // Console.WriteLine(contractor.GetFullName());
+
+            LeafyGreen lg = new LeafyGreen();
+            // 1.
+            lg.Sell();
+            //3. 
+            Sunflower sf = new Sunflower();
+            Console.WriteLine(sf.GetScientificName());     
+            //4.
+            lg.FiberContent = 0.5;
+            Console.WriteLine(lg.GetFiberContent());
+            //5. 
+            Marigold mg = new Marigold();
+            mg.FlowerParts = "Leaves";
+            //6.
+            Console.WriteLine(mg.GetFlowerParts());
+
     }
-
-
 }
 }
 

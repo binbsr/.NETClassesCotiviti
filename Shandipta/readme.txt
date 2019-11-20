@@ -19,3 +19,4 @@ uses of static kewords.
 understanding of concept of inheritances. 
 types of inheritances,.
 18th Nov: Abstract class, Inheritance class
+19th Nov: learnt various keywords and their uses: Abstract, override, new, virtual, sealed
