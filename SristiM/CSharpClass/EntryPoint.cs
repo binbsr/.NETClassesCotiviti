@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Filehandling;
 using Inheritances;
 using LearningMethods;
 using LoopsAndConditions;
 using PropertiesAndEnum;
-using Filehandling;
-using System.IO;
 
 //comment ctrl+K+C and uncomment ctrl+K+U
 namespace MainProgram {
@@ -213,32 +213,85 @@ namespace MainProgram {
 
             // //6.Child class 2 should have a method that is overriden and uses base class implementation of that method as well.
             // System.Console.WriteLine (ctp.DisplayCelerbityName ("AR Reheman"));
-//---------------------------------------Nov 20 Files---------------------------------
-            string folderPath=@"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder";
-                 string filepath1=Path.Combine(folderPath,"file1.txt");
-                 string filepath2=Path.Combine(folderPath,"file2.txt");
-                 string filepath3=Path.Combine(folderPath,"file3.txt");
-                 string filepath4=Path.Combine(folderPath,"file4.txt");
-                 string filepath5=Path.Combine(folderPath,"file5.txt");
-                 string text="Today is a lovely day";       
-                 string[] texts={"Hi there!","Hello","Hi"};       
+            //---------------------------------------Nov 20 class---------------------------------
+            // string folderPath = @"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder";
+            // string filepath1 = Path.Combine (folderPath, "file1.txt");
+            // string filepath2 = Path.Combine (folderPath, "file2.txt");
+            // string filepath3 = Path.Combine (folderPath, "file3.txt");
+            // string filepath4 = Path.Combine (folderPath, "file4.txt");
+            // string filepath5 = Path.Combine (folderPath, "file5.txt");
+            // string text = "Today is a lovely day";
+            // string[] texts = { "Hi there!", "Hello", "Hi" };
 
-                 FileIo fileIO=new FileIo();
-                 var folder=fileIO.CreateDFolder(folderPath);
-                //  Console.WriteLine(folder.FullName);
-                //  Console.WriteLine(folder.CreationTime);
-                //  Console.WriteLine(folder.LastAccessTime);
-                //  Console.WriteLine(folder.Attributes);
-                 //fileIO.CreateFile(filepath1,text);
-                 fileIO.CreateFile(filepath4,texts);
-                 
-                 var result=fileIO.ReadFile(filepath5);
-                Console.WriteLine(result);
+            // FileIo fileIO = new FileIo ();
+            // var folder = fileIO.CreateDFolder (folderPath);
+            // //  Console.WriteLine(folder.FullName);
+            // //  Console.WriteLine(folder.CreationTime);
+            // //  Console.WriteLine(folder.LastAccessTime);
+            // //  Console.WriteLine(folder.Attributes);
+            // //fileIO.CreateFile(filepath1,text);
+            // fileIO.CreateFile (filepath4, texts);
 
-                 for(int i=0;i<result.Length;i++)
-                 {
-                        Console.WriteLine($"{i+1}-{result[i]}");
-                 }
+            // var result = fileIO.ReadFile (filepath5);
+
+            // for (int i = 0; i < result.Length; i++) {
+            //     Console.WriteLine ($"{i+1}-{result[i]}");
+            // }
+
+            //--------------------------Nov-20 Assignment II-------------------------------------
+
+            int WordsCount = 0;
+            int CharCount = 0;
+            int LinesCount = 0;
+            int SentenceCount = 0;
+            int Total = 0;
+            int TotalSpecialChar = 0;
+            string FilePath = @"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\blackp.txt";
+
+            //string FileText = new System.IO.StreamReader(FilePath).ReadToEnd().Replace("\r\n", "\r");
+            //CharCount = FileText.Length;
+
+            //1.Number of characters
+            string Content = File.ReadAllText (FilePath);
+            CharCount = Content.Length;
+            System.Console.WriteLine ("The number of characers is " + CharCount);
+            //2.Number of lines
+            LinesCount = Content.Split ('\r').Length; //total lines
+            System.Console.WriteLine ("The number of Lines is " + LinesCount);
+            //3.Number of words
+            WordsCount = Content.Split (' ').Length;
+            System.Console.WriteLine ("The number of words is " + WordsCount);
+            //4.Number of sentences
+            SentenceCount = Content.Split ('.').Length - 1;
+            System.Console.WriteLine ("The number of Sentences is " + SentenceCount);
+
+            //  char[] vowelList = { 'a', 'e', 'i', 'o', 'u' };
+            //  foreach (char vowel in vowelList)
+            // {
+            //     if (Content.Contains(vowel))
+            //     Console.WriteLine(vowel);
+            //     total++;
+            // }
+
+            //5.Number of vowels
+            foreach (char c in Content.ToLower ()) {
+
+                if ("aeiou".Contains (c)) {
+                    Total++;
+                }
+            }
+
+           //6.Number of special characters
+            System.Console.WriteLine ("The number of vowels in the file is " + Total);
+
+            foreach (char c in Content.ToLower ()) {
+
+                if ("$'()!+*<>=@?&".Contains (c)) {
+                    TotalSpecialChar++;
+                }
+            }
+
+            System.Console.WriteLine ("The number of special characters in the file is " + TotalSpecialChar);
 
         }
     }

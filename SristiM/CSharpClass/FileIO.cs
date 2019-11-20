@@ -26,5 +26,16 @@ namespace Filehandling
               var lines=content.Split(",",System.StringSplitOptions.RemoveEmptyEntries);
               return lines;
          }
+
+         public string ReadBlackPeterFile(string[] AllCharacters)
+         {
+             var path=@"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\blackp.txt";
+            
+             string content=File.ReadAllText(path);
+             return content;
+
+         }
+
+         //-------------------Nov 20 Assignment---------------------------------
     }
 } 
