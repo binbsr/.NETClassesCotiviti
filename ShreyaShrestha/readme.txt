@@ -32,3 +32,6 @@ Day9 (14th Nov, 2019)
 
 Day10 (18th Nov, 2019)
 	Inheritance and interface.
+
+Day11 (19th Nov, 2019)
+	Abstract class, sealed class, method overriding, method hiding.
