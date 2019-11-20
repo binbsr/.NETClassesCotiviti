@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Inheritances;
 using LearningMethods;
 using LoopsAndConditions;
 using PropertiesAndEnum;
@@ -166,8 +167,49 @@ namespace MainProgram {
 
             // Animal p=new Puppy();
             //-------------------------------------------------------------------------
-            IPlayAdvertisements advertisements = new CelebritiesTalkProgram ();
-            Radio r = new NewsBroadCasting ();
+            //IPlayAdvertisements advertisements = new CelebritiesTalkProgram ();
+            //Radio r = new NewsBroadCasting ();
+            //FullTimeEmployee fte=new FullTimeEmployee();
+            // BaseEmployee fte = new FullTimeEmployee ();
+            // fte.FirstName = "Sristi";
+            // fte.LastName = "Musyaju";
+            // System.Console.WriteLine (fte.GetFullName ());
+            // //GetFullName is called from the base class as the method is not virtual in the base class
+
+            // System.Console.WriteLine (fte.CalculateMonthlySalary ());
+            //Here the CalculateMonthlySalary is called from FullTimeEmployee
+            //due to method overriding as is defined as virtual in the base class
+
+            // // Contractor c = new Contractor ();
+            // // c.FirstName = "Shreya";
+            // // c.LastName = "S";
+            // // System.Console.WriteLine (c.GetFullName ());
+
+            //--------------------------------------------Nov-20 Assignment-----------------------
+            //Base class 1 should have a method that can be overriden by child classes
+            Television t = new MusicalShow ();
+            System.Console.WriteLine ("No of Week Days to display the program is " + t.ProgramDisplayDays ());
+
+            //2.Base class 1 should not allow its instantiation.
+            // Television t=new Television();
+
+            //3.Base class 2 should have a method that must be overriden by child classes1.
+            CelebritiesTalkProgram ctp = new CelebritiesTalkProgram ();
+            System.Console.WriteLine ("The display duration of the program is " + ctp.DisplayDuration ());
+
+            //4.Child class 1 should have a method that hides a parent method.
+            MusicalShow m = new MusicalShow ();
+            m.ProgramName = "Chart Busters";
+            m.Language = "Hindi";
+            m.HostName = "Asif";
+            System.Console.WriteLine (m.GetProgramName ());
+
+            //5.Child class 2 should have a propery that hides a property in a parent class.
+            NewsBroadCasting n = new NewsBroadCasting ();
+            n.RadioProgramName = "8 A.M Nepali News";
+
+            //6.Child class 2 should have a method that is overriden and uses base class implementation of that method as well.
+            System.Console.WriteLine (ctp.DisplayCelerbityName ("AR Reheman"));
 
         }
     }
