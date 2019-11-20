@@ -16,3 +16,5 @@ Class day8: learnt about Properties, Constants and Enums
 Class day 9 : learnt about inheritance 
  
 Class day 11 : learnt about abstract class/method virtual keyword, sealed class
+
+class day 12 : learnt about fileIo, reading and writing file.
