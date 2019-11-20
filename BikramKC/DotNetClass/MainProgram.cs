@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using DotNetClass;
 using Properties;
 using Inheritances;
+using FileHandling;
+using System.IO;
 
 namespace MainProgram
 {
@@ -121,7 +123,7 @@ namespace MainProgram
             ISaleable y = new GermanShephard();
             x.Buy();
             y.Buy();
-            */
+            
             IBrakingSystem bs1 = new Car();
             bs1.getBrakingSystem();
             IBrakingSystem bs2 = new SportsBike();
@@ -133,6 +135,79 @@ namespace MainProgram
             ILegGuard lg2 = new CruiseBike();
             System.Console.WriteLine(lg1.hasLegGuard);
             System.Console.WriteLine(lg2.hasLegGuard);
+            
+            FullTimeEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "Bishnu";
+            fte.LastName = "Rawal";
+            System.Console.WriteLine(fte.GetFullName());
+
+            Contractor con = new Contractor();
+            con.FirstName = "Gautam";
+            con.LastName = "Rasal";
+            System.Console.WriteLine(con.GetFullName());
+
+            BaseEmployee be = new FullTimeEmployee();
+            be.FirstName = "Bikram";
+            be.LastName = "KC";
+            System.Console.WriteLine(be.GetFullName());
+            
+            System.Console.WriteLine(be.CalculateMonthlySalary());
+         
+            IBrakingSystem bs1 = new Car();
+            bs1.getBrakingSystem();
+            IBrakingSystem bs2 = new SportsBike();
+            bs2.getBrakingSystem();
+            IBrakingSystem bs3 = new CruiseBike();
+            bs3.getBrakingSystem();
+
+            ILegGuard lg1 = new SportsBike();
+            ILegGuard lg2 = new CruiseBike();
+            System.Console.WriteLine(lg1.hasLegGuard);
+            System.Console.WriteLine(lg2.hasLegGuard);
+            */
+           // Homework 19 Nov
+       
+            Vehicle v = new Car();
+            // Base class 1 should have a method that can be overriden by child classes
+            v.Transport(); 
+            // 2. Base class 1 should not allow its instantiation.
+            // Vehicle v1 = new Vehicle();
+            SportsBike b1 = new SportsBike();
+            // 3. Base class 2 should have a method that must be overriden by child classes1.
+            b1.Carries(); // abstract function
+            // 4. Child class 1 should have a method that hides a parent method.
+            System.Console.WriteLine(b1.Suspension()); // method hiding
+            //5. Child class 2 should have a propery that hides a property in a parent class.
+            CruiseBike b2 = new CruiseBike();           
+            System.Console.WriteLine(b2.MaxCC); // Property Hiding
+            //6. Child class 2 should have a method that is overriden and uses base class implementation of that method as well.           
+            Console.WriteLine(b1.Comfortable());
+            Console.WriteLine(b2.Comfortable());
+            // 7. Grand child should protect itself from getting inherited.
+            // Sealed keyword has been used for this
+           
+
+
+
+
+           
+           /*
+            // Nov 20 classwork
+            string folderPath = @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir";
+            FileIO fileIO = new FileIO();
+            var folder = fileIO.CreateFolder(folderPath);
+            string filePath = Path.Combine(folderPath,"file.txt");
+            fileIO.CreateFile(filePath);
+            string[] text = {"hi", "Hello", "What's up"};
+            fileIO.CreateFile(filePath, text);
+            string path1 = @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir\file1.txt";
+            //Console.WriteLine(fileIO.ReadFile(path1));
+            string[] fileContent = fileIO.ReadFile(path1);
+            for(int i = 0; i< fileContent.Length; i++)
+            {
+                Console.WriteLine($"{i+1} {fileContent[i]}");
+            }
+            */
 
         }
 
