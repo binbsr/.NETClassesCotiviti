@@ -160,59 +160,59 @@ namespace MainProgram
 
                   }
                   */
-                  /*
-            Person p = new Person();
-            Person p1 = new Person("Shreya");
+            /*
+      Person p = new Person();
+      Person p1 = new Person("Shreya");
 
-            PropertiesAndEnums.Person per = new PropertiesAndEnums.Person("Nitin","Malla");
-            var x = per.FirstName;
-            Console.WriteLine(x);
-           // per.FirstName = "Abc";
-            x = per.FirstName;
-            Console.WriteLine(x);
+      PropertiesAndEnums.Person per = new PropertiesAndEnums.Person("Nitin","Malla");
+      var x = per.FirstName;
+      Console.WriteLine(x);
+     // per.FirstName = "Abc";
+      x = per.FirstName;
+      Console.WriteLine(x);
 
-           //  var card = Customer.CardNo;
+     //  var card = Customer.CardNo;
 
 */
             //Student s1 = new Student("Nitin");
             //Student s2 = new Student("Ram");
-            
-           // Student s3 = new Student();
-           // Student s4 = new Student();
+
+            // Student s3 = new Student();
+            // Student s4 = new Student();
             //Student s5 = new Student();
 
-           // Student.Address ="ktm";
+            // Student.Address ="ktm";
 
-           // s1.RollNo;
+            // s1.RollNo;
 
             //Student.PrintStudentDetails();
-// built in static class
+            // built in static class
             // Math.Sin(90);
 
-           // Dog d = new Dog();
+            // Dog d = new Dog();
             //Puppy puppy = new Puppy();
-           // Puppy p = new Puppy();
+            // Puppy p = new Puppy();
 
-           // ISaleable p1 = new Snake();  // dependancy injection
+            // ISaleable p1 = new Snake();  // dependancy injection
 
             //var p = new Snake();
             //var s = new Puppy(); 
 
-           // Animal a = new Snake();
-           // Animal b = new Puppy();
+            // Animal a = new Snake();
+            // Animal b = new Puppy();
 
             BaseEmployee fte = new FullTimeEmployee();
             fte.FirstName = "Nitin";
             fte.LastName = "Malla";
-            
-            System.Console.WriteLine (fte.GetFullName()); // method hiding
-            System.Console.WriteLine (fte.CalculateMonthlySalary()); // method override
+
+            System.Console.WriteLine(fte.GetFullName()); // method hiding
+            System.Console.WriteLine(fte.CalculateMonthlySalary()); // method override
 
             Contractor contra = new Contractor();
             contra.FirstName = "Abc";
             contra.LastName = "test";
 
-            System.Console.WriteLine (contra.GetFullName());
+            System.Console.WriteLine(contra.GetFullName());
 
 
             MotorBike bike1 = new MotorBike();
@@ -226,38 +226,67 @@ namespace MainProgram
             System.Console.WriteLine(t1.NoOfSheets());
             System.Console.WriteLine(t1.FourWheelDrive());
 
-            string folderPath =@"D:\Nitin\test";
+            string folderPath = @"D:\Nitin\test";
+            //string folderPath1 = @"http://textfiles.com/stories/";
             FileIO fileIO = new FileIO();
-            var folder =fileIO.CreateFolder(folderPath);
+            var folder = fileIO.CreateFolder(folderPath);
             Console.WriteLine(folder.FullName);
             Console.WriteLine(folder.CreationTime);
             Console.WriteLine(folder.LastAccessTime);
 
-           /*
-            string filePath =@"D:\Nitin\test";
-            string fileName ="Test1.txt";
-            fileIO.CreateFile($@"{filePath}\{fileName}");
-            */
+            /*
+             string filePath =@"D:\Nitin\test";
+             string fileName ="Test1.txt";
+             fileIO.CreateFile($@"{filePath}\{fileName}");
+             */
 
-            string filePath = Path.Combine(folderPath,"file1.txt");
-            string filePath1 = Path.Combine(folderPath,"file2.txt");
-            string filePath2 = Path.Combine(folderPath,"production_support.txt");
-            fileIO.CreateFile(filePath);   
+            string filePath = Path.Combine(folderPath, "file1.txt");
+            string filePath1 = Path.Combine(folderPath, "file2.txt");
+            string filePath2 = Path.Combine(folderPath, "production_support.txt");
+            string filePath3 = Path.Combine(folderPath, "blackp.txt");
+
+            fileIO.CreateFile(filePath);
 
             string text = "testing ";
 
-            fileIO.CreateFile (filePath, text);
+            fileIO.CreateFile(filePath, text);
 
-            string[] texts = { "Hi there", "hello", "Hi"};
-            
-            fileIO.CreateFile(filePath1,texts);
+            string[] texts = { "Hi there", "hello", "Hi" };
 
-            var results = fileIO.ReadFile(filePath2);
-            for (byte i=0; i<results.Length;i++)
+            fileIO.CreateFile(filePath1, texts);
+
+            var results = fileIO.ReadFile(filePath3);
+            var vowels = 0;
+            var specialChars = 0;
+
+            for (int i = 0; i < results.Length; i++)
             {
-                Console.WriteLine($"{i+1} -> {results[i]}");
+                Console.WriteLine($"{i + 1} -> {results[i]}");
+                var str = results[i];
+                for (int j = 0; j < results[i].Length; j++)
+                {
+                    if (str[j] == 'a' || str[j] == 'e' || str[j] == 'i' || str[j] == 'o' || str[j] == 'u' || str[j] == 'A' || str[j] == 'E' || str[j] == 'I' || str[j] == 'O' || str[j] == 'U')
+                    {
+                        vowels++;
+                    }   
+
+                    if (!((str[j]>='a' && str[j]<='z') || (str[j]>='A' && str[j]<='Z') ||(str[j]>='0' && str[j]<='9')))
+                    {
+                        specialChars++;
+                    }
+
+                }
             }
-            
+
+            System.Console.WriteLine($"No of Vowels --> {vowels} ");
+              System.Console.WriteLine($"No of special Characters --> {specialChars} ");
+
+
+            (int charCount, int lineCount, int wordCount) = fileIO.Count(filePath3);
+
+            Console.WriteLine($"Character Count --> {charCount}");
+            Console.WriteLine($"Line Count --> {lineCount}");
+            Console.WriteLine($"Word Count --> {wordCount}");
 
         }
     }

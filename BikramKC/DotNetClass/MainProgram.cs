@@ -166,7 +166,7 @@ namespace MainProgram
             System.Console.WriteLine(lg2.hasLegGuard);
             */
            // Homework 19 Nov
-       
+            /*
             Vehicle v = new Car();
             // Base class 1 should have a method that can be overriden by child classes
             v.Transport(); 
@@ -186,12 +186,12 @@ namespace MainProgram
             // 7. Grand child should protect itself from getting inherited.
             // Sealed keyword has been used for this
            
-
+            */
 
 
 
            
-           /*
+           
             // Nov 20 classwork
             string folderPath = @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir";
             FileIO fileIO = new FileIO();
@@ -202,12 +202,22 @@ namespace MainProgram
             fileIO.CreateFile(filePath, text);
             string path1 = @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir\file1.txt";
             //Console.WriteLine(fileIO.ReadFile(path1));
+            /*
             string[] fileContent = fileIO.ReadFile(path1);
             for(int i = 0; i< fileContent.Length; i++)
             {
                 Console.WriteLine($"{i+1} {fileContent[i]}");
             }
             */
+            string fp = @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir\AdventureOfBlackPeter.txt";
+            fileIO.ReadFile(path1);           
+            Console.WriteLine($"Number Of Characters: {fileIO.CountChar()}");
+            Console.WriteLine($"Number of Lines : {fileIO.CountLine(path1)}");
+            Console.WriteLine($"Number of Words : {fileIO.CountWord()}"); 
+            Console.WriteLine($"Number of Sentence : {fileIO.CountSentence()}"); 
+            Console.WriteLine($"Number of vowels : {fileIO.CountVowel()}"); 
+            Console.WriteLine($"Number of Consonent : {fileIO.CountConsonant()}");
+                    
 
         }
 

@@ -1,8 +1,12 @@
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace FileHandling
 {
     public class FileIO
-    {
+    {   
+        string fileContent;
         public DirectoryInfo CreateFolder(string path)
         {
             var result = Directory.CreateDirectory(path);
@@ -16,11 +20,41 @@ namespace FileHandling
         {
             File.WriteAllLines(path, content);
         }
-        public string[] ReadFile(string f)
+        public void ReadFile(string f)
         {
-            var a =  File.ReadAllText(f);
-            var result = a.Split("\r\n");
-            return result;
+            fileContent =  File.ReadAllText(f);
+            // var result = a.Split("\r\n");         
+            //return result;
         }
+        public int CountChar()
+        {
+            return fileContent.Length;
+        }
+        public int CountWord()
+        {
+            var count = Regex.Matches(fileContent, @"\b\w+\b").Count;
+            return count;
+        }
+        public int CountLine(string fp)
+        {
+            int count = File.ReadLines(fp).Count();
+            return count;
+        }
+        public int CountSentence()
+        {
+            return Regex.Matches(fileContent, @"[.?!]").Count;  
+        }
+        public int CountVowel()
+        {
+            var count = Regex.Matches(fileContent, @"[aeiou]").Count;
+            return count;
+        }
+        public int CountConsonant()
+        {
+            var count = Regex.Matches(fileContent, @"[b-df-hj-np-tv-z]").Count;
+            return count;
+        }
+
+        
     }
 }

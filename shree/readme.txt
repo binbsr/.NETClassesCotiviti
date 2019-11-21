@@ -23,3 +23,5 @@ Nov 14: Learned Static class data, methods, class and its implementation, privat
 Nov 18: Learned Inheritance, multiple inheritance, interface
 
 Nov 19: Discussed on virtual method, override method, abstract class and method
+
+Nov 20: file and directory handling
