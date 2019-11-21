@@ -63,3 +63,13 @@ Wednesday : 20th November 2019
 1. learnt about creting folder and file
 2. Readline , alltext of a file
 3. split the lines words, text, in a file 
+
+Thursday : 21st November 2019
+1. Started (LINQ) language intregated  Query
+2. Create  new project LINQ using dotnet new console -n LINQ
+3. using dotnet x=>x. using lamda(=>) expression where x. is list of item
+3. two syntax to use lamda : 
+   -- Method Syntax to use LINQ x=>x.StartWith("S")
+   -- Query Expression syntax - using query while extracting the values using keys to access value (example list)
+
+

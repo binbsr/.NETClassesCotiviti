@@ -39,6 +39,20 @@ namespace FileHandling
             var lines = fileContent.Split('\r').Length;//next line 
             return lines;
         }
+        internal void CreateFileUsingStreamWriter(string path,string fileContent)
+        {
+            StreamWriter sw = new StreamWriter(path);// write file
+            sw.WriteLine(fileContent);//object api
+            sw.Flush();
+            sw.Close();
+        }
+         internal void AppendTextUsingStreamWriter(string path,string textToAppend)
+        {
+            StreamWriter sw = new StreamWriter(path,true);// appends in existing file
+            sw.WriteLine(textToAppend);
+            sw.Flush();
+            sw.Close();
+        }
       
     }
 

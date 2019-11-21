@@ -174,6 +174,7 @@ namespace MainProgram
             string filePath2 = Path.Combine(folderPath, "file2.txt");
             string filePath3 = Path.Combine(folderPath, "file3.txt");
             string filePath4 = Path.Combine(folderPath, "blackp.txt");
+            string filePath5 = Path.Combine(folderPath,"fileStreamWriter.txt");
             string text = "kjdhfjsdhfjshf sdfkhsjfdhs kjshfkjshfjshf";
             FileIO fileIO = new FileIO();
             var folder = fileIO.CreateFolder(folderPath);
@@ -223,6 +224,11 @@ namespace MainProgram
                 }
             } 
             Console.WriteLine($"Number of Special Character  is {SpecialChar}");  
+
+            //create file anoyther way
+            fileIO.CreateFileUsingStreamWriter(filePath5,"hi i am from stream writer");
+            fileIO.AppendTextUsingStreamWriter(filePath5,"I must be an 2nd line if notyou are an idiot !!");
+
         }
 
     }
