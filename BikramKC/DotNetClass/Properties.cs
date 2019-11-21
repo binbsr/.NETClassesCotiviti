@@ -28,7 +28,6 @@ namespace Properties
                 return $"{fName} {lName}";
             }
         }
-        /*
         public bool HasBT
         {
             set 
@@ -36,7 +35,6 @@ namespace Properties
                 hasBT = value;
             }
         }
-        */
         public Person(string f, string l)
         {
             fName = f;
