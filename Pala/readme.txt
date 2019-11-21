@@ -59,4 +59,7 @@ Tuesday: 19th November 2019
 //base implementation when using method of base class (using keyword base.method of baseclass)
 //Key word new to hide method and properties
 
-
+Wednesday : 20th November 2019
+1. learnt about creting folder and file
+2. Readline , alltext of a file
+3. split the lines words, text, in a file 
