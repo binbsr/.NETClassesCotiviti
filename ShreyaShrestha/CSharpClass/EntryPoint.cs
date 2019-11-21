@@ -8,6 +8,8 @@ using GenericExamples;
 using Assignments;
 using PropertiesAndEnum;
 using Inheritance;
+using FileHandler;
+using System.IO;
 namespace MainProgram
 {
     public class EntryPoint
@@ -189,22 +191,63 @@ namespace MainProgram
             // contractor.LastName = "Agarwal";
             // Console.WriteLine(contractor.GetFullName());
 
-            LeafyGreen lg = new LeafyGreen();
-            // 1.
-            lg.Sell();
-            //3. 
-            Sunflower sf = new Sunflower();
-            Console.WriteLine(sf.GetScientificName());     
-            //4.
-            lg.FiberContent = 0.5;
-            Console.WriteLine(lg.GetFiberContent());
-            //5. 
-            Marigold mg = new Marigold();
-            mg.FlowerParts = "Leaves";
-            //6.
-            Console.WriteLine(mg.GetFlowerParts());
+            //Assignment 19th Nov
+            // LeafyGreen lg = new LeafyGreen();
+            // // 1.
+            // lg.Sell();
+            // //3. 
+            // Sunflower sf = new Sunflower();
+            // Console.WriteLine(sf.GetScientificName());     
+            // //4.
+            // lg.FiberContent = 0.5;
+            // Console.WriteLine(lg.GetFiberContent());
+            // //5. 
+            // Marigold mg = new Marigold();
+            // mg.FlowerParts = "Leaves";
+            // //6.
+            // Console.WriteLine(mg.GetFlowerParts());
 
+            //File Handling
+            //Directory.CreateDirectory(string path) can be done directly in the main function
+            FileIO fileIO = new FileIO();
+
+            //Directory
+            string folderPath = @"D:\DotNetClasses\.NETClassesCotiviti\ShreyaShrestha\DemoFolder";
+            // var folder = fileIO.CreateFolder(folderPath);
+            // Console.WriteLine(folder.FullName);
+            // Console.WriteLine(folder.CreationTime);
+            // Console.WriteLine(folder.LastAccessTime);
+            // Console.WriteLine(folder.Attributes);
+
+            //File
+            // string filePath1 = Path.Combine(folderPath, "Test.txt"); //can simply concatenate 
+            // string text = "Hello World!";
+
+            // //WriteAllText method overrides the text file
+            // fileIO.CreateFile(filePath1, "This is for file handling");
+            // fileIO.CreateFile(filePath1, text);
+
+            // string[] content = { "Hello there!", "How are you doing?", "Are you having a great time?" };
+            // string filePath2 = Path.Combine(folderPath, "ArrayText.txt");
+            // fileIO.CreateFile(filePath2, content);
+
+            // string filePath3 = @"C:\Users\i81378\Documents\Nucleus.txt";
+            // var result = fileIO.ReadFile(filePath3);
+            // for(byte i = 0 ; i < result.Length; i++)
+            // {
+            //     Console.WriteLine($"{i+1}: {result[i]}");
+            // }
+
+
+            //Assignment 
+            FileInterAction fia = new FileInterAction();
+            string filePath = Path.Combine(folderPath, "TheAdventureWorks.txt");
+            //Console.WriteLine($"The numbers of character in the text file is {fia.ReadCharacter(filePath)}");
+            //Console.WriteLine($"The numbers of words in the text file is {fia.ReadWords(filePath)}"); //8678
+            Console.WriteLine($"The numbers of sentences in the text file is {fia.ReadSentence(filePath)}"); //660 
+            //Console.WriteLine($"The numbers of vowels in the text file is {fia.ReadVowels(filePath)}");
+            //Console.WriteLine($"The numbers of special characters in the text file is {fia.ReadSpecialCharacters(filePath)}"); //47107
+        }
     }
-}
 }
 
