@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using Filehandling;
 using Inheritances;
 using LearningMethods;
@@ -240,58 +241,75 @@ namespace MainProgram {
 
             //--------------------------Nov-20 Assignment II-------------------------------------
 
-            int WordsCount = 0;
-            int CharCount = 0;
-            int LinesCount = 0;
-            int SentenceCount = 0;
-            int Total = 0;
-            int TotalSpecialChar = 0;
-            string FilePath = @"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\blackp.txt";
+            // int WordsCount = 0;
+            // int CharCount = 0;
+            // int LinesCount = 0;
+            // int SentenceCount = 0;
+            // int Total = 0;
+            // int TotalSpecialChar = 0;
+            // int TotalSentences = 0;
+            // string FilePath = @"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\file1.txt";
 
-            //string FileText = new System.IO.StreamReader(FilePath).ReadToEnd().Replace("\r\n", "\r");
-            //CharCount = FileText.Length;
+            // //string FileText = new System.IO.StreamReader(FilePath).ReadToEnd().Replace("\r\n", "\r");
+            // //CharCount = FileText.Length;
 
-            //1.Number of characters
-            string Content = File.ReadAllText (FilePath);
-            CharCount = Content.Length;
-            System.Console.WriteLine ("The number of characers is " + CharCount);
-            //2.Number of lines
-            LinesCount = Content.Split ('\r').Length; //total lines
-            System.Console.WriteLine ("The number of Lines is " + LinesCount);
-            //3.Number of words
-            WordsCount = Content.Split (' ').Length;
-            System.Console.WriteLine ("The number of words is " + WordsCount);
-            //4.Number of sentences
-            SentenceCount = Content.Split ('.').Length - 1;
-            System.Console.WriteLine ("The number of Sentences is " + SentenceCount);
+            // //1.Number of characters
+            // string Content = File.ReadAllText (FilePath);
+            // CharCount = Content.Length;
+            // System.Console.WriteLine ("The number of characers is " + CharCount);
+            // //2.Number of lines
+            // LinesCount = Content.Split ('\r').Length; //total lines
+            // System.Console.WriteLine ("The number of Lines is " + LinesCount);
+            // //3.Number of words
+            // WordsCount = Content.Split (' ').Length;
+            // System.Console.WriteLine ("The number of words is " + WordsCount);
+            // //4.Number of sentences
+            // SentenceCount = Content.Split ('.').Length - 1;
+            // System.Console.WriteLine ("The number of Sentences is " + SentenceCount);
 
-            //  char[] vowelList = { 'a', 'e', 'i', 'o', 'u' };
-            //  foreach (char vowel in vowelList)
-            // {
-            //     if (Content.Contains(vowel))
-            //     Console.WriteLine(vowel);
-            //     total++;
+            // var splitSentences = Regex.Matches (Content, @"[.?!]");
+            // System.Console.WriteLine ("The number of Sentences considering all possible end symbols is " + splitSentences.Count);
+
+            // //  char[] vowelList = { 'a', 'e', 'i', 'o', 'u' };
+            // //  foreach (char vowel in vowelList)
+            // // {
+            // //     if (Content.Contains(vowel))
+            // //     Console.WriteLine(vowel);
+            // //     total++;
+            // // }
+
+            // //5.Number of vowels
+            // foreach (char c in Content.ToLower ()) {
+
+            //     if ("aeiou".Contains (c)) {
+            //         Total++;
+            //     }
             // }
 
-            //5.Number of vowels
-            foreach (char c in Content.ToLower ()) {
+            // //6.Number of special characters
+            // System.Console.WriteLine ("The number of vowels in the file is " + Total);
 
-                if ("aeiou".Contains (c)) {
-                    Total++;
-                }
-            }
+            // foreach (char c in Content.ToLower ()) {
 
-           //6.Number of special characters
-            System.Console.WriteLine ("The number of vowels in the file is " + Total);
+            //     if ("$'()!+*<>=@?&".Contains (c)) {
+            //         TotalSpecialChar++;
+            //     }
+            // }
 
-            foreach (char c in Content.ToLower ()) {
+            // System.Console.WriteLine ("The number of special characters in the file is " + TotalSpecialChar);
+//--------------------------Nov-21 class-----------------
+string folderPath = @"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder";
+             string filepath1 = Path.Combine (folderPath, "file1.txt");
+            
 
-                if ("$'()!+*<>=@?&".Contains (c)) {
-                    TotalSpecialChar++;
-                }
-            }
+              FileIo fileIO = new FileIo ();
+            
+            
+            fileIO.CreateFileUsingStreamWriter(filepath1,"Hello There");
+            fileIO.AppendTextUsingStreamWriter(filepath1,"This is sristi");
 
-            System.Console.WriteLine ("The number of special characters in the file is " + TotalSpecialChar);
+
+
 
         }
     }

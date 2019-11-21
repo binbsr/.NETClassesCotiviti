@@ -42,3 +42,7 @@ Learned about how to create objects from inherited class or interface
 
 Day11:
 Learned about File I/O
+
+Day12:
+Leared about StremWriter
+Learned about LINQ
