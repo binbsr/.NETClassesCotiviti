@@ -13,8 +13,7 @@ public class Student {
 }
 
 public class Collections {
-    public static List<Student> FetchStudent ()
-     {
+    public static List<Student> FetchStudent () {
         List<Student> students = new List<Student> ();
         students.Add (new Student { RollNo = 1, Name = "Sristi", CollegeName = "KU", Dob = DateTime.Parse ("1990-12-12") });
         students.Add (new Student { RollNo = 2, Name = "Ayushma", CollegeName = "KU", Dob = DateTime.Parse ("1991-12-12") });
