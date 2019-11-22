@@ -46,3 +46,7 @@ Learned about File I/O
 Day12:
 Leared about StremWriter
 Learned about LINQ
+
+Day13:
+Learned about LINQ-Query Expressions
+Learned about LINQ- Method Syntax
