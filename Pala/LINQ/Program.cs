@@ -7,7 +7,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            //LINQ language intregated  Query
+          /*  //LINQ language intregated  Query
             //Example
             string[] names = { "Bishnu", "Pawan", "Shristi", "pala" };
             //var orderedNames = names.OrderBy(x => x);//Lamda expression order by 
@@ -15,11 +15,11 @@ namespace LINQ
             foreach (var name in namesFiltered)
             {
                 Console.WriteLine(name);
-            }
+            }       */
             //xample2
             var students = Collections.FetchStudents();
             var result = from student in students  //query expression to use linq 
-                              group student by student.CollegeName="MBM" into studentGroup
+                              group student by student.CollegeName into studentGroup
                               orderby studentGroup.Key 
                               select studentGroup; 
             foreach (var x in result)
