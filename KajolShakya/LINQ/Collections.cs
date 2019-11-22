@@ -1,17 +1,11 @@
+
 using System;
 using System.Collections.Generic;
 
-public class Student
-{
-    public int RollNo{get; set;}
-    public string Name{get; set;}
 
-    public string Address{get; set;}
-    public string CollegeName{get; set;}
-    public DateTime Dob {get; set;}
 
-}
-/*public class Collections
+
+public class Collections
 {
     public static List<Student> FetchStudents()
     {
@@ -24,4 +18,4 @@ public class Student
         
         return students;
     }
-}*/
+}

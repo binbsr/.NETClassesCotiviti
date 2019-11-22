@@ -24,4 +24,7 @@ Learn about Generic, Non-Generic, List and Dictionary.
 12th Nov 2019 -- Day 7
 Learn about Collection and Constructor.
 
+22nd Nov 2019 --
+Learn about basics of filtering, projections, ordering and grouping in query.
+
 
