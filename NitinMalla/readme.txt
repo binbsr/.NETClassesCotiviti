@@ -39,3 +39,9 @@ Team: Paymnet Customization
 
 20 Nov 2019 -- Day 12
 	Learn about File and Directory Handling
+
+21 Nov 2019 -- Day 13
+	Absent
+
+22 Nov 2019 -- Day 14
+	Learn about LinQ -- filtering, projections, ordering and grouping in query.
