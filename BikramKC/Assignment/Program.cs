@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Assignment
@@ -9,44 +10,41 @@ namespace Assignment
         static void Main(string[] args)
         {
             DataOperation dtOp = new DataOperation();
-            string filePath = @"D:\DotNet\Olympics_Athelete_Events.txt";
-            List<Player> dataTable = dtOp.LoadData(filePath);
+            
+            string curDir = Directory.GetCurrentDirectory();
+            string filePath = Path.Join(curDir, @"InputFiles\Olympics_Athelete_Events.txt"); 
+            //@"D:\Research\DotNet\.NETClassesCotiviti\BikramKC\TestDir\Olympics_Athelete_Events.txt";
+            // List<Player> dataTable = dtOp.LoadData(filePath);
+            List<Player> dataTable = dtOp.TextParser(filePath);
+
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine($"{dataTable[i].iD}   {dataTable[i].name}   {dataTable[i].sex}   {dataTable[i].age}   {dataTable[i].height}   {dataTable[i].weight}   {dataTable[i].team}   {dataTable[i].noc}   {dataTable[i].games}   {dataTable[i].year}   {dataTable[i].season}   {dataTable[i].city}   {dataTable[i].sport}   {dataTable[i].evnt}    {dataTable[i].medal}");
             }
+
             // Print Nepali Players
-           /* var nepaliPlayer = from plr1 in dataTable where plr1.team.ToLower() == "nepal" select new {plr1.name,plr1.team};
+            var nepaliPlayer = dtOp.GetNepaliPlayer(dataTable);
+            string npPlayersFp = Path.Join(curDir, @"OutputFiles\NepaliPlayers.csv");
+            dtOp.WriteToFile(nepaliPlayer, npPlayersFp);
+            // Chinease player with Gold
+            var chnPlayerWithgold = dtOp.GetChineaseWithGold(dataTable);
+            string chnPlayerWithgoldFp = Path.Join(curDir, @"OutputFiles\ChineasePlayer.csv");
+            dtOp.WriteToFile(chnPlayerWithgold,chnPlayerWithgoldFp);
 
-            Console.WriteLine("List of Nepali Player:");
-            foreach (var item in nepaliPlayer)
-            {
-                 Console.WriteLine($"{item.name}    {item.team}");
-            }
-            var chineasePlayerWithGold = from plr1 in dataTable where plr1.team.ToLower() == "china" && plr1.medal.ToLower() == "gold" select new {plr1.name, plr1.medal};
+            // US Players grouped by sports
+            var usPlayers = dtOp.GetUSPlayer(dataTable);
+            string usPlayersFp = Path.Join(curDir, @"OutputFiles\USPlayer.csv");
+            dtOp.WriteToFile(usPlayers,usPlayersFp);
+            
+            
+            // Medal Table ordered by Gold
+            MedalTable mt = new MedalTable();
+            var result = mt.GetMedalTable(dataTable);
+            string medTableFp = Path.Join(curDir, @"OutputFiles\MedalTable.csv");
+            mt.WriteToFile(result,medTableFp);
 
-            Console.WriteLine("List of Chinease Player who won Gold:");
-            foreach (var item2 in chineasePlayerWithGold)
-            {
-                Console.WriteLine($"{item2.name}    {item2.medal}");
-            }
+            
 
-            var usPlayer = from plr3 in dataTable  where plr3.noc.ToLower() == "usa" orderby  plr3.sport select new {plr3.name, plr3.sport};
-
-            Console.WriteLine("List of US Player grouped by Sports and ordered by sports:");
-            foreach (var item3 in usPlayer)
-            {
-                Console.WriteLine($"{item3.name}    {item3.sport}");
-            }
-            */
-            var medalByCountry = from mdl in dataTable  group mdl by new {mdl.noc, mdl.medal} into plrGroup  select new {team = plrGroup.Key.noc , medal = plrGroup.Key.medal, cnt = plrGroup.Count()};
-
-            Console.WriteLine("List of US Player grouped by Sports and ordered by sports:");
-            foreach (var item3 in medalByCountry)
-            {
-                Console.WriteLine($"{item3.team}    {item3.medal}   {item3.cnt}");
-            }
-                
         }
     }
 }
