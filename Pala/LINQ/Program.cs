@@ -35,48 +35,67 @@ namespace LINQ
                     System.Console.WriteLine("--" + s.Name);
                 }
             }
-          //impreative and declarative
-          //forloop is imperative step by step method
-          //int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 20 };
-          //Declerative
-          //var sum = numbers.Sum();//declarative way of defining function we dont know the functionality of the AIP
-          //Imperative
-          //int sum1 = 0;
-          // foreach (int num in numbers)
-          //{
-          //sum1 += num;
-          //}
-          //LINQ - Query Expression and Method Syntax
-          //Query Expression Syntax - Get evn number
-          /* var evenNumbers = from number in numbers
-                             where number % 2 == 0 && number < 20
-                             orderby number ascending
-                             select number;*/
-          //Method syntax
-          //evenNumbers = numbers.Where(number => number % 2 == 0).Select(x => x);
+            //impreative and declarative
+            //forloop is imperative step by step method
+            //int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 20 };
+            //Declerative
+            //var sum = numbers.Sum();//declarative way of defining function we dont know the functionality of the AIP
+            //Imperative
+            //int sum1 = 0;
+            // foreach (int num in numbers)
+            //{
+            //sum1 += num;
+            //}
+            //LINQ - Query Expression and Method Syntax
+            //Query Expression Syntax - Get evn number
+            /* var evenNumbers = from number in numbers
+                               where number % 2 == 0 && number < 20
+                               orderby number ascending
+                               select number;*/
+            //Method syntax
+            //evenNumbers = numbers.Where(number => number % 2 == 0).Select(x => x);
 
-          /*var evenNumbersWithMethodSyntax = numbers.Where(number => number % 2 == 0).Select(x => x);
-          foreach (var n in evenNumbers)
-          {
-              Console.WriteLine(n + " ");
-          }
+            /*var evenNumbersWithMethodSyntax = numbers.Where(number => number % 2 == 0).Select(x => x);
+            foreach (var n in evenNumbers)
+            {
+                Console.WriteLine(n + " ");
+            }
 
-          var students = Collections.FetchStudents();
-          var y = from student in students  //query expression to use linq 
-                  where student.CollegeName == "MBM"
-                  orderby student.Name descending
-                  select student.Name;*/
-          // Select new {student.RollNo, student.Name}
-          //students.Where(student=>student.CollegeName =="mbm").Select (x=>x.Name);
+            var students = Collections.FetchStudents();
+            var y = from student in students  //query expression to use linq 
+                    where student.CollegeName == "MBM"
+                    orderby student.Name descending
+                    select student.Name;*/
+            // Select new {student.RollNo, student.Name}
+            //students.Where(student=>student.CollegeName =="mbm").Select (x=>x.Name);
 
-          //student group by cpllege
-          /*var studentGroupByCollege = from student in students
-                                      group student by student.CollegeName into studentGroup
-                                      where studentGroup.Count() <= 2
-                                      orderby studentGroup.Key
-                                      select studentGroup;*/
-
-
+            //student group by cpllege
+            /*var studentGroupByCollege = from student in students
+                                        group student by student.CollegeName into studentGroup
+                                        where studentGroup.Count() <= 2
+                                        orderby studentGroup.Key
+                                        select studentGroup;*/
+            //joining 
+            var faculties = Collections.fetchFaculty();
+            var depStudents = from student in students
+                            join faculty in faculties on student.facultyId equals faculty.Id
+                            select new {Department = faculty.facultyName, Student = student  };// faculty name and student object 
+            var depStudentGroupedByFacultyId = from x in depStudents
+                                               group x by x.Department;
+            //student Faculty name and student name 
+             foreach(var item in depStudents)
+            {
+                Console.WriteLine($"{item.Department} - {item.Student.Name}");
+            }                                  
+            foreach(var item in depStudentGroupedByFacultyId)
+            {
+                Console.WriteLine($"{item.Key}");
+                foreach (var s in item)
+                {
+                    Console.WriteLine($"\t{s.Student.rollNo} - {s.Student.Name}");
+                }
+            }
+/*
             PlayerCollections pc = new PlayerCollections();
             var players = PlayerCollections.PlayerList();
             var NepaliPalyers = from PlayerList in players
@@ -127,7 +146,7 @@ namespace LINQ
 
 
 
-
+*/
 
 
 
