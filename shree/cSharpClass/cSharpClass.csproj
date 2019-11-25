@@ -3,11 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Exercise5\" />
-    <Folder Include="FileIO\" />
+    <Compile Remove="Exercise5\**" />
+    <EmbeddedResource Remove="Exercise5\**" />
+    <None Remove="Exercise5\**" />
   </ItemGroup>
 
 </Project>
