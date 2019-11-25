@@ -116,16 +116,21 @@ namespace LINQ
             FileOperation.CreateFile(path1,PlayerBycountry.ToArray());
             FileOperation.CreateFile(path2,chineeseGoldMedalist.ToArray());
             
+
+            List<string> SportTeam=new List<string>();
              foreach (var sportsgroup in AmericanPlayers)
             {
-                    Console.WriteLine($" grouop -> {sportsgroup.Key}");
+                             
+                SportTeam.Add(sportsgroup.Key);
+
                     foreach(var play in sportsgroup)
-                     {
-                          Console.WriteLine(play.Name);
+                     { 
+                          SportTeam.Append("\t"+play.Name);
 
                      }
 
             }
+            FileOperation.CreateFile(path3,SportTeam.ToArray());
 
 
         
