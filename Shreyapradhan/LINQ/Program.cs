@@ -3,7 +3,7 @@ using System.Linq;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-
+using Athelete;
 namespace LINQ
 {
     class Program
@@ -85,48 +85,27 @@ namespace LINQ
             }
             */
 
-            string path=@"C:\Users\i10572\.NETClassesCotiviti\Shreyapradhan\LINQ\Olympics_Athelete_Events.txt";
-            var content=File.ReadAllLines(path);
-            List<Player> players = new List<Player>();
-            var lines = content.Skip(1);
-            foreach(var line in lines)
-            {
-                
-                List<string> playerlist=new List<string>();
-                playerlist=line.Split(",").ToList();
-                Player player = new Player();
-                player.Id=int.Parse( playerlist[0]);
-                player.Name=playerlist[1];
-                player.sex=playerlist[2];
-                player.Age = playerlist[3];
-                player.Height=playerlist[4];
-                player.Weight=playerlist[5];
-                player.TeamName=playerlist[6];
-                player.NOC=playerlist[7];
-                player.Games=playerlist[8];
-                player.Year=playerlist[9];
-                player.Season=playerlist[10];
-                player.City=playerlist[11];
-                player.Sport=playerlist[12];
-                player.Event=playerlist[13];
-                player.Medal=playerlist[14];
-                players.Add(player);
-                //Console.WriteLine(playerlist[1]);
-            }
+            string rootpath=@"C:\Users\i10572\.NETClassesCotiviti\Shreyapradhan\LINQ";
+            string path=Path.Combine(rootpath,"Olympics_Athelete_Events.txt");
+            string path1=Path.Combine(rootpath,"Nepaleeseplayer.txt");
+            string path2=Path.Combine(rootpath,"ChineesePlayer.txt");
+            string path3=Path.Combine(rootpath,"AmericanPlayer.txt");
+
+            var players=Player.GetPlayers(path);
 
             
             var PlayerBycountry = from player in players
-                                      where player.TeamName == "Nepal"
+                                      where player.NOC == "NEP"
                                       select player.Name;
 
             var chineeseGoldMedalist= from player in players
-                                       where player.TeamName=="China" && player.Medal=="Gold"
+                                       where player.NOC=="CHN" && player.Medal=="Gold"
                                        select player.Name;
 
             var AmericanPlayers= from athelete in players
-                                 where athelete.TeamName =="USA"
+                                 where athelete.NOC =="USA"
                                  group athelete by athelete.Sport into sportsgroup
-                                 orderby sportsgroup ascending
+                                 orderby sportsgroup.Key ascending
                                  select sportsgroup;
 
             var CountryMedalTally = from sportsperson in players
@@ -134,23 +113,12 @@ namespace LINQ
                                     orderby countrygroup.Count() ascending
                                     select countrygroup;
 
-            Console.WriteLine("nepaleese Player");
-            foreach (var Nepaleese in PlayerBycountry)
+            FileOperation.CreateFile(path1,PlayerBycountry.ToArray());
+            FileOperation.CreateFile(path2,chineeseGoldMedalist.ToArray());
+            
+             foreach (var sportsgroup in AmericanPlayers)
             {
-
-                Console.WriteLine(Nepaleese);
-            }  
-
-            Console.WriteLine("Chineese Player with gold Medal");
-            foreach(var chineese in chineeseGoldMedalist)
-            {
-                Console.WriteLine(chineese);
-            }         
-
-            Console.WriteLine("American Player with gold Medal");
-            foreach (var sportsgroup in AmericanPlayers)
-            {
-                    Console.WriteLine($"{sportsgroup.Key}");
+                    Console.WriteLine($" grouop -> {sportsgroup.Key}");
                     foreach(var play in sportsgroup)
                      {
                           Console.WriteLine(play.Name);
@@ -160,19 +128,7 @@ namespace LINQ
             }
 
 
-            foreach (var sportsgroup in CountryMedalTally)
-            {
-                    Console.WriteLine($"{sportsgroup.Key}");
-                    foreach(var play in sportsgroup)
-                     {
-                          Console.WriteLine(play.Name);
-
-                     }
-
-            }
-
-
-             
+        
 
 
 

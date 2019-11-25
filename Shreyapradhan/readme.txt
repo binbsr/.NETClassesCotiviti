@@ -1,4 +1,8 @@
-shreya,i10572,R&D1,Payment Accuracy
+Name:shreya Pradhan
+Inumber:i10572
+Department: R&D1
+Team: Payment Accuracy
+
 
 class day 2: learnt about data types and create a new console app.
 

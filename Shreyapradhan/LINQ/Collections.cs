@@ -15,6 +15,6 @@ using System.Collections.Generic;
             return students;
         }
 
-        public static List<Player> players=new List<Player>();
+        
         
     }
