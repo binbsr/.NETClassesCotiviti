@@ -1,13 +1,15 @@
-﻿using System;
+﻿using AssignmentLinq;
+using System;
+using System.IO;
 using System.Linq;
 
 namespace cSharpLinq
 {
     class Program
     {
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
-           // Console.WriteLine("Hello World!");
+           Console.WriteLine("Hello World!");
             
 
            /* LINQ is language integrated language
@@ -15,7 +17,7 @@ namespace cSharpLinq
              * programming language type:
              * 
              * IMPERETIVE  --> it is step by step approach.Like Loop
-             * example: */
+             * example: 
                 
                 int[] number = { 2, 3, 4, 5, 6, 7, 8, 9,18,16,20,22 };
             //sum=sum of all array item using loop
@@ -57,7 +59,7 @@ namespace cSharpLinq
 
             /*   var b = from student in students
                        where student.CollegeName == "mbm"
-                       select new { student.RollNo, student.CollegeName };     */
+                       select new { student.RollNo, student.CollegeName };     
 
             // this will give roll no and college name
 
@@ -81,6 +83,21 @@ namespace cSharpLinq
                 }
             }
 
+        }     */  
+    
+        static void Main(string [] args)
+        {
+            Player p1 = new Player();
+            string folderPath = @"E:\DotNetCotiviti\.NETClassesCotiviti\shree";
+            string filePath = Path.Combine(folderPath, "Olympics_Athelete_Events.txt");
+            p1.ReadDataFIle(filePath);
+
+           // Console.WriteLine("this is test");
+
+           /* foreach (var item in p1.ReadDataFIle(filePath))
+            {
+                Console.WriteLine();
+            }*/
         }
     }
 }
