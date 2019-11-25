@@ -50,3 +50,6 @@ Learned about LINQ
 Day13:
 Learned about LINQ-Query Expressions
 Learned about LINQ- Method Syntax
+
+Day14:
+Learned about LINQ-JOIN
