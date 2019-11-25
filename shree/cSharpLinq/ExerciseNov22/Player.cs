@@ -10,40 +10,57 @@ namespace AssignmentLinq
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public char Sex { get; set; }
-        public byte Age { get; set; }
-        public byte Height { get; set; }
-        public byte Weight { get; set; }
+        public string Sex { get; set; }
+        public string Age { get; set; }
+        public string Height { get; set; }
+        public string Weight { get; set; }
         public string Team { get; set; }
         public string Noc { get; set; }
         public string Games { get; set; }
-        public short Year { get; set; }
+        public string Year { get; set; }
         public string Season { get; set; }
         public string City { get; set; }
         public string Sport { get; set; }
         public string Event { get; set; }
         public string Medal { get; set; }
 
-        public void SetDataTable()
+        public List<Player> SetTextLineToList()
         {
-
+            List<Player> playerList = new List<Player>();
+            
+            string folderPath = @"D:\shree\dot net\.NETClassesCotiviti\shree";
+            string filePath = Path.Combine(folderPath, "Olympics_Athelete_Events.txt");
+            var fileContent = ReadDataFIle(filePath);
+            for (int i = 1; i < fileContent.Length; i++)
+            {
+                var textLine = fileContent[i].Split(",", System.StringSplitOptions.RemoveEmptyEntries);
+                playerList.Add(new Player
+                {
+                    Id = Convert.ToInt32(textLine[0]),
+                    Name=textLine[1],
+                    Sex=textLine[2],
+                    Age= textLine[3],
+                    Height=textLine[4],
+                    Weight= textLine[5],
+                    Team= textLine[6],
+                    Noc= textLine[7],
+                    Games= textLine[8],
+                    Year= textLine[9],
+                    Season= textLine[10],
+                    City= textLine[11],
+                    Sport= textLine[12],
+                    Event= textLine[13],
+                    Medal= textLine[14]
+                });     
+            }
+            return playerList;
         }
 
-        public void ReadDataFIle(string filePath)
+        public string[] ReadDataFIle(string filePath)
         {
-            
-            IEnumerable<string> p = File.ReadAllLines(filePath);
-            //.Split("\n", StringSplitOptions.RemoveEmptyEntries);
-
-            List<Player> plr = p.OfType<Player>().ToList();
-            foreach (var i in p)
-            {
-                foreach (Player p1 in plr)
-                {
-                    Console.WriteLine(p1.Id);
-                }
-            }
-           // return plr;
+            var readFileContent = File.ReadAllText(filePath).Split("\n", StringSplitOptions.RemoveEmptyEntries);
+            return readFileContent;
+          
         }
     }
 }
