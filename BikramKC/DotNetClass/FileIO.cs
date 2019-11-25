@@ -20,6 +20,20 @@ namespace FileHandling
         {
             File.WriteAllLines(path, content);
         }
+        public void CreateFileSW(string fp, string content)
+        {
+            StreamWriter sw = new StreamWriter(fp);
+            sw.WriteLine(content);
+            sw.Flush();
+            sw.Close();
+        }
+        public void AppendFileSW(string fp, string content)
+        {
+            StreamWriter sw = new StreamWriter(fp, true);
+            sw.WriteLine(content);
+            sw.Flush();
+            sw.Close();
+        }
         public void ReadFile(string f)
         {
             fileContent =  File.ReadAllText(f);
@@ -42,7 +56,7 @@ namespace FileHandling
         }
         public int CountSentence()
         {
-            return Regex.Matches(fileContent, @"[.?!]").Count;  
+            return Regex.Matches(fileContent, @"[.?]").Count;  
         }
         public int CountVowel()
         {

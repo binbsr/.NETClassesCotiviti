@@ -21,6 +21,21 @@ namespace FileHandling
             File.WriteAllLines(path, content);
         }
 
+        internal void CreateFileUsingStreamWriter(string path, string fileContent)
+        {
+            StreamWriter sw = new StreamWriter(path);
+            sw.WriteLine(fileContent);
+            sw.Flush();
+            sw.Close();
+        }
+        internal void AppendTextUsingStreamWriter(string path, string textToAppend)
+        {
+            StreamWriter sw = new StreamWriter(path, true);
+            sw.WriteLine(textToAppend);
+            sw.Flush();
+            sw.Close();
+        }
+
         internal string[] ReadFile(string path)
         {
             var fileContent = File.ReadAllText(path);

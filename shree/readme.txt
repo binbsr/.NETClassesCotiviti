@@ -25,3 +25,5 @@ Nov 18: Learned Inheritance, multiple inheritance, interface
 Nov 19: Discussed on virtual method, override method, abstract class and method
 
 Nov 20: file and directory handling
+
+Nov 22: Learned LINQ

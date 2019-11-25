@@ -189,105 +189,104 @@ namespace cSharpClass
                 Console.WriteLine($"song = {item.Key} and Genre = {item.Value}");
             }
         }       */
-/*
+        /*
+                public static void Main()
+                {
+                    Collection c1 = new Collection();
+                    var song = c1.FetchSongs1();
+                    foreach (var item in song)
+                    {
+                        Console.WriteLine($"song = {item.Key} and Genre = {item.Value[0]} and Artist = {item.Value[1]}");
+                    }
+                }
+
+                public static void Main()
+                {
+                    Collection c1 = new Collection();
+                    List<(string songName, string Genre, string Artist)> var songs = c1.Fetchsongs2();
+                    foreach (var item in songs)
+                    {
+                        Console.WriteLine($"song = {item.songName} and Genre = {item.Genre} and Artist = {item.Artist}");
+                    }
+                }       
+
+               public static void Main()
+                {
+                    /* PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("ram", "shyam");
+                     var x = p.FirstName;
+                     Console.WriteLine(x);  
+
+                    //var x=Customer.CardNo;            // for Constant variable no need to create class object
+
+                    //Student.address;            // here address is static variable which is shared by all class object
+                    // to access STATIC variable, use classname.static_variable name
+
+                  //  var x=Student.PrintStudentDetails();
+
+
+                } */
+
+        /* public static void Main()
+     {
+             //Dog d = new Dog();            // FIRST BASE CLASS CONSTRUCTOR CALLS then only Child class constructor 
+             Puppy p = new Puppy();
+
+             Isaleable p1 = new Puppy();      // this is dependancy injection, it is also valid 
+             Isaleable p2 = new Snake();
+             Animal p3 = new Snake();
+
+     }
+     */
+
+        /*  public static void Main()
+             {   BaseEmployee fte = new FullTimeEmployee();
+                 fte.FirstName = "ram";
+                 fte.LastName = "sharma";
+                 Console.WriteLine(fte.GetFullName());
+
+                 Contractor contr = new Contractor();
+                 contr.FirstName = "Shree";
+                 contr.LastName = "gurung";
+                 Console.WriteLine(contr.GetFullName());
+
+                 Contractor fte1 = new Contractor();
+                 Console.WriteLine(fte1.CalculateMonthlySalary());
+                 Console.WriteLine(fte1.CalculateTax());
+
+                 Amphibian a1 = new Amphibian();
+                 a1.Name = "Animal";
+                 a1.ClassName = "Amphibian Class";
+                 Console.WriteLine(a1.GetName());        
+
+                 string folderpath= @"E:\DotNetCotiviti\.NETClassesCotiviti\shree\TestFolder";
+                 FileInputOutput f1 = new FileInputOutput();
+                 string filepath1 = Path.Combine(folderpath,"TextFile.txt");
+
+                 string filepath3 = Path.Combine(folderpath, "testFile.log");  
+
+                  var folderDetails = f1.CreateFolder(folderpath);
+                  Console.WriteLine($"{folderDetails.CreationTime}");
+                  Console.WriteLine($"{folderDetails.Attributes}");
+                  Console.WriteLine($"{folderDetails.FullName}");
+                  Console.WriteLine($"{folderDetails.Root}");
+
+                  f1.CreateFile(filepath1);
+                  string text = "This is file, folder handling";
+                  f1.CreateFile(filepath1, text);
+
+                  string[] texts = { "ram", "shyam", "hari", "" };
+                  string filepath2 = Path.Combine(folderpath, "TextFile1.txt");
+                  f1.CreateFile(filepath2, texts);        
+
+                 var lines = f1.ReadFile(filepath3);
+                 for (byte i=1; i<lines.Length;i++)
+                 {
+                     Console.WriteLine($"{i} - {lines[i - 1]}");
+                 }   */
+
         public static void Main()
         {
-            Collection c1 = new Collection();
-            var song = c1.FetchSongs1();
-            foreach (var item in song)
-            {
-                Console.WriteLine($"song = {item.Key} and Genre = {item.Value[0]} and Artist = {item.Value[1]}");
-            }
+
         }
-                
-        public static void Main()
-        {
-            Collection c1 = new Collection();
-            List<(string songName, string Genre, string Artist)> var songs = c1.Fetchsongs2();
-            foreach (var item in songs)
-            {
-                Console.WriteLine($"song = {item.songName} and Genre = {item.Genre} and Artist = {item.Artist}");
-            }
-        }       
-
-       public static void Main()
-        {
-            /* PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("ram", "shyam");
-             var x = p.FirstName;
-             Console.WriteLine(x);  
-
-            //var x=Customer.CardNo;            // for Constant variable no need to create class object
-
-            //Student.address;            // here address is static variable which is shared by all class object
-            // to access STATIC variable, use classname.static_variable name
-
-          //  var x=Student.PrintStudentDetails();
-            
-            
-        } */
-
-       /* public static void Main()
-    {
-            //Dog d = new Dog();            // FIRST BASE CLASS CONSTRUCTOR CALLS then only Child class constructor 
-            Puppy p = new Puppy();
-
-            Isaleable p1 = new Puppy();      // this is dependancy injection, it is also valid 
-            Isaleable p2 = new Snake();
-            Animal p3 = new Snake();
-            
-    }
-    */
-
-        public static void Main()
-        {/*
-            BaseEmployee fte = new FullTimeEmployee();
-            fte.FirstName = "ram";
-            fte.LastName = "sharma";
-            Console.WriteLine(fte.GetFullName());
-
-            Contractor contr = new Contractor();
-            contr.FirstName = "Shree";
-            contr.LastName = "gurung";
-            Console.WriteLine(contr.GetFullName());
-
-            Contractor fte1 = new Contractor();
-            Console.WriteLine(fte1.CalculateMonthlySalary());
-            Console.WriteLine(fte1.CalculateTax());
-            
-            Amphibian a1 = new Amphibian();
-            a1.Name = "Animal";
-            a1.ClassName = "Amphibian Class";
-            Console.WriteLine(a1.GetName());        */
-
-            string folderpath= @"D:\shree\dot net\.NETClassesCotiviti\shree\TestFolder";
-            FileInputOutput f1 = new FileInputOutput();
-            string filepath1 = Path.Combine(folderpath,"TextFile.txt");
-
-            string filepath3 = Path.Combine(folderpath, "testFile.log");
-
-            /* var folderDetails = f1.CreateFolder(folderpath);
-             Console.WriteLine($"{folderDetails.CreationTime}");
-             Console.WriteLine($"{folderDetails.Attributes}");
-             Console.WriteLine($"{folderDetails.FullName}");
-             Console.WriteLine($"{folderDetails.Root}");
-
-             f1.CreateFile(filepath1);
-             string text = "This is file, folder handling";
-             f1.CreateFile(filepath1, text);
-
-             string[] texts = { "ram", "shyam", "hari", "" };
-             string filepath2 = Path.Combine(folderpath, "TextFile1.txt");
-             f1.CreateFile(filepath2, texts);        */
-
-            var lines = f1.ReadFile(filepath3);
-            for (byte i=1; i<lines.Length;i++)
-            {
-                Console.WriteLine($"{i} - {lines[i - 1]}");
-            }
-            
-
-        }
-         
-
     }
 }

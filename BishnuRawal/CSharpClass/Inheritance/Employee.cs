@@ -25,7 +25,7 @@ namespace Inheritance
         public double HourlyWage { get; set; }
 
         public override double CalculateMonthlySalary() => HourlyWage * 160;
-        public override double CalculateTax() => 3234.3;
+        public double CalculateTax() => 3234.3;
         public new string GetFullName() => $"{base.GetFullName()} - Contractor";        
 
     }

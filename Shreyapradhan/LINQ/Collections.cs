@@ -14,4 +14,7 @@ using System.Collections.Generic;
             students.Add(new Student { rollNo = 6, Name = "lali", CollegeName = "MBM", Dob = DateTime.Parse("1993/12/11") });
             return students;
         }
+
+        public static List<Player> players=new List<Player>();
+        
     }
