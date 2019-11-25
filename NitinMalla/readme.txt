@@ -45,3 +45,6 @@ Team: Paymnet Customization
 
 22 Nov 2019 -- Day 14
 	Learn about LinQ -- filtering, projections, ordering and grouping in query.
+
+25 Nov 2010 -- Day 15
+	learn More about LInq, grouping joining .
