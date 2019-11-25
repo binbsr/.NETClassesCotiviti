@@ -7,7 +7,8 @@ namespace Athelete
 {
     public class Athelete
     {
-        static void Main(string[] args)
+        public static void sfsdfs()
+     //   static void Main(string[] args)
         {
           //   string filePath = @"D:\\\\dotNet\\\\.NETClassesCotiviti\\\\Shandipta\\\\ChsarpClass\\\\Assignments\\\\t.txt";
             string filePath = @"D:\\dotNet\\.NETClassesCotiviti\\Shandipta\\ChsarpClass\\Assignments\\Olympics_Athelete_Events.txt";
@@ -52,6 +53,7 @@ namespace Athelete
 
             //List all countries with thier medal tally so far. Also, order the list by number of golds won.
 
+
 var result = ath.Where(ath=>ath.medal!="NA")
     .GroupBy(p => new { p.noc, p.medal })
     .Select(g => new 
@@ -64,7 +66,7 @@ var result = ath.Where(ath=>ath.medal!="NA")
 
     foreach(var v in result)    {
 
-         Console.WriteLine($"{v.team} -> {v.medal} -> {v.count}");
+         Console.WriteLine($"Country: {v.team}, Medal: {v.medal}, Count: {v.count}");
 
     }
 
