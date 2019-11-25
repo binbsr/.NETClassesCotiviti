@@ -72,4 +72,13 @@ Thursday : 21st November 2019
    -- Method Syntax to use LINQ x=>x.StartWith("S")
    -- Query Expression syntax - using query while extracting the values using keys to access value (example list)
 
+Friday: 22nd November ,2019
+REvision of 21st November on LINQ , expressions
+And also learned groupby Query as well
+
+Monday: 25th November 2019
+Today we learnt to use join using declarative query 
+
+
+
 

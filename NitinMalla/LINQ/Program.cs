@@ -87,7 +87,7 @@ class Program
            atheletesEvents.Add(new OlympicsAtheletesEvent { Id=2,Name="MAX",Sex='M',Age=30,Height="123",Weight="70",Team="United State of America",NOC="USA",Games ="1992 Summer",Year =1992,
            Season="Summer",City="Barcelona",Sport="Basketball",Event="Basketball Men's Basketball",Medal="NA"});
        */
-        string folderPath = @"D:\dotnet_classes\files";
+  /*      string folderPath = @"D:\dotnet_classes\files";
         FileIO fileIO = new FileIO();
         string filePath1 = Path.Combine(folderPath, "NepaliAtheletesList.txt");
         string filePath2 = Path.Combine(folderPath, "ChineseAtheletesList.txt");
@@ -252,6 +252,36 @@ class Program
             l++;              
         } 
         fileIO.CreateFile(filePath4,medalList);
+
+*/
+
+        // Joining 
+
+        var faculties = Collections.GetListOfFaculties();
+        var depStudents = from student in students
+                            join faculty in faculties on student.FacultyId equals faculty.Id
+                            select new {Department = faculty.FacultyName, student = student};
+
+        
+        var depStudentGroupedByFacultyId = from x in depStudents
+                                            group x by x.Department;
+                                            
+        foreach (var item in depStudents)
+        {
+            Console.WriteLine($"{item.Department} {item.student.Name}");
+            
+        }
+         
+         foreach (var item in depStudentGroupedByFacultyId)
+        {
+            Console.WriteLine($"{item.Key}");
+            foreach (var s in item)
+            {
+                Console.WriteLine($"\t{s.student.RollNumber} -- {s.student.Name}");
+            }
+            
+        }
+
 
        
 

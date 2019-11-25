@@ -10,12 +10,13 @@ using HealthAndFitness;
 using Inheritance;
 using PropertiesPrac;
 using Sport;
+using LINQ;
 namespace MainProgram
 {
     public class entryPoint
     {
-        public static void Main()
-        {
+  //      public static void Main()
+  //      {
 
             /*   Iterration iter = new Iterration ();
                iter.DefineLoops ();
@@ -136,20 +137,39 @@ namespace MainProgram
                 var v = p.FullName;
                 Console.WriteLine(a);
                 */
-            Console.WriteLine("-----------------------------------");
-            MotoGP mgp = new MotoGP();
-            mgp.WinnerName();
-            Console.WriteLine("-----------------------------------");
-            Moto2 m3 = new Moto2();
-            Console.WriteLine("-----------------------------------");
-            MMA mma = new MMA();
-            mma.WeightDivision(90);
-            mma.WinnerName();
-            Console.WriteLine("-----------------------------------");
-            Boxing boxing = new Boxing();
-            boxing.WeightDivision(90);
+            /*     Console.WriteLine("-----------------------------------");
+                 MotoGP mgp = new MotoGP();
+                 mgp.WinnerName();
+                 Console.WriteLine("-----------------------------------");
+                 Moto2 m3 = new Moto2();
+                 Console.WriteLine("-----------------------------------");
+                 MMA mma = new MMA();
+                 mma.WeightDivision(90);
+                 mma.WinnerName();
+                 Console.WriteLine("-----------------------------------");
+                 Boxing boxing = new Boxing();
+                 boxing.WeightDivision(90); */
+
+     /*--------------------------------------------------------*/
+/*
+            FullEmployees fe = new FullEmployees();
+            fe.FirstName = "Shandipta";
+            fe.LastName = "Rai"; //If private field construtor is necessary to use properties
+                                 // fe.MonthlySalary=1;
+            Console.WriteLine(fe.GetFullName());
+            Console.WriteLine(fe.CalculateMonthlySalary());//runtime(dynamic) polymorphism
 
 
-        }
+            Contractor c = new Contractor();
+            c.FirstName = "Anna";
+            c.LastName = "Rai"; //If private field construtor is necessary to use properties
+            Console.WriteLine(c.GetFullName());
+            */
+
+    /*        LINQPrac p = new LINQPrac();
+            p.LINQ(5,10,20,30,40,50,60);
+
+
+        }*/
     }
 }

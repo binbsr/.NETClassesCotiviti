@@ -10,20 +10,6 @@ namespace LINQ
         public string stream { get; set; }
         public string CollegeName { get; set; }
         public DateTime Dob { get; set; }
-    }
-
-    public class Collections
-    {
-        public static List<Student> FetchStudents()
-        {
-            List<Student> students = new List<Student>();
-            students.Add(new Student { rollNo = 1, Name = "Ram", CollegeName = "Trinity", Dob = DateTime.Parse("1990/12/11") });
-            students.Add(new Student { rollNo = 1, Name = "bishnu", CollegeName = "united", Dob = DateTime.Parse("1994/12/11") });
-            students.Add(new Student { rollNo = 1, Name = "bisnu", CollegeName = "gems", Dob = DateTime.Parse("1996/12/11") });
-            students.Add(new Student { rollNo = 1, Name = "hari", CollegeName = "prime", Dob = DateTime.Parse("1997/12/11") });
-            students.Add(new Student { rollNo = 1, Name = "prasad", CollegeName = "ccrc", Dob = DateTime.Parse("1993/12/11") });
-            students.Add(new Student { rollNo = 1, Name = "lali", CollegeName = "mbm", Dob = DateTime.Parse("1993/12/11") });
-            return students;
-        }
+        public int facultyId {get;set;}
     }
 }

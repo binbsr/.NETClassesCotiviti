@@ -109,92 +109,103 @@ namespace LINQ {
 
             //------------------------------------------------Nov-22 Assignment----------------------------
 
-            string FilePath = @"D:\DotNetTraining\.NETClassesCotiviti\BishnuRawal\Homework\Nov22_Excercise\Olympics_Athelete_Events.txt";
-            // var p = new FetchPlayers ();
-            // var pl = p.LoadPlayerData (FilePath);
-            var pl = FetchPlayers.LoadPlayerData (FilePath);
+            // string FilePath = @"D:\DotNetTraining\.NETClassesCotiviti\BishnuRawal\Homework\Nov22_Excercise\Olympics_Athelete_Events.txt";
+            // // var p = new FetchPlayers ();
+            // // var pl = p.LoadPlayerData (FilePath);
+            // var pl = FetchPlayers.LoadPlayerData (FilePath);
 
-            //------------------------1.List all the players participated from our country.
-            var ply = (from player in pl where player.Team == "Nepal"
-                select player).Take (100);
+            // //------------------------1.List all the players participated from our country.
+            // var ply = (from player in pl where player.Team == "Nepal"
+            //     select player).Take (100);
 
-            Console.WriteLine ("The list of players in Nepal are: ");
-            foreach (var plyr in ply) {
-                Console.WriteLine ($"{plyr.ID} - {plyr.Name} ");
-            }
+            // Console.WriteLine ("The list of players in Nepal are: ");
+            // foreach (var plyr in ply) {
+            //     Console.WriteLine ($"{plyr.ID} - {plyr.Name} ");
+            // }
 
-            Console.WriteLine ();
-            Console.WriteLine ();
+            // Console.WriteLine ();
+            // Console.WriteLine ();
 
-            //-------------------------2.List all chinese players who have won the GOLD.
-            var plyrChina = (from player in pl where player.Team == "China" && player.Medal == "Gold"
-                select player).Take (100);
-            Console.WriteLine ("The list of players in China who won gold medal are are: ");
-            foreach (var plyr in plyrChina) {
-                Console.WriteLine ($"{plyr.ID} - {plyr.Name} ");
-            }
+            // //-------------------------2.List all chinese players who have won the GOLD.
+            // var plyrChina = (from player in pl where player.Team == "China" && player.Medal == "Gold"
+            //     select player).Take (100);
+            // Console.WriteLine ("The list of players in China who won gold medal are are: ");
+            // foreach (var plyr in plyrChina) {
+            //     Console.WriteLine ($"{plyr.ID} - {plyr.Name} ");
+            // }
 
-            Console.WriteLine ();
-            Console.WriteLine ();
+            // Console.WriteLine ();
+            // Console.WriteLine ();
 
-            //-------------------------3.List all players from USA and group them by sport they were in. Also order the result by sport.
-            var plyrUSA = (from player in pl where player.Team == "United States"
-                group player by player.Sport into USAPlayerGroup orderby USAPlayerGroup.Key select USAPlayerGroup);
-            Console.WriteLine ("The list of USA players grouped as per their sport are:");
-            foreach (var plyrs in plyrUSA) //studs is itself collection of students
-            {
-                Console.WriteLine ();
-                Console.WriteLine ($" USA players as per the Sport -{plyrs.Key} has given list of players:");
-                foreach (var plyr in plyrs.Take (3)) {
-                    Console.WriteLine ($"{plyrs.Key} : {plyr.ID} - {plyr.Name}");
+            // //-------------------------3.List all players from USA and group them by sport they were in. Also order the result by sport.
+            // var plyrUSA = (from player in pl where player.Team == "United States"
+            //     group player by player.Sport into USAPlayerGroup orderby USAPlayerGroup.Key select USAPlayerGroup);
+            // Console.WriteLine ("The list of USA players grouped as per their sport are:");
+            // foreach (var plyrs in plyrUSA) //studs is itself collection of students
+            // {
+            //     Console.WriteLine ();
+            //     Console.WriteLine ($" USA players as per the Sport -{plyrs.Key} has given list of players:");
+            //     foreach (var plyr in plyrs.Take (3)) {
+            //         Console.WriteLine ($"{plyrs.Key} : {plyr.ID} - {plyr.Name}");
+            //     }
+            // }
+
+            // //----------------------As the output rows is huge(15000 lines), writing the content in file
+            // using (StreamWriter writer = new StreamWriter (@"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\USA_Sports_Players.txt"))
+            // foreach (var country in plyrUSA)
+            //     foreach (var plyrs in plyrUSA) //studs is itself collection of students
+            // {
+            //     writer.WriteLine ();
+            //     writer.WriteLine ($" USA players as per the Sport -{plyrs.Key} has given list of players:");
+            //     foreach (var plyr in plyrs.Take (3)) {
+            //         writer.WriteLine ($"{plyrs.Key} : {plyr.ID} - {plyr.Name}");
+            //     }
+            // }
+
+            // Console.WriteLine ();
+            // Console.WriteLine ();
+
+            // //--------------------------4.List all countries with thier medal tally so far. Also, order the list by number of golds won.            
+            // var countryMedalList = (from player in pl.Take (1000) where player.Medal == "Gold" ||
+            //     player.Medal == "Silver" ||
+            //     player.Medal == "Bronze"
+            //     group player by new { player.Team, player.Medal } into GropingByCountryMedal orderby GropingByCountryMedal.Key.Team, GropingByCountryMedal.Key.Medal ascending select new { Team = GropingByCountryMedal.Key.Team, Medal = GropingByCountryMedal.Key.Medal, MedalCount = GropingByCountryMedal.Count () });
+            // Console.WriteLine ("The list of countries along with their medal tally are:");
+            // foreach (var country in countryMedalList) {
+
+            //     Console.WriteLine ($"{country.Team} - {country.Medal} - {country.MedalCount} ");
+
+            // }
+
+            // Console.WriteLine ();
+            // Console.WriteLine ();
+
+            // //---------------------------- Also, order the list by number of golds won.        
+            // var countryGoldMedalList = (from player in pl.Take (1000) where player.Medal == "Gold"
+            //     group player by new { player.Team, player.Medal } into GropingByCountry orderby GropingByCountry.Count () descending, GropingByCountry.Key.Team ascending select new { Team = GropingByCountry.Key.Team, Medal = GropingByCountry.Key.Medal, MedalCount = GropingByCountry.Count () });
+            // Console.WriteLine ("The list of countries along with their Gold medal tally are:");
+            // foreach (var country in countryGoldMedalList) {
+            //     Console.WriteLine ($"{country.Team} - {country.Medal} - {country.MedalCount}");
+            // }
+
+            //--------------------Nov-25 class------------------------------------------
+
+            //Joining
+            var students = Collections.FetchStudent ();
+            var faculties = Faculty.FetchFaculties ();
+            var depStudents = from student in students
+            join faclty in faculties on student.FacultyId equals faclty.Id
+            select new { Department = faclty.FacultyName, Student = student };
+
+            var depStudentGroupedByFacultyId = from x in depStudents
+            group x by x.Department;
+
+            foreach (var dept in depStudentGroupedByFacultyId) {
+                Console.WriteLine ($"{dept.Key}");
+                foreach (var stud in dept) {
+                    Console.WriteLine ($"{stud.Student.RollNo} - {stud.Student.Name}");
                 }
             }
-
-            //----------------------As the output rows is huge(15000 lines), writing the content in file
-            using(StreamWriter writer=new StreamWriter(@"D:\DotNetTraining\.NETClassesCotiviti\SristiM\DemoFolder\USA_Sports_Players.txt"))
-                foreach (var country in plyrUSA)
-            foreach (var plyrs in plyrUSA) //studs is itself collection of students
-            {
-                writer.WriteLine ();
-                writer.WriteLine ($" USA players as per the Sport -{plyrs.Key} has given list of players:");
-                foreach (var plyr in plyrs.Take (3)) {
-                    writer.WriteLine ($"{plyrs.Key} : {plyr.ID} - {plyr.Name}");
-                }
-            }
-
-            Console.WriteLine ();
-            Console.WriteLine ();
-
-            //--------------------------4.List all countries with thier medal tally so far. Also, order the list by number of golds won.            
-            var countryMedalList = (from player in pl.Take (1000) where player.Medal == "Gold" ||
-                player.Medal == "Silver" ||
-                player.Medal == "Bronze"
-                group player by new { player.Team, player.Medal } into GropingByCountryMedal 
-                orderby GropingByCountryMedal.Key.Team, GropingByCountryMedal.Key.Medal ascending
-                select new { Team = GropingByCountryMedal.Key.Team, Medal = GropingByCountryMedal.Key.Medal, MedalCount = GropingByCountryMedal.Count () });
-            Console.WriteLine ("The list of countries along with their medal tally are:");
-            foreach (var country in countryMedalList)
-            {            
-                
-                Console.WriteLine ($"{country.Team} - {country.Medal} - {country.MedalCount} ");                
-                
-            }          
-
-            
-            Console.WriteLine ();
-            Console.WriteLine ();
-
-            //---------------------------- Also, order the list by number of golds won.        
-            var countryGoldMedalList = (from player in pl.Take (1000) where player.Medal == "Gold"
-                group player by new { player.Team, player.Medal } into GropingByCountry 
-                orderby GropingByCountry.Count () descending,GropingByCountry.Key.Team ascending 
-                select new { Team = GropingByCountry.Key.Team, Medal = GropingByCountry.Key.Medal, MedalCount = GropingByCountry.Count () });
-            Console.WriteLine ("The list of countries along with their Gold medal tally are:");
-            foreach (var country in countryGoldMedalList) 
-            {
-                Console.WriteLine ($"{country.Team} - {country.Medal} - {country.MedalCount}");
-            }
-
         }
     }
 }
