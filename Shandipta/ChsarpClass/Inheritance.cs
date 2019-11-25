@@ -76,7 +76,7 @@ namespace Inheritance
     }
 }
 
-//is a, has a 
-//is a gives characteristic
-//if to add something new its inheritance
-//dependency injection loosly coupling
+//is a, has a
+//if we need to add something new to a class --> inheritance
+//if we need to use some definite characterstics --> base class
+//dependency injection --> loosly coupling
