@@ -4,9 +4,12 @@ using LearningMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using FileHandling;
 namespace MainProgram
 {
+    using System.IO;
+    using System.Linq;
+
     public class EntryPoint
     {
         public static void Main()
@@ -85,7 +88,7 @@ namespace MainProgram
             // [977] = "NEPAL",
             // [91] = "INDIA"
             //};
-            // countries.Add(1,"USA");
+             //countries.Add(1,"USA");
             // countries.Add(977,"Nepal");
             //countries.Add(91,"india");
             //foreach (var item in countries)
@@ -93,7 +96,7 @@ namespace MainProgram
             // Console.WriteLine(item.Key + "=" + item.Value);
             //}
             // Create class named *Collection*, create 3 methods in there:*GetAnimals()* which returns list of animal names.
-            List<string> animals = new List<string>() { "Rat", "Cat" };
+            /*List<string> animals = new List<string>() { "Rat", "Cat" };
             Collection collectionName = new Collection();
             collectionName.getAnimals(animals);
 
@@ -113,7 +116,121 @@ namespace MainProgram
                 ["wolves"] = new List<string> { "ElectronicMusic", "SelenaGomez" }
             };
 
-            collectionName.ReturnArtist(Fetchsongs1);
+            collectionName.ReturnArtist(Fetchsongs1);*/
+
+            /*Collection c = new Collection();
+            List<(string songName,string genre, string artist)> songs = c.FetchSongList();// deconstruction
+            foreach(var song in songs)
+            {
+              Console.WriteLine($" Song Name = {song.songName} Genre = {song.genre} Artist = {song.artist}");
+            }*/
+
+            /*PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Pala","Kansakar");
+            var x = p.FirstName;
+            p.FirstName = "abc";
+            x = p.FullName;
+            Customer.card*/
+
+            //Student.PrintStudentDetails();//ststic methodcalled by classname.
+            //student.address 
+
+            //Math.Sin(324);
+            //Student s1 = new Student();
+            //Student s2 = new Student();
+            //Student s3 = new Student();
+
+            //Dog g = new Dog();
+            //Puppy p = new Puppy();
+            //ISaleable p = new Puppy();// class Object is assigend in Interface: Dependecy --loosly couple 
+            /*BaseEmployee fte = new FullTimeEmployee();
+            fte.FirstName = "Pala";
+            fte.LastName = "Kansakar";
+            System.Console.WriteLine(fte.GetFullName());
+            System.Console.WriteLine(fte.CalculateMonthlysalary());
+
+            Contractor contra = new Contractor();
+            contra.FirstName = "Sugam";
+            contra.LastName = "Tamrakar";
+            System.Console.WriteLine(contra.GetFullName());
+
+            Airplane air = new Airplane();
+            Console.WriteLine(air.NumOfLane);
+            Console.WriteLine(air.NumOfPlanes);
+            air.JetCode = 2;
+            Console.WriteLine($"No of JetCode and Num of Planes is : {air.GetJetCodeAndPlanes()}");
+            */
+
+            //File handling 
+            string folderPath = @"D:\PalaKansakar\.NETClassesCotiviti\Pala\DemoFolder";
+
+            //var folder = fileIO.CreateFolder(folderPath);
+            /*Console.WriteLine(folder.FullName);
+            Console.WriteLine(folder.CreationTime);
+            Console.WriteLine(folder.LastAccessTime);
+            Console.WriteLine(folder.Attributes);*/
+            int SpecialChar= 0;
+            int cnt = 0;
+            string filePath = Path.Combine(folderPath, "file1.txt");
+            string filePath2 = Path.Combine(folderPath, "file2.txt");
+            string filePath3 = Path.Combine(folderPath, "file3.txt");
+            string filePath4 = Path.Combine(folderPath, "blackp.txt");
+            string filePath5 = Path.Combine(folderPath,"fileStreamWriter.txt");
+            string text = "kjdhfjsdhfjshf sdfkhsjfdhs kjshfkjshfjshf";
+            FileIO fileIO = new FileIO();
+            var folder = fileIO.CreateFolder(folderPath);
+            //fileIO.CreateFile(filePath);
+            fileIO.CreateFile(filePath, text);
+            string[] texts = { "Hi there", "Hello", "Hi" };
+            fileIO.CreateFile(filePath2, texts);
+
+            var result = fileIO.ReadFile(filePath4);
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} - {result[i]}");
+            }
+            // System.Console.WriteLine(result);
+            //Number of characters
+            int sum = 0;
+            for (int i = 0; i < result.Length; i++)
+            {
+                //Console.WriteLine($"{i + 1} - {result[i].Length}");
+                for (int j = 0; j < result[i].Length; j++)
+                {
+                    if (result[j] != " ")
+                    {
+                        sum++;
+                    }
+                }
+            }
+            Console.WriteLine($"Sum of Characters --> {sum}");
+            //Number of words
+            Console.WriteLine($"Number of words --> {fileIO.CountWord(filePath4)}");
+            //Number of Sentences
+            Console.WriteLine($"Number of sentences --> {fileIO.CountSentence(filePath4)}");
+            //Number of vowels
+            string vText = File.ReadAllText(filePath4);
+            foreach( char c in vText.ToLower())
+            {
+                if ("aeiou".Contains(c))
+                {
+                    cnt=cnt +1;
+                }
+            }
+            Console.WriteLine($"Number of vowels is {cnt}");    
+            foreach (char s in vText.ToLower ()) {
+
+                if ("$'()!+*<>=@?&^:;{}%#".Contains (s)) {
+                    SpecialChar++;
+                }
+            } 
+            Console.WriteLine($"Number of Special Character  is {SpecialChar}");  
+
+            //create file anoyther way
+            fileIO.CreateFileUsingStreamWriter(filePath5,"hi i am from stream writer");
+            fileIO.AppendTextUsingStreamWriter(filePath5,"I must be an 2nd line if notyou are an idiot !!");
+
         }
+
     }
+
 }

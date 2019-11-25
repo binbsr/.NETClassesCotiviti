@@ -24,3 +24,61 @@ Learnt about: Return Argments, Passing Varable number of arguments,Passing optio
 5.Learnt using tuple .
 6.Learnt Named Argument while passing in arugemnt
 ------------------------------------------------------------------
+Monday , 11th November 2019
+Learned about Genric , Make List<string> , Dictonary 
+Tuesday, 12th November 2019
+Wednesday , 13th Novemver 2019
+
+Thursday , 14th November,2019
+1. Studied about Static class and memebers,
+2. Static class declared only when all properties and method are static
+3. Instance member accessed by instance
+4. Static property accessed by class
+5. only static value accessed in static method
+6. static constructor called only once first time by object
+
+
+Monday: 18th November , 2019
+1. Studied about inheritance and Interface .
+2. Class Object is assigend in Interface: Dependecy --loosly couple 
+3. No body in interface
+4. Inheritance
+5. Base class- parnet class
+6. Derived class - child class
+7. Multiple Base class cannot be derived from derived class
+8. Accessin Ability (Multiple method )is called Interface from classes, it has no body.
+9. Calling object via interface interface c = new puppy() class puppy constructor first.
+
+Tuesday: 19th November 2019
+1. Learnt about keywords,
+//sealed -- cannot be inherated in class //selaed class also called concrete base class
+//abstrct similatr to interface using override
+//instance can't be made and called  using abstract method
+//virtual method similar to overriding but it is not compulsary
+// Method hiding- (using keywordBase )base class method hide by derived class
+//base implementation when using method of base class (using keyword base.method of baseclass)
+//Key word new to hide method and properties
+
+Wednesday : 20th November 2019
+1. learnt about creting folder and file
+2. Readline , alltext of a file
+3. split the lines words, text, in a file 
+
+Thursday : 21st November 2019
+1. Started (LINQ) language intregated  Query
+2. Create  new project LINQ using dotnet new console -n LINQ
+3. using dotnet x=>x. using lamda(=>) expression where x. is list of item
+3. two syntax to use lamda : 
+   -- Method Syntax to use LINQ x=>x.StartWith("S")
+   -- Query Expression syntax - using query while extracting the values using keys to access value (example list)
+
+Friday: 22nd November ,2019
+REvision of 21st November on LINQ , expressions
+And also learned groupby Query as well
+
+Monday: 25th November 2019
+Today we learnt to use join using declarative query 
+
+
+
+

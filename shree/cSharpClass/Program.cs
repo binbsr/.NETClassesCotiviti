@@ -8,6 +8,12 @@ using System.Collections.Generic;
 using LearnGeneric;
 using Exercise4Collection;
 using SongDetailInformation;
+using PropertiesAndEnums;
+using LearningInheritance;
+using cSharpClass.Inheritance;
+using MultipleInheritance;
+using FileHandling;
+using System.IO;
 
 namespace cSharpClass
 {
@@ -85,94 +91,202 @@ namespace cSharpClass
               Console.WriteLine($"Male Count = {result.maleCount} and Female Count = { result.femaleCount} and Other Count = { result.otherCount}");
           }       */
 
-       /*     public static void Main()
-        {
-            TestList<string> list = new TestList<string>();     //string type list
-            list.Add("abc");
+        /*     public static void Main()
+         {
+             TestList<string> list = new TestList<string>();     //string type list
+             list.Add("abc");
 
-            TestList<byte> list1 = new TestList<byte>();        // byte type list
-            list1.Add(12);
+             TestList<byte> list1 = new TestList<byte>();        // byte type list
+             list1.Add(12);
 
 
-            // this is arraylist- non generic list 
-            
-            ArrayList arraylist = new ArrayList();
-            arraylist.Add("abc");
-            arraylist.Add(123);
-            
+             // this is arraylist- non generic list 
 
-            List<short> lst = new List<short>();       // List <> is in-build GENERIC LIST
-            lst.Add(12);
-            lst.Add(23);
-            lst.Add(45);
-            lst.Add(56);
-            lst.Add(17);
-            lst.Add(23);
+             ArrayList arraylist = new ArrayList();
+             arraylist.Add("abc");
+             arraylist.Add(123);
 
-            List<Student> students = new List<Student>();           // "students" is list of user defined class STUDENTS
-            Student std1 = new Student                      // this is inline class intialization
-            {
-                name = "Shree",
-                rollNo = 12,
-                address = "balaju",
-                stream = "Computer",
-            };                      
-            Student std2 = new Student()            // inline class intialize using ( ) symbol -- ( ) can be or can not be use - both acceptable
-            {
-                name = "Krishna"
-            };
-            students.Add(std1);
-            students.Add(std2);
 
-            Dictionary<int, string> countries = new Dictionary<int, string>();  // dictionary is built in generic list that hold two datatypes - KEY & its VALUE
-            countries.Add(01, "USA");                                           // KEY must be unique always
-            countries.Add(977, "Nepal");
-            countries.Add(047, "Norway");
-            countries.Add(91, "India");
+             List<short> lst = new List<short>();       // List <> is in-build GENERIC LIST
+             lst.Add(12);
+             lst.Add(23);
+             lst.Add(45);
+             lst.Add(56);
+             lst.Add(17);
+             lst.Add(23);
 
-            foreach(var item in countries)
-            {
-                Console.WriteLine(item.Key +"="+item.Value);
-            }
+             List<Student> students = new List<Student>();           // "students" is list of user defined class STUDENTS
+             Student std1 = new Student                      // this is inline class intialization
+             {
+                 name = "Shree",
+                 rollNo = 12,
+                 address = "balaju",
+                 stream = "Computer",
+             };                      
+             Student std2 = new Student()            // inline class intialize using ( ) symbol -- ( ) can be or can not be use - both acceptable
+             {
+                 name = "Krishna"
+             };
+             students.Add(std1);
+             students.Add(std2);
 
-            Dictionary<int, string> countries1 = new Dictionary<int, string>()          // this is dicitionary intialization
-            {
-                [1] = "USA",
-                [977]="Nepal",
-                [047]="Norway",
-                [91]="India"
-            };
+             Dictionary<int, string> countries = new Dictionary<int, string>();  // dictionary is built in generic list that hold two datatypes - KEY & its VALUE
+             countries.Add(01, "USA");                                           // KEY must be unique always
+             countries.Add(977, "Nepal");
+             countries.Add(047, "Norway");
+             countries.Add(91, "India");
 
-        }       */
+             foreach(var item in countries)
+             {
+                 Console.WriteLine(item.Key +"="+item.Value);
+             }
 
-       //*GetAnimals()* which returns list of animal names.
-      /*  public static void Main()
-        {
-            Collection c1 = new Collection();
-            List<string> animalName = new List<string>();
-            animalName = c1.ReturnAnimalName();
-            foreach (var item in animalName)
-            {
-                Console.WriteLine(item);
-            }
-        }
-        */
+             Dictionary<int, string> countries1 = new Dictionary<int, string>()          // this is dicitionary intialization
+             {
+                 [1] = "USA",
+                 [977]="Nepal",
+                 [047]="Norway",
+                 [91]="India"
+             };
 
+         }       */
+
+        //*GetAnimals()* which returns list of animal names.
+        /*  public static void Main()
+          {
+              Collection c1 = new Collection();
+              List<string> animalName = new List<string>();
+              animalName = c1.ReturnAnimalName();
+              foreach (var item in animalName)
+              {
+                  Console.WriteLine(item);
+              }
+          }
+          */
+
+        /*  public static void Main()
+          {
+              Collection c1 = new Collection();
+              List<SongDetails> songDetail = new List<SongDetails>();
+              songDetail = c1.ReturnSongNameGenre();
+              foreach (var item in songDetail)
+              {
+                  if (item.artistName != "")
+                      Console.WriteLine($"Song name = {item.songName} and Genre = {item.songGenre} and Artist name = {item.artistName}");
+                  else
+                      Console.WriteLine($"Song name = {item.songName} and Genre = {item.songGenre}");
+              }
+          }       */
+
+        // *FetchSongs()*` which returns list of songs (song name and genre).   USING Dictionary Method
+        /*
         public static void Main()
         {
             Collection c1 = new Collection();
-            List<SongDetails> songDetail = new List<SongDetails>();
-            songDetail = c1.ReturnSongNameGenre();
-            foreach (var item in songDetail)
+            var song = c1.FetchSongs();
+            foreach (var item in song)
             {
-                if (item.artistName != "")
-                    Console.WriteLine($"Song name = {item.songName} and Genre = {item.songGenre} and Artist name = {item.artistName}");
-                else
-                    Console.WriteLine($"Song name = {item.songName} and Genre = {item.songGenre}");
+                Console.WriteLine($"song = {item.Key} and Genre = {item.Value}");
             }
+        }       */
+        /*
+                public static void Main()
+                {
+                    Collection c1 = new Collection();
+                    var song = c1.FetchSongs1();
+                    foreach (var item in song)
+                    {
+                        Console.WriteLine($"song = {item.Key} and Genre = {item.Value[0]} and Artist = {item.Value[1]}");
+                    }
+                }
+
+                public static void Main()
+                {
+                    Collection c1 = new Collection();
+                    List<(string songName, string Genre, string Artist)> var songs = c1.Fetchsongs2();
+                    foreach (var item in songs)
+                    {
+                        Console.WriteLine($"song = {item.songName} and Genre = {item.Genre} and Artist = {item.Artist}");
+                    }
+                }       
+
+               public static void Main()
+                {
+                    /* PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("ram", "shyam");
+                     var x = p.FirstName;
+                     Console.WriteLine(x);  
+
+                    //var x=Customer.CardNo;            // for Constant variable no need to create class object
+
+                    //Student.address;            // here address is static variable which is shared by all class object
+                    // to access STATIC variable, use classname.static_variable name
+
+                  //  var x=Student.PrintStudentDetails();
+
+
+                } */
+
+        /* public static void Main()
+     {
+             //Dog d = new Dog();            // FIRST BASE CLASS CONSTRUCTOR CALLS then only Child class constructor 
+             Puppy p = new Puppy();
+
+             Isaleable p1 = new Puppy();      // this is dependancy injection, it is also valid 
+             Isaleable p2 = new Snake();
+             Animal p3 = new Snake();
+
+     }
+     */
+
+        /*  public static void Main()
+             {   BaseEmployee fte = new FullTimeEmployee();
+                 fte.FirstName = "ram";
+                 fte.LastName = "sharma";
+                 Console.WriteLine(fte.GetFullName());
+
+                 Contractor contr = new Contractor();
+                 contr.FirstName = "Shree";
+                 contr.LastName = "gurung";
+                 Console.WriteLine(contr.GetFullName());
+
+                 Contractor fte1 = new Contractor();
+                 Console.WriteLine(fte1.CalculateMonthlySalary());
+                 Console.WriteLine(fte1.CalculateTax());
+
+                 Amphibian a1 = new Amphibian();
+                 a1.Name = "Animal";
+                 a1.ClassName = "Amphibian Class";
+                 Console.WriteLine(a1.GetName());        
+
+                 string folderpath= @"E:\DotNetCotiviti\.NETClassesCotiviti\shree\TestFolder";
+                 FileInputOutput f1 = new FileInputOutput();
+                 string filepath1 = Path.Combine(folderpath,"TextFile.txt");
+
+                 string filepath3 = Path.Combine(folderpath, "testFile.log");  
+
+                  var folderDetails = f1.CreateFolder(folderpath);
+                  Console.WriteLine($"{folderDetails.CreationTime}");
+                  Console.WriteLine($"{folderDetails.Attributes}");
+                  Console.WriteLine($"{folderDetails.FullName}");
+                  Console.WriteLine($"{folderDetails.Root}");
+
+                  f1.CreateFile(filepath1);
+                  string text = "This is file, folder handling";
+                  f1.CreateFile(filepath1, text);
+
+                  string[] texts = { "ram", "shyam", "hari", "" };
+                  string filepath2 = Path.Combine(folderpath, "TextFile1.txt");
+                  f1.CreateFile(filepath2, texts);        
+
+                 var lines = f1.ReadFile(filepath3);
+                 for (byte i=1; i<lines.Length;i++)
+                 {
+                     Console.WriteLine($"{i} - {lines[i - 1]}");
+                 }   */
+
+        public static void Main()
+        {
+
         }
-
-
-        
     }
 }

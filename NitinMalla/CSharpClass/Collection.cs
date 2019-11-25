@@ -4,9 +4,7 @@ namespace Collections
 
     public class Collection
     {
-        private const string V = "Song1";
-
-        public List<string> GetAnimals()
+               public List<string> GetAnimals()
         {
             List<string> list = new List<string> { "Cow", "Goat", "Tiger", "Leopard" };
             list.Add("Rihno");
@@ -43,6 +41,17 @@ namespace Collections
              Dictionary<string,Song> dict = new Dictionary<string, Song> { ["1"] = s1, ["2"] = s2, ["3"] = s3 };
             
             return dict;
+        }
+
+        public List<(string, string, string)> FetchSongs3()
+        {
+            var songs = new List<(string,string,string)>
+            {
+                ("Song1","Romantic","Sajin"),
+                ("Song2","Rock","Saroj"),
+                ("Song3","Pop","Shyam")
+            };
+            return songs;
         }
 
 

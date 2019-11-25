@@ -4,7 +4,9 @@ using System;
 using UsingMethods;
 using System.Collections.Generic;
 using System.Collections;
-using Practice;
+using PropertiesAndEnums;
+using Inheritance;
+// using Practice;
 
 namespace MainProgram
 {
@@ -101,19 +103,77 @@ namespace MainProgram
 
             // }
             //list of animals name
-           Collection c = new Collection();
-           List<(string SongName, string Genre, string Artist)>songs =c.FetchSongsList();
-           foreach(var song in songs)
-           {
-             Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
+          //   Collection c = new Collection();
 
-           }
+          //   List<string> animallists = c.GetAnimals();
+          //  Console.WriteLine("List of Animals:");
+          //  foreach(string a in animallists)
+          //  {
+          //    Console.WriteLine(a);
+          //  }
+          //  Console.WriteLine("..............................");
+
+
             //list of songs and genre
            
 
             //modifying the above to return the list of songs name, genre and artist name  
-            Person p = new Person();
-            Person p1 = new Person ("Ravi");
+            
+          //  List<(string SongName, string Genre, string Artist)>songs =c.FetchSongsList();
+          //  foreach(var song in songs)
+          //  {
+          //    Console.WriteLine($"Song Name = {song.SongName} Genre = {song.Genre} Artist = {song.Artist}");
+
+          //  }
+            // Person p = new Person();
+            // Person p1 = new Person ("Ravi");
+
+          //   PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Ravi","Shakya");
+          //   var x = p.FirstName;
+          //   p.FirstName = "Ravi";
+          //   x = p.FirstName;
+          //   Console.WriteLine();
+
+          //  var x = Customer.CardNo;
+          //  Customer c =new Customer();
+           
+          //  Student s1 = new Student( ); //s1 is the instance
+
+          //   Student s2 = new Student();
+          //    Student s3 = new Student();
+          //     Student s4 = new  Student();
+          //      Student s5 = new Student();
+          //     //  Student.PrintStudentDetails();
+
+              //  Math.Sin(324);
+
+               //Student.address
+
+               //ISaleable p= new Snake();
+              //  var p = new Snake();
+              //  var s = new Puppy();
+              // ILivesOnLand p = new Mammals();
+              // ILivesOnLand q = new Reptiles();
+              // ILivesOnWater w = new Amphibians();
+              
+              FullTimeEmployee fte = new FullTimeEmployee();
+              fte.FirstName = "Ravi";
+              fte.LastName = "Shakya";
+              System.Console.WriteLine(fte.GetFullName);
+
+              Contractor contra = new Contractor();
+              contra.FirstName = "RaviKrishna";
+              contra.LastName = "Shrestha";
+              System.Console.WriteLine(contra.GetFullName);
+
+
+
+
+
+
+
+
+
 
 
 

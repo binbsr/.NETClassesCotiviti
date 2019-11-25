@@ -20,3 +20,18 @@ Day5 (8th Nov 2019)
 
 Day6 (11th Nov 2019)
 	Introduction to Generics, dictionary, list.
+
+Day7 (12th Nov,  2019)
+	Learnt about constructor, class and assignment review to make it simpler.
+
+Day8 (13th Nov, 2019)
+	Introduction to properties, auto implemented properties, Enum, constant and read only data type.
+
+Day9 (14th Nov, 2019)
+	Discussion on static varaibles, methods and constructor.
+
+Day10 (18th Nov, 2019)
+	Inheritance and interface.
+
+Day11 (19th Nov, 2019)
+	Abstract class, sealed class, method overriding, method hiding.

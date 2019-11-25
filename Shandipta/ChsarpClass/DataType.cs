@@ -2,10 +2,10 @@ namespace DataTypeBasic
 {
 public class DataType
 {
-   //value types
+  /* //value types
     //numbers
     //Integers
-    byte a; //8 bits
+    byte a; //8 bits 255
     short b; //16 bits
     int c;  //32 bits
     long d; //64 bits
@@ -28,7 +28,7 @@ public class DataType
     //object
     object l;
 
-    
+   */ 
 
 }   
 

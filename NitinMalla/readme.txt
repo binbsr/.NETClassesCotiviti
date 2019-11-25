@@ -17,3 +17,31 @@ Team: Paymnet Customization
 
 8th Nov 2019 -- Day 5
 	Learn about Nested loops, Methods, Access modifier, Return types, Arguments and parameters, String concatination 
+
+11th Nov 2019 -- Day 6
+	Learn about collection types list , dictionary, generic list
+
+12 Nov 2019 -- Day 7
+	Learn more about collections , tuple and construction, const, readonly, static
+
+13 Nov 2019 -- Day 8
+    Learn more on class properties, get , set, auto implemented properties,  Enum, constant and read only data type
+
+14 Nov 2019 -- Day 9
+	Learn about static key word , static constructor, instance constructor, builtin static class.
+	
+
+18 Nov 2019 -- Day 10
+    Learn more on inheritance, multiple inheritance using inerface
+
+19 NOv 2019 -- Day 11
+	 Learn about abstract , virtual , sealed methods and properties.
+
+20 Nov 2019 -- Day 12
+	Learn about File and Directory Handling
+
+21 Nov 2019 -- Day 13
+	Absent
+
+22 Nov 2019 -- Day 14
+	Learn about LinQ -- filtering, projections, ordering and grouping in query.

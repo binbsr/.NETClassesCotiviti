@@ -1,0 +1,22 @@
+I am computer science graduate from Nepal from only university. 
+Nepal is in its infancy for technical institutions and industries. Currently, 
+I am working on a company which outsource products to US on healthcare business, 
+with minimum financial benefits for me. Besides, I don't have international credit 
+card even if I manage to pay smaller course fees. While graduation, I have studied AI, 
+statistics and neural network courses and implemented some apps like email spam filtering 
+using ANN algorithms. I really want to expand my knowledge on those areas of 
+implementation with practical gurus like Andrew Ng. I am big fan of him for what he 
+has achieved and contributed so far from Baidu to Stanford. As, machine learning is 
+going to be the must-know domain for software engineers no matter what they do: mobile, 
+web, desktop, data etc, I want to grasp all the foundational theories on the same to be a better engineer.
+
+
+I love to experiment with machine learning algorithms. To enhance my foundation on practical 
+machine learning algorithms and architectures, I would like to take this course by Andrew Ng. 
+I want to broaden my engineering expertise so that I can understand and implement state of art ML 
+techniques if need be. There is no denial that AI is the future and It already has big impacts on 
+healthcare analytics, education, infrastructure development etc., forcing us to experience it’s need. 
+Technology giants like Google, Microsoft, IBM etc. are investing and researching a lot on this domain 
+and we as a software engineers must be in sync with all AI frameworks/libraries they release and should 
+know the internal details of how algorithms work to rightfully integrate into our systems. I am hopeful that, 
+this course will strengthen me on ML practices and use cases and nurture my career path as a full stack engineer.

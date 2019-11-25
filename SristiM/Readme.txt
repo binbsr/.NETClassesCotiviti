@@ -29,3 +29,27 @@ Learned about List and Dictionary
 
 Day7:
 Learned about Constructors
+
+Day8:
+Learned about Properties, Constants and Enums
+
+Day9:
+Learned about static constructors,class
+
+Day10:
+Learned about Inheritance-Interface
+Learned about how to create objects from inherited class or interface
+
+Day11:
+Learned about File I/O
+
+Day12:
+Leared about StremWriter
+Learned about LINQ
+
+Day13:
+Learned about LINQ-Query Expressions
+Learned about LINQ- Method Syntax
+
+Day14:
+Learned about LINQ-JOIN

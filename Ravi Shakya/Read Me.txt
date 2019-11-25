@@ -32,3 +32,33 @@ Date: 12th November, 2019 (Class 7th)
 
 Learnt about use of Var and constructors.
 
+Date: 13th November, 2019 (Class 8th)
+
+Continuation of constructor.
+Auto implemented properties.
+readonly and write onlyl properties.
+Expression bodied definition and Access modifier.
+Enumeration lists.
+
+
+Date; 14th November, 2019 (Class 9th)
+
+uses of static kewords.
+understanding of concept of inheritances. 
+types of inheritances,.
+
+
+Date: 18th November, 2019 (Class 10th)
+> Continuation of Inheritances.
+> Types of Instance constructors.
+> Learnt that Multi level inheritances is possible but Multiple Inheritance is not allowed in c#.
+> Learnt about Interface: whicha allows to add inheritance in different object (it doesn't have body).
+> "Is a" and "Has a" relation
+
+Date: 19th November, 2019 (Class 11th)
+ > Continuation of Inheritances.
+ > use of abstract class
+ > use of override function
+ > use of sealed function
+ > use of virtual key
+ > use of base and new class
