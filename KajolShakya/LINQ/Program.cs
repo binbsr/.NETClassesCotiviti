@@ -8,6 +8,7 @@ namespace LINQ
     class Program
     {
         static void Main(string[] args)
+        //public void testing()
         {
             //LINQ: Language Integrated Query
             //Example1

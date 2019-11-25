@@ -217,6 +217,11 @@ namespace MainProgram
             Console.WriteLine($"Number of Sentence : {fileIO.CountSentence()}"); 
             Console.WriteLine($"Number of vowels : {fileIO.CountVowel()}"); 
             Console.WriteLine($"Number of Consonent : {fileIO.CountConsonant()}");
+
+            // Nov 21
+            string fp1 =  @"D:\DotNet\.NETClassesCotiviti\BikramKC\TestDir\test2.txt";
+            fileIO.CreateFileSW(fp1,"dfkdfjdjfjdfjdjfjdjfjlkdfkkdkf");
+            fileIO.AppendFileSW(fp1, "baal ho ");
                     
 
         }
