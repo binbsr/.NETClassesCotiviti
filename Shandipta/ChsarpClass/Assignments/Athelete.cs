@@ -9,8 +9,8 @@ namespace Athelete
     {
         static void Main(string[] args)
         {
-             string filePath = @"D:\\\\dotNet\\\\.NETClassesCotiviti\\\\Shandipta\\\\ChsarpClass\\\\Assignments\\\\t.txt";
-          //  string filePath = @"D:\\dotNet\\.NETClassesCotiviti\\Shandipta\\ChsarpClass\\Assignments\\Olympics_Athelete_Events.txt";
+          //   string filePath = @"D:\\\\dotNet\\\\.NETClassesCotiviti\\\\Shandipta\\\\ChsarpClass\\\\Assignments\\\\t.txt";
+            string filePath = @"D:\\dotNet\\.NETClassesCotiviti\\Shandipta\\ChsarpClass\\Assignments\\Olympics_Athelete_Events.txt";
             AtheleteData athData = new AtheleteData();
             var ath = athData.GetAtheleteData(filePath);
 
