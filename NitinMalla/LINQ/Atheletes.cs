@@ -79,12 +79,7 @@ namespace LinQ
         }
     }
 
-    public class OutFile
-    {
-        int ID{get;set;}
-        string name {get;set;}
-    }
-    public class FileIO
+      public class FileIO
     {
         internal string[] ReadFile(string path)
         {
