@@ -10,7 +10,9 @@ using PropertiesAndEnums;
 namespace MainProgram {
 
     public class EntryPoint {
-        public static void Main () {
+     //   public static void Main ()
+     public void test()
+         {
          
             /*Iterations iter = new Iterations ();
             iter.DefineLoops ();
