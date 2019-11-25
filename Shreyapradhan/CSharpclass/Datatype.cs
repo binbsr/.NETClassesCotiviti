@@ -1,33 +1,41 @@
-namespace DataTypeBasics
-{
 public class DataType
 {
-    //Value Type
-        //Numbers
-            //Intgers - byte, short, 
-            byte a = 24; // 8 bits eg for age
-            short b = 3453 ; //16 bits 
-            int c = 345325; //32 bits
-            long d = 1; //64 bits
 
-            //Floating point numbers
-            float e = 0.1F; //32 6-9 digits accuracy for gamings
-            double f = 1.2; //64  15-17 digits precision //defacto
-            decimal g = 3.4M; //128  28-29 digits precision for financial 
+    public void Main()
+    {
+        //value Types
+        //Numbers 
+        //Integers
+        //byte->shortint--> 
 
-        // Character types
-            char h = 'r';
+        byte a=24; // 8 bits  0-255;
+        short b= 345;   //16 bits  signed 
+        int c= 1233; //32 bits
 
-        //Boolean types
-            bool i = true;
+        long d=12343343434; // 64 bits
 
-            //nullable - int?, float? any data type can be nullable
-            bool? j =  null;
+        //floating 
+        float e=2332.5F;  //32bits accuracy of 6-9 digits
 
-    //Reference Type
-        string k = @"f\sdfhkjshfd"; // or f\\sdhklldf;
-        object l = "";
+        double f=234343434.8;  // 64 bits accuracy of 15-17 digits of precision
+        decimal g=234.5M;  //128 bits , 28-29 digits of precision
 
-}
 
+        //character types
+        char h='b';
+        
+        // boolean types
+        bool m =false;
+        bool? new= null;
+
+
+       // reference 
+        string n= @" new\string";
+        object o="newobject";
+
+
+
+        
+        
+    }
 }
