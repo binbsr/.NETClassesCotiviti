@@ -79,6 +79,20 @@ And also learned groupby Query as well
 Monday: 25th November 2019
 Today we learnt to use join using declarative query 
 
+Tuesday: 26th November 2019
+Entity Framework
+install sqlite 
+creating database table with classes
+run follwing commands
+dotnet add package Microsoft.EntityFrameworkCore --version 3.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.0.1
+dotnet tool install --global dotnet-ef --version 3.0.0
+dotnet ef migrations
+dotnet ef migrations add InitialDbCreate (creation Migration folder)
+dotnet build
+dotnet ef database update
+
 
 
 

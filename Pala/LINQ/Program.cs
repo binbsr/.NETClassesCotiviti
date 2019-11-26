@@ -96,7 +96,7 @@ namespace LINQ
                 }
             }*/
 
-            PlayerCollections pc = new PlayerCollections();
+ /*           PlayerCollections pc = new PlayerCollections();
             var players = PlayerCollections.PlayerList();
             var NepaliPalyers = from PlayerList in players
                                 where PlayerList.NOC == "NEP"
@@ -151,7 +151,7 @@ namespace LINQ
             /*foreach (var item in goldPlayer)
             {
                  Console.WriteLine($"{item.countryName}     {item.goldCount}");
-            }   */
+            }   
             var PlayersSilver = PlayerCollections.PlayerList();
             var silverPlayer = from countries in PlayersSilver
                                where countries.Medal == "Silver"
@@ -173,7 +173,9 @@ namespace LINQ
             foreach(var item in bronzePlayer)
             {
                 Console.WriteLine($"{item.countryName}        {item.bronzeCount}");
-            }
+            }*/
+            //Medal tallying*/
+            
         }
     }
 }
