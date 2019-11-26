@@ -1,4 +1,5 @@
-// using System;
+//  using System;
+//  using System.Collections.Generic;
 //     public class Student
 //         {
 //             // public Student ()// instance constructor
@@ -32,14 +33,17 @@
 //         }
 //     }
 
+
 using System;
+using System.Collections.Generic;
 
-public class Student
+namespace LINQ
 {
-    public int RollNo { get; set; }
-    public string Name { get; set; }
-    public string CollegeName { get; set; }
-    public DateTime Dob { get; set; }
+    public class Faculty
+    {
+        public int FacultyId { get; set; }
+        public string FacultyName { get; set; }
+        public string FacultyHead { get; set; }
 
-    public int FacultyID{get; set;}
+    } 
 }
