@@ -4,6 +4,7 @@ namespace LinQ
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Text.RegularExpressions;
 
     public abstract class Athelete
     {
@@ -66,10 +67,13 @@ namespace LinQ
 
             var results = fileIO.ReadFile(filePath);
           
+           //var str = Regex.Split(c,",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+           
             for (int i = 1; i < results.Length; i++)
             {
                // Console.WriteLine($"{i + 1} -> {results[i]}"); 
-                 var str = results[i].Split(",",System.StringSplitOptions.RemoveEmptyEntries);
+                 //var str = results[i].Split(",",System.StringSplitOptions.RemoveEmptyEntries);
+                 var str = Regex.Split( results[i],",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
                 OlympicsAtheletesEvents.Add(new OlympicsAtheletesEvent { Id=int.Parse(str[0]),Name=str[1],Sex=str[2],Age=str[3],Height=str[4],Weight=str[5],Team=str[6],NOC=str[7],Games =str[8],Year =str[9],
                     Season=str[10],City=str[11],Sport=str[12],Event=str[13],Medal=str[14]});
                
