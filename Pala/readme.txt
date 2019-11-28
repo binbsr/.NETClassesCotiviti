@@ -93,13 +93,16 @@ dotnet ef migrations add InitialDbCreate (creation Migration folder)
 dotnet build
 dotnet ef database update
 
-Wednesday : 26th November 2019
+
+
+wednesday : 27th November 2019
 Learnt to insert Rows in Table
 Learnt to use migration command while chaging that the datatyoe of the table  (dotnet ef migrations add SalaryColumnDatatypeToDouble)
 Learnt to use updatig the table.
 
 
-Thursday : 27th November 2019
+thursday: 28th November 2019
+learnt to use first select first data
 Using foreign key in table by calling object 
 //var employee1 = new Employee(){Name = "ABC",Designation ="Manager",DOB = DateTime.Now,Department = dept}
 This command calls object of department to insert in employee table
