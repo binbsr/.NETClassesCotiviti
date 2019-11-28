@@ -109,7 +109,33 @@ namespace LINQ
             }
         }
 
-        
+        //Joining
+        var faculties = Collections.FetchFaculties();
+        /*var depStudents = from student in students
+                        join faculty in faculties on student.FacultyID equals faculty.ID
+                        select new {Department = faculty.FacultyName, Student = student};
+                        */
+        var depStudents = from student in students
+                        join faculty in faculties on student.FacultyID equals faculty.ID
+                        select new {Department = faculty.FacultyName, Student = student};
+
+        var depStudentsGroupByFacultyId = from x in depStudents
+                                            group x by x.Department;
+
+        /*foreach (var item in depStudents)
+        {
+            Console.WriteLine($"{item.Department} - {item.Student.Name}");
+        }
+        */
+
+         foreach (var item in depStudentsGroupByFacultyId)
+        {
+            Console.WriteLine($"{item.Key}");
+            foreach (var s in item)
+            {
+                Console.WriteLine($"\t{s.Student.RollNo} - {s.Student.Name}");
+            }
+        }
 
 
         }

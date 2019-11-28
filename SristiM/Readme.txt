@@ -53,3 +53,7 @@ Learned about LINQ- Method Syntax
 
 Day14:
 Learned about LINQ-JOIN
+
+Day15:
+Learned about Entity Framework Basics
+Learned about how to create database and tables

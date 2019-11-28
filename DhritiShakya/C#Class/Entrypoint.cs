@@ -5,9 +5,6 @@ using System.Collections.Generic;
 using LearningMethods;
 using LoopsAndConditions;
 using FileHandling;
-using PropertiesAndEnums;
-using Inheritance;
-
 namespace MainProgram
 {
 
@@ -107,28 +104,16 @@ public class EntryPoint
         //        Console.WriteLine($"Song Name={song.SongName} Genre={song.Genre} Artist={song.Artist}");
         //    }
 
-        //Changes for ConstantsAndEnums
-            Person p = new Person();
-            Person p1 = new Person("Dhriti");
-           // Customer card=new Customer();
-            var x = Customer.cardNo;
-            Console.WriteLine(x);
+        //  Person p=new Person();
+        //  Person p1=new Person("Dhriti");
 
-            //Changes for //Inheritance
-           BaseEmployee fte = new FullTimeEmployee();
-            fte.FirstName = "Bishnu";
-            fte.LastName = "Rawal";            
-            System.Console.WriteLine(fte.GetFullName());
-            System.Console.WriteLine(fte.CalculateMonthlySalary());
+        // Propertiesandenums.Person p=new Propertiesandenums.Person();
+        // var x=p.FirstName;
+        // Console.WriteLine();
 
-            Contractor contra = new Contractor();
-            contra.FirstName = "Dhriti";
-            contra.LastName = "Shakya";
-
-            System.Console.WriteLine(contra.GetFullName());
        // var x=Customer.cardNo;
-    //    string folderpath=@"D:\C#\.NetClassesCotiviti\DhritiShakya\DemoFolder";
-    //    FileIO fileIO=new FileIO();
+       string folderpath=@"D:\C#\.NetClassesCotiviti\DhritiShakya\DemoFolder";
+       FileIO fileIO=new FileIO();
     //    string filepath=Path.Combine(folderpath,"testfile.txt");
     //    string filepath1=Path.Combine(folderpath,"testfile1.txt");
     //    string filepath2=Path.Combine(folderpath,"testfile2.txt");
@@ -148,16 +133,19 @@ public class EntryPoint
     //        Console.WriteLine($"{i+1}-{result[i]}");
     //    }
 
-    //    string Exfilepath=Path.Combine(folderpath,"blackp.txt");
-    //    string contentsoffile=fileIO.ReadBlackPeter(Exfilepath);
-    //    Console.WriteLine(contentsoffile);
-    //    Console.WriteLine("Number of characters in the file is"+ contentsoffile.Length);
-    //    Console.WriteLine("Number of lines in the file is"+ contentsoffile.Split('\r').Length); 
-    //    Console.WriteLine("Number of sentences in the file is"+ contentsoffile.Split('.').Length); 
+       string Exfilepath=Path.Combine(folderpath,"blackp.txt");
+       fileIO.ReadBlackPeter(Exfilepath);
+    
+    Console.WriteLine($"Number Of Characters: {fileIO.NumberOfCharacters()}");
+            Console.WriteLine($"Number of Lines : {fileIO.CountLine(path1)}");
+            Console.WriteLine($"Number of Words : {fileIO.CountWord()}"); 
+            Console.WriteLine($"Number of Sentence : {fileIO.CountSentence()}"); 
+            Console.WriteLine($"Number of vowels : {fileIO.CountVowel()}"); 
+            Console.WriteLine($"Number of Consonent : {fileIO.CountConsonant()}"); 
        
-    //    string filepath4=Path.Combine(folderpath,"filestreamWriter.txt");
-    //    fileIO.CreateFileUsingStreamWriter(filepath4,"This is another way of creating file");
-    //     fileIO.AppendTextUsingStreamWriter(filepath4,"Some more texts");
+       string filepath4=Path.Combine(folderpath,"filestreamWriter.txt");
+       fileIO.CreateFileUsingStreamWriter(filepath4,"This is another way of creating file");
+        fileIO.AppendTextUsingStreamWriter(filepath4,"Some more texts");
        
     //    Console.WriteLine(folder.FullName);
     //    Console.WriteLine(folder.CreationTime);

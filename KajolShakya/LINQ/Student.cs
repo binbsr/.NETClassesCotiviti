@@ -9,6 +9,7 @@ public class Student
     public string Address{get; set;}
     public string CollegeName{get; set;}
     public DateTime Dob {get; set;}
+    public int FacultyID {get; set;}
 
 }
 /*public class Collections

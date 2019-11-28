@@ -9,7 +9,7 @@ public class Player
         string file = @"D:\\C#\\.NETClassesCotiviti\\KajolShakya\\CSharpClass\\Homework\\Olympics_Athelete_Events.txt";
         PlayerData p = new PlayerData();
         var players = p.FetchPlayers(file);
-        var result = from pp in players
+        /*var result = from pp in players
                     group pp by pp.Name;
         foreach(var x in result)
             {
@@ -62,17 +62,35 @@ public class Player
                 Console.WriteLine($"Player Name: {v.Name}");
             }
         }
+        */
 
-        //List all countries with thier medal tally so far. Also, order the list by number of golds won.
+        //List all countries with their medal tally so far. Also, order the list by number of golds won.
 
+       var playerResult = from a in players
+                            group a by a.NOC into b
+                            select new 
+                            {
+                                country = b.Key,
+                                goldCount = b.Select(x=>new
+                                {
+                                    x.Medal
+                                }).Where(y => y.Medal.ToLower() == "gold").Count(),
+                                silverCount = b.Select(x =>new
+                                {
+                                    x.Medal
+                                }).Where(y => y.Medal.ToLower() == "silver").Count(),
+                                bronzeCount = b.Select(x => new
+                                {
+                                    x.Medal
+                                }).Where(y=> y.Medal.ToLower() == "bronze").Count()
+                            };
 
+       
 
-
-
-
-
-        
-                                        
+        foreach (var item in playerResult.OrderByDescending(x => x.goldCount))
+        {
+            Console.WriteLine(string.Join(",", item.country, item.goldCount, item.silverCount, item.bronzeCount));
+        }                                
 
    }
                 

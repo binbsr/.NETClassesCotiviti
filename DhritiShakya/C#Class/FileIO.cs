@@ -21,10 +21,21 @@ namespace FileHandling
          return lines;
      }
 
-     public string ReadBlackPeter(string path)
+     public void ReadBlackPeter(string path)
      {
-        var blackpetercontent=File.ReadAllText(path);
-        return blackpetercontent;
+         blackpetercontent=File.ReadAllText(path);
+        
+     }
+     public int NumberOfCharacters()
+     {
+        return blackpetercontent.Length;
+     }
+
+     
+
+       public int NumberOfLines(string )
+     {
+        var lineCount = File.ReadLines(@"C:\file.txt").Count();
      }
 
      internal void CreateFileUsingStreamWriter(string path,string filecontent)
