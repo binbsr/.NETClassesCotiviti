@@ -50,8 +50,8 @@ namespace PlayWithDB.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Salary")
-                        .HasColumnType("TEXT");
+                    b.Property<double>("Salary")
+                        .HasColumnType("REAL");
 
                     b.HasKey("ID");
 
