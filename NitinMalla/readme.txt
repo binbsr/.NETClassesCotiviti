@@ -51,3 +51,9 @@ Team: Paymnet Customization
 
 26 Nov 2019 -- Day 16
 	Learn about  Entity Framework Core ORM(object relational mapper) tools , Database connection, SQLite
+
+27 Nov 2019 -- Day 17
+	Learn about insert, update in database.
+
+28 Nov 2019 -- Day 18
+	Learn more about database operations.

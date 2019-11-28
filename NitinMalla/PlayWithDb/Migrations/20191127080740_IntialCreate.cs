@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PlayWithDb.Migrations
 {
-    public partial class IntialDbCreate : Migration
+    public partial class IntialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,7 +29,7 @@ namespace PlayWithDb.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
                     Designation = table.Column<string>(nullable: true),
-                    Salary = table.Column<decimal>(nullable: false),
+                    Salary = table.Column<double>(nullable: false),
                     DOB = table.Column<DateTime>(nullable: false),
                     DepartmentId = table.Column<int>(nullable: false)
                 },

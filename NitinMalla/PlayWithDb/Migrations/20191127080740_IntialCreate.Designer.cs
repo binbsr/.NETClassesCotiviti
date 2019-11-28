@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace PlayWithDb.Migrations
 {
     [DbContext(typeof(CompanyContext))]
-    [Migration("20191126080203_IntialDbCreate")]
-    partial class IntialDbCreate
+    [Migration("20191127080740_IntialCreate")]
+    partial class IntialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,8 +52,8 @@ namespace PlayWithDb.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Salary")
-                        .HasColumnType("TEXT");
+                    b.Property<double>("Salary")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
@@ -65,7 +65,7 @@ namespace PlayWithDb.Migrations
             modelBuilder.Entity("Employee", b =>
                 {
                     b.HasOne("Department", "Department")
-                        .WithMany("MyProperties")
+                        .WithMany("Employee")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
