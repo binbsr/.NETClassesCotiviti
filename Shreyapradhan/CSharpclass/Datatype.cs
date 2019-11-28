@@ -25,8 +25,8 @@ public class DataType
         char h='b';
         
         // boolean types
-        bool m =false;
-        bool? new= null;
+        //bool m =false;
+        //bool? new= null;
 
 
        // reference 
