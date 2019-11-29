@@ -30,6 +30,22 @@ namespace FileHandler
             return lines; //ReadAllText when file type is unknwn 
         }
 
+        internal void CreateFileAnotherWay(string path, string text)
+        {
+            StreamWriter sw = new StreamWriter(path); //true for appending
+            sw.WriteLine(text);
+            sw.Flush(); //clears buffers and underlying streams 
+            sw.Close(); //destroys obj from the memory
+        }
+
+        //FileStream is another way for appending and other stuffs explore urself
+        internal void AppendText(string path, string textToAppend)
+        {
+            StreamWriter sw = new StreamWriter(path, true);
+            sw.WriteLine(textToAppend);
+            sw.Flush();
+            sw.Close();
+        }
     }
 
 

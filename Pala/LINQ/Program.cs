@@ -22,7 +22,7 @@ namespace LINQ
                   Console.WriteLine(name);
               }       */
             //xample2
-            var students = Collections.FetchStudents();
+           /*var students = Collections.FetchStudents();
             var result = from student in students  //query expression to use linq 
                          group student by student.CollegeName into studentGroup
                          orderby studentGroup.Key
@@ -34,7 +34,7 @@ namespace LINQ
                 {
                     System.Console.WriteLine("--" + s.Name);
                 }
-            }
+            }*/
             //impreative and declarative
             //forloop is imperative step by step method
             //int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 20 };
@@ -76,7 +76,7 @@ namespace LINQ
                                         orderby studentGroup.Key
                                         select studentGroup;*/
             //joining 
-            var faculties = Collections.fetchFaculty();
+            /*var faculties = Collections.fetchFaculty();
             var depStudents = from student in students
                             join faculty in faculties on student.facultyId equals faculty.Id
                             select new {Department = faculty.facultyName, Student = student  };// faculty name and student object 
@@ -94,9 +94,9 @@ namespace LINQ
                 {
                     Console.WriteLine($"\t{s.Student.rollNo} - {s.Student.Name}");
                 }
-            }
-/*
-            PlayerCollections pc = new PlayerCollections();
+            }*/
+
+ /*           PlayerCollections pc = new PlayerCollections();
             var players = PlayerCollections.PlayerList();
             var NepaliPalyers = from PlayerList in players
                                 where PlayerList.NOC == "NEP"
@@ -119,54 +119,64 @@ namespace LINQ
             foreach (var chinList in chinesePlayers)
             {
 
-                Console.WriteLine($"\t{chinList}");
+                Console.WriteLine($"\t{chinList.Name}");
 
             }
-            //List all players from USA and group them by sport they were in Also order the result by sport.
+            //3.List all players from USA and group them by sport they were in Also order the result by sport.
             var usaPlayers = PlayerCollections.PlayerList();
             var usPlayers = from usa in usaPlayers
-                            where usa.NOC == "USA"
+                            where usa.NOC == "USA" 
                             group usa by usa.Sport into usaSportGroupList
                             orderby usaSportGroupList.Key
                             select usaSportGroupList;
             //Console.WriteLine(usPlayers);
-
-            string[] usaPlayerList = new string[100000];
-            int i = 0;
             foreach (var usPlayer in usPlayers)
             {
                 Console.WriteLine($"{usPlayer.Key} total atheletes {usPlayer.Count()}");
                 foreach (var usaPlayList in usPlayer)
                 {
-                    i++;
                     Console.WriteLine($"\t{usaPlayList.Id} {usaPlayList.Name}");
                 }
-                i++;
             }
 
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //4.List all countries with thier medal tally so far. Also, order the list by number of golds won.
+            PlayerCollections pc1 = new PlayerCollections(); 
+            var PlayersGold = PlayerCollections.PlayerList();
+            var goldPlayer = from countries in PlayersGold
+                             where countries.Medal == "Gold"
+                             group countries by countries.Team into groupList
+                             orderby groupList.Key descending
+                             select new { countryName = groupList.Key,goldCount = groupList.Count()};
+            Console.WriteLine($"countryName         GoldCount");              
+            /*foreach (var item in goldPlayer)
+            {
+                 Console.WriteLine($"{item.countryName}     {item.goldCount}");
+            }   
+            var PlayersSilver = PlayerCollections.PlayerList();
+            var silverPlayer = from countries in PlayersSilver
+                               where countries.Medal == "Silver"
+                               group countries by countries.Team into groupList
+                               orderby groupList.Key descending
+                               select new {countryName = groupList.Key,silvercount = groupList.Count()};
+            Console.WriteLine($"countryName         SilverCount"); 
+            foreach (var item in silverPlayer)
+            {
+                Console.WriteLine($"{item.countryName} ----   {item.silvercount}");
+            }
+            var PlayersBronze = PlayerCollections.PlayerList();
+            var bronzePlayer = from countries in PlayersBronze
+                               where countries.Medal == "Bronze"  
+                               group countries by countries.Team into groupList
+                               orderby groupList.Key descending
+                               select new {countryName= groupList.Key, bronzeCount = groupList.Count()};    
+            Console.WriteLine($"countryName         Bronzecount");  
+            foreach(var item in bronzePlayer)
+            {
+                Console.WriteLine($"{item.countryName}        {item.bronzeCount}");
+            }*/
+            //Medal tallying*/
+            
         }
     }
 }
+            

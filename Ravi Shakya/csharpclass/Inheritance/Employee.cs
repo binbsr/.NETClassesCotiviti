@@ -7,7 +7,9 @@ namespace Inheritance
         public string LastName { get; set; }
         public string Address { get; set; }
 
-        public string GetFullName() => $"(FirstName) (LastName)";
+        public string GetFullName() => $"{FirstName} {LastName}";
+
+        //virtual keyword helps to override the method.
         public virtual double CalculateMonthlySalary()
         {
             return 0.0;
@@ -20,39 +22,33 @@ namespace Inheritance
     {
         public double MonthlySalary { get; set; }
 
-        public override double CalculateMonthlySalary()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override double CalculateTax()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public new string GetFullName() => $"(base.GetFullName()) - FullTimeEmployee";
+        public override double CalculateMonthlySalary() => MonthlySalary;
+        
+        public override double CalculateTax() => 1232.0;
+        
+        //method hiding
+        public new string GetFullName() => $"{FirstName} {LastName} FullTime";
 
     }
     public class Contractor : BaseEmployee
     {
-        public Contractor(string hourlyWage)
-        {
-            HourlyWage = hourlyWage;
-        }
+        // public Contractor()
+        // {
+        // }
+
+        // public Contractor(double hourlyWage)
+        // {
+        //     HourlyWage = hourlyWage;
+        // }
 
         public double HourlyWage { get; set; }
 
-        public override double CalculateMonthlySalary()
-        {
-            return HourlyWage*22;
-        }
+        public override double CalculateMonthlySalary() => HourlyWage *160;
+        
 
-        public override double CalculateTax()
-        {
-            throw new System.NotImplementedException();
-        }
+        public override double CalculateTax() => 12.32;
 
-        public new string GetFullName() => $"(base.GetFullName() - Contractor";
+        public new string GetFullName() => $"{base.GetFullName()} - Contractor";
 
     }
 }

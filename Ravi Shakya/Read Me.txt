@@ -62,3 +62,12 @@ Date: 19th November, 2019 (Class 11th)
  > use of sealed function
  > use of virtual key
  > use of base and new class
+
+Date: 25th November, 2019 (Class 15th)
+
+Continuation of LINQ - use of Joining.
+
+Date: 26th November, 2019 (Class 16th)
+
+- Introduction of Entity Framework Core.
+- Use of Code first approach in creating database.

@@ -17,6 +17,7 @@ using System.IO;
 
 namespace cSharpClass
 {
+    
     class Program
     {
         /*   public static void Main()
@@ -286,7 +287,16 @@ namespace cSharpClass
 
         public static void Main()
         {
-
+            NewStudentClass student = new NewStudentClass()
+            {
+                StudentId = 1,
+                StudentName = "ram",
+                Address = "Kalanki",
+                CollegeName = "Ncit"
+            };
+            Console.WriteLine($"{student.StudentId}     {student.StudentName}       {student.Address}       {student.CollegeName}");
+           
+           
         }
     }
 }

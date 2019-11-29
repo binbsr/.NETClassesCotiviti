@@ -79,6 +79,43 @@ And also learned groupby Query as well
 Monday: 25th November 2019
 Today we learnt to use join using declarative query 
 
+Tuesday: 26th November 2019
+Entity Framework
+install sqlite 
+creating database table with classes
+run follwing commands
+dotnet add package Microsoft.EntityFrameworkCore --version 3.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.0.1
+dotnet tool install --global dotnet-ef --version 3.0.0
+dotnet ef migrations
+dotnet ef migrations add InitialDbCreate (creation Migration folder)
+dotnet build
+dotnet ef database update
+
+
+
+wednesday : 27th November 2019
+Learnt to insert Rows in Table
+Learnt to use migration command while chaging that the datatyoe of the table  (dotnet ef migrations add SalaryColumnDatatypeToDouble)
+Learnt to use updatig the table.
+
+
+thursday: 28th November 2019
+learnt to use first select first data
+Using foreign key in table by calling object 
+//var employee1 = new Employee(){Name = "ABC",Designation ="Manager",DOB = DateTime.Now,Department = dept}
+This command calls object of department to insert in employee table
+//var departms = context.Department.Include(e=>e.Employees).ToList();
+include used to take all data in employee table which are in department
+//var x = employee1 ?? new Employee();//Null collesion - > if the value of employee is null then x=employee else x calls object and stores it 
+//var thoraiData = context.Department.SkipWhile(x => x.Location == "KTM");
+skipwhile ised to skipe the statement until it is true
+//bool isthereAnyDataThere = ContextBoundObject.Department.where (x=>x.Name.all());
+written the bool value and check if it has all data or not
+
+
+
 
 
 

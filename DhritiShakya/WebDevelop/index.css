@@ -1,0 +1,41 @@
+
+
+.large-cursive{
+    font-size: 30px;
+    font-family: cursive;
+}
+
+
+.form-style-9{
+	max-width: 450px;
+	background: #FAFAFA;
+	padding: 30px;
+	margin: 50px auto;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #305A72;
+}
+
+.field-style
+{font-family: cursive;
+    font-style: italic;
+    color: black;
+}
+
+.textbox
+{
+    padding: 2px;
+	margin: 5px auto;
+}
+
+.style-button
+{
+    padding-top: 15px;
+}
+.buttonstyle
+{
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+    
+ 
+}

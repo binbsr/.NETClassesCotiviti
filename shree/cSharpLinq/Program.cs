@@ -1,5 +1,6 @@
 ﻿using AssignmentLinq;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -87,17 +88,112 @@ namespace cSharpLinq
     
         static void Main(string [] args)
         {
-            Player p1 = new Player();
-            string folderPath = @"E:\DotNetCotiviti\.NETClassesCotiviti\shree";
-            string filePath = Path.Combine(folderPath, "Olympics_Athelete_Events.txt");
-            p1.ReadDataFIle(filePath);
+                 Player player1 = new Player();
+                 List<Player> p1 = new List<Player>();
+                 p1 = player1.SetTextLineToList();
 
-           // Console.WriteLine("this is test");
+                Console.WriteLine("Player From our country");
 
-           /* foreach (var item in p1.ReadDataFIle(filePath))
+                var playerFromOutCountry = from player in p1
+                                           where player.Noc == "CHN"  && player.Medal=="Gold"
+                                           select new { player.Id, player.Name, player.Medal};
+
+                 foreach (var i in playerFromOutCountry)
+                 {
+                     Console.WriteLine($"{i.Id}      {i.Name}       {i.Medal}");
+
+                 }      
+
+                Console.WriteLine(playerFromOutCountry.Count());
+
+/*                var plyrFromChinaGold = from player in p1
+                                        where player.Team == "China" && player.Medal == "Gold"
+                                        select new { player.Id, player.Name, player.Noc};
+                foreach (var i in plyrFromChinaGold)
+                { 
+                    Console.WriteLine($"{i.Id}      {i.Name}    {i.Noc}");
+
+                }
+
+                Console.WriteLine("Player From USA Group by Sports");
+                var plyrFromUSA = from player in p1
+                                  where player.Noc == "USA"
+                                  group player by player.Sport into playerUSAGroup
+                                  orderby playerUSAGroup.Key
+                                  select playerUSAGroup;
+                foreach (var playerUSAGroupBySports in plyrFromUSA)
+                {
+                    foreach (var i in playerUSAGroupBySports)
+                    {
+                        Console.WriteLine($"{i.Name}    {i.Sport}");
+                    }
+                }
+
+           var countryListWithMedalTally = from player in p1
+                                           group player by player.Medal into playerListGroupbyMedal
+                                           orderby playerListGroupbyMedal.Key descending
+                                           select playerListGroupbyMedal;
+
+               foreach (var playerListGroupbyMedal in countryListWithMedalTally)
+               {
+               //Console.WriteLine(playerListGroupbyMedal.Key);
+                   foreach (var i in playerListGroupbyMedal)
+                   {
+                       Console.WriteLine($"{i.Team}    {i.Medal}");
+                   }
+               }
+
+           
+
+            var medalCountNepal = from medalCount in p1
+                                  where medalCount.Team=="China" && medalCount.Medal== "Bronze"
+                                  group medalCount by medalCount.Team into countMedal
+                                  select countMedal;
+
+            foreach (var i in medalCountNepal)
             {
-                Console.WriteLine();
-            }*/
+                Console.WriteLine(medalCountNepal.Count());
+            }
+            
+
+            var goldMedalistCountry = from listCountry in p1
+                                          group listCountry by listCountry.Noc into listofCountrywithGoldMedal
+                                          where listofCountrywithGoldMedal.Key == "Gold"
+                                          select listofCountrywithGoldMedal.Count();
+            foreach (var listofCountrywithGoldMedal in goldMedalistCountry)
+            {
+                foreach (var i in listofCountrywithGoldMedal)
+                {
+                    Console.WriteLine($"{i.Team}        {i.Medal}");
+                }
+            }   */
+
+
+       // JOINING
+
+       var student = Collections.FetchStudents();
+       var faculty = Collections.FetchFacutly();
+       var depStudents = from std1 in student
+                         join fac in faculty on std1.FactultyId equals fac.FacultyId
+                         select new { std1.Name, std1.CollegeName, fac.FacultyName, fac.FacultyHead, std1.RollNo };
+
+       foreach (var i in depStudents)
+       {
+           Console.WriteLine($"{i.Name}    {i.CollegeName}     {i.FacultyName}     {i.FacultyHead}");
+       }
+
+       var deptStudentGroupByFacutlyId = from x in depStudents
+                                         group x by x.FacultyName;
+
+       foreach (var item in deptStudentGroupByFacutlyId)
+       {
+           Console.WriteLine($"{item.Key}");
+           foreach (var i in item)
+           {
+               Console.WriteLine($"\t{i.Name}      {i.RollNo}");
+           }
+       }
+       
         }
     }
 }

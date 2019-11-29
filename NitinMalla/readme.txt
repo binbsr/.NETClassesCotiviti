@@ -48,3 +48,15 @@ Team: Paymnet Customization
 
 25 Nov 2010 -- Day 15
 	learn More about LInq, grouping joining .
+
+26 Nov 2019 -- Day 16
+	Learn about  Entity Framework Core ORM(object relational mapper) tools , Database connection, SQLite
+
+27 Nov 2019 -- Day 17
+	Learn about insert, update in database.
+
+28 Nov 2019 -- Day 18
+	Learn more about database operations.
+
+29 Nov 2019 -- Day 19
+	Learn about web Development -- HTML Tags, CSS 

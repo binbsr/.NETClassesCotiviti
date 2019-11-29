@@ -20,3 +20,14 @@ understanding of concept of inheritances.
 types of inheritances,.
 18th Nov: Abstract class, Inheritance class
 19th Nov: learnt various keywords and their uses: Abstract, override, new, virtual, sealed
+25th Nov: learnt join using declarative query 
+26th Nov:
+Learnt about Entity Framework Core
+Creating database using SQLite
+Added package Microsoft.EntityFrameworkCore
+Added package Microsoft.EntityFrameworkCore.Design
+Added add package Microsoft.EntityFrameworkCore.Sqlite
+installed global dotnet-ef 
+
+
+

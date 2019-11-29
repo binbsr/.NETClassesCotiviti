@@ -24,3 +24,8 @@ Class day 11 : learnt about abstract class/method virtual keyword, sealed class
 class day 12 : learnt about fileIo, reading and writing file.
 
 Class day 14 : learnt about LINQ
+
+Class day  15 : Learnt about JOINS in LINQ
+class day 16 : learnt about Entity Framework.
+
+class day 17 : Worked on crud operations using EF

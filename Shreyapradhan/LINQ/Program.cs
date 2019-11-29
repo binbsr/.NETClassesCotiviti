@@ -116,15 +116,46 @@ namespace LINQ
             FileOperation.CreateFile(path1,PlayerBycountry.ToArray());
             FileOperation.CreateFile(path2,chineeseGoldMedalist.ToArray());
             
+
+            List<string> SportTeam=new List<string>();
              foreach (var sportsgroup in AmericanPlayers)
             {
-                    Console.WriteLine($" grouop -> {sportsgroup.Key}");
+                             
+                SportTeam.Add(sportsgroup.Key);
+
                     foreach(var play in sportsgroup)
-                     {
-                          Console.WriteLine(play.Name);
+                     { 
+                          SportTeam.Append("\t"+play.Name);
 
                      }
 
+            }
+            FileOperation.CreateFile(path3,SportTeam.ToArray());
+
+            var students=Collections.FetchStudents();
+            var faculties= Collections.FetchFaculties();
+            var deptStudents= from student in students
+                                join Faculty in faculties on student.FacultyId equals Faculty.Id
+                                select new {Department=Faculty.FacName,Student=student};
+
+            var deptStudentGroupedByFacultyId = from x in deptStudents
+                                                group  x by x.Department;
+                                                
+            
+
+            foreach(var item in deptStudents)
+            {
+                Console.WriteLine($"{item.Department}-{item.Student.Name}");
+            }
+
+            foreach(var items in deptStudentGroupedByFacultyId)
+            {
+                Console.WriteLine($"{items.Key}");
+                foreach(var item in items)
+                {
+                        Console.WriteLine($"{item.Student.rollNo}-{item.Student.Name}");
+                }
+                
             }
 
 
