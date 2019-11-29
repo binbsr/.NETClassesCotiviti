@@ -56,3 +56,6 @@ Day17 (27th Nov)
 
 Day18 (28th Nov)
 	CRUD operation on database.
+
+Day19 (29th Nov)
+	HTML and CSS basics
