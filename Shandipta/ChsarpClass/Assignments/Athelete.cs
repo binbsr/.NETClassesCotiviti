@@ -54,7 +54,7 @@ namespace Athelete
 
 
             //List all countries with thier medal tally so far. Also, order the list by number of golds won.
-            var res = from a in ath
+            var res = from a in ath 
                       group a by a.noc into b
                       select new
                       {
@@ -76,15 +76,15 @@ namespace Athelete
                           }).Where(y => y.medal.ToLower() == "bronze").Count()
                       };
 
-            var result = ath.Where(ath => ath.medal != "NA")
-                .GroupBy(p => new { p.noc, p.medal })
-                .Select(g => new
-                {
-                    team = g.Key.noc,
-                    medal = g.Key.medal,
-                    count = g.Count()
+            // var result = ath.Where(ath => ath.medal != "NA")
+            //     .GroupBy(p => new { p.noc, p.medal })
+            //     .Select(g => new
+            //     {
+            //         team = g.Key.noc,
+            //         medal = g.Key.medal,
+            //         count = g.Count()
 
-                }).OrderByDescending(g => g.count);
+            //     }).OrderByDescending(g => g.count);
 
             foreach (var v in res.OrderByDescending(x => x.goldCount))
             {
