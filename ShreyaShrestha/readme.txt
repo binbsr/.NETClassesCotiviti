@@ -35,3 +35,24 @@ Day10 (18th Nov, 2019)
 
 Day11 (19th Nov, 2019)
 	Abstract class, sealed class, method overriding, method hiding.
+
+Day12 (20th Nov, 2019)
+	File handling
+
+Day13 (21st Nov, 2019)
+	Linq
+
+Day14 (22nd Nov, 2019)
+	More on linq
+
+Day15 (25th Nov)
+	Join on linq
+
+Day16 (26th Nov)
+	Entity Framework, migrations, setups
+
+Day17 (27th Nov)
+	Creation of database, tables
+
+Day18 (28th Nov)
+	CRUD operation on database.
