@@ -237,14 +237,16 @@ namespace MainProgram
             // {
             //     Console.WriteLine($"{i+1}: {result[i]}");
             // }
-
+            string filePath4 = Path.Combine(folderPath, "StreamWriter.txt");
+            string text = "abdjfkjs";
+            fileIO.CreateFileAnotherWay(filePath4, text);
 
             //Assignment 
             FileInterAction fia = new FileInterAction();
             string filePath = Path.Combine(folderPath, "TheAdventureWorks.txt");
             //Console.WriteLine($"The numbers of character in the text file is {fia.ReadCharacter(filePath)}");
             //Console.WriteLine($"The numbers of words in the text file is {fia.ReadWords(filePath)}"); //8678
-            Console.WriteLine($"The numbers of sentences in the text file is {fia.ReadSentence(filePath)}"); //660 
+            //Console.WriteLine($"The numbers of sentences in the text file is {fia.ReadSentence(filePath)}"); //660 
             //Console.WriteLine($"The numbers of vowels in the text file is {fia.ReadVowels(filePath)}");
             //Console.WriteLine($"The numbers of special characters in the text file is {fia.ReadSpecialCharacters(filePath)}"); //47107
         }

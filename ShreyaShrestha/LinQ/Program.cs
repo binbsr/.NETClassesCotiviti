@@ -178,26 +178,49 @@ namespace LinQ
             // }
 
             // 4. List all countries with thier medal tally so far. Also, order the list by number of golds won.
-            string[] customOrder = { "Gold", "Silver", "Bronze", "NA" };
-            var countriesByMedal = FileReader.GetAtheletes(path).GroupBy(p => new { p.Team, p.Medal }).
-            Select(g => new
-            {
-                team = g.Key.Team,
-                medal = g.Key.Medal,
-                count = g.Count(),
-                goldCount = g.Where(x=>x.Medal == "Gold").Count()
-            }).OrderBy(x => Array.IndexOf(customOrder, x.medal)).ThenByDescending(x => x.goldCount);
-            
+            // string[] customOrder = { "Gold", "Silver", "Bronze", "NA" };
+            // var countriesByMedal = FileReader.GetAtheletes(path).GroupBy(p => new { p.Team, p.Medal }).
+            // Select(g => new
+            // {
+            //     team = g.Key.Team,
+            //     medal = g.Key.Medal,
+            //     count = g.Count(),
+            //     goldCount = g.Where(x=>x.Medal == "Gold").Count()
+            // }).OrderBy(x => Array.IndexOf(customOrder, x.medal)).ThenByDescending(x => x.goldCount);
+
+            // using (StreamWriter writer = new StreamWriter(writePath))
+            // {
+            //     foreach (var v in countriesByMedal)
+            //     {
+            //         Console.SetOut(writer);
+            //         Console.WriteLine($"{v.team} {v.medal} {v.count}");
+
+            //     }
+            // }
+
+
+            var countriesByMedal = FileReader.GetAtheletes(path).GroupBy(p => p.Team).
+                        Select(g => new
+                        {
+                            team = g.Key,
+                            goldCount = g.Where(x => x.Medal == "Gold").Count(),
+                            silverCount = g.Where(x => x.Medal == "Silver").Count(),
+                            BronzeCount = g.Where(x => x.Medal == "Bronze").Count(),
+                        }).OrderByDescending(x => x.goldCount);
+
+
+
             using (StreamWriter writer = new StreamWriter(writePath))
             {
                 foreach (var v in countriesByMedal)
                 {
                     Console.SetOut(writer);
-                    Console.WriteLine($"{v.team} {v.medal} {v.count}");
+                    Console.WriteLine($"{v.team}");
+                    Console.WriteLine($"Gold:{v.goldCount} Silver:{v.silverCount} Bronze:{v.BronzeCount}");
+
 
                 }
             }
-
             #endregion
 
             #region 25th Nov 2019
