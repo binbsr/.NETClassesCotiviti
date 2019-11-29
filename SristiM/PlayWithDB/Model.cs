@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 //dotnet core CLI for commands
-public class CompanyContext : DbContext {
+public class CompanyContext : DbContext {//represents database 
     public DbSet<Employee> Employee { get; set; }
     public DbSet<Department> Department { get; set; }
     protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder) {
