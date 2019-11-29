@@ -134,9 +134,13 @@ namespace Assignments
         public bool ProduceNectar();
     }
 
+    
     public class FileInterAction
     {
-
+        internal void ReadFile(string path)
+        {
+            
+        }
         internal int ReadCharacter(string path)
         {
             int results = 0;
@@ -187,7 +191,7 @@ namespace Assignments
             string vowels = "aeiouAEIOU";
             foreach (char c in text)
             {
-                if (!char.IsWhiteSpace(c) && vowels.IndexOf(c) >= 0)
+                if (vowels.IndexOf(c) >= 0)
                 {
                     results++;
                 }
@@ -199,15 +203,9 @@ namespace Assignments
         {
             int results = 0;
             var text = File.ReadAllText(path);
-            // foreach(char c in text)
-            // {
-            // if(c !>= 'a' && c !<= 'z' && c!>=0 && c!<=9 && !char.IsWhiteSpace(c))
-            // {
-            //     results++;
-            // }
-            results = text.Count(c => !char.IsLetterOrDigit(c)) + text.Count(c => !char.IsWhiteSpace(c));
-            //}
+            results = text.Count(c => !char.IsLetterOrDigit(c)) + text.Count(c => !char.IsWhiteSpace(c));        
             return results;
         }
     }
+    
 }
