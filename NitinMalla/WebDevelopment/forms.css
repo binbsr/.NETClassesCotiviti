@@ -1,0 +1,29 @@
+input[type=text], input[type=password],input[type=email],input[type=date],select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    Height: 30px;
+    Width: 250px;
+    font-size: 15;
+  }
+
+  
+  .container {
+    border-radius: 5px;
+    background-color: #c9ddee;
+    padding: 20px;
+    width: 50%;
+    }
+  
+  .label {
+    float: left;
+    width:20%;
+    margin-top: 6px;
+    }
+  
+  .element {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+   }
+  
