@@ -44,7 +44,7 @@ Day11:
 Learned about File I/O
 
 Day12:
-Leared about StremWriter
+Leared about StraemWriter
 Learned about LINQ
 
 Day13:
@@ -57,3 +57,16 @@ Learned about LINQ-JOIN
 Day15:
 Learned about Entity Framework Basics
 Learned about how to create database and tables
+
+Day16
+Learned about how to insert and update database tables
+
+Day17
+Learned more about how to carry CRUD operations
+
+Day18
+Learned about Web project basics
+Learned about basic html and css
+
+
+
