@@ -1,0 +1,57 @@
+.large-cursive {
+    font-size: 30px;
+    font-family: cursive;
+}
+#tp {
+    font-size: 30px;
+    font-family: cursive;
+}
+
+input[type-text],input[type-password]{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    resize:vertical;
+}
+textarea{
+    width:70%;
+    height: 150px;
+}
+.forminfo
+{
+    max-width:500px;
+    margin:.5rem auto;
+    border:2px solid darkslateblue;
+    padding: 2rem;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Times New Roman';
+    font-size:20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+ input[type=submit]{
+    width: 100%;
+    margin-top: 5;
+    padding: 20px;
+    font-size: medium;
+ }

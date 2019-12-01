@@ -115,6 +115,8 @@ skipwhile ised to skipe the statement until it is true
 written the bool value and check if it has all data or not
 
 
+Friday: 29th November 2019
+Learnt to use css .. tags, css styling , inline and block line styling
 
 
 
