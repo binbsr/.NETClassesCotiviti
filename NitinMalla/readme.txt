@@ -57,3 +57,6 @@ Team: Paymnet Customization
 
 28 Nov 2019 -- Day 18
 	Learn more about database operations.
+
+29 Nov 2019 -- Day 19
+	Learn about web Development -- HTML Tags, CSS 

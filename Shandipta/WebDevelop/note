@@ -1,0 +1,7 @@
+//htmh represent html5
+//if no doctype the browser take the latest version
+//within head tag only title is visible
+//http,ftp to browse remote file
+//inline and block elements in html
+//client site: html,css,javascript
+//dotnet new webapp --

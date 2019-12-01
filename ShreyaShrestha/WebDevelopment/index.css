@@ -1,0 +1,26 @@
+/*p {
+    font-size: 30px;
+    font-family: cursive ;
+}
+*/
+/*Implementing only in specific paragraphs using id
+#f2p /*ids can be comma separated
+{
+    font-size: 30px;
+    font-family: cursive ;
+
+}
+
+#f3p
+{
+    font-size: 30px;
+    font-family: cursive ;
+
+}
+*/
+
+.fontCursive
+{
+    font-size: 30px;
+    font-family: cursive ;
+}

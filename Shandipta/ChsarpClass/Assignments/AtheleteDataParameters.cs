@@ -32,12 +32,14 @@ namespace Athelete
 
         public List<AtheleteDataParameters> GetAtheleteData(string file)
         {
-        TextFieldParser parser = new TextFieldParser(file);
+            TextFieldParser parser = new TextFieldParser(file);
         parser.TextFieldType = FieldType.Delimited;
         parser.SetDelimiters(",");
         parser.CommentTokens = new string[] { "ID" };
         parser.HasFieldsEnclosedInQuotes = true;
             List<AtheleteDataParameters> AetheleteDetails = new List<AtheleteDataParameters>();
+          //  string[] lines = System.IO.File.ReadAllLines(file);
+           // lines = lines.Skip(1).ToArray();
            while (!parser.EndOfData)
             {
                var data = parser.ReadFields();

@@ -26,4 +26,24 @@ Nov 19: Discussed on virtual method, override method, abstract class and method
 
 Nov 20: file and directory handling
 
-Nov 22: Learned LINQ
+Nov 22: Learned 
+
+Nov 23:
+
+Nov 24:
+
+Nov 25:
+
+Nov 26: Discussed on entity framework core
+
+Nov 27: Discussed on CRUD operation on database / Datatable
+
+Nov 29: Discussed on basics of HTML element
+
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet tool install --global dotnet-ef --version 3.0.0
+dotnet ef migrations add InitialDbCreate 
+dotnet ef database update
+dotnet ef migrations add SalaryColumnDataTypeToDouble
+dotnet ef migrations add InitialCreate
