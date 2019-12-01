@@ -1,0 +1,84 @@
+.large-cursive {
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.label-format {
+    color: darkred;
+    block-size: auto;
+    font-weight: bold;
+}
+
+.txt-box {
+    width: 80%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.div-format {
+    border-radius: 5px;
+    border-color: grey;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-self: center;
+}
+
+.button1 {
+    background-color: grey;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancelbtn {
+    background-color: #f44336;
+    color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+cancelbtn:hover {
+    opacity: 0.8;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #ccc;
+    padding: 10px;
+}
+
+.formfield * {
+    vertical-align: middle;
+}
+
+.div-background {
+    background-color: powderblue;
+    padding: 16px;
+}
