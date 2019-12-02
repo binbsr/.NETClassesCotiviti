@@ -1,0 +1,13 @@
+Entity Framework Core
+-help to switch from one db to another 
+-help to query db
+-from creating db to modifying 
+-dotnet ef migrations add OnitialDbCreate Note: create migration tables (to undo database)
+-dotnet ef database migrate: Create table
+Limitations of SQLite
+//Add need to done on migration if columns of a table gets changed
+//API All() can be use
+//API Any()
+//?? 
+//?. if null then doesnt execute further 
+//string.Join(", ", v.Employee)

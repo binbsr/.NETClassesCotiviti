@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>
+        Registration Form
+    </title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <div class="container">
+        <Form>
+            <fieldset>
+                <legend> User Registration Form </legend>
+
+                <div class="label"> User Name : </div>
+                <div class="control"><input type="text" /> </div>
+                <div class="label">Password :</div>
+                <div class="control"><input type="password" /> </div>
+                <div class="label"> Re Password :</div>
+                <div class="control"><input type="password" /> </div>
+
+                <div class="label"> Name :</div>
+                <div class="control"></div>
+                <div class="control"><input type="text" /> </div>
+                <div class="label"> Gender : </div>
+                <div class="control">
+                    <input type="radio" name="gender" /> Male
+                    <input type="radio" name="gender" /> Female
+                    <input type="radio" name="gender" /> Others
+                </div>
+                <div class="label">DOB : </div>
+                <div class="control"> <input type="date" /> </div>
+                <div class="label">Email : </div>
+                <div class="control"> <input type="email" /> </div>
+                <div class="label"> Country : </div>
+                <div class="control"> <select>
+                        <option>Australia</option>
+                        <option selected>Nepal</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+                <div class="label">Personal Info :</div>
+                <div class="control"><textarea cols="50" rows="10">Write something about yourself !!!</textarea></div>
+                <div class="label"> Remember me : </div>
+                <div class="control"><input type="checkbox" /> </div>
+                <div class="label"><input type="submit" value="Register" /> </div>
+                <div class="control"><input type="reset" value="Reset" /></div>
+
+            </fieldset>
+        </Form>
+
+    </div>
+</body>
+
+</html>

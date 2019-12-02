@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--optional tag, if html is provided lates html version 5 is taken-->
+<html>
+
+<head>
+    <!--contains metadata informations, that might not be visible-->
+    <title>First Web Page</title>
+    <!--<style>
+        P {
+            font-size: 30px;
+            font-family: cursive;
+        }
+    </style>-->
+    <!--Another approach, but still not recommended-->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="center">
+    <div class="div-background">
+        <h1 style="color: blue; text-align: center;">Sign Up Page!</h1>
+        <!-- <h2>Hey there! </h2>
+    <h3>Hey there! </h3>
+    <h4>Hey there! </h4>
+    <h5>Hey there! </h5>
+    <h6>Hey there! </h6> -->
+        <!--<p style="font-size: 20;"><!--This is the inline styling, worst approach-->
+        <p class="large-cursive class">
+            Please sign up providing given details to access our website. Once signed up you can change your password with the forgot password option.
+        </p>
+
+
+        <!-- <div> -->
+        <!--container-->
+        <!-- <div>
+            <ul> -->
+        <!--Unordered list-->
+        <!-- <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li> -->
+        <!-- </div>
+        </ul>
+    </div>
+    <div>
+        <ol> -->
+        <!--ordered list-->
+        <!-- <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ol>
+    </div> -->
+        <!-- </div> -->
+        <div class="div-format center">
+            <form>
+                <div><label class="label-format" for="usrname">User Name:</label> <br><input type="text" class="txt-box" /></div>
+                <br>
+                <div><label class="label-format" for="pwd">Password:</label> <br><input type="password" class="txt-box" /></div>
+                <br>
+                <div><label class="label-format" for="re-pwd">Confirm Password:</label> <br><input type="password" class="txt-box" /></div>
+                <br>
+                <div><label class="label-format" for="dob">DOB:</label> <br> <input type="date" class="txt-box" /></div>
+                <br>
+                <div>
+                    <label class="label-format" for="gender">Gender:</label>
+                    <input type="radio" name="Gender" class="label-format" />Male
+                    <input type="radio" name="Gender" class="label-format" />Female
+                    <input type="radio" name="Gender" class="label-format" />Others
+                </div>
+                <br>
+
+                <div class="formfield"><label class="label-format" for="bio">Your Bio:</label>
+                    <textarea cols="50" , rows="6"></textarea></div>
+                <br>
+
+                <div><label class="label-format" for="country">Your Country:</label>
+                    <select>
+                <option>India</option>
+                <option selected>Nepal</option>
+                <option>USA</option>
+                <option>Russia</option>
+                <option>Denmark</option>
+
+
+            </select>
+                </div>
+                <br>
+                <div><input type="Checkbox" /> <label class="label-format" for="remember">Remember Me?</label> </div>
+                <br>
+                <input type="submit" value="Register" class="button button1" />
+                <button type="button" class="button cancelbtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
