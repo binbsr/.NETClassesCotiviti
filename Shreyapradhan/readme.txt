@@ -31,4 +31,4 @@ class day 16 : learnt about Entity Framework.
 class day 17 : Worked on crud operations using EF
 
 class day 18 : Web development html tags and css
-class day 19 :
+class day 19 : Worked with bootstrap
