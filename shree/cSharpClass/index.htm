@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>     
+﻿<!DOCTYPE html>
 
 <!-- html represent html5 by defaul -->
 
@@ -6,44 +6,19 @@
 <head>
     <meta charset="utf-8" />
     <title>First Web Page</title>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
     <!-- Div is just Container in order to manange the layout-->
-    <div>
-        <div id="headingDiv">
+
+    <div class="row">
+        <div id="headingAndListDiv">
             <h1>This is Heading 1</h1>
             <h2>This is Heading 2</h2>
             <h3>This is Heading 3</h3>
             <h4>This is Heading 4</h4>
             <h5>This is Heading 5</h5>
             <h6>This is Heading 6</h6>
-        </div>
-
-        <div>
-            <p>
-                In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents.
-                In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee specified HTML and wrote the browser and server software
-                in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not
-                formally adopted by CERN. In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia first.
-            </p>
-            <p class="large-font">
-                The first publicly available description of HTML was a document called "HTML Tags", first mentioned on the Internet by Tim Berners-Lee in late 1991.[6][7]
-                It describes 18 elements comprising the initial, relatively simple design of HTML. Except for the hyperlink tag, these were strongly influenced by SGMLguid,
-                an in-house Standard Generalized Markup Language (SGML)-based documentation format at CERN. Eleven of these elements still exist in HTML 4.[8]
-            </p>
-            <p class="large-font">
-                HTML is a markup language that web browsers use to interpret and compose text, images, and other material into visual or audible web pages. Default
-                characteristics for every item of HTML markup are defined in the browser, and these characteristics can be altered or enhanced by the web page designer's
-                additional use of CSS. Many of the text elements are found in the 1988 ISO technical report TR 9537 Techniques for using SGML, which in turn covers the features
-                of early text formatting languages such as that used by the RUNOFF command developed in the early 1960s for the CTSS (Compatible Time-Sharing System) operating
-                system: these formatting commands were derived from the commands used by typesetters to manually format documents. However, the SGML concept of generalized markup
-                is based on elements (nested annotated ranges with attributes) rather than merely print effects, with also the separation of structure and markup; HTML has been
-                progressively moved in this direction with CSS.
-            </p>
-        </div>
-
-        <div>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -59,33 +34,59 @@
                 <li>Tiger</li>
             </ol>
         </div>
+        <div id="paragraphDiv">
+            <p>
+                In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents.
+                In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system. Berners-Lee specified HTML and wrote the browser and server software
+                in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not
+                formally adopted by CERN. In his personal notes from 1990 he listed "some of the many areas in which hypertext is used" and put an encyclopedia first.
+            </p>
+            <p>
+                The first publicly available description of HTML was a document called "HTML Tags", first mentioned on the Internet by Tim Berners-Lee in late 1991.
+                It describes 18 elements comprising the initial, relatively simple design of HTML. Except for the hyperlink tag, these were strongly influenced by SGMLguid,
+                an in-house Standard Generalized Markup Language (SGML)-based documentation format at CERN. Eleven of these elements still exist in HTML 4.
+            </p>
+            <p>
+                HTML is a markup language that web browsers use to interpret and compose text, images, and other material into visual or audible web pages. Default
+                characteristics for every item of HTML markup are defined in the browser, and these characteristics can be altered or enhanced by the web page designer's
+                additional use of CSS. Many of the text elements are found in the 1988 ISO technical report TR 9537 Techniques for using SGML, which in turn covers the features
+                of early text formatting languages such as that used by the RUNOFF command developed in the early 1960s for the CTSS (Compatible Time-Sharing System) operating
+                system: these formatting commands were derived from the commands used by typesetters to manually format documents. However, the SGML concept of generalized markup
+                is based on elements (nested annotated ranges with attributes) rather than merely print effects, with also the separation of structure and markup; HTML has been
+                progressively moved in this direction with CSS.
+            </p>
+        </div>
+        <div id="formDiv">
+            <form>
+                <div><label>Name</label>
+                    <input type="text" /></div>
+                <div><label>Password</label>
+                    <input type="password" /></div>
+                <div><label>Date of Birth</label>
+                    <input type="date" /></div>
+                <div>
+                    <label>Gender</label>
+                    <input type="radio" name="gender" /> Male
+                    <input type="radio" name="gender" /> Female
+                    <input type="radio" name="gender" /> Others
+                </div>
+                <div><label>Your Bio</label><textarea cols="50" rows="5"></textarea></div>
+                <div>
+                    <label>Your Country</label>
+                    <select>
+                        <option>Nepal</option>
+                        <option selected>Canada</option>
+                        <option>India</option>
+                        <option>France</option>
+                    </select>
+                </div>
+                <div><input type="checkbox" />Remember Me ?</div>
+                <div>
+                    <input type="button" value="Submit" />
+                </div>
+            </form>
+        </div>
     </div>
-
-    <form>
-        <div>Name: <input type="text" /></div>
-        <div>Password: <input type="password" /></div>
-        <div>Date of Birth: <input type="date" /></div>
-        <div>Gender:
-        <input type="radio" name="gender"/> Male
-        <input type="radio" name="gender"/> Female
-        <input type="radio" name="gender"/> Others</div>
-        <div>Your Bio:<textarea cols="200" rows="5"></textarea></div>
-        <div>
-            Your Country:
-            <select>
-                <option>Nepal</option>
-                <option selected>Canada</option>
-                <option>India</option>
-                <option>France</option>
-            </select>
-        </div>
-        <div><input type="checkbox" />Remember Me ?</div>
-        <div>
-            <input type="button" value="Submit" />
-        </div>
-        
-    </form>
-
 
 </body>
 </html>
