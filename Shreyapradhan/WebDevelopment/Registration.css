@@ -35,6 +35,11 @@
     width: 100%;
     clear: both;
   }
+  .container input[type="radio"] {
+    width: 20%;
+    clear: both;
+  }
+
 
   input:hover {
     background-color: DodgerBlue;
@@ -59,3 +64,4 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
