@@ -92,21 +92,21 @@ namespace cSharpLinq
                  List<Player> p1 = new List<Player>();
                  p1 = player1.SetTextLineToList();
 
-            /*    Console.WriteLine("Player From our country");
+                Console.WriteLine("Player From our country");
 
                 var playerFromOutCountry = from player in p1
-                                           where player.Noc == "NEP"
-                                           select new { player.Id, player.Name};
+                                           where player.Noc == "CHN"  && player.Medal=="Gold"
+                                           select new { player.Id, player.Name, player.Medal};
 
                  foreach (var i in playerFromOutCountry)
                  {
-                     Console.WriteLine($"{i.Id}      {i.Name}");
+                     Console.WriteLine($"{i.Id}      {i.Name}       {i.Medal}");
 
                  }      
 
-                Console.WriteLine("Player From china who won GOLD");
+                Console.WriteLine(playerFromOutCountry.Count());
 
-                var plyrFromChinaGold = from player in p1
+/*                var plyrFromChinaGold = from player in p1
                                         where player.Team == "China" && player.Medal == "Gold"
                                         select new { player.Id, player.Name, player.Noc};
                 foreach (var i in plyrFromChinaGold)
@@ -143,21 +143,32 @@ namespace cSharpLinq
                    }
                }
 
-           */
+           
+
+            var medalCountNepal = from medalCount in p1
+                                  where medalCount.Team=="China" && medalCount.Medal== "Bronze"
+                                  group medalCount by medalCount.Team into countMedal
+                                  select countMedal;
+
+            foreach (var i in medalCountNepal)
+            {
+                Console.WriteLine(medalCountNepal.Count());
+            }
+            
 
             var goldMedalistCountry = from listCountry in p1
                                           group listCountry by listCountry.Noc into listofCountrywithGoldMedal
                                           where listofCountrywithGoldMedal.Key == "Gold"
-                                          select listofCountrywithGoldMedal;
+                                          select listofCountrywithGoldMedal.Count();
             foreach (var listofCountrywithGoldMedal in goldMedalistCountry)
             {
                 foreach (var i in listofCountrywithGoldMedal)
                 {
                     Console.WriteLine($"{i.Team}        {i.Medal}");
                 }
-            }
+            }   */
 
-/*
+
        // JOINING
 
        var student = Collections.FetchStudents();
@@ -181,9 +192,8 @@ namespace cSharpLinq
            {
                Console.WriteLine($"\t{i.Name}      {i.RollNo}");
            }
-
        }
-       */
+       
         }
     }
 }

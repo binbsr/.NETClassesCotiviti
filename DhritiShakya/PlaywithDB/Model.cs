@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 public class CompanyContext:DbContext
 {
   public DbSet<Employee> Employee{get;set;}
-  public DbSet<Employee> Department{get;set;}
+  public DbSet<Department> Department{get;set;}
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)=>optionsBuilder.UseSqlite("Data Source=Company.db");
 }
@@ -34,7 +34,7 @@ public class Department
 
     public string name{get;set;}
 
-    public string Location{get;set;}
+    public string Location {get;set;}
    
     public List<Employee> Employees{get;set;}
 }

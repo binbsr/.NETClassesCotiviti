@@ -11,7 +11,7 @@ public class Student
     public DateTime dob {get; set;}
 }
 
-public class Collections
+public class Collections1
 {
     public static List<Student> FetchStudents()
     {

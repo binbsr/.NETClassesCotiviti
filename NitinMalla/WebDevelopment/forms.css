@@ -1,0 +1,30 @@
+.container
+{
+    background-color: azure;
+    padding:5px;
+    width: 40%;
+   }
+              
+input[type=text],input[type=password],input[type=date],input[type=email], select, textarea {
+    padding: 5px;
+    border-radius: 4px;
+    resize: vertical;
+    width: 50%;
+    font-size: 11pt;
+  }
+               
+
+.label
+{
+   float: left;
+   width : 20%;
+   margin-top: 4px;
+   font-size:12pt;
+}
+
+.control
+{
+   float: left;
+   width: 80%;
+   margin-top: 4px;
+}

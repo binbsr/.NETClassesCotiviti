@@ -20,7 +20,7 @@ public class Employee
 
     public string Designation { get; set; }
 
-    public decimal Salary { get; set; }
+    public double Salary { get; set; }
 
     public DateTime DOB { get; set; }
 
@@ -38,6 +38,6 @@ public class Department
 
     public string Location { get; set; }
 
-    public List<Employee> MyProperties { get; set; }
+    public List<Employee> Employee { get; set; }
 
 }

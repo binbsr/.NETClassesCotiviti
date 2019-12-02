@@ -35,8 +35,6 @@ using Excercise;
 using LearningMethods;
 using LoopsAndConditions;
 using PropertiesAndEnums;
-using FileHandling;
-using System.IO;
 
 namespace MainProgram
 {
@@ -87,9 +85,8 @@ namespace MainProgram
                 {
                     Console.WriteLine($"Song Name={song.SongName} Genre ={song.Genre} Artist = {song.Artist}");
                 }
-            */
+            
 
-            /*
             PropertiesAndEnums.Person p = new PropertiesAndEnums.Person("Pawan","KC", "98419418850");
             var x = p.FirstName;
             var y = p.LastName;
@@ -109,41 +106,6 @@ namespace MainProgram
             var a = Customer.CardNo;
             Customer c = new Customer();
             var b = c.CitizenshipID;
-
-            */
-                string folderPath =@"D:\PawanWorkDir\PawanKCDemo";
-                string filePath = Path.Combine(folderPath, @"Pawan.txt");
-                string filePath1 = Path.Combine(folderPath, @"PawanIntro1.txt");
-                string filePath2 = Path.Combine(folderPath, @"FileStreamWriter.txt");
-                
-                
-                
-                FileIO fileIO = new FileIO();
-                var folder = fileIO.CreateFolder(folderPath);
-                fileIO.CreateFile(filePath);
-
-
-                Console.WriteLine(folder.FullName);
-                Console.WriteLine(folder.CreationTime);
-                Console.WriteLine(folder.LastAccessTime);
-                Console.WriteLine(folder.Attributes);    
-
-                string[] texts ={"Hi Sheela", "Hello", "Hi"} ;
-                fileIO.CreateFile (filePath,texts);
-
-                /*
-                var result = fileIO.ReadFile(filePath1);
-                for(byte i = 0; i<=result.Length; i++ )
-                {
-                    Console.WriteLine($"{i + 1} - {result[i]}");
-                }
-                */
-
-                fileIO.CreateFileUsingStreamWriter(filePath2,"Hello Ram");
-                fileIO.AppendTextUsingStreamWriter(filePath2,"Hello Site");
-
-
-
 
         }
     }

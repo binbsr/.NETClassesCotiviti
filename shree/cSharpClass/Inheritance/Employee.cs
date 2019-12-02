@@ -56,4 +56,42 @@ namespace cSharpClass.Inheritance
             return 987.654;
         }
     }
+
+    public class student
+    {
+        public int id;
+        public string name;
+        public string address;
+        public string collegeName;
+
+        public void GetStudentInformation(int id, string stdName, string stdAddress, string nameOfCollege)
+        {
+            this.id = id;
+            name = stdName;
+            address = stdAddress;
+            collegeName = nameOfCollege;
+        }
+        public void DisplayStudentInfo()
+        {
+            Console.WriteLine(id+name+address+collegeName);
+        }
+    }
+
+
+    /*student s1 = new student();
+    s1.GetStudentInformation(1,"ram","balaju","NCIT");
+    s1.DsiplayStudentInfo();
+    */
+
+    public class NewStudentClass
+    {        
+        public int StudentId { get; set; }
+        public string StudentName { get; set; }
+        public string Address { get; set; }
+        public string CollegeName { get; set; }    
+    }
+
 }
+
+
+

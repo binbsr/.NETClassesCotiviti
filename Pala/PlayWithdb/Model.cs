@@ -19,7 +19,7 @@ public class Employee
     public int Id { get; set; }
     public string Designation { get; set; }
     public string Name { get; set; }
-    public decimal Salary { get; set; }
+    public Double Salary { get; set; }
     public DateTime DOB { get; set; }
     public int DepartmentId { get; set; }
     public Department Department { get; set; }
@@ -30,5 +30,6 @@ public class Department
     public int Id { get; set; }
     public string Name { get; set; }
     public string Location { get; set; }
+    public List<Employee> Employees{get;set;}
 }
 //code first approach

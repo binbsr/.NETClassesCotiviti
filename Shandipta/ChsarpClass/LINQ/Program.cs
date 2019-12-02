@@ -11,7 +11,8 @@ namespace LINQ
 
     class Program
     {
-        static void Main(string[] args)
+        public void test()
+    //    static void Main(string[] args)
         {
             //     LINQPrac lP = new LINQPrac();
             //     lP.LINQ(20, 30, 31, 32, 50);

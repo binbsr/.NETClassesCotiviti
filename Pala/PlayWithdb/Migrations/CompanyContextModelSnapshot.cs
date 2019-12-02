@@ -50,8 +50,8 @@ namespace PlayWithdb.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Salary")
-                        .HasColumnType("TEXT");
+                    b.Property<double>("Salary")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
@@ -63,7 +63,7 @@ namespace PlayWithdb.Migrations
             modelBuilder.Entity("Employee", b =>
                 {
                     b.HasOne("Department", "Department")
-                        .WithMany()
+                        .WithMany("Employees")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
