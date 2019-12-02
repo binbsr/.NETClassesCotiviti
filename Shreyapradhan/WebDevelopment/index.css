@@ -1,0 +1,61 @@
+.large-cursive{
+    font-size: 15px;
+    font-family: cursive;
+ }
+ input, select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .container {
+    width: 500px;
+    clear: both;
+    background-color: lightgrey;
+    padding: 50px;
+    margin: 20px;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+  }
+
+  input:hover {
+    background-color: DodgerBlue;
+  }
+  body {
+    background-color: rgb(224, 228, 230);
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
