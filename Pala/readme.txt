@@ -117,7 +117,12 @@ written the bool value and check if it has all data or not
 
 Friday: 29th November 2019
 Learnt to use css .. tags, css styling , inline and block line styling
+Created Forms
 
 
+Monday: 2nd December 2019
+https://getbootstrap.com/docs/4.4/components/forms/#select-menu
+Learnt to use bootstrap to edit css templates(coiler plate code)
+Desinged forms using Bootstrap.css template
 
 
