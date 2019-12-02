@@ -59,3 +59,6 @@ Day18 (28th Nov)
 
 Day19 (29th Nov)
 	HTML and CSS basics
+
+Day20 (2nd Dec)
+	Bootstrap implementation
