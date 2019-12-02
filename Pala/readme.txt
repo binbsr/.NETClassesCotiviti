@@ -124,5 +124,8 @@ Monday: 2nd December 2019
 https://getbootstrap.com/docs/4.4/components/forms/#select-menu
 Learnt to use bootstrap to edit css templates(coiler plate code)
 Desinged forms using Bootstrap.css template
+paddong is used in parent element
+  chainging inside content 
 
+Margin : related to whole body
 
