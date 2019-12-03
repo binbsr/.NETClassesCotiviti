@@ -68,5 +68,8 @@ Day18
 Learned about Web project basics
 Learned about basic html and css
 
+Day19
+Learned about Bootstrap CSS
+
 
 
