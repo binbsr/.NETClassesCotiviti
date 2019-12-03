@@ -12,6 +12,7 @@
         }
     </style>-->
     <!--Another approach, but still not recommended-->
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="index.css">
 
 </head>
@@ -53,46 +54,53 @@
     </div> -->
         <!-- </div> -->
         <div class="div-format center">
-            <form>
-                <div><label class="label-format" for="usrname">User Name:</label> <br><input type="text" class="txt-box" /></div>
-                <br>
-                <div><label class="label-format" for="pwd">Password:</label> <br><input type="password" class="txt-box" /></div>
-                <br>
-                <div><label class="label-format" for="re-pwd">Confirm Password:</label> <br><input type="password" class="txt-box" /></div>
-                <br>
-                <div><label class="label-format" for="dob">DOB:</label> <br> <input type="date" class="txt-box" /></div>
-                <br>
-                <div>
-                    <label class="label-format" for="gender">Gender:</label>
-                    <input type="radio" name="Gender" class="label-format" />Male
-                    <input type="radio" name="Gender" class="label-format" />Female
-                    <input type="radio" name="Gender" class="label-format" />Others
-                </div>
-                <br>
+            <form class="p-5">
+                <div class="form-group"><label class="form-check-label" for="usrname">User Name:</label> <br><input type="text" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="pwd">Password:</label> <br><input type="password" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="re-pwd">Confirm Password:</label> <br><input type="password" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="dob">DOB:</label> <br> <input type="date" class="form-control" /></div>
+                <div class="form-group">
+                    <label class="form-check-label" for="gender">Gender:</label>
+                    <div>
+                        <div class="form-check form-check-inline"><input id="male" type="radio" name="Gender" /><label for="male">Male</label></div>
+                        <div class="form-check form-check-inline"><input id="female" type="radio" name="Gender" /><label for="female">Female</label></div>
+                        <div class="form-check form-check-inline"><input id="others" type="radio" name="Gender" /><label for="others">Others</label></div>
+                    </div>
+                    <br>
 
-                <div class="formfield"><label class="label-format" for="bio">Your Bio:</label>
-                    <textarea cols="50" , rows="6"></textarea></div>
-                <br>
+                    <div class="form-group"><label class="form-check-label" for="bio">Your Bio:</label>
+                        <textarea cols="30" , rows="6"></textarea></div>
+                    <br>
 
-                <div><label class="label-format" for="country">Your Country:</label>
-                    <select>
+                    <div class="form-group"><label for="country">Your Country:</label>
+                        <select>
                 <option>India</option>
                 <option selected>Nepal</option>
                 <option>USA</option>
                 <option>Russia</option>
                 <option>Denmark</option>
-
-
             </select>
-                </div>
-                <br>
-                <div><input type="Checkbox" /> <label class="label-format" for="remember">Remember Me?</label> </div>
-                <br>
-                <input type="submit" value="Register" class="button button1" />
-                <button type="button" class="button cancelbtn">Cancel</button>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="remember" type="Checkbox" />
+                            <label class="form-check-label" for="remember">Remember Me?</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Register" class="btn-success" />
+                    <button type="button" class="btn-success">Cancel</button>
             </form>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
