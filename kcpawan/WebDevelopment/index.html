@@ -2,21 +2,21 @@
 <html>
     <head>
         <title>First Web Page</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="bootstrap.css">
         <body>
             <div>
                 
-            <h1>Hey There</h1>
-            <h2>Hey There</h2>
-            <h3>Hey There</h3>
-            <h3>Hey There</h4>
-            <h4>Hey There</h5>
-            <h5>Hey There</h6>
+                <h1>Hey There</h1>
+                <h2>Hey There</h2>
+                <h3>Hey There</h3>
+                <h3>Hey There</h4>
+                <h4>Hey There</h5>
+                <h5>Hey There</h6>
 
-            <p>
+                <p>
                     Introduction: HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. Markup language is used to define the text document within tag which defines the structure of web pages. HTML 5 is the fifth and current version of HTML. It has improved the markup available for documents and has introduced application programming interfaces(API) and Document Object Model(DOM).            
-            </p>
-            <ul>
+                </p>
+                <ul>
                     <li>It has introduced new multimedia features which supports audio and video controls by using audio and video tags.</li>
                     <li>There are new graphics elements including vector graphics and tags.</li>
                     <li>Enrich semantic content by including <!--<header> <footer>, <article>, <section> and <figure> --> are added.</li>
@@ -28,15 +28,15 @@
                     <li>Capable of handling incorrect syntax.</li>
                     <li>Easy DOCTYPE declaration i.e. <!-- <!doctype html> --></li>
                     <li>Easy character encoding i.e.<!-- meta charset=”UTF-8″--> </li>
-            </ul>
+                </ul>
 
-            <p class="large-cursive">
+                <p>
                     Liverpool fear Fabinho will miss their most demanding spell of the season due to the ankle injury he sustained in their Champions League draw with Napoli.
-            </p>
+                </p>
             
-            <p class="large-cursive">
-            The Brazil midfielder, who has become one of Jurgen Klopp's most trusted players, was substituted midway through the first half of Wednesday's 1-1 draw with the Italians and Klopp's reaction suggested immediately the damage he sustained was serious.
-            </p>
+                <p>
+                    The Brazil midfielder, who has become one of Jurgen Klopp's most trusted players, was substituted midway through the first half of Wednesday's 1-1 draw with the Italians and Klopp's reaction suggested immediately the damage he sustained was serious.
+                </p>
                 <div>
                     <ol>
                         <li>Mane</li>
@@ -45,36 +45,55 @@
                         <li>Firmino</li>
                     </ol>
                 </div>
-                <form>
-                 <div>  User Name: <input type="text" /><div>
-                 <div>  PWD: <input type ="password" /></div>
-                 <div>  DOB <input type = "date"/></div>
-                 <div>
-                        Gender: <br />
-                        <input type ="radio" name="Gender" /> Male
-                        <input type ="radio" name="Gender" /> Female
-                        <input type ="radio" name="Gender" /> Others
-                 </div>   
-                 <div>
-                    Your Bio:<br/>
-                    <textarea cols="50" rows="5"></textarea>
-                </div>   
-                <div>
-                    Your Country:<br/>
-                    <select>
-                        <option>India</option>
-                        <option selected>Nepal</option>
-                        <option>USA</option>
-                        <option>Russia</option>
-                        <option>UAE</option>
-                        <option>Denmark</option>
-                        <option>Malasia</option>
-                    </select>
-                </div>
-                <div>
+                <form class="p-5">
+                    <div class ="form-group">
+                        <label>Name </label><input type="text" class="form-control"/>
+                        <label>Password</label><input type ="password" class="form-control" />
+                        <label>Date of Birth</label> <input type = "date" class="form-control"/>
+                    </div>
+                    <label> Gender</label>
+                    <div class="form-group">
+                        <div class ="form-check form-check-inline">
+                           <input class="form-check-input" type ="radio" name="Gender" id="male"/> 
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class ="form-check form-check-inline">
+                            <input class="form-check-input" type ="radio" name="Gender" id ="female"/> 
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class ="form-check form-check-inline">
+                            <input class="form-check-input" type ="radio" name="Gender" id= "Others"/>
+                            <label class="form-check-label" for="Others">Others</label> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Bio</label> 
+                        <textarea cols="100" rows="5" class="form-control"></textarea>
+                    </div>   
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select class="form-control">
+                            <option>India</option>
+                            <option selected>Nepal</option>
+                            <option>USA</option>
+                            <option>Russia</option>
+                            <option>UAE</option>
+                            <option>Denmark</option>
+                            <option>Malasia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <input type="checkbox" /> Remember Me?
-                </div>
-                <input type ="submit" value = Register />
+                    </div>
+                    <div class ="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class ="custom-file-label" for="customFile">Choose Your Photo</label>
+                        </div>
+                    </div>
+                    <div>
+                        <button type ="submit" Class ="btn btn-outline-success btn-block"/>Register</button>
+                    </div>                    
                 </form>
             </div>
             
