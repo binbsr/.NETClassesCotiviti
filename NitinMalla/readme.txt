@@ -63,3 +63,6 @@ Team: Paymnet Customization
 
 02 Dec 2019 -- Day 20
 	Learn about css, bootstrap.css and form layout.
+
+04 Dec 2019 -- Day 21
+	Learn more about bootstrap.css and MVC projects
