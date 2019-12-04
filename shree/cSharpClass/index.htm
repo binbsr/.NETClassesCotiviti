@@ -6,101 +6,63 @@
 <head>
     <meta charset="utf-8" />
     <title>First Web Page</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
 </head>
 <body>
-    <!-- Div is just Container in order to manange the layout-->
-
-    <div class="row">
-        <div id="headingAndListDiv">
-            <h1>This is Heading 1</h1>
-            <h2>This is Heading 2</h2>
-            <h3>This is Heading 3</h3>
-            <h4>This is Heading 4</h4>
-            <h5>This is Heading 5</h5>
-            <h6>This is Heading 6</h6>
-            <ul>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Guava</li>
-                <li>Pineapple</li>
-                <li>Mango</li>
-            </ul>
-            <ol>
-                <li>Dog</li>
-                <li>Cat</li>
-                <li>Hen</li>
-                <li>Lion</li>
-                <li>Tiger</li>
-            </ol>
-        </div>
-        <div id="paragraphDiv">
-            <p>
-                In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents.
-                In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system. Berners-Lee specified HTML and wrote the browser and server software
-                in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not
-                formally adopted by CERN. In his personal notes from 1990 he listed "some of the many areas in which hypertext is used" and put an encyclopedia first.
-            </p>
-            <p>
-                The first publicly available description of HTML was a document called "HTML Tags", first mentioned on the Internet by Tim Berners-Lee in late 1991.
-                It describes 18 elements comprising the initial, relatively simple design of HTML. Except for the hyperlink tag, these were strongly influenced by SGMLguid,
-                an in-house Standard Generalized Markup Language (SGML)-based documentation format at CERN. Eleven of these elements still exist in HTML 4.
-            </p>
-            <p>
-                HTML is a markup language that web browsers use to interpret and compose text, images, and other material into visual or audible web pages. Default
-                characteristics for every item of HTML markup are defined in the browser, and these characteristics can be altered or enhanced by the web page designer's
-                additional use of CSS. Many of the text elements are found in the 1988 ISO technical report TR 9537 Techniques for using SGML, which in turn covers the features
-                of early text formatting languages such as that used by the RUNOFF command developed in the early 1960s for the CTSS (Compatible Time-Sharing System) operating
-                system: these formatting commands were derived from the commands used by typesetters to manually format documents. However, the SGML concept of generalized markup
-                is based on elements (nested annotated ranges with attributes) rather than merely print effects, with also the separation of structure and markup; HTML has been
-                progressively moved in this direction with CSS.
-            </p>
-        </div>
+    <!-- Div is just Container in order to manange the layout-->  
         <div id="formDiv">
-            <form>
-<<<<<<< HEAD
-                <div><label>Name</label>
-                    <input type="text" /></div>
-                <div><label>Password</label>
-                    <input type="password" /></div>
-                <div><label>Date of Birth</label>
-                    <input type="date" /></div>
-                <div>
-                    <label>Gender</label>
-=======
-                <div>Name:<input type="text" /></div>
-                <div>Password: <input type="password" /></div>
-                <div>Date of Birth: <input type="date" /></div>
-                <div>
-                    Gender:
->>>>>>> 14b3ae18bc0dccc46b5fb11eed2a3b22621fd15e
-                    <input type="radio" name="gender" /> Male
-                    <input type="radio" name="gender" /> Female
-                    <input type="radio" name="gender" /> Others
+            <form class="p-5">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" />
                 </div>
-<<<<<<< HEAD
-                <div><label>Your Bio</label><textarea cols="50" rows="5"></textarea></div>
-                <div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" class="form-control" />
+                </div>
+                <div class="form-group">  
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" class="form-check-input" id="male" />
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" class="form-check-input" id="female" />
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" class="form-check-input" id="others" />
+                        <label class="form-check-label" for="others">Others</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Your Bio</label>
+                    <textarea class="form-control" ></textarea>
+                </div>
+                <div class="form-group">
                     <label>Your Country</label>
-=======
-                <div>Your Bio:<textarea cols="50" rows="5"></textarea></div>
-                <div>
-                    Your Country:
->>>>>>> 14b3ae18bc0dccc46b5fb11eed2a3b22621fd15e
-                    <select>
-                        <option>Nepal</option>
-                        <option selected>Canada</option>
-                        <option>India</option>
-                        <option>France</option>
-                    </select>
+                        <select class="form-control">
+                            <option>Nepal</option>
+                            <option selected>Canada</option>
+                            <option>India</option>
+                            <option>France</option>
+                        </select>
                 </div>
-                <div><input type="checkbox" />Remember Me ?</div>
-                <div>
-                    <input type="button" value="Submit" />
+                <div class="form-group">
+                    <input type="checkbox" id="remember"/>
+                <label class="form-check-label" for="remember">Remember Me ?</label>
                 </div>
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="chooseFile"/>
+                        <label class="custom-file-label" for="chooseFile">Choose Your Photo</label>
+                    </div>
+                </div>
+                <button type="button" class="form-control btn btn-success">Success</button></div>
             </form>
-        </div>
-    </div>
-
+        </div>     
 </body>
 </html>
