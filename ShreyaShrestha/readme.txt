@@ -62,3 +62,6 @@ Day19 (29th Nov)
 
 Day20 (2nd Dec)
 	Bootstrap implementation
+
+Day21 (4th Dec)
+	MVC implementation
