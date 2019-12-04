@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <!-- metadata and references are included here-->
+
+    <link rel="stylesheet" href="registrationForm.css">
+</head>
+
+<body>
+    <div class="page">
+        <section id="signup">
+            <header id="signupLogo">
+                <p>Sign Up</p>
+            </header>
+            <form class="form_input_container">
+                <div>
+                    <label class="field_label">Name:</label>
+                    <input data-val="true" data-val-required="The Username is required." class="field_input" maxlength="25" name="Username" placeholder="Username" type="text" />
+                </div>
+                <div>
+                    <label class="field_label">Password:</label>
+                    <input data-val="true" data-val-required="The Password is required." class="field_input" maxlength="25" name="Password" placeholder="Password" type="password" />
+                </div>
+                <div>
+                    <label class="field_label">Re-Password:</label>
+                    <input data-val="true" data-val-required="The Password is required." class="field_input" maxlength="25" name="Password" placeholder="Password" type="password" />
+                </div>
+                <div>
+                    <label class="field_label">DOB: </label>
+                    <input class="field_input" type="date" />
+                </div>
+                <div>
+                    <label class="field_label">Gender:</label>
+                    <input type="radio" name="Gender" /> Male
+                    <!--grouping by giving same name so that others get unselected on clicking one-->
+                    <input type="radio" name="Gender" /> Female
+                    <input type="radio" name="Gender" /> Others
+                </div>
+                <div>
+                    <label class="field_label">Your Bio:</label>
+                    <textarea id="textarea" cols="40" rows="5"></textarea>
+                </div>
+                <div>
+                    <label class="field_label">Country:</label>
+                    <select class="field_input">
+                    <option>India</option>
+                    <option selected>Nepal</option>
+                    <option>USA</option>
+                    <option>Russia</option>
+                    <option>China</option>
+                    <option>Indonesia</option>
+                </select>
+                </div>
+                <div><input type="checkbox" />Remember Me?</div>
+                <div class="field_input"><input type="submit" value="Register" /></div>
+
+            </form>
+    </div>
+</body>
+
+</html>

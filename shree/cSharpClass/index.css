@@ -1,19 +1,15 @@
-
 /*
 # is used for id
 dot (.) is used for class
-
 if same CSS is used in multiple , use CLASS instead on ID
 */
 
 /*/
-
 #sp {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
 /* this css only apply on second paragraph
-
 #tp {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -22,6 +18,24 @@ if same CSS is used in multiple , use CLASS instead on ID
 
 * {
     box-sizing: border-box;
+<<<<<<< HEAD
+    font-family: 'Bell MT';
+}
+
+#headingAndListDiv {
+    width: 20%;
+    float: left;
+    background-color:gainsboro;
+    margin: 0 5px;
+    
+}
+
+#paragraphDiv {
+    width: 50%;
+    float: left;
+    background-color:wheat;
+    margin: 0 5px;
+=======
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -44,4 +58,25 @@ if same CSS is used in multiple , use CLASS instead on ID
     content: "";
     display: table;
     clear: both;
+>>>>>>> 14b3ae18bc0dccc46b5fb11eed2a3b22621fd15e
 }
+
+#formDiv {
+    width: 25%;
+    float: left;
+    background-color: gainsboro;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+label {    
+    display: block;
+    width: 100px;
+    float: left;
+}
+
+
+  
