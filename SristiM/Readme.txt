@@ -71,5 +71,9 @@ Learned about basic html and css
 Day19
 Learned about Bootstrap CSS
 
+Day20
+Learned about MVC Framework-Controllers, Views, Models
+Learned about basic Webpage design using MVC
+
 
 
