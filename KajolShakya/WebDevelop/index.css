@@ -1,0 +1,100 @@
+.large-cursive{
+    font-size: 30px;
+    font-family: cursive;
+}
+
+
+body {
+    font-family: sans-serif;
+    color: #384047;
+  }
+  
+  form {
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #ADD8E6;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    margin: 0px 0 27px 0;
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .divStyle{
+    margin-bottom: 30px;
+  }
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 8px 8px 0;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+  border: none;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 9px;
+  width: 90%;
+  color: #8a97a0;
+  margin-bottom: 9px;
+}
+
+button {
+    padding: 15px 25px 15px 25px;
+    background-color: #5697cc;
+    font-size: 9px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #5697cc;
+    border-width: 2px 2px 3px;
+    margin:20px 0 10px 0;
+    color: #f4f7f8;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+  .additonalstyling{
+    padding-top: 10px;
+  }
+
+
+ .heading {
+    padding: 15px 15px 15px 15px;
+    background-color: #5697cc;
+    border-radius: 5px;
+    color: #f4f7f8;
+    width:90%
+  }
+
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+    width: 100%;
+  }
+
+
+

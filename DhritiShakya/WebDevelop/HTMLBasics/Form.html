@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>First Web Page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <form class="p-5">
+        <div class="form-group">
+            <label>Name: </label>
+            <input type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Password: </label>
+            <input type="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Re-Password:</label>
+            <input type="password" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>DOB: </label>
+            <input type="date" class="form-control" />
+        </div>
+        <label>Gender: </label>
+        <div class="form-group">
+            
+            <div class="form-check form-check-inline">
+                <input type="radio" name="gender" class="form-check-input" id="male" />
+                <label for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="gender" class="form-check-input" id="female" />
+                <label for="female"> Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="gender" class="form-check-input" id="others" />
+                <label for="others"> Others</label>
+            </div>
+        </div>
+        <div class="form-group"><label>
+                Your Bio:</label>
+        </div>
+        <div>
+            <textarea cols="60" rows="7"></textarea>
+            </td>
+        </div>
+        <div class="form-group"><label class="form-check-label">
+                Your Country:</label>
+            <select class="form-control">
+
+                <option>India</option>
+                <option value="Nepal" selected>Nepal</option>
+                <option>USA</option>
+                <option>Russia</option>
+                <option>Denmark</option>
+                <option>Indonesia</option>
+            </select>
+        </div>
+        <label class="form-check-label">Add Photo:</label>
+        <div class="custom-file form-group" >
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            <input type="file" class="custom-file-input" id="customFile">
+          </div>
+        <div class="form-group">
+            <input class="form-check-input"type="checkbox">
+             <label class="form-check-label">Remember Me?</label>
+        </div>
+        
+        <div class="form-group ">
+            <button type="submit" class="btn btn-outline-success " />Register</button>
+        </div>
+
+    </form>
+
+</body>
+
+
+</html>

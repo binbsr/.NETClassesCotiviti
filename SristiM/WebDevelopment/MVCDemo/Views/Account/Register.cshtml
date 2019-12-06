@@ -1,0 +1,108 @@
+@{
+    ViewData["Title"] = "Register";
+}
+<!--optional tag, if html is provided lates html version 5 is taken-->
+<html>
+
+<head>
+    <!--contains metadata informations, that might not be visible-->
+    <title>First Web Page</title>
+    <!--<style>
+        P {
+            font-size: 30px;
+            font-family: cursive;
+        }
+    </style>-->
+    <!--Another approach, but still not recommended-->
+    <link rel="stylesheet" href="bootstrap.css">
+    
+
+</head>
+
+<body class="center">
+    <div class="div-background">
+        <h1 style="color: blue; text-align: center;">Sign Up Page!</h1>
+        <!-- <h2>Hey there! </h2>
+    <h3>Hey there! </h3>
+    <h4>Hey there! </h4>
+    <h5>Hey there! </h5>
+    <h6>Hey there! </h6> -->
+        <!--<p style="font-size: 20;"><!--This is the inline styling, worst approach-->
+        <p class="large-cursive class">
+            Please sign up providing given details to access our website. Once signed up you can change your password with the forgot password option.
+        </p>
+
+
+        <!-- <div> -->
+        <!--container-->
+        <!-- <div>
+            <ul> -->
+        <!--Unordered list-->
+        <!-- <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li> -->
+        <!-- </div>
+        </ul>
+    </div>
+    <div>
+        <ol> -->
+        <!--ordered list-->
+        <!-- <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ol>
+    </div> -->
+        <!-- </div> -->
+        <div class="div-format center">
+            <form class="p-5">
+                <div class="form-group"><label class="form-check-label" for="usrname">User Name:</label> <br><input type="text" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="pwd">Password:</label> <br><input type="password" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="re-pwd">Confirm Password:</label> <br><input type="password" class="form-control" /></div>
+                <div class="form-group"><label class="form-check-label" for="dob">DOB:</label> <br> <input type="date" class="form-control" /></div>
+                <div class="form-group">
+                    <label class="form-check-label" for="gender">Gender:</label>
+                    <div>
+                        <div class="form-check form-check-inline"><input id="male" type="radio" name="Gender" /><label for="male">Male</label></div>
+                        <div class="form-check form-check-inline"><input id="female" type="radio" name="Gender" /><label for="female">Female</label></div>
+                        <div class="form-check form-check-inline"><input id="others" type="radio" name="Gender" /><label for="others">Others</label></div>
+                    </div>
+                    <br>
+
+                    <div class="form-group"><label class="form-check-label" for="bio">Your Bio:</label>
+                        <textarea cols="30" , rows="6"></textarea></div>
+                    <br>
+
+                    <div class="form-group"><label for="country">Your Country:</label>
+                        <select>
+                <option>India</option>
+                <option selected>Nepal</option>
+                <option>USA</option>
+                <option>Russia</option>
+                <option>Denmark</option>
+            </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="remember" type="Checkbox" />
+                            <label class="form-check-label" for="remember">Remember Me?</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Register" class="btn-success" />
+                    <button type="button" class="btn-success">Cancel</button>
+            </form>
+            </div>
+        </div>
+</body>
+
+</html>
