@@ -1,0 +1,15 @@
+<form action=@Url.Action("Create","Employee") method="POST">
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control" id="firstname" name = "FirstName" placeholder="Enter First Name">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control" id="lastname" name="LastName" placeholder="Enter Last Name">
+  </div>
+  <div class="form-group">
+    <label for="DOB">DOB</label>
+    <input type="date" class="form-control" id="DOB" name="DOB" placeholder="Enter DOB">
+  </div>
+  <button type="submit" class="btn btn-primary">Insert Employee</button>
+</form>

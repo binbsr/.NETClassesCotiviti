@@ -1,0 +1,31 @@
+@using MvcDemo.Models;
+@model List<Employee>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Date of Birth</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(int i =0; i<Model.Count; i++ )
+    {
+      var employee = Model[i];
+    <tr>
+      <th scope="row">@(i+1)</th>
+      <td>@employee.FirstName</td>
+      <td>@employee.LastName</td>
+      <td>@employee.DOB</td>
+      <td> <a asp-controller="Employee" asp-action="Update" asp-route-id=@employee.Id><i class="fas fa-edit"></i>edit</a></td>
+      <td><i class="fas fa-trash"></i>delete</td>
+    </tr>
+    
+    }
+  </tbody>
+</table>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- doctype represent documet type and html represent HTML 5-->
+<html>
+
+<head>
+    <title>First Web Page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <form class="p-5">
+        <div class="form-group">
+            <label> Name: </label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label> Password: </label>
+            <input type="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Re Password: </label>
+            <input type="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>DOB:</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label> Gender: </label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-inout" id="male" type="radio" name="gender" />
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" id="female" type="radio" name="gender" />
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" id="others" type="radio" name="gender" />
+                <label class="form-check-label" for="others">Others</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Your Country</label>
+            <select class="form-control">
+                <option> India</option>
+                <option selected> Nepal</option>
+                <option> USA</option>
+                <option>Russia</option>
+                <option></option>
+            </select> </div>
+        <div class="form-group">
+            <label>Your Bio:</label>
+            <textarea cols="100" rows="10" class="form-control"></textarea> </div>
+        <div class="form-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose your Photo</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" id="remember" type="checkbox" class="form-control">
+                <label class="form-check-label" for="remember">Remember me? </label> </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-block"> Register </button>
+
+        </div>
+    </form>
+
+
+</body>
+
+</html>
