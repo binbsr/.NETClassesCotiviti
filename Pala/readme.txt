@@ -3,7 +3,7 @@ i-number   : i82200
 Department : R&D1
 TeamName   : Payment Customization
 
----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 Monday,11th November: BAsic introduction to C# and dot net 
 Wednesday,13th November: 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +118,7 @@ Learnt to use css .. tags, css styling , inline and block line styling
 Created Forms
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
+
 Monday: 2nd December 2019
 https://getbootstrap.com/docs/4.4/components/forms/#select-menu
 Learnt to use bootstrap to edit css templates(coiler plate code)
@@ -125,11 +126,14 @@ Desinged forms using Bootstrap.css template
 paddong is used in parent element
   chainging inside content 
 Margin : related to whole body
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+
 Wednesday:4th December 2019
 done homework to insert form in register. Learnt to use View and Controller .
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-Monday : 9th December,2019 
+Monday : 9th December 2019 
 Done homework and commited 
 Created Database connection in Model inside MvcDemo Project.
 Also ccreated class and updated migrations using all the ef commands.
