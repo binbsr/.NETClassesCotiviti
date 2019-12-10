@@ -10,8 +10,8 @@ using MvcDemo.Data;
 namespace MvcDemo.Migrations
 {
     [DbContext(typeof(OfficeContext))]
-    [Migration("20191209075737_IntitialCreate")]
-    partial class IntitialCreate
+    [Migration("20191210080250_InitialDbCreate")]
+    partial class InitialDbCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,8 +23,10 @@ namespace MvcDemo.Migrations
 
             modelBuilder.Entity("MvcDemo.Models.Employee", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("DOB")
                         .HasColumnType("datetime2");

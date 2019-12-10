@@ -69,3 +69,6 @@ Team: Paymnet Customization
 
 09 Dec 2019 -- Day 22
 	Learn about database connection (MS sqlserver)
+
+10 Dec 2019 -- Day 23
+	Learn about CURD operations in database
