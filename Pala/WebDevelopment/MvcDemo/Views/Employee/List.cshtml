@@ -19,6 +19,12 @@
       <td>@employee.FirstName</td>
       <td>@employee.LastName</td>
       <td>@employee.DOB</td>
+      <td>
+
+      @Html.ActionLink("Edit", "Edit", new { id=employee.Id }) |
+
+      @Html.ActionLink("Delete", "Delete", new { id=employee.Id })
+
     </tr>  
     }
 </table>
