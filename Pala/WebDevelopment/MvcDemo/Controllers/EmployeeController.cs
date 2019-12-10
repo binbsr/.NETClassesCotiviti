@@ -6,7 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using MvcDemo.Data;
-using MvcDemo.Models; 
+using MvcDemo.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcDemo.Controllers{
 
@@ -38,6 +39,36 @@ namespace MvcDemo.Controllers{
             OfficeContext db = new OfficeContext();
            var Employees = db.Employees.ToList();
            return View(Employees);
+
+        }
+        public IActionResult Details(int id)
+        {
+           using(OfficeContext officeContext = new OfficeContext())
+           {
+               return View(officeContext.Employees.Where(X=>X.Id==id).FirstOrDefault());
+           }
+         
+        }
+
+        //get:/Employee/Edit
+        public IActionResult Edit(int id)
+        {
+              using(OfficeContext officeContext = new OfficeContext())
+           {
+               return View(officeContext.Employees.Where(X=>X.Id==id).FirstOrDefault());
+           }
+
+        }
+        [HttpPost]
+        public IActionResult Edit(int id,Employee employee)
+        {
+            using (OfficeContext officeContext = new OfficeContext())
+            {
+                officeContext.Entry(employee).State = EntityState.Modified;
+                officeContext.SaveChanges();
+                //Add udate logic
+                return RedirectToAction("List");
+            }
 
         }
 
