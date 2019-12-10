@@ -127,14 +127,41 @@ paddong is used in parent element
   chainging inside content 
 Margin : related to whole body
 
----------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 Wednesday:4th December 2019
 done homework to insert form in register. Learnt to use View and Controller .
 
----------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 Monday : 9th December 2019 
 Done homework and commited 
 Created Database connection in Model inside MvcDemo Project.
 Also ccreated class and updated migrations using all the ef commands.
----------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Tuesday:10th December 2019
+route in startup file attern: "{controller=Home}/{action=Index}/{id?}")  -- controller/Actionname
+prompt $g to clear screen
+cd--path
+Wrting code in server site
+inserted data in form through httpPost method <form  action="/Employee/Create" method="POST"> 
+display inserted data through command  @using MvcDemo.Models;  @model List<Employee>
+@for(int i =0; i<Model.Count; i++ )
+    {
+      var employee = Model[i];
+    <tr>
+      <th scope="row">@i</th>
+      <td>@employee.FirstName</td>
+      <td>@employee.LastName</td>
+      <td>@employee.DOB</td>
+    </tr>  
+    }
+created action to display list 
+   public IActionResult List()
+        {
+            OfficeContext db = new OfficeContext();
+           var Employees = db.Employees.ToList();
+           return View(Employees);
+
+        }
+
+
