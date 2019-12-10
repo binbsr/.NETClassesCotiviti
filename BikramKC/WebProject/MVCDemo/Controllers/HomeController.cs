@@ -23,7 +23,7 @@ namespace MVCDemo.Controllers
             return View();
         }
 
-public IActionResult Galary()
+        public IActionResult Galary()
         {
             return View();
         }
