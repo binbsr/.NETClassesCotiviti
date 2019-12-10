@@ -64,10 +64,8 @@ namespace MvcDemo.Controllers
             employee.FirstName = FirstName;
             employee.LastName = LastName;
             employee.DOB =  DateTime.Parse(Dob);
-
-            db.SaveChanges();
-         
-           return RedirectToAction("List"); 
+            db.SaveChanges();         
+            return RedirectToAction("List"); 
 
           }
      
