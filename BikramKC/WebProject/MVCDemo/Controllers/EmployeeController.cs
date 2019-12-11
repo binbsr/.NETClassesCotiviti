@@ -17,15 +17,9 @@ namespace MVCDemo.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(string FirstName, string LastName, string DOB)
+        public IActionResult Create(Employee emp)
         {
 
-            Employee emp = new Employee()
-            {
-                FirstName = FirstName,
-                LastName = LastName,
-                DOB = DateTime.Parse(DOB)
-            };
             dbcon.Employees.Add(emp);
             dbcon.SaveChanges();
             return RedirectToAction("List");
