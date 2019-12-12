@@ -1,0 +1,38 @@
+@using MVCDemo.Models;
+@model List<Employee>
+<table class="table table-bordered table-striped table-sm table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">DOB</th>
+      <th scope="col">
+        <a asp-area="" asp-controller="Employee" asp-action="Create">
+            <i class="fas fa-user-plus" style="color: #339af0;"></i>
+        </a>
+      </th>      
+    </tr>
+  </thead>
+  <tbody>
+    @for (int i = 0; i < Model.Count; i++)
+    {       
+       var employee = @Model[i];     
+    <tr>
+      <th scope="row">@(i+1)</th>
+      <td>@employee.FirstName</td>
+      <td>@employee.LastName</td>
+      <td>@employee.DOB</td>
+      <td>
+          <a data-toggle="tooltip" data-placement="top" title="Edit" asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Edit">
+              <i class="fas fa-edit"></i>
+          </a>          
+          <a data-toggle="tooltip" data-placement="top" title="Delete" asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Delete">
+            <i class="fas fa-trash-alt"></i>
+          </a>
+            
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>

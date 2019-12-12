@@ -1,0 +1,21 @@
+@model Employee;
+
+<form action="/Employee/Update" method="POST">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" name="fname" value="@Model.FirstName" placeholder="Enter FirstName">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+ <div class="form-group">
+    <label for="lastName">First Name</label>
+    <input type="text" class="form-control" id="lastName" name="lname" value="@Model.LastName" placeholder="Enter LastName">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">DOB</label>
+    <input type="date" class="form-control" id="dob" name="DOB" value='@Model.DOB.ToString("yyyy-MM-dd")' placeholder="Enter your DOB">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

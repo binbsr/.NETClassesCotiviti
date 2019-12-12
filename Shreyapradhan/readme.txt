@@ -33,3 +33,6 @@ class day 17 : Worked on crud operations using EF
 class day 18 : Web development html tags and css
 class day 19 : Worked with bootstrap
 class day 20 : created MVC application
+class day 21 : Added Employees page to view list of employees and add new employees
+class day 22 : learnt about Data Annotation
+class day 23: Added Department menu to add new Department and List all employees of the department. Learnt about View Model

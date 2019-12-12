@@ -1,0 +1,23 @@
+@using MvcDemo.Models;
+@model List<Department>
+  <a class="btn btn-success" asp-action="Create">Create new</a>
+<h1>List of all Employees</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+         </tr>
+  </thead>
+  <tbody>
+ @for(int i =0; i<Model.Count; i++ )
+    {
+      var dep = Model[i];
+    <tr>
+      <th scope="row">@dep.Id</th>
+      <td>@dep.Name</td>
+      <td>@dep.Location</td>
+    </tr>  
+    }
+</table>

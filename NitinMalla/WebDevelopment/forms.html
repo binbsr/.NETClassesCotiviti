@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <link  rel ="stylesheet" href="forms.css">
+    </head>
+    <body>
+     
+    <fieldset class="container">
+        <legend>User Registration Form </legend>
+        <Form >
+                
+            <div class="label"> User Name:</div> <div class="element"><input type ="text"/> </div>
+            <div class="label">  Password :</div> <div class="element"> <input type = "password"/> </div>
+            <div class="label">  Re Password:</div> <div class="element"><input type ="password"/> </div>
+            <div class="label"> Name: </div> <div class="element"> <input type ="text"/> </div>
+            <div class="label">  Gender: </div> <div class="element">
+                <input type ="radio" name ="gender"/> Male
+                <input type ="radio" name ="gender"/> Female
+                <input type ="radio" name ="gender"/> Others 
+            </div>
+            <div class="label">  DOB: </div> <div class="element"> <input type="date"/> </div>
+            <div class="label">  Email: </div> <div class="element"><input type="email"/> </div>
+            <div class="label">  Country:</div> <div class="element">
+                <select>
+                    <option>Australia</option>
+                    <option selected>Nepal</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+            </div>
+            <div class="label"> Comments:</div> <div class="element">
+                <textarea rows ="5" cols="50">  Type something about yourself</textarea>
+            </div>
+            <div class="label">  Remember me: </div> <div class="element"> <input type="checkbox"/> </div>
+            <div class="label"><input type ="submit" value ="Register"/> </div> <div class="element"><input type="reset" value="Reset"/></div>
+        </Form>
+    </fieldset>
+              
+    </body>
+</html>

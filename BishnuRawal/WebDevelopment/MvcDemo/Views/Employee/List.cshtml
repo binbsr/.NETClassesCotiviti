@@ -1,0 +1,25 @@
+@using MvcDemo.Models;
+@model List<Employee>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Date Of Birth</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(int i = 0; i < Model.Count; i++)
+    {
+      var employee = Model[i];
+      <tr>
+        <th scope="row">@(i+1)</th>
+        <td>@employee.FirstName</td>
+        <td>@employee.LastName</td>
+        <td>@employee.DOB</td>
+      </tr>
+    }    
+  </tbody>
+</table>

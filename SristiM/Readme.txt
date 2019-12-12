@@ -75,5 +75,11 @@ Day20
 Learned about MVC Framework-Controllers, Views, Models
 Learned about basic Webpage design using MVC
 
+Day-21/22/23/24
+Learned more about MVC Framework-Controllers, Views, Models
+
+Day25
+Learned about ViewModels
+
 
 
