@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using MvcDemo.Data;
 using MvcDemo.Models;
@@ -12,18 +11,13 @@ using MvcDemo.Models;
 
 namespace MvcDemo.Controllers
 {
-    public class EmployeeController : Controller
+    public class DepartmentController : Controller
     {
        OfficeContext db = new OfficeContext();
         [HttpGet]
           public IActionResult Create()
           {
-             var departments = db.Departments.Select(x => new{x.Id, x.Name}).ToList();
-             EmployeeViewModel employeeViewModel = new EmployeeViewModel
-             {
-                DD_Departments = new SelectList(departments,"Id","Name")
-             };
-             return View(employeeViewModel); 
+             return View(); 
           } 
 
        
@@ -44,16 +38,10 @@ namespace MvcDemo.Controllers
           }*/
 
            [HttpPost]
-          public IActionResult Create(Employee employee)
+          public IActionResult Create(Department department)
           {
              
-            // Employee emp = new Employee
-             //{
-              //  FirstName=FirstName, 
-               // LastName= LastName, 
-                //DOB = DateTime.Parse(Dob)
-             //};
-             db.Employees.Add(employee);
+             db.Departments.Add(department);
              db.SaveChanges();
              
              return RedirectToAction("List");
@@ -61,18 +49,18 @@ namespace MvcDemo.Controllers
 
           public IActionResult List()
           {
-             var employees = db.Employees.ToList();
-             return View(employees); 
+             var departments = db.Departments.ToList();
+             return View(departments); 
           } 
 
           public IActionResult Update(int Id)
           {
-             var employee = db.Employees.Where(x => x.Id == Id).FirstOrDefault();
-             return View(employee); 
+             var department = db.Departments.Where(x => x.Id == Id).FirstOrDefault();
+             return View(department); 
           }
 
            [HttpPost]
-          public IActionResult Update(int Id,string FirstName, string LastName, string Dob)
+          public IActionResult Update(int Id,string Name, string Location )
           {
              
            /* Employee updatedEmployee = (from e in db.Employees
@@ -82,10 +70,9 @@ namespace MvcDemo.Controllers
              updatedEmployee.LastName = employee.LastName;
              updatedEmployee.DOB = employee.DOB;
 */
-            var employee = db.Employees.Where(x => x.Id == Id).FirstOrDefault();
-            employee.FirstName = FirstName;
-            employee.LastName = LastName;
-            employee.DOB =  DateTime.Parse(Dob);
+            var department = db.Departments.Where(x => x.Id == Id).FirstOrDefault();
+            department.Name = Name;
+            department.Location = Location;
             db.SaveChanges();         
             return RedirectToAction("List"); 
 

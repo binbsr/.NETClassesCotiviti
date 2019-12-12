@@ -1,15 +1,23 @@
-<form action ="Create" method="POST">
+@model EmployeeViewModel
+<form asp-action ="Create" method="POST">
   <div class="form-group">
-    <label for="firstName">FirstName</label>
-    <input type="text" class="form-control" name="FirstName" id="firstName" placeholder="Enter First Name">
+    <select asp-for="DepartmentId" asp-items="Model.DD_Departments" class ="form-control">
+      <option>Select Department</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+    <span class="text-danger" asp-validation-for="FirstName"></span>
  </div>
    <div class="form-group">
-    <label for="lastName">LastName</label>
-    <input type="text" class="form-control" name="LastName" id="lastName" placeholder="Enter Last Name">
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+    <span class="text-danger" asp-validation-for="LastName"></span>
     </div>
     <div class="form-group">
-    <label for="Dob">Date of Birth</label>
-    <input type="date" class="form-control" name ="Dob" id="dob" placeholder="Enter your dob">
+    <label asp-for="DOB"></label>
+    <input asp-for="DOB" class="form-control" placeholder="Enter your dob">
     </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
