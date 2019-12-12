@@ -1,0 +1,59 @@
+@using MVCDemo.Models;
+@model List<Employee>
+<h1>List of Employees</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+     @for (int i = 0; i < Model.Count; i++)
+
+     {
+         var emp=Model[i];
+          <tr>
+        <th scope="row">@i+1</th>
+        <td>@emp.Id</td>
+        <td>@emp.FirstName</td>
+        <td>@emp.LastName</td>
+        <td>@emp.DOB</td>
+     <!--<td><div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                            <a class="nav-link" style="color:black" asp-area="" asp-controller="Home" asp-action="Index">Update</a>
+                        </li>
+                    </ul>
+        </td>
+        <td><div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                            <a class="nav-link" style="color:black" asp-area="" asp-controller="Home" asp-action="Index">Delete</a>
+                        </li>
+                    </ul>
+        </td>-->
+        <!--<%=Html.ActionLink("test","Update", "Employee", new {id = @i+1})%>-->
+        <td> <button class="btn btn-labeled btn-success" type="submit">
+            <span class="btn-label"><i class="glyphicon glyphicon-ok"></i>@Html.ActionLink("Update","Update", "Employee", new {id = @emp.Id})
+            </span>
+
+        </button></td>
+        <!-- <td>
+            
+            <button type="button" style="visibility="hidden" class="btn btn-labeled btn-success" onclick="location.href='@Url.Action("Update", "Employee")'">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Update</button>
+        </td> -->
+        <td>
+            <button type="button" class="btn btn-labeled btn-danger" onclick="location.href='@Url.Action("Index", "Home")'">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Delete</button>
+        </td>
+        </tr>          
+     }     
+    
+  </tbody>
+</table>
