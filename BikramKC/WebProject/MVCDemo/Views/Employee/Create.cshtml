@@ -1,15 +1,18 @@
-<form action=@Url.Action("Create","Employee") method="POST">
+@model Employee
+<form asp-action = "Create" method="POST">
   <div class="form-group">
-    <label for="firstname">First Name</label>
-    <input type="text" class="form-control" id="firstname" name = "FirstName" placeholder="Enter First Name">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+    <span class = "text-danger" asp-validation-for="FirstName"></span>
   </div>
   <div class="form-group">
-    <label for="lastname">Last Name</label>
-    <input type="text" class="form-control" id="lastname" name="LastName" placeholder="Enter Last Name">
+    <label asp-for="LastName"></label>
+    <input asp-for = "LastName" class="form-control" placeholder="Enter Last Name">
   </div>
   <div class="form-group">
-    <label for="DOB">DOB</label>
-    <input type="date" class="form-control" id="DOB" name="DOB" placeholder="Enter DOB">
+    <label asp-for="DOB"></label>
+    <input asp-for = "DOB" class="form-control" placeholder="Enter DOB">
+    <span class = "text-danger" asp-validation-for="DOB"></span>
   </div>
   <button type="submit" class="btn btn-primary">Insert Employee</button>
 </form>

@@ -24,11 +24,11 @@
       <td>@employee.LastName</td>
       <td>@employee.DOB</td>
       <td>
-          <a asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Edit">
-              <i class="fas fa-edit" style="color: #339af0;"></i>
+          <a data-toggle="tooltip" data-placement="top" title="Edit" asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Edit">
+              <i class="fas fa-edit"></i>
           </a>          
-          <a asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Delete">
-            <i class="fas fa-trash-alt" style="color: #339af0;"></i>
+          <a data-toggle="tooltip" data-placement="top" title="Delete" asp-area="" asp-controller="Employee" asp-route-id = "@employee.Id" asp-action="Delete">
+            <i class="fas fa-trash-alt"></i>
           </a>
             
       </td>
