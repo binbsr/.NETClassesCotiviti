@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using MvcDemo.Data;
 using MvcDemo.Models;
@@ -17,11 +18,16 @@ namespace MvcDemo.Controllers
         [HttpGet]
           public IActionResult Create()
           {
-             return View(); 
+             var departments = db.Departments.Select(x => new{x.Id, x.Name}).ToList();
+             EmployeeViewModel employeeViewModel = new EmployeeViewModel
+             {
+                DD_Departments = new SelectList(departments,"Id","Name")
+             };
+             return View(employeeViewModel); 
           } 
 
-        [HttpPost]
-          public IActionResult Create(string FirstName, string LastName, string Dob)
+       
+         /* public IActionResult Create(string FirstName, string LastName, string Dob)
           {
              
              Employee emp = new Employee
@@ -35,6 +41,22 @@ namespace MvcDemo.Controllers
              
              return RedirectToAction("List"); 
 
+          }*/
+
+           [HttpPost]
+          public IActionResult Create(Employee employee)
+          {
+             
+            // Employee emp = new Employee
+             //{
+              //  FirstName=FirstName, 
+               // LastName= LastName, 
+                //DOB = DateTime.Parse(Dob)
+             //};
+             db.Employees.Add(employee);
+             db.SaveChanges();
+             
+             return RedirectToAction("List");
           }
 
           public IActionResult List()

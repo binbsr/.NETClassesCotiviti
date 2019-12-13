@@ -1,0 +1,28 @@
+@using MvcDemo.Models;
+@model List<Employee>;
+
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(int i=0; i<Model.Count; i++)
+    {
+      var emp = Model[i];
+      <tr>
+        <th scope="row">@(i+1)</th>
+        <td>@emp.FirstName</td>
+        <td>@emp.LastName</td>
+        <td>@emp.DOB</td>
+        <td>@Html.ActionLink("Edit","Update","Employee",new { Id =emp.Id},new { })</td>
+        <td>@Html.ActionLink("Delete","Update","Employee",new { Id = emp.Id},new { })</td>
+      </tr>
+    }
+  </tbody>
+</table>
+

@@ -1,0 +1,32 @@
+@model List<MVCDemo.Models.Employee>
+<div>
+    <h1 class="h1 text-center"> List of Employees</h1> 
+    <a class="nav-link text-right" asp-area="" asp-controller="Employee" asp-action="Create" data-toggle="tooltip" data-placement="top" title="Add New"><i class="fa fa-file"></i></a>
+    
+</div>
+<table class = "table table-hover">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+
+<tbody>
+    @for(int i = 0; i< Model.Count; i++)
+    {
+        var employee = Model[i];
+        <tr>
+            <th scope="row">@(i+1)</th>
+            <td>@employee.FirstName</td>
+            <td>@employee.LastName</td>
+            <td>@employee.DOB</td>
+            <td><a><i class="fa fa-edit" style="padding-right:15px"></i>|</a>
+            <a><i class="fa fa-trash" style="padding-left :15px"></i></a></td>
+        </tr>
+    }
+</tbody>
+</table>

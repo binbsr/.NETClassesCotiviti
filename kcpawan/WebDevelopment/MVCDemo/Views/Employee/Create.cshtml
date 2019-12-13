@@ -1,0 +1,18 @@
+@model Employee
+<form action-action="/Employee/Create" method = "POST">
+  <div class="form-group">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control" placeholder="Enter FirstName">
+    <span asp-validation-for="FirstName"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control" placeholder="Enter LastName">
+    <span asp-validation-for="LastName"></span>
+  </div>
+   <div class="form-group">
+    <label asp-for="DOB"></label>
+    <input asp-for="DOB" class="form-control" placeholder="Enter DOB">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
