@@ -1,30 +1,23 @@
 @using MvcDemo.Models;
-@model List<Employee>
+@model List<EmployeeViewModel>
 <h1>List of all Employees</h1>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">FirstName</th>
-      <th scope="col">LastLast</th>
-      <th scope="col">Date of Birth</th>
+      <th asp_for="Model[0].FirstName" scope="col"></th>
+      <th asp_for="Model[0].LastName" scope="col"></th>
+      <th asp_for="Model[0].DOB" scope="col"></th>
+      <th asp_for="Model[0].Department" scope="col"></th>
+      
     </tr>
   </thead>
   <tbody>
  @for(int i =0; i<Model.Count; i++ )
     {
-      var employee = Model[i];
-    <tr>
-      <th scope="row">@i</th>
-      <td>@employee.FirstName</td>
-      <td>@employee.LastName</td>
-      <td>@employee.DOB</td>
-      <td>
-
-      @Html.ActionLink("Edit", "Edit", new { id=employee.Id }) |
-
-      @Html.ActionLink("Delete", "Delete", new { id=employee.Id })
-
-    </tr>  
+      var emp= Model[i];
+      <partial name="_Row" model=@emp/>
+   
     }
+  </tbody>
 </table>
