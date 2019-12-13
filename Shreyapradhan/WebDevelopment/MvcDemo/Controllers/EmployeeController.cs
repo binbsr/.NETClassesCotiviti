@@ -28,9 +28,17 @@ namespace MvcDemo.Controllers{
             return View(employeeViewModel);
         }
         [HttpPost]
-        public IActionResult Create(Employee employee)//Binding varables from form
+        public IActionResult Create(EmployeeViewModel employeeViewModel)//Binding varables from form
         {
             OfficeContext db = new OfficeContext();
+            Employee employee = new Employee
+            {
+                    FirstName=employeeViewModel.FirstName,
+                    LastName=employeeViewModel.LastName,
+                    DOB=employeeViewModel.DOB,
+                    DepartmentId=employeeViewModel.DepartmentId
+
+            };
             //Employee em = new Employee
             //{
             //  FirstName=FirstName,
@@ -46,8 +54,21 @@ namespace MvcDemo.Controllers{
         public IActionResult List()
         {
             OfficeContext db = new OfficeContext();
-           var Employees = db.Employees.ToList();
-           return View(Employees);
+           var employees = db.Employees.Include(e=>e.Department).ToList(); // join internally
+           List<EmployeeViewModel>employeeViewModels=new List<EmployeeViewModel>();
+           foreach(var employee in employees)
+           {
+               EmployeeViewModel employeeViewModel=new EmployeeViewModel
+               {
+                   FirstName=employee.FirstName,
+                   LastName=employee.LastName,
+                   DOB=employee.DOB,
+                   DepartmentName=(employee?.Department?.Name)??" NA"
+
+               };
+             employeeViewModels.Add(employeeViewModel);
+           }
+           return View(employeeViewModels);
 
         }
        
