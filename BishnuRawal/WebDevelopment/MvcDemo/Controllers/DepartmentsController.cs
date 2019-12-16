@@ -1,18 +1,24 @@
-using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using MvcDemo.Data;
 using MvcDemo.Models;
 
 namespace MvcDemo.Controllers
 {
     public class DepartmentsController : Controller
     {
-        OfficeContext db = new OfficeContext();
+        private readonly IOfficeContext db;
+        private readonly IMyLogger _logger;
+
+        public DepartmentsController(IOfficeContext context, IMyLogger logger)
+        {
+            db = context;
+            _logger = logger;
+        }
 
         public IActionResult List()
         {         
             var departments = db.Departments.ToList();
+            _logger.LogToConsole("Departments list fetched");
             return View(departments);
         }
         
@@ -27,6 +33,7 @@ namespace MvcDemo.Controllers
         {
             db.Departments.Add(department);
             db.SaveChanges();
+            _logger.LogToConsole("Department Created.");
             
             return RedirectToAction("List");
         }
