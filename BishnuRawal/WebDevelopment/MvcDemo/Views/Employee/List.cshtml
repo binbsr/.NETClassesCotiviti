@@ -8,16 +8,16 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">@Html.DisplayNameFor(x => x.FirstName)</th>
-      <th asp-for="LastName" scope="col"></th>
-      <th asp-for="DOB" scope="col"></th>
-      <th asp-for="DepartmentName" scope="col"></th>
+      <th scope="col">@Html.DisplayNameFor(x => x.LastName)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.DOB)</th>
+      <th scope="col">@Html.DisplayNameFor(x => x.DepartmentName)</th>
     </tr>
   </thead>
   <tbody>
     @for(int i = 0; i < Model.Count(); i++)
     {
       var employee = Model.ElementAt(i);
-      <partial name="_Row" model=@employee/>
+      <partial name="_Row" model=@(new {Employee=employee, Counter=i+1})/>
     }    
   </tbody>
 </table>

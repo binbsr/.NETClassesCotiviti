@@ -1,8 +1,8 @@
-@model EmployeeViewModel
+@model dynamic
 <tr>
-    <th scope="row">1</th>
-    <td>@Model.FirstName</td>
-    <td>@Model.LastName</td>
-    <td>@Model.DOB</td>
-    <td>@Model.DepartmentName</td>
+    <th scope="row">@Model.Counter</th>
+    <td>@Model.Employee.FirstName</td>
+    <td>@Model.Employee.LastName</td>
+    <td>@Model.Employee.DOB</td>
+    <td>@Model.Employee.DepartmentName</td>
 </tr>
