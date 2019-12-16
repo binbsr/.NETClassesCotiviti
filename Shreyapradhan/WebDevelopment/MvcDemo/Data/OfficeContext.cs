@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MvcDemo.Models;
 namespace MvcDemo.Data
 {
-    public class OfficeContext : DbContext
+    public class OfficeContext : DbContext,IOfficeContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {

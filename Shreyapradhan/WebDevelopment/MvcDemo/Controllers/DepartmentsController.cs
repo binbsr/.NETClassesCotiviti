@@ -13,6 +13,13 @@ namespace MvcDemo.Controllers{
 
     public class DepartmentController: Controller
     {
+            private readonly IOfficeContext db ;
+            private readonly ILogger  _logger;
+        public DepartmentController(IOfficeContext context,ILogger logger)
+        {
+                db=context;
+                _logger=logger;
+        }
         [HttpGet]
         public IActionResult Create()
         {
@@ -21,7 +28,7 @@ namespace MvcDemo.Controllers{
         [HttpPost]
         public IActionResult Create(Department department)//Binding varables from form
         {
-            OfficeContext db = new OfficeContext();
+            
             //Employee em = new Employee
             //{
             //  FirstName=FirstName,

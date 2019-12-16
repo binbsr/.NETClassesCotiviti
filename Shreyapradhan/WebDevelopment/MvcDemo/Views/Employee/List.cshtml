@@ -1,22 +1,22 @@
 @using MvcDemo.Models;
-@model List<EmployeeViewModel>
+@model IEnumerable<EmployeeViewModel>
 <h1>List of all Employees</h1>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th asp_for="Model[0].FirstName" scope="col"></th>
-      <th asp_for="Model[0].LastName" scope="col"></th>
-      <th asp_for="Model[0].DOB" scope="col"></th>
-      <th asp_for="Model[0].Department" scope="col"></th>
+      <th  scope="col">@Html.DisplayNameFor(x=>x.FirstName)</th>
+      <th  scope="col">@Html.DisplayNameFor(x=>x.LastName)</th>
+      <th  scope="col">@Html.DisplayNameFor(x=>x.DOB)</th>
+      <th scope="col">@Html.DisplayNameFor(x =>x.DepartmentName)</th>
       
     </tr>
   </thead>
   <tbody>
- @for(int i =0; i<Model.Count; i++ )
+ @for(int i =0; i<Model.Count(); i++ )
     {
-      var emp= Model[i];
-      <partial name="_Row" model=@emp/>
+      var emp= Model.ElementAt(i);
+      <partial name="_Row" model=@(new {Employee=emp, Counter=i+1})/>
    
     }
   </tbody>
