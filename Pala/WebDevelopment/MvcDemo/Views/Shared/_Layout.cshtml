@@ -28,8 +28,13 @@
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" >Employee</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item"  asp-area="" asp-controller="Employee" asp-action="Create" >New</a>
-                        <a class="dropdown-item"  asp-area="" asp-controller="Employee" asp-action="Edit" >Edit</a>
                         <a class="dropdown-item"  asp-area="" asp-controller="Employee" asp-action="List">ListAll</a>
+                        </li>
+                         <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" >Department</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item"  asp-area="" asp-controller="Department" asp-action="Create" >New</a>
+                        <a class="dropdown-item"  asp-area="" asp-controller="Department" asp-action="List">ListAll</a>
   </li>
                         
   </ul>
@@ -55,6 +60,8 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using MvcDemo.Data;
 using MvcDemo.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MvcDemo.Controllers{
 
@@ -16,19 +17,32 @@ namespace MvcDemo.Controllers{
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+             OfficeContext db = new OfficeContext();
+            var departments =db.Departments.Select(X=> new {X.Id,X.Name}).ToList();
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+            {
+                DD_Departments = new  SelectList(departments,"Id","Name")
+            };
+            return View(employeeViewModel);
         }
         [HttpPost]
-        public IActionResult Create(string FirstName,string LastName,string Dob)//Binding varables from form
+        public IActionResult Create(EmployeeViewModel employeeViewModel)//Binding varables from form
         {
             OfficeContext db = new OfficeContext();
-            Employee em = new Employee
+            Employee employee = new Employee
             {
-                FirstName=FirstName,
-                LastName=LastName,
-                DOB = DateTime.Parse(Dob)
+                FirstName=employeeViewModel.FirstName,
+                LastName=employeeViewModel.LastName,
+                DOB=employeeViewModel.DOB,
+                DepartmentId=employeeViewModel.DepartmentId
             };
-            db.Employees.Add(em);
+            //Employee em = new Employee
+            //{
+             //   FirstName=FirstName,
+              //  LastName=LastName,
+               // DOB = DateTime.Parse(Dob)
+           // };
+            db.Employees.Add(employee);
             db.SaveChanges();
 
             return RedirectToAction("List");
@@ -37,10 +51,22 @@ namespace MvcDemo.Controllers{
         public IActionResult List()
         {
             OfficeContext db = new OfficeContext();
-           var Employees = db.Employees.ToList();
-           return View(Employees);
-
+           var employees = db.Employees.Include(e=>e.Department).ToList();///Include department id and name (join)
+           List<EmployeeViewModel> employeeViewModels = new List<EmployeeViewModel>();
+           foreach(var employee in employees)
+           {
+               EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+               {
+                FirstName=employee.FirstName,
+                LastName=employee.LastName,
+                DOB=employee.DOB,
+                DepartmentName = (employee?.Department?.Name) ?? "N/A"
+               };
+           employeeViewModels.Add(employeeViewModel);
+           }
+           return View(employeeViewModels);
         }
+        
         public IActionResult Details(int id)
         {
            using(OfficeContext officeContext = new OfficeContext())
