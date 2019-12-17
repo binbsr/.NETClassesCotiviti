@@ -9,6 +9,8 @@ namespace MvcDemo.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         => optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=OfficeDbNew;Trusted_Connection=True;");
          public DbSet<Employees> Employees{get; set;}
+
+         public DbSet<Department> Departments{get; set;}
     }
    
 }

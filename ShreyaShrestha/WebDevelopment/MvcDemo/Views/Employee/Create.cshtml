@@ -1,23 +1,79 @@
+<!--  @{
+    ViewData["Title"] = "Create";
+}
+
+@using Microsoft.AspNetCore;
+
+ we are already in Employee/Create url so only /Create should do -->
+<!-- <form action="@Url.Action("Create","Employee")" method="POST"> -->
+<!-- <form action="/Employee/Create" method="POST"> -->
+<!--
+<form asp-action="Create" method="POST">
+  <div class="form-group">
+     <label for="firstName">First Name</label> -->
+    <!--
+    <label asp-for="FirstName"></label>
+    <input type="text" class="form-control" name="FirstName" id="firstName" placeholder="Enter First Name"> -->
+    <!--<input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+    <small id="firstName" class="form-text text-muted"></small>
+    <span class = "text-danger" asp-validation-for="FirstName"></span>
+  </div>
+ <div class="form-group">
+    <label for="lastName">Last Name</label> -->
+    <!--<label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+     <input type="text" class="form-control" name = "LastName" id="lastName" placeholder="Enter Last Name"> -->
+    <!--<small id="lastName" class="form-text text-muted" placeholder="Enter Last Name"></small>
+    <span class = "text-danger" asp-validation-for="LastName"></span>
+  </div>
+  <div class="form-group">
+     <label for="dob">DOB</label> -->
+    <!--<label asp-for="Dob"></label>
+    <input asp-for="Dob" class="form-control" placeholder="Enter DOB">
+    <input type="date" class="form-control" name="Dob" id="dob" placeholder="Enter your DOB"> -->
+    <!--<small id="dob" class="form-text text-muted"></small>
+  </div>
+  <button type="submit" class="btn btn-primary">Insert</button>
+</form>  -->
+
 @{
     ViewData["Title"] = "Create";
 }
 
+@using Microsoft.AspNetCore;
+@model EmployeeViewModel;
 <!-- we are already in Employee/Create url so only /Create should do -->
 <!-- <form action="@Url.Action("Create","Employee")" method="POST"> -->
-<form action="/Employee/Create" method="POST">
+<!-- <form action="/Employee/Create" method="POST"> -->
+<form asp-action="Create" method="POST">
+
+   <div class="form-group">
+      <select asp-for="DepartmentId" asp-items="Model.DD_Departments" class="form-control">
+        <option>Select Department</option>
+      </select>
+  </div>
+  
   <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input type="text" class="form-control" name="FirstName" id="firstName" placeholder="Enter First Name">
+    <!-- <label for="firstName">First Name</label> -->
+    <label asp-for="FirstName"></label>
+    <!-- <input type="text" class="form-control" name="FirstName" id="firstName" placeholder="Enter First Name"> -->
+    <input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
     <small id="firstName" class="form-text text-muted"></small>
+    <span class = "text-danger" asp-validation-for="FirstName"></span>
   </div>
  <div class="form-group">
-    <label for="lastName">Last Name</label>
-    <input type="text" class="form-control" name = "LastName" id="lastName" placeholder="Enter Last Name">
-    <small id="lastName" class="form-text text-muted"></small>
+    <!-- <label for="lastName">Last Name</label> -->
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+    <!-- <input type="text" class="form-control" name = "LastName" id="lastName" placeholder="Enter Last Name"> -->
+    <small id="lastName" class="form-text text-muted" placeholder="Enter Last Name"></small>
+    <span class = "text-danger" asp-validation-for="LastName"></span>
   </div>
   <div class="form-group">
-    <label for="dob">DOB</label>
-    <input type="date" class="form-control" name="Dob" id="dob" placeholder="Enter your DOB">
+    <!-- <label for="dob">DOB</label> -->
+    <label asp-for="Dob"></label>
+    <input asp-for="Dob" class="form-control" placeholder="Enter DOB">
+    <!-- <input type="date" class="form-control" name="Dob" id="dob" placeholder="Enter your DOB"> -->
     <small id="dob" class="form-text text-muted"></small>
   </div>
   <button type="submit" class="btn btn-primary">Insert</button>
