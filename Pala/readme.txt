@@ -163,22 +163,5 @@ created action to display list
            return View(Employees);
 
         }
-WEdnesday: 11th December,2019
-Learnt to use tag helper asp-for 
-Learnt to use annotations () 
-   [Required(ErrorMessage="First Name cannot be empty!!")]//Data annotations
-   [Display(Name="Date of Birth")]
 
-added jave script link in _layout.cshtml
-<script src="~/Scripts/jquery.validate.min.js"></script>
-
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
-Thursday: 12th December 2019
-Learnt to use Viewmodel , inserting foreign key in Employee a, learnt to use binding variables in http get and Post method (EmployeeViewModel employeeViewModel)
-
-friday: 13th December 2019
-automapper c# (using object withobject just for information )
-Partial view: Shared in all so put in shared
-Partial view used as a view to display where used repeatedly.(created _Row.cshtml)
 
