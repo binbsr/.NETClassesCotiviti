@@ -18,4 +18,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview9.19423.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Assessment.ApplicationCore\Assessment.ApplicationCore.csproj" />
+    <ProjectReference Include="..\Assessment.Infrastructure\Assessment.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
