@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UserSecretsId>aspnet-Assessment.Web-4B6F9D5F-36BE-4B5B-9AEB-E775BCE89C54</UserSecretsId>
+    <UserSecretsId>aspnet-Assessment.Web-DF1F5380-D224-4BBD-A32E-43EFF624C703</UserSecretsId>
   </PropertyGroup>
 
 
@@ -16,6 +16,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assessment.ApplicationCore\Assessment.ApplicationCore.csproj" />
+    <ProjectReference Include="..\Assessment.Infrastructure\Assessment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
