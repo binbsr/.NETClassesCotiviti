@@ -1,0 +1,21 @@
+@model EmployeeViewModel
+
+
+<tr>
+      <th scope="row"></th>
+      <td>@Model.Id</td>
+      <td>@Model.FirstName</td>
+      <td>@Model.LastName</td>
+      <td>@Model.Dob</td>
+      <td>@Model.DepartmentName</td>
+      <td>
+         <a asp-controller="Employee" asp-action="Update" asp-route-id="@Model.Id">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+        </td>
+        <td>
+        <a href="#">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a> 
+          </td>       
+    </tr>      

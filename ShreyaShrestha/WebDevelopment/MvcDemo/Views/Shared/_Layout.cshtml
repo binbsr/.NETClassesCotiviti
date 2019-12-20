@@ -37,7 +37,16 @@
                                  <div class="dropdown-divider border border-dark"></div>
                                  <a class="dropdown-item font-weight-bold lead pt-md-4 pb-4" asp-area="" asp-controller="Employee" asp-action="EmployeeList">List All</a>      
                             </div>                            
-                        </li>                                  
+                        </li>  
+
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Department</a>
+                            <div class="dropdown-menu border border-dark pill" style="background:linear-gradient(0deg, #ffffff 0%, #e9e9e9 100%)">
+                                 <a class="dropdown-item font-weight-bold lead pt-md-4" asp-area="" asp-controller="Department" asp-action="CreateDepartment">Create</a> .
+                                 <div class="dropdown-divider border border-dark"></div>
+                                 <a class="dropdown-item font-weight-bold lead pt-md-4 pb-4" asp-area="" asp-controller="Department" asp-action="DepartmentList">List All</a>      
+                            </div>                            
+                        </li>                                 
                     </ul>
                 </div>
                 <div> 
@@ -60,6 +69,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
