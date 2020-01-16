@@ -285,7 +285,7 @@ namespace cSharpClass
                      Console.WriteLine($"{i} - {lines[i - 1]}");
                  }   */
 
-        public static void Main()
+       /* public static void Main()
         {
             NewStudentClass student = new NewStudentClass()
             {
@@ -294,9 +294,22 @@ namespace cSharpClass
                 Address = "Kalanki",
                 CollegeName = "Ncit"
             };
-            Console.WriteLine($"{student.StudentId}     {student.StudentName}       {student.Address}       {student.CollegeName}");
+            Console.WriteLine($"{student.StudentId}     {student.StudentName}       {student.Address}       {student.CollegeName}");   
+        }*/
+        public static void Main()
+        {
+            int i = 10;            
            
-           
+           // 
+            Console.WriteLine("++i= "+ ++i);
+
+            Console.WriteLine("i=   " + i);
+
+            Console.WriteLine("i++= " + i++);
+
+            Console.WriteLine("i++= " + i);
         }
     }
 }
+
+
